@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AuctionEnterpriseApp
+namespace ConsoleApp
 {
     class Program
     {
