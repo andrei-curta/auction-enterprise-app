@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionEnterpriseApp", "AuctionEnterpriseApp\AuctionEnterpriseApp.csproj", "{966EA1D5-C48B-41DA-A2BB-AF830B75A5FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLayer", "DataLayer", "{03647CF6-3723-4DA3-9F11-03E23BA6384E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainLayer", "DomainLayer", "{62D800B2-E17D-461C-96C1-C5E15483C099}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterfaces", "UserInterfaces", "{D4A0923D-82CE-4EA5-ADAB-56F9684915C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{9E3723A2-D14C-4188-A7CA-C46B0647CF76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMapper", "AuctionEnterpriseApp\DataLayer\DataMapper\DataMapper.csproj", "{9D95278D-D2FC-4342-AA4C-672347DA3A81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{966EA1D5-C48B-41DA-A2BB-AF830B75A5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966EA1D5-C48B-41DA-A2BB-AF830B75A5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966EA1D5-C48B-41DA-A2BB-AF830B75A5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966EA1D5-C48B-41DA-A2BB-AF830B75A5FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D95278D-D2FC-4342-AA4C-672347DA3A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D95278D-D2FC-4342-AA4C-672347DA3A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D95278D-D2FC-4342-AA4C-672347DA3A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D95278D-D2FC-4342-AA4C-672347DA3A81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{966EA1D5-C48B-41DA-A2BB-AF830B75A5FB} = {9E3723A2-D14C-4188-A7CA-C46B0647CF76}
+		{9E3723A2-D14C-4188-A7CA-C46B0647CF76} = {D4A0923D-82CE-4EA5-ADAB-56F9684915C2}
+		{9D95278D-D2FC-4342-AA4C-672347DA3A81} = {03647CF6-3723-4DA3-9F11-03E23BA6384E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {066344D5-0FD8-40BD-B6CF-369D765A19AF}
+	EndGlobalSection
+EndGlobal
