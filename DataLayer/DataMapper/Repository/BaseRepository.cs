@@ -16,7 +16,7 @@ namespace DataMapper.Repository
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = "")
         {
-            using (var ctx = new AuctionEnterpriseAppContext())
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 var dbSet = ctx.Set<T>();
 
@@ -46,7 +46,7 @@ namespace DataMapper.Repository
 
         public virtual void Insert(T entity)
         {
-            using (var ctx = new AuctionEnterpriseAppContext())
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 var dbSet = ctx.Set<T>();
                 dbSet.Add(entity);
@@ -57,7 +57,7 @@ namespace DataMapper.Repository
 
         public virtual void Update(T item)
         {
-            using (var ctx = new AuctionEnterpriseAppContext())
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 var dbSet = ctx.Set<T>();
                 dbSet.Attach(item);
@@ -74,7 +74,7 @@ namespace DataMapper.Repository
 
         public virtual void Delete(T entityToDelete)
         {
-            using (var ctx = new AuctionEnterpriseAppContext())
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 var dbSet = ctx.Set<T>();
 
@@ -91,7 +91,7 @@ namespace DataMapper.Repository
 
         public virtual T GetByID(object id)
         {
-            using (var ctx = new AuctionEnterpriseAppContext())
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 return ctx.Set<T>().Find(id);
             }

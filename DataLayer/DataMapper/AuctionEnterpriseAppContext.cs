@@ -6,6 +6,11 @@ namespace DataMapper
 
     class AuctionEnterpriseAppContext : DbContext
     {
+
+        public AuctionEnterpriseAppContext(DbContextOptions options) : base(options)
+        {
+            
+        }
         public virtual DbSet<ApplicationSetting> ApplicationSettings { get; set; }
     }
 }
