@@ -3,7 +3,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    class ApplicationSetting
+    public class ApplicationSetting
     {
         public long Id { get; set; }
 
@@ -12,6 +12,6 @@
         public string Name { get; set; }
 
         [Required]
-        public string value { get; set; }
+        public string Value { get; set; }
     }
 }
