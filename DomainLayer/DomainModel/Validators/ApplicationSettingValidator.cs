@@ -1,7 +1,10 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿// <copyright file="ApplicationSettingValidator.cs" company="Transilvania University of Brașov">
+// Copyright (c) Curta Andrei. All rights reserved.
+// </copyright>
 
 namespace DomainModel.Validators
 {
+    using System.Diagnostics.CodeAnalysis;
     using DomainModel.Models;
     using FluentValidation;
 
