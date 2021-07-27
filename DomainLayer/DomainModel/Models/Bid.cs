@@ -6,6 +6,7 @@
 namespace DomainModel.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
 
     /// <summary>
     /// Class that represents a bid an user makes at an auction.
@@ -20,16 +21,19 @@ namespace DomainModel.Models
         /// <summary>
         /// Gets or sets the Id of the user that placed this bid.
         /// </summary>
+        [Required]
         public long UserId { get; set; }
 
         /// <summary>
         /// Gets or sets the auctionId that the bid was placed in.
         /// </summary>
+        [Required]
         public long AuctionId { get; set; }
 
         /// <summary>
         /// Gets or sets the date when the bid was added. Default is current datetime.
         /// </summary>
+        [Required]
         public DateTime DateAdded { get; set; } = DateTime.Now;
     }
 }

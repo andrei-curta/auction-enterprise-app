@@ -3,7 +3,6 @@
 // </copyright>
 
 
-
 namespace DomainModel.Models
 {
     using System.ComponentModel.DataAnnotations;
@@ -33,9 +32,15 @@ namespace DomainModel.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// Gets or sets the Id of the user that owns this product.
+        /// </summary>
+        [Required]
+        public long UserId { get; set; }
+
+        /// <summary>
         /// Gets or sets the owner of this product.
         /// </summary>
         [Required]
-        public User Owner { get; set; }
+        public virtual User User { get; set; }
     }
 }
