@@ -2,8 +2,10 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+
 namespace DomainModel.Models
 {
+    using System.Collections.Generic;
     using Microsoft.AspNetCore.Identity;
 
     /// <summary>
@@ -11,5 +13,9 @@ namespace DomainModel.Models
     /// </summary>
     public class User : IdentityUser
     {
+        /// <summary>
+        /// Gets or sets the products that a user has.
+        /// </summary>
+        public List<Product> Products { get; set; }
     }
 }

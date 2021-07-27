@@ -2,10 +2,12 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using System.Collections.Generic;
 
 namespace DomainModel.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     /// <summary>
     /// Product category.
     /// </summary>
@@ -19,6 +21,7 @@ namespace DomainModel.Models
         /// <summary>
         /// Gets or sets the Name of this category.
         /// </summary>
+        [Required]
         public string Name { get; set; }
 
         /// <summary>
