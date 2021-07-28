@@ -2,6 +2,9 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using System.Linq;
+using DataMapper.Repository;
+
 namespace ServiceLayer.Implemantations
 {
     using System.Collections.Generic;
@@ -11,13 +14,19 @@ namespace ServiceLayer.Implemantations
     /// Base service to provide common 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class BaseService<T> : IService<T>
+    public abstract class BaseService<T, S> : IService<T>
+        where S : IRepository<T>
     {
+        private readonly S service;
 
+        protected BaseService(S service)
+        {
+            this.service = service;
+        }
 
         public void Add(T entity)
         {
-            throw new System.NotImplementedException();
+            service.Insert(entity);
         }
 
         public void Delete(T entity)
@@ -32,7 +41,7 @@ namespace ServiceLayer.Implemantations
 
         public IList<T> List()
         {
-            throw new System.NotImplementedException();
+            return service.Get().ToList();
         }
 
         public void Update(T entity)

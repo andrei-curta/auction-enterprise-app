@@ -4,6 +4,7 @@
 
 
 using DataMapper.DAO;
+using ServiceLayer.Implemantations;
 
 namespace ServiceLayer.Implementations
 {
@@ -13,38 +14,10 @@ namespace ServiceLayer.Implementations
     using DomainModel.Models;
     using ServiceLayer.Interfaces;
 
-    public class ApplicationSettingImplementation : IApplicationSettingService
+    public class ApplicationSettingImplementation : BaseService<ApplicationSetting, ApplicationSettingDataService>
     {
-        private readonly IApplicationSettingDataService _applicationSettingDataService;
-
-        public ApplicationSettingImplementation()
+        public ApplicationSettingImplementation() : base(new ApplicationSettingDataService())
         {
-            this._applicationSettingDataService = new ApplicationSettingDataService();
-        }
-
-        public void Add(ApplicationSetting entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(ApplicationSetting entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void GetById(long id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IList<ApplicationSetting> List()
-        {
-            return this._applicationSettingDataService.Get().ToList();
-        }
-
-        public void Update(ApplicationSetting entity)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
