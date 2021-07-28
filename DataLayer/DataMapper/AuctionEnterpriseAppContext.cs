@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataMapper
 {
@@ -13,9 +14,12 @@ namespace DataMapper
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Specifies the monet property is a value type and not an entyty, such no other table is created and the properties are defined as columns in the product table.
+            // Specifies the monet property is a value type and not an entity, such no other table is created and the properties are defined as columns in the product table.
             modelBuilder.Entity<Product>().OwnsOne(x => x.Value);
+            modelBuilder.Entity<Bid>().OwnsOne(x => x.BidValue);
 
+            modelBuilder.Entity<Bid>().Property(b => b.DateAdded).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Auction>().Property(b => b.DateCreated).HasDefaultValueSql("GETDATE()");
         }
 
         public virtual DbSet<ApplicationSetting> ApplicationSettings { get; set; }

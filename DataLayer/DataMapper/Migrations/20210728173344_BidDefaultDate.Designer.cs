@@ -4,14 +4,16 @@ using DataMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
-    partial class AuctionEnterpriseAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210728173344_BidDefaultDate")]
+    partial class BidDefaultDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,9 +53,7 @@ namespace DataMapper.Migrations
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");

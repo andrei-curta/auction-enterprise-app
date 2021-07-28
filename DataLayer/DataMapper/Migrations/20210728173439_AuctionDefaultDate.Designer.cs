@@ -4,14 +4,16 @@ using DataMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
-    partial class AuctionEnterpriseAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210728173439_AuctionDefaultDate")]
+    partial class AuctionDefaultDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
