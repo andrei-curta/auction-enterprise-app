@@ -4,7 +4,7 @@
     using DataMapper.Repository;
     using DomainModel.Models;
 
-    class ApplicationSettingDataService : BaseRepository<ApplicationSetting>, IApplicationSettingDataService
+    public class ApplicationSettingDataService : BaseRepository<ApplicationSetting>, IApplicationSettingDataService
     {
     }
 }

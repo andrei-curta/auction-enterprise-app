@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\DataLayer\DataMapper\DataMapper.csproj" />
+    <ProjectReference Include="..\..\..\DomainLayer\ServiceLayer\ServiceLayer\ServiceLayer.csproj" />
   </ItemGroup>
 
 </Project>

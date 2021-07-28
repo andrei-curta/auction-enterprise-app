@@ -1,6 +1,7 @@
-﻿// <copyright file="BaseRepository.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="BaseRepository.cs" company="Transilvania University of Brașov">
+// Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
+
 
 namespace DataMapper.Repository
 {
@@ -10,7 +11,7 @@ namespace DataMapper.Repository
     using System.Linq.Expressions;
     using Microsoft.EntityFrameworkCore;
 
-    abstract class BaseRepository<T> : IRepository<T>
+    public abstract class BaseRepository<T> : IRepository<T>
         where T : class
     {
         public virtual IEnumerable<T> Get(

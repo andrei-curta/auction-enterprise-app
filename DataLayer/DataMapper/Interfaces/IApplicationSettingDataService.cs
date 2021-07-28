@@ -3,7 +3,7 @@
     using DataMapper.Repository;
     using DomainModel.Models;
 
-    interface IApplicationSettingDataService : IRepository<ApplicationSetting>
+    public interface IApplicationSettingDataService : IRepository<ApplicationSetting>
     {
     }
 }
