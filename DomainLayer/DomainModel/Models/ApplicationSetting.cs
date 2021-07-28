@@ -11,7 +11,7 @@
         /// <summary>
         /// Gets or sets the primary key.
         /// </summary>
-        public long Id { get; set; }
+        public long Id { get; private set; }
 
         /// <summary>
         /// Gets or sets the name of the setting.

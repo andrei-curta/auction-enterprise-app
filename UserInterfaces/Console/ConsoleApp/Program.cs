@@ -1,4 +1,5 @@
 ﻿using System;
+using DomainModel.Models;
 using ServiceLayer.Implementations;
 
 namespace ConsoleApp
@@ -9,6 +10,7 @@ namespace ConsoleApp
         {
             var serv = new ApplicationSettingImplementation();
 
+            serv.Add(new ApplicationSetting());
 
             var settings = serv.List();
 

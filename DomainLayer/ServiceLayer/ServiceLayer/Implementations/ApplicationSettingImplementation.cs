@@ -4,6 +4,7 @@
 
 
 using DataMapper.DAO;
+using DomainModel.Validators;
 using ServiceLayer.Implemantations;
 
 namespace ServiceLayer.Implementations
@@ -14,9 +15,10 @@ namespace ServiceLayer.Implementations
     using DomainModel.Models;
     using ServiceLayer.Interfaces;
 
-    public class ApplicationSettingImplementation : BaseService<ApplicationSetting, ApplicationSettingDataService>
+    public class ApplicationSettingImplementation : BaseService<ApplicationSetting, ApplicationSettingDataService, ApplicationSettingValidator>
     {
-        public ApplicationSettingImplementation() : base(new ApplicationSettingDataService())
+        public ApplicationSettingImplementation()
+            : base(new ApplicationSettingDataService(), new ApplicationSettingValidator())
         {
         }
     }
