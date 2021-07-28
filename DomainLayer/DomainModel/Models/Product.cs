@@ -3,6 +3,8 @@
 // </copyright>
 
 
+using DomainModel.ValueObjects;
+
 namespace DomainModel.Models
 {
     using System.ComponentModel.DataAnnotations;
@@ -36,5 +38,10 @@ namespace DomainModel.Models
         /// </summary>
         [Required]
         public virtual User User { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value of the product.
+        /// </summary>
+        public Money Value { get; set; }
     }
 }
