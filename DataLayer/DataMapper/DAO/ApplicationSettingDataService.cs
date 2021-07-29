@@ -8,6 +8,9 @@ namespace DataMapper.DAO
     using DataMapper.Repository;
     using DomainModel.Models;
 
+    /// <summary>
+    /// Provides data access functionality for <see cref="ApplicationSetting"/>.
+    /// </summary>
     public class ApplicationSettingDataService : BaseRepository<ApplicationSetting>, IApplicationSettingDataService
     {
     }
