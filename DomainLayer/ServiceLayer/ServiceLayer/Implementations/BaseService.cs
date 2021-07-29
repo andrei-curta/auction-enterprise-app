@@ -2,56 +2,66 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
-
 namespace ServiceLayer.Implemantations
 {
     using System.Collections.Generic;
-    using FluentValidation;
-    using ServiceLayer.Interfaces;
     using System.Linq;
     using DataMapper.Repository;
+    using FluentValidation;
+    using ServiceLayer.Interfaces;
 
     /// <summary>
-    /// Base service to provide common 
+    /// Base service to provide common functionality.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public abstract class BaseService<T, S, V> : IService<T>
-        where V : AbstractValidator<T>
-        where S : IRepository<T>
+    /// <typeparam name="TE">The Entity.</typeparam>
+    /// <typeparam name="TS">The Service that corresponds to the Entity.</typeparam>
+    /// <typeparam name="TV">The Validator that coresponds to the Entity.</typeparam>
+    public abstract class BaseService<TE, TS, TV> : IService<TE>
+        where TV : AbstractValidator<TE>
+        where TS : IRepository<TE>
     {
-        private readonly S service;
-        private readonly V validator;
+        private readonly TS service;
+        private readonly TV validator;
 
-        protected BaseService(S service, V validator)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseService{TE, TS, TV}"/> class.
+        /// </summary>
+        /// <param name="service">The service that corresponds to the entity managed by this service.</param>
+        /// <param name="validator">The validator that corresponds to the entity managed by this service.</param>
+        protected BaseService(TS service, TV validator)
         {
             this.service = service;
             this.validator = validator;
         }
 
-        public void Add(T entity)
+        /// <inheritdoc/>
+        public void Add(TE entity)
         {
             this.validator.ValidateAndThrow(entity);
 
             this.service.Insert(entity);
         }
 
-        public void Delete(T entity)
+        /// <inheritdoc/>
+        public void Delete(TE entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public void GetById(long id)
+        /// <inheritdoc/>
+        public TE GetById(long id)
         {
             throw new System.NotImplementedException();
         }
 
-        public IList<T> List()
+        /// <inheritdoc/>
+        public IList<TE> List()
         {
             return service.Get().ToList();
         }
 
-        public void Update(T entity)
+        /// <inheritdoc/>
+        public void Update(TE entity)
         {
             throw new System.NotImplementedException();
         }
