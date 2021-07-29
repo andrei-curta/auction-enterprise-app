@@ -20,7 +20,10 @@ namespace DomainModel.Validators
         /// </summary>
         public AuctionValidator()
         {
-            
+            this.RuleFor(x => x.StartDate).NotEmpty().LessThan(x => x.EndDate).WithMessage("Start date cannot be after End date");
+            this.RuleFor(x => x.EndDate).NotEmpty().WithMessage("End date must be specified.");
+            this.RuleFor(x => x.StartDate).Must((x, startDate) => startDate.AddMonths(7) < x.EndDate);
+
         }
     }
 }
