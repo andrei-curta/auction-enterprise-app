@@ -3,12 +3,11 @@
 // </copyright>
 
 
-using DomainModel.ValueObjects;
-
 namespace DomainModel.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using DomainModel.ValueObjects;
 
     /// <summary>
     /// Class that represents a bid an user makes at an auction.
@@ -36,13 +35,12 @@ namespace DomainModel.Models
         /// Gets or sets the date when the bid was added. Default is current datetime.
         /// </summary>
         [Required]
-        public DateTime DateAdded { get; set; } 
+        public DateTime DateAdded { get; set; }
 
         /// <summary>
         /// Gets or sets the bid value and currency for this bid.
         /// </summary>
         [Required]
         public Money BidValue { get; set; }
-
     }
 }

@@ -3,11 +3,10 @@
 // </copyright>
 
 
-using DomainModel.ValueObjects;
-
 namespace DomainModel.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using DomainModel.ValueObjects;
 
     /// <summary>
     /// A product that is to be sold at aan auction.

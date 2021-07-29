@@ -1,10 +1,12 @@
-﻿using DomainModel.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using DomainModel.Models;
 using DomainModel.Validators;
 using FluentValidation.TestHelper;
 using Xunit;
 
 namespace DomainModelTests.Validators
 {
+    [ExcludeFromCodeCoverage]
     public class ApplicationSettingValidatorTests
     {
         [Theory]
