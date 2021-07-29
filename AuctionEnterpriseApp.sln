@@ -13,15 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModel", "DomainModel"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModel", "DomainLayer\DomainModel\DomainModel.csproj", "{18FEFD79-39F3-43FC-8964-4B9B0CE11C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "DomainLayer\ServiceLayer\ServiceLayer\ServiceLayer.csproj", "{21967916-4645-46FE-B5A8-B523D52C86B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "DomainLayer\ServiceLayer\ServiceLayer\ServiceLayer.csproj", "{21967916-4645-46FE-B5A8-B523D52C86B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLayer", "ServiceLayer", "{924F214F-CAFD-4B64-97D8-FB1115FBDB94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "UserInterfaces\Console\ConsoleApp\ConsoleApp.csproj", "{6291673D-1492-4D14-8774-E6B2BFC5D26B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "UserInterfaces\Console\ConsoleApp\ConsoleApp.csproj", "{6291673D-1492-4D14-8774-E6B2BFC5D26B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterfaces", "UserInterfaces", "{937551FC-AF9D-4122-80BF-576FA0FCE318}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{67447D86-69C2-4076-B6B1-4A2D92D61982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModelTests", "DomainLayer\DomainModelTests\DomainModelTests.csproj", "{F825CE7B-E36A-499A-B271-A7BC3804E3E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6291673D-1492-4D14-8774-E6B2BFC5D26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6291673D-1492-4D14-8774-E6B2BFC5D26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6291673D-1492-4D14-8774-E6B2BFC5D26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
