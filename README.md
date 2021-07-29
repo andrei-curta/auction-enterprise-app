@@ -4,9 +4,14 @@
 Sa se creeze o aplicatie in care se permite licitarea pentru produse vandute de catre utilizatori. Produsele sunt caracterizate prin apartenenta la categorii, acestea putand face parte din alte categorii etc. (ex: electronice <- aparatura foto <- aparat foto concret). Se va modela situatia in care o categorie poate sa aiba mai multi parinti – conditie de luare in considerare a temei.
 ##### Se cere implementare care sa trateze urmatoarele:
 
-- [ ] Pentru un produs se specifica data de incepere si data de finalizare a licitatiei; se va valida ca data inceperii < data finalizarii, dar diferente sa fie de maxim 7 luni de zile, sau ca data inceperii nu poate sa fie in trecut (relativ la momentul prezent); impuneti alte validari ale valorilor utilizate.
+- [ ] Pentru un produs se specifica data de incepere si data de finalizare a licitatiei; se va valida ca
+  - [ ]  data inceperii < data finalizarii, dar diferente sa fie de maxim 7 luni de zile, 
+  - [ ]  ca data inceperii nu poate sa fie in trecut (relativ la momentul prezent); impuneti alte validari ale valorilor utilizate.
    
-- [ ] Pentru fiecare produs pentru care se incepe licitatia se specifica un pret de pornire; se vor rejecta preturi de pornire mai mici decat un prag, predefinit ca o constanta a aplicatiei; la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda (validati sau modelati corespunzator). Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n. Impuneti alte validari asupra datelor, demonstrati prin testare automata implementarea.
+- [ ] Pentru fiecare produs pentru care se incepe licitatia se specifica un pret de pornire; 
+  - [ ] se vor rejecta preturi de pornire mai mici decat un prag, predefinit ca o constanta a aplicatiei;
+  - [ ] la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda (validati sau modelati corespunzator). 
+  - [ ] Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n. Impuneti alte validari asupra datelor, demonstrati prin testare automata implementarea.
 - [ ] Finalizarea unui proces de licitatie se face
   - fie prin atingerea datei declarate pentru finalizare
   - fie prin incheierea la dorinta de catre cel care a depus obiectul la licitare (o persoana nu poate sa incheie o licitatie pe care nu a demarat-o);

@@ -1,4 +1,4 @@
-﻿// <copyright file="AuctionValidator.cs" company="Transilvania University of Brașov">
+﻿// <copyright file="ProductValidator.cs" company="Transilvania University of Brașov">
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
