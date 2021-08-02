@@ -9,11 +9,12 @@ namespace ServiceLayer.Implementations
     using DomainModel.Models;
     using DomainModel.Validators;
     using ServiceLayer.Implemantations;
+    using ServiceLayer.Interfaces;
 
-    public class ApplicationSettingImplementation : BaseService<ApplicationSetting, ApplicationSettingDataService,
-        ApplicationSettingValidator>
+    public class ApplicationSettingService : BaseService<ApplicationSetting, ApplicationSettingDataService,
+        ApplicationSettingValidator>, IApplicationSettingService
     {
-        public ApplicationSettingImplementation()
+        public ApplicationSettingService()
             : base(new ApplicationSettingDataService(), new ApplicationSettingValidator())
         {
         }

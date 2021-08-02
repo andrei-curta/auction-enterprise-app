@@ -8,7 +8,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var serv = new ApplicationSettingImplementation();
+            var serv = new ApplicationSettingService();
 
             serv.Add(new ApplicationSetting());
 

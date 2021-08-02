@@ -2,12 +2,15 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+
 namespace ServiceLayer.Interfaces
 {
+    using DomainModel.Models;
+
     /// <summary>
     /// Interface for the Bid service.
     /// </summary>
-    public interface IBidService : IService<IBidService>
+    public interface IBidService : IService<Bid>
     {
     }
 }
