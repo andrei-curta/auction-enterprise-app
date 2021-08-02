@@ -9,6 +9,9 @@ namespace ServiceLayer.Implementations
     using DomainModel.Validators;
     using ServiceLayer.Implemantations;
 
+    /// <summary>
+    /// Provides services regarding the <see cref="Auction"/>.
+    /// </summary>
     public class AuctionService : BaseService<Auction, AuctionDataService, AuctionValidator>
     {
         public AuctionService()

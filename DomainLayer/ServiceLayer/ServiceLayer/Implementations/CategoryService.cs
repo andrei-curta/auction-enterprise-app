@@ -10,8 +10,14 @@ namespace ServiceLayer.Implementations
     using ServiceLayer.Implemantations;
     using ServiceLayer.Interfaces;
 
+    /// <summary>
+    /// Provides services regarding the <see cref="Category"/>.
+    /// </summary>
     public class CategoryService : BaseService<Category, CategoryDataService, CategoryValidator>, ICategoryService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CategoryService"/> class.
+        /// </summary>
         public CategoryService()
             : base(new CategoryDataService(), new CategoryValidator())
         {

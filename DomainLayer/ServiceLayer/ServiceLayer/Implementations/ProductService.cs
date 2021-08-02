@@ -11,8 +11,14 @@ namespace ServiceLayer.Implementations
     using ServiceLayer.Implemantations;
     using ServiceLayer.Interfaces;
 
+    /// <summary>
+    /// Provides services regarding the <see cref="Product"/>.
+    /// </summary>
     public class ProductService : BaseService<Product, ProductDataService, ProductValidator>, IProductService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProductService"/> class.
+        /// </summary>
         public ProductService()
             : base(new ProductDataService(), new ProductValidator())
         {
