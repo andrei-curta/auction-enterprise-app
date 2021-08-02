@@ -29,7 +29,7 @@ Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
 - [ ] Unit testing folosind NUnit, xUnit sau Visual Studio 2019+; minim 210 de metode de testare (conditie de luare in considerare a temei); se vor testa daca valorile proprietatilor au valori adecvate, restrictiile de mai sus si altele de validare a corectitudinii rezultatelor sia fluxului de lucru.
 - [ ] Folosire de blocuri din suita Microsoft Enterprise Library sau echivalente: logging (se poate folosi alternativ log4net), validation application block (sau se poate scrie cod de validare manual, sau se poate folosi o biblioteca de tipul https://github.com/JeremySkinner/FluentValidation), optional: exception handling application block, optional: security application block. Nu se face logging in unit testing (se permite in straturile aplicatiei, insa). Validarea starii obiectelor prin teste este conditie obligatorie pentru luarea in considere a temei. Logging-ul este obligatoriu pentru luarea in considerare a temei.
 - [ ] Dezvoltare pe straturi (layers): Domain layer si Data Layer (conditie de luare in considerare a temei); nu se ia in considerare/nu se cere user interface. Se pot folosi alte pattern-uri de design, daca se considera necesar (DTO, remote facade etc.).
-- [ ] Baza de date relationala.
+- [X] Baza de date relationala.
 - [ ] Domain Layer implementat prin Domain Model; Data Layer implementat prin Data Mapper (conditiile de la acest punct sunt obligatorii).
 - [ ] Code coverage de minim 90% pentru codul de Domain Model si minim 90% pentru Service Layer (conditie de luare in considerare a temei).
 - [ ] Mocking (conditie de luare in considerare a temei).

@@ -35,7 +35,7 @@ namespace ServiceLayer.Implemantations
         }
 
         /// <inheritdoc/>
-        public void Add(TE entity)
+        public virtual void Add(TE entity)
         {
             this.validator.ValidateAndThrow(entity);
 
@@ -43,25 +43,25 @@ namespace ServiceLayer.Implemantations
         }
 
         /// <inheritdoc/>
-        public void Delete(TE entity)
+        public virtual void Delete(TE entity)
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public TE GetById(long id)
+        public virtual TE GetById(long id)
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public IList<TE> List()
+        public virtual IList<TE> List()
         {
             return service.Get().ToList();
         }
 
         /// <inheritdoc/>
-        public void Update(TE entity)
+        public virtual void Update(TE entity)
         {
             throw new System.NotImplementedException();
         }

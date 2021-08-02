@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Implementations\ApplicationSettingImplementation.cs~RF3ef41e32.TMP" />
     <None Remove="stylecop.json" />
   </ItemGroup>
 

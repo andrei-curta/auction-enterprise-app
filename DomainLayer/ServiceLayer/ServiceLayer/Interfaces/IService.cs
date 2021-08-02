@@ -7,7 +7,7 @@ namespace ServiceLayer.Interfaces
     using System.Collections.Generic;
 
     /// <summary>
-    /// Interface to be implemented by all services.
+    /// Interface to be implemented by all services. Provides basic crud functionality.
     /// </summary>
     /// <typeparam name="T">The entity that this service works with.</typeparam>
     public interface IService<T>

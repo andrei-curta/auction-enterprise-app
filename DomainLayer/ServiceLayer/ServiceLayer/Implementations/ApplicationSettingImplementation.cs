@@ -3,19 +3,15 @@
 // </copyright>
 
 
-using DataMapper.DAO;
-using DomainModel.Validators;
-using ServiceLayer.Implemantations;
-
 namespace ServiceLayer.Implementations
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using DataMapper.Interfaces;
+    using DataMapper.DAO;
     using DomainModel.Models;
-    using ServiceLayer.Interfaces;
+    using DomainModel.Validators;
+    using ServiceLayer.Implemantations;
 
-    public class ApplicationSettingImplementation : BaseService<ApplicationSetting, ApplicationSettingDataService, ApplicationSettingValidator>
+    public class ApplicationSettingImplementation : BaseService<ApplicationSetting, ApplicationSettingDataService,
+        ApplicationSettingValidator>
     {
         public ApplicationSettingImplementation()
             : base(new ApplicationSettingDataService(), new ApplicationSettingValidator())
