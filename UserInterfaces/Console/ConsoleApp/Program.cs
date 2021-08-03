@@ -1,9 +1,12 @@
 ﻿using System;
 using DomainModel.Models;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using Microsoft.Extensions.Logging.Debug;
+using Serilog;
 using ServiceLayer.Implementations;
 
 namespace ConsoleApp
@@ -28,19 +31,24 @@ namespace ConsoleApp
 
         private static void ConfigureServices(ServiceCollection services)
         {
-            services.AddLogging(config =>
-                {
-                    config.AddDebug(); // Log to debug (debug window in Visual Studio or any debugger attached)
-                    config.AddConsole(); // Log to console (colored !)
-                })
-                .Configure<LoggerFilterOptions>(options =>
-                {
-                    options.AddFilter<DebugLoggerProvider>(null /* category*/, LogLevel.Information /* min level */);
-                    options.AddFilter<ConsoleLoggerProvider>(null /* category*/, LogLevel.Warning /* min level */);
-                });
+            var configuration = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .CreateLogger();
+
+
+            services.AddLogging(configure => configure.AddSerilog());
 
             // Register service from the library
             services.AddTransient<BidService>();
         }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .UseSerilog(); // <- Add this line
+               
     }
 }
