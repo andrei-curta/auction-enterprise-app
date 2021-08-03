@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using Microsoft.Extensions.Logging;
+
 namespace ServiceLayer.Implemantations
 {
     using System.Collections.Generic;
@@ -22,16 +24,18 @@ namespace ServiceLayer.Implemantations
     {
         private readonly TS service;
         private readonly TV validator;
+        protected readonly ILogger logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseService{TE, TS, TV}"/> class.
         /// </summary>
         /// <param name="service">The service that corresponds to the entity managed by this service.</param>
         /// <param name="validator">The validator that corresponds to the entity managed by this service.</param>
-        protected BaseService(TS service, TV validator)
+        protected BaseService(TS service, TV validator, ILogger logger = null)
         {
             this.service = service;
             this.validator = validator;
+            this.logger = logger;
         }
 
         /// <inheritdoc/>
