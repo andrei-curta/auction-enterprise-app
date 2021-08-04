@@ -7,6 +7,7 @@ namespace DomainModel.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// Class that represents an auction.
@@ -52,6 +53,7 @@ namespace DomainModel.Models
         /// Gets or sets the Id of the user that started the auction.
         /// </summary>
         [Required]
+
         public string UserId { get; set; }
     }
 }

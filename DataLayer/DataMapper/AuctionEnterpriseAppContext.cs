@@ -21,6 +21,11 @@ namespace DataMapper
             modelBuilder.Entity<Bid>().Property(b => b.DateAdded).HasDefaultValueSql("GETDATE()");
             modelBuilder.Entity<Auction>().Property(b => b.DateCreated).HasDefaultValueSql("GETDATE()");
             modelBuilder.Entity<Auction>().Property(b => b.ClosedByOwner).HasDefaultValue(false);
+
+            modelBuilder.Entity<Auction>()
+                .HasOne(typeof(User))
+                .WithMany()
+                .HasForeignKey("UserId");
         }
 
         public virtual DbSet<ApplicationSetting> ApplicationSettings { get; set; }
