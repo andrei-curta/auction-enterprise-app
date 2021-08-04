@@ -4,14 +4,16 @@ using DataMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
-    partial class AuctionEnterpriseAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210804203427_UpdatedRelations")]
+    partial class UpdatedRelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,19 +62,23 @@ namespace DataMapper.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("ProductId")
+                    b.Property<long>("ProductId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UserId1")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Auctions");
                 });
@@ -143,13 +149,16 @@ namespace DataMapper.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<string>("UserId")
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UserId1")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Products");
                 });
@@ -210,7 +219,13 @@ namespace DataMapper.Migrations
                 {
                     b.HasOne("DomainModel.Models.Product", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DomainModel.Models.User", null)
+                        .WithMany("Auctions")
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Product");
                 });
@@ -257,7 +272,7 @@ namespace DataMapper.Migrations
                 {
                     b.HasOne("DomainModel.Models.User", "User")
                         .WithMany("Products")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("UserId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -296,6 +311,8 @@ namespace DataMapper.Migrations
 
             modelBuilder.Entity("DomainModel.Models.User", b =>
                 {
+                    b.Navigation("Auctions");
+
                     b.Navigation("Products");
                 });
 #pragma warning restore 612, 618

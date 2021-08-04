@@ -21,10 +21,10 @@ namespace ConsoleApp
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
             // Get an instance of the service
-            var myService = serviceProvider.GetService<BidService>();
+            var myService = serviceProvider.GetService<AuctionService>();
 
             // Call the service (logs are made here)
-            myService.GetById(2);
+            myService.List();
 
 
         }
@@ -44,6 +44,7 @@ namespace ConsoleApp
 
             // Register service from the library
             services.AddTransient<BidService>();
+            services.AddTransient<AuctionService>();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

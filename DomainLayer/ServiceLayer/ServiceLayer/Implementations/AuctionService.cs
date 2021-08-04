@@ -18,5 +18,12 @@ namespace ServiceLayer.Implementations
             : base(new AuctionDataService(), new AuctionValidator())
         {
         }
+
+        public override void Add(Auction entity)
+        {
+
+
+            base.Add(entity);
+        }
     }
 }

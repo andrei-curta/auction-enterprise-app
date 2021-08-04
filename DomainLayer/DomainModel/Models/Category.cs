@@ -28,8 +28,19 @@ namespace DomainModel.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the parent categories for this category.
+        /// Gets or sets the parent id.
         /// </summary>
-        public virtual List<Category> ParentCategories { get; set; }
+        public int? ParentId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the parent.
+        /// </summary>
+#nullable enable
+        public Category? Parent { get; set; }
+#nullable disable
+        /// <summary>
+        /// Gets or sets the subcategories.
+        /// </summary>
+        public ICollection<Category> SubCategories { get; set; }
     }
 }

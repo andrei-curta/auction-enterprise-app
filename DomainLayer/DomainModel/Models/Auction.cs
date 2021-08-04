@@ -47,5 +47,11 @@ namespace DomainModel.Models
         /// </summary>
         [Required]
         public bool ClosedByOwner { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets the Id of the user that started the auction.
+        /// </summary>
+        [Required]
+        public string UserId { get; set; }
     }
 }
