@@ -23,5 +23,10 @@ namespace ServiceLayer.Implementations
             : base(new ApplicationSettingDataService(), new ApplicationSettingValidator())
         {
         }
+
+        public ApplicationSetting GetByName(string name)
+        {
+            return this.GetByName(name);
+        }
     }
 }

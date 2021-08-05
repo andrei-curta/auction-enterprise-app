@@ -16,8 +16,8 @@ namespace DataMapper.Interfaces
         /// <summary>
         /// Returns a list of auctions that the user has.
         /// </summary>
-        /// <param name="user">the user.</param>
+        /// <param name="userId">the user.</param>
         /// <returns>A list of auctions.</returns>
-        public List<Auction> GetAuctionsByUser(User user);
+        public List<Auction> GetAuctionsByUserId(string userId);
     }
 }

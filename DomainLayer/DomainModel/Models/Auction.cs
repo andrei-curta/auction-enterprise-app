@@ -53,7 +53,12 @@ namespace DomainModel.Models
         /// Gets or sets the Id of the user that started the auction.
         /// </summary>
         [Required]
-
         public string UserId { get; set; }
+
+        /// <summary>
+        /// Gets a value indicating whether if the auction is either closed by the owner or the end date is passed.
+        /// </summary>
+        [NotMapped]
+        public bool Closed => this.ClosedByOwner || this.EndDate > DateTime.Now;
     }
 }

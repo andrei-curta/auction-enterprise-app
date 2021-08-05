@@ -22,7 +22,7 @@ namespace ServiceLayer.Implemantations
         where TV : AbstractValidator<TE>
         where TS : IRepository<TE>
     {
-        private readonly TS service;
+        public readonly TS service;
         private readonly TV validator;
         protected readonly ILogger logger;
 

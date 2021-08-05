@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using System.Linq;
+
 namespace DataMapper.DAO
 {
     using DataMapper.Interfaces;
@@ -13,5 +15,14 @@ namespace DataMapper.DAO
     /// </summary>
     public class ApplicationSettingDataService : BaseRepository<ApplicationSetting>, IApplicationSettingDataService
     {
+
+        /// <inheritdoc/>
+        public ApplicationSetting GetByName(string name)
+        {
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
+            {
+                return ctx.ApplicationSettings.First(x => x.Name == name);
+            }
+        }
     }
 }

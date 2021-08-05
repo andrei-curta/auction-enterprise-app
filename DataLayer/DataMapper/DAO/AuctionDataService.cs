@@ -18,11 +18,11 @@ namespace DataMapper.DAO
     public class AuctionDataService : BaseRepository<Auction>, IAuctionDataService
     {
         /// <inheritdoc/>
-        public List<Auction> GetAuctionsByUser(User user)
+        public List<Auction> GetAuctionsByUserId(string userId)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
-                return ctx.Auctions.Where(x => x.UserId == user.Id).OrderByDescending(x => x.EndDate).ToList();
+                return ctx.Auctions.Where(x => x.UserId == userId).OrderByDescending(x => x.EndDate).ToList();
             }
         }
     }

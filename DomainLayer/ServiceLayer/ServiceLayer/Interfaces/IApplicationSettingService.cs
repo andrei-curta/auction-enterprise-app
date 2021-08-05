@@ -9,5 +9,7 @@ namespace ServiceLayer.Interfaces
 
     public interface IApplicationSettingService : IService<ApplicationSetting>
     {
+        public ApplicationSetting GetByName(string name);
+
     }
 }
