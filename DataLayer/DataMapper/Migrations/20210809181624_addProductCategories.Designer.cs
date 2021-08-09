@@ -4,35 +4,22 @@ using DataMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
-    partial class AuctionEnterpriseAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210809181624_addProductCategories")]
+    partial class addProductCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.Property<long>("CategoriesId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("ProductsId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("CategoriesId", "ProductsId");
-
-                    b.HasIndex("ProductsId");
-
-                    b.ToTable("CategoryProduct");
-                });
 
             modelBuilder.Entity("DomainModel.Models.ApplicationSetting", b =>
                 {
@@ -136,9 +123,14 @@ namespace DataMapper.Migrations
                     b.Property<long?>("ParentId1")
                         .HasColumnType("bigint");
 
+                    b.Property<long?>("ProductId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ParentId1");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Categories");
                 });
@@ -223,21 +215,6 @@ namespace DataMapper.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.HasOne("DomainModel.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DomainModel.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("DomainModel.Models.Auction", b =>
                 {
                     b.HasOne("DomainModel.Models.Product", "Product")
@@ -288,6 +265,10 @@ namespace DataMapper.Migrations
                         .WithMany("SubCategories")
                         .HasForeignKey("ParentId1");
 
+                    b.HasOne("DomainModel.Models.Product", null)
+                        .WithMany("Categories")
+                        .HasForeignKey("ProductId");
+
                     b.Navigation("Parent");
                 });
 
@@ -330,6 +311,11 @@ namespace DataMapper.Migrations
             modelBuilder.Entity("DomainModel.Models.Category", b =>
                 {
                     b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("DomainModel.Models.Product", b =>
+                {
+                    b.Navigation("Categories");
                 });
 
             modelBuilder.Entity("DomainModel.Models.User", b =>

@@ -2,6 +2,9 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using DataMapper.Interfaces;
+using FluentValidation;
+
 namespace ServiceLayer.Implementations
 {
     using System;
@@ -18,6 +21,7 @@ namespace ServiceLayer.Implementations
     public class AuctionService : BaseService<Auction, AuctionDataService, AuctionValidator>
     {
         private readonly IApplicationSettingService applicationSettingService = new ApplicationSettingService();
+        private readonly IProductDataService productDataService = new ProductDataService();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
@@ -30,14 +34,21 @@ namespace ServiceLayer.Implementations
         /// <inheritdoc/>
         public override void Add(Auction entity)
         {
+            this.validator.ValidateAndThrow(entity);
 
             if (this.HasReachedMaxNumberOfOpenedAuctions(entity.UserId))
             {
                 throw new Exception("You have reached the max number of open auctions;");
             }
 
+            var auctionedProduct = productDataService.GetByID(entity.ProductId);
+            if (auctionedProduct == null)
+            {
+                throw new NullReferenceException("The Id for the product is invalid");
+            }
 
-            base.Add(entity);
+            //todo: verificat daca produsul apartine userului curent
+            this.service.Insert(entity);
         }
 
         /// <summary>

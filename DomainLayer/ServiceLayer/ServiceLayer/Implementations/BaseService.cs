@@ -22,8 +22,8 @@ namespace ServiceLayer.Implemantations
         where TV : AbstractValidator<TE>
         where TS : IRepository<TE>
     {
-        public readonly TS service;
-        private readonly TV validator;
+        protected readonly TS service;
+        protected readonly TV validator;
         protected readonly ILogger logger;
 
         /// <summary>
@@ -49,13 +49,13 @@ namespace ServiceLayer.Implemantations
         /// <inheritdoc/>
         public virtual void Delete(TE entity)
         {
-            throw new System.NotImplementedException();
+            this.service.Delete(entity);
         }
 
         /// <inheritdoc/>
         public virtual TE GetById(long id)
         {
-            throw new System.NotImplementedException();
+            return this.service.GetByID(id);
         }
 
         /// <inheritdoc/>

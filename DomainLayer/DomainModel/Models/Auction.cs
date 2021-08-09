@@ -44,6 +44,12 @@ namespace DomainModel.Models
         public Product Product { get; set; }
 
         /// <summary>
+        /// Gets or sets the id of the product that is auctioned in this auction.
+        /// </summary>
+        [Required]
+        public long ProductId { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether this auction was closed by the owner.
         /// </summary>
         [Required]

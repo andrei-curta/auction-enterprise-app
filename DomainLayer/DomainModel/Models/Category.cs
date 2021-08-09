@@ -42,5 +42,10 @@ namespace DomainModel.Models
         /// Gets or sets the subcategories.
         /// </summary>
         public ICollection<Category> SubCategories { get; set; }
+
+        /// <summary>
+        /// The list of products in the category.
+        /// </summary>
+        public virtual List<Product> Products { get; set; }
     }
 }
