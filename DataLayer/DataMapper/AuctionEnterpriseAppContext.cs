@@ -1,12 +1,13 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿// <copyright file="AuctionEnterpriseAppContext.cs" company="Transilvania University of Brașov">
+// Copyright (c) Curta Andrei. All rights reserved.
+// </copyright>
 
 namespace DataMapper
 {
-    using Microsoft.EntityFrameworkCore;
     using DomainModel.Models;
+    using Microsoft.EntityFrameworkCore;
 
-    class AuctionEnterpriseAppContext : DbContext
+    public class AuctionEnterpriseAppContext : DbContext
     {
         public AuctionEnterpriseAppContext(DbContextOptions options) : base(options)
         {

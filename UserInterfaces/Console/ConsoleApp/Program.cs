@@ -24,9 +24,12 @@ namespace ConsoleApp
             var myService = serviceProvider.GetService<AuctionService>();
 
             // Call the service (logs are made here)
-            myService.List();
+            // myService.List();
 
+            var appServ = serviceProvider.GetService<ApplicationSettingService>();
 
+            var x = appServ.GetByName("test1");
+            Console.WriteLine(x.Value);
         }
 
         private static void ConfigureServices(ServiceCollection services)
@@ -43,8 +46,12 @@ namespace ConsoleApp
             services.AddLogging(configure => configure.AddSerilog());
 
             // Register service from the library
-            services.AddTransient<BidService>();
+            services.AddTransient<ApplicationSettingService>();
             services.AddTransient<AuctionService>();
+            services.AddTransient<BidService>();
+            services.AddTransient<CategoryService>();
+            services.AddTransient<ProductService>();
+            services.AddTransient<UserService>();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

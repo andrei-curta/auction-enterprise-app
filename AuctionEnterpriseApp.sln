@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayerTests", "DomainLayer\ServiceLayer\ServiceLayerTests\ServiceLayerTests.csproj", "{158964AD-2F1A-4ECC-90D1-BDB35F7BEF71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F825CE7B-E36A-499A-B271-A7BC3804E3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158964AD-2F1A-4ECC-90D1-BDB35F7BEF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158964AD-2F1A-4ECC-90D1-BDB35F7BEF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158964AD-2F1A-4ECC-90D1-BDB35F7BEF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158964AD-2F1A-4ECC-90D1-BDB35F7BEF71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

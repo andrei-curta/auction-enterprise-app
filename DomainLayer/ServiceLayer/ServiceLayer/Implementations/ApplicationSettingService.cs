@@ -24,9 +24,34 @@ namespace ServiceLayer.Implementations
         {
         }
 
+        /// <inheritdoc/>
         public ApplicationSetting GetByName(string name)
         {
-            return this.GetByName(name);
+            return this.service.GetByName(name);
+        }
+
+        /// <inheritdoc/>
+        public string GetValueAsString(string name)
+        {
+            return this.service.GetByName(name).Value;
+        }
+
+        /// <inheritdoc/>
+        public int GetValueAsInt(string name)
+        {
+            return int.Parse(this.service.GetByName(name).Value);
+        }
+
+        /// <inheritdoc/>
+        public bool GetValueAsBool(string name)
+        {
+            return bool.Parse(this.service.GetByName(name).Value);
+        }
+
+        /// <inheritdoc/>
+        public decimal GetValueAsDecimal(string name)
+        {
+            return decimal.Parse(this.service.GetByName(name).Value);
         }
     }
 }

@@ -2,8 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
-
 namespace ServiceLayer.Implementations
 {
     using System;
@@ -32,17 +30,36 @@ namespace ServiceLayer.Implementations
         /// <inheritdoc/>
         public override void Add(Auction entity)
         {
-            var userAuctions = this.service.GetAuctionsByUserId(entity.UserId);
-            int unfinishedAuctions = userAuctions.Count(x => !x.Closed);
 
-            int maxUnfinishedAuctions = int.Parse(this.applicationSettingService.GetByName("MaxUnfinishedAuctions").Value);
-
-            if (unfinishedAuctions > maxUnfinishedAuctions)
+            if (this.HasReachedMaxNumberOfOpenedAuctions(entity.UserId))
             {
                 throw new Exception("You have reached the max number of open auctions;");
             }
 
+
             base.Add(entity);
+        }
+
+        /// <summary>
+        /// Checks if the user has surpassed the max number of open auctions.
+        /// </summary>
+        /// <param name="userId">The ID of the user.</param>
+        /// <returns>A boolean indicating whether the max number of open auctions was reached.</returns>
+        private bool HasReachedMaxNumberOfOpenedAuctions(string userId)
+        {
+            var userAuctions = this.service.GetAuctionsByUserId(userId);
+            int unfinishedAuctions = userAuctions.Count(x => !x.Closed);
+
+            int maxUnfinishedAuctions = this.applicationSettingService.GetValueAsInt("MaxUnfinishedAuctions");
+
+            return unfinishedAuctions > maxUnfinishedAuctions;
+        }
+
+        private bool StartPriceIsAboveThreshold(decimal value)
+        {
+            decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
+
+            return value > thresholdValue;
         }
     }
 }
