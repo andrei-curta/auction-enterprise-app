@@ -30,13 +30,7 @@ namespace ServiceLayer.Implementations.Tests
 
             Assert.Equal(data, result);
         }
-
-        [Fact()]
-        public void ApplicationSettingServiceTest()
-        {
-            Assert.True(false, "This test needs an implementation");
-        }
-
+        
 
         [Theory]
         [InlineData("1", "1")]

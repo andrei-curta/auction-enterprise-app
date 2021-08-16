@@ -45,7 +45,7 @@ namespace ConsoleApp
                 Name = "chair2",
 
                 UserId = "1",
-                Value = new Money(10, "RON")
+                // Value = new Money(10, "RON")
             };
 
             prodServ.Add(prod);

@@ -46,12 +46,6 @@ namespace DomainModel.Models
         [Required]
         public virtual string UserId { get; set; }
 
-
-        /// <summary>
-        /// Gets or sets the value of the product.
-        /// </summary>
-        public Money Value { get; set; }
-
         /// <summary>
         /// Gets or sets categories that the product is part of.
         /// </summary>

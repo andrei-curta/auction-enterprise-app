@@ -2,8 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using DataMapper.Interfaces;
-
 namespace ServiceLayer.Implementations
 {
     using DataMapper.DAO;

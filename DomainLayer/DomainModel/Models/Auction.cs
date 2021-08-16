@@ -3,6 +3,8 @@
 // </copyright>
 
 
+using DomainModel.ValueObjects;
+
 namespace DomainModel.Models
 {
     using System;
@@ -41,7 +43,7 @@ namespace DomainModel.Models
         /// Gets or sets the product that is auctioned in this auction.
         /// </summary>
         [Required]
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
         /// <summary>
         /// Gets or sets the id of the product that is auctioned in this auction.
@@ -60,6 +62,11 @@ namespace DomainModel.Models
         /// </summary>
         [Required]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the start price of the auction.
+        /// </summary>
+        public Money StartPrice { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether if the auction is either closed by the owner or the end date is passed.

@@ -2,16 +2,15 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using DataMapper.Interfaces;
-using FluentValidation;
-
 namespace ServiceLayer.Implementations
 {
     using System;
     using System.Linq;
     using DataMapper.DAO;
+    using DataMapper.Interfaces;
     using DomainModel.Models;
     using DomainModel.Validators;
+    using FluentValidation;
     using ServiceLayer.Implemantations;
     using ServiceLayer.Interfaces;
 
@@ -20,15 +19,18 @@ namespace ServiceLayer.Implementations
     /// </summary>
     public class AuctionService : BaseService<Auction, AuctionDataService, AuctionValidator>
     {
-        private readonly IApplicationSettingService applicationSettingService = new ApplicationSettingService(new ApplicationSettingDataService());
-        private readonly IProductDataService productDataService = new ProductDataService();
+        private readonly IApplicationSettingService applicationSettingService;
+
+        private readonly IProductDataService productDataService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
-        public AuctionService()
-            : base(new AuctionDataService(), new AuctionValidator())
+        public AuctionService(AuctionDataService auctionDataService, IProductDataService productDataService, ApplicationSettingDataService applicationSettingDataService)
+            : base(auctionDataService, new AuctionValidator())
         {
+            this.productDataService = productDataService;
+            this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService); 
         }
 
         /// <inheritdoc/>
@@ -56,7 +58,7 @@ namespace ServiceLayer.Implementations
         /// </summary>
         /// <param name="userId">The ID of the user.</param>
         /// <returns>A boolean indicating whether the max number of open auctions was reached.</returns>
-        private bool HasReachedMaxNumberOfOpenedAuctions(string userId)
+        public bool HasReachedMaxNumberOfOpenedAuctions(string userId)
         {
             var userAuctions = this.service.GetAuctionsByUserId(userId);
             int unfinishedAuctions = userAuctions.Count(x => !x.Closed);
@@ -66,7 +68,12 @@ namespace ServiceLayer.Implementations
             return unfinishedAuctions > maxUnfinishedAuctions;
         }
 
-        private bool StartPriceIsAboveThreshold(decimal value)
+        /// <summary>
+        /// Checks if the price is valid.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <returns>A boolean indicating whether the value for the auction is above the requiired value..</returns>
+        public bool StartPriceIsAboveThreshold(decimal value)
         {
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
 
