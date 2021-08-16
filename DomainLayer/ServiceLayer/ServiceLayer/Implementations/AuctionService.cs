@@ -49,6 +49,12 @@ namespace ServiceLayer.Implementations
                 throw new NullReferenceException("The Id for the product is invalid");
             }
 
+            decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
+            if (entity.StartPrice.Amount < thresholdValue)
+            {
+                throw new Exception($"The price set is below the threshold of {thresholdValue}");
+            }
+
             //todo: verificat daca produsul apartine userului curent
             this.service.Insert(entity);
         }
@@ -66,18 +72,6 @@ namespace ServiceLayer.Implementations
             int maxUnfinishedAuctions = this.applicationSettingService.GetValueAsInt("MaxUnfinishedAuctions");
 
             return unfinishedAuctions > maxUnfinishedAuctions;
-        }
-
-        /// <summary>
-        /// Checks if the price is valid.
-        /// </summary>
-        /// <param name="value">The value to check.</param>
-        /// <returns>A boolean indicating whether the value for the auction is above the requiired value..</returns>
-        public bool StartPriceIsAboveThreshold(decimal value)
-        {
-            decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
-
-            return value > thresholdValue;
         }
     }
 }

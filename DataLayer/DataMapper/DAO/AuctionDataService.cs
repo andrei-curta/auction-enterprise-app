@@ -18,7 +18,7 @@ namespace DataMapper.DAO
     public class AuctionDataService : BaseRepository<Auction>, IAuctionDataService
     {
         /// <inheritdoc/>
-        public List<Auction> GetAuctionsByUserId(string userId)
+        public virtual List<Auction> GetAuctionsByUserId(string userId)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {

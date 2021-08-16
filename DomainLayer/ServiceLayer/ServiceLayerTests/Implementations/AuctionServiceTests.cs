@@ -17,40 +17,39 @@ namespace ServiceLayer.Implementations.Tests
             Assert.True(false, "This test needs an implementation");
         }
 
-        // [Fact()]
-        // public void HasReachedMaxNumberOfOpenedAuctionsTest()
-        // {
-        //     Mock<AuctionDataService> auctionDataServiceMock =
-        //         new Mock<AuctionDataService>();
-        //
-        //     auctionDataServiceMock.Setup(x => x.GetByName(name)).Returns(data);
-        //
-        //     var service = new AuctionService(auctionDataServiceMock.Object);
-        //
-        //     var result = service.GetValueAsInt(name);
-        //
-        //     Assert.Equal(result, expectedValue);
-        // }
-        //
-        // [Fact()]
-        // public void StartPriceIsAboveThresholdTest()
-        // {
-        //     Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
-        //         new Mock<ApplicationSettingDataService>();
-        //
-        //     string name = "aasda";
-        //
-        //     var data = new ApplicationSetting()
-        //     {
-        //         Name = name,
-        //         Value = appSettingValue,
-        //         Id = 1
-        //     };
-        //
-        //     applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(data);
-        //
-        //     var auctionService = new AuctionService()
-        //
-        // }
+        [Fact()]
+        public void HasReachedMaxNumberOfOpenedAuctionsTest()
+        {
+            Mock<AuctionDataService> auctionDataServiceMock =
+                new Mock<AuctionDataService>();
+            Mock<ProductDataService> productDataService = new Mock<ProductDataService>();
+
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            string name = "MaxUnfinishedAuctions";
+            string userId = "1";
+            var appSettingData = new ApplicationSetting()
+            {
+                Name = "BBB",
+                Value = "123",
+                Id = 1
+            };
+
+            var userAuctionsData = new List<Auction>()
+            {
+                new Auction(),
+                new Auction()
+            };
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
+            auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
+            
+            var service = new AuctionService(auctionDataServiceMock.Object, productDataService.Object, applicationSettingDataServiceMock.Object);
+            var result = service.HasReachedMaxNumberOfOpenedAuctions(userId);
+        
+            Assert.False(result);
+        }
+
     }
 }

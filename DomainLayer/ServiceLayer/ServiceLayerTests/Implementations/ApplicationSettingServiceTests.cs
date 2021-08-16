@@ -54,7 +54,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var result = service.GetValueAsString(name);
 
-            Assert.Equal(result, expectedValue);
+            Assert.Equal(expectedValue, result);
         }
 
         [Theory]
@@ -82,7 +82,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var result = service.GetValueAsInt(name);
 
-            Assert.Equal(result, expectedValue);
+            Assert.Equal( expectedValue, result);
         }
 
         [Theory]
@@ -111,7 +111,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var result = service.GetValueAsBool(name);
 
-            Assert.Equal(result, expectedValue);
+            Assert.Equal(expectedValue, result);
         }
 
         [Theory]
@@ -136,7 +136,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var result = service.GetValueAsDecimal(name);
 
-            Assert.Equal(result, expectedValue);
+            Assert.Equal(expectedValue,result);
         }
     }
 }
