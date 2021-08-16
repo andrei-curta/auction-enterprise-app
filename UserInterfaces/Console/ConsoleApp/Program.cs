@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using DomainModel.Models;
 using DomainModel.ValueObjects;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,7 @@ using ServiceLayer.Implementations;
 
 namespace ConsoleApp
 {
+    [ExcludeFromCodeCoverage]
     class Program
     {
         static void Main(string[] args)
@@ -36,17 +38,17 @@ namespace ConsoleApp
             // catServ.Add(new Category(){Name = "Furniture"});
 
             var prodServ = serviceProvider.GetService<ProductService>();
-            var x = prodServ.GetById(1);
-            Console.WriteLine(x.Name);
 
-            // prodServ.Add(new Product()
-            // {
-            //     Description = "a chair",
-            //     Name = "chair",
-            //
-            //     UserId = "1",
-            //     Value = new Money(10, "RON")
-            // });
+            var prod = new Product()
+            {
+                Description = "another chair",
+                Name = "chair2",
+
+                UserId = "1",
+                Value = new Money(10, "RON")
+            };
+
+            prodServ.Add(prod);
 
             var auctServ = serviceProvider.GetService<AuctionService>();
             // auctServ.Add(new Auction()

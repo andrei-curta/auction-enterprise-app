@@ -20,7 +20,7 @@ namespace ServiceLayer.Implementations
     /// </summary>
     public class AuctionService : BaseService<Auction, AuctionDataService, AuctionValidator>
     {
-        private readonly IApplicationSettingService applicationSettingService = new ApplicationSettingService();
+        private readonly IApplicationSettingService applicationSettingService = new ApplicationSettingService(new ApplicationSettingDataService());
         private readonly IProductDataService productDataService = new ProductDataService();
 
         /// <summary>

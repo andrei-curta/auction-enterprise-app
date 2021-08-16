@@ -52,6 +52,12 @@ namespace ServiceLayer.Implemantations
             this.service.Delete(entity);
         }
 
+        // /// <inheritdoc/>
+        // public virtual void Delete(object id)
+        // {
+        //     this.service.Delete(id);
+        // }
+
         /// <inheritdoc/>
         public virtual TE GetById(long id)
         {

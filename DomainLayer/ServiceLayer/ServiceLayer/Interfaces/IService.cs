@@ -24,6 +24,12 @@ namespace ServiceLayer.Interfaces
         /// <param name="entity">Entity to be deleted.</param>
         void Delete(T entity);
 
+        // /// <summary>
+        // /// Delets an entity by its id.
+        // /// </summary>
+        // /// <param name="id">ID of the entity to be deleted. </param>
+        // void Delete(object id);
+
         /// <summary>
         /// Retrieves a list with all entities.
         /// </summary>

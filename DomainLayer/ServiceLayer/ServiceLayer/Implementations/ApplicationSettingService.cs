@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using DataMapper.Interfaces;
+
 namespace ServiceLayer.Implementations
 {
     using DataMapper.DAO;
@@ -19,8 +21,8 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationSettingService"/> class.
         /// </summary>
-        public ApplicationSettingService()
-            : base(new ApplicationSettingDataService(), new ApplicationSettingValidator())
+        public ApplicationSettingService(ApplicationSettingDataService applicationSettingDataService)
+            : base(applicationSettingDataService, new ApplicationSettingValidator())
         {
         }
 

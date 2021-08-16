@@ -17,7 +17,7 @@ namespace DataMapper.DAO
     {
 
         /// <inheritdoc/>
-        public ApplicationSetting GetByName(string name)
+        public virtual ApplicationSetting GetByName(string name)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {

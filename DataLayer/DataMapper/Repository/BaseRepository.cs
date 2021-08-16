@@ -2,7 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
 namespace DataMapper.Repository
 {
     using System;
@@ -18,6 +17,17 @@ namespace DataMapper.Repository
     public abstract class BaseRepository<T> : IRepository<T>
         where T : class
     {
+        // private readonly AuctionEnterpriseAppContext _context;
+        //
+        // /// <summary>
+        // /// Initializes a new instance of the <see cref="BaseRepository{T}"/> class.
+        // /// </summary>
+        // /// <param name="context">The EF context.</param>
+        // protected BaseRepository(AuctionEnterpriseAppContext context)
+        // {
+        //     this._context = context;
+        // }
+
         public virtual IEnumerable<T> Get(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
