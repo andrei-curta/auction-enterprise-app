@@ -2,12 +2,10 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
-using System.Linq;
-
 namespace DataMapper.DAO
 {
     using System.Collections.Generic;
+    using System.Linq;
     using DataMapper.Interfaces;
     using DataMapper.Repository;
     using DomainModel.Models;

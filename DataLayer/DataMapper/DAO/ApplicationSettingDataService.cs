@@ -2,10 +2,9 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using System.Linq;
-
 namespace DataMapper.DAO
 {
+    using System.Linq;
     using DataMapper.Interfaces;
     using DataMapper.Repository;
     using DomainModel.Models;
@@ -15,7 +14,6 @@ namespace DataMapper.DAO
     /// </summary>
     public class ApplicationSettingDataService : BaseRepository<ApplicationSetting>, IApplicationSettingDataService
     {
-
         /// <inheritdoc/>
         public virtual ApplicationSetting GetByName(string name)
         {
