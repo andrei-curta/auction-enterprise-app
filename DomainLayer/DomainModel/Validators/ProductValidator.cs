@@ -19,7 +19,6 @@ namespace DomainModel.Validators
         /// </summary>
         public ProductValidator()
         {
-
         }
     }
 }

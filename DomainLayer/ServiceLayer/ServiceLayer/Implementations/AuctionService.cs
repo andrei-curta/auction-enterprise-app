@@ -11,7 +11,7 @@ namespace ServiceLayer.Implementations
     using DomainModel.Models;
     using DomainModel.Validators;
     using FluentValidation;
-    using ServiceLayer.Implemantations;
+    using ServiceLayer.Implementations;
     using ServiceLayer.Interfaces;
 
     /// <summary>
@@ -26,7 +26,9 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
-        public AuctionService(AuctionDataService auctionDataService, IProductDataService productDataService,
+        public AuctionService(
+            AuctionDataService auctionDataService,
+            IProductDataService productDataService,
             ApplicationSettingDataService applicationSettingDataService)
             : base(auctionDataService, new AuctionValidator())
         {
@@ -55,14 +57,13 @@ namespace ServiceLayer.Implementations
             // {
             //     throw new NullReferenceException("The Id for the product is invalid");
             // }
-
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
             if (entity.StartPrice.Amount < thresholdValue)
             {
                 throw new Exception($"The price set is below the threshold of {thresholdValue}");
             }
 
-            //todo: verificat daca produsul apartine userului curent
+            // todo: verificat daca produsul apartine userului curent
             this.service.Insert(entity);
         }
 
@@ -90,8 +91,7 @@ namespace ServiceLayer.Implementations
         /// <inheritdoc/>
         public void CancelAuction(Auction auction)
         {
-            //todo: verificat daca userul care incearca inchiderea licitatiei este cel care a si deschis-o
-
+            // todo: verificat daca userul care incearca inchiderea licitatiei este cel care a si deschis-o
             if (auction.Closed)
             {
                 throw new Exception("The auction is already closed");

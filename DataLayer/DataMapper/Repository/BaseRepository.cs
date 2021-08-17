@@ -28,6 +28,7 @@ namespace DataMapper.Repository
         //     this._context = context;
         // }
 
+        /// <inheritdoc/>
         public virtual IEnumerable<T> Get(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
@@ -39,8 +40,9 @@ namespace DataMapper.Repository
 
                 IQueryable<T> query = dbSet;
 
-                foreach (var includeProperty in includeProperties.Split
-                   (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var includeProperty in includeProperties.Split(
+                    new char[] { ',' },
+                    StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);
                 }
@@ -61,6 +63,7 @@ namespace DataMapper.Repository
             }
         }
 
+        /// <inheritdoc/>
         public virtual void Insert(T entity)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
@@ -72,6 +75,7 @@ namespace DataMapper.Repository
             }
         }
 
+        /// <inheritdoc/>
         public virtual void Update(T item)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
@@ -84,11 +88,16 @@ namespace DataMapper.Repository
             }
         }
 
+        /// <summary>
+        /// Deletes an record from the database based on its id.
+        /// </summary>
+        /// <param name="id">The id of teh record.</param>
         public virtual void Delete(object id)
         {
-            Delete(GetByID(id));
+            this.Delete(this.GetByID(id));
         }
 
+        /// <inheritdoc/>
         public virtual void Delete(T entityToDelete)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
@@ -106,6 +115,7 @@ namespace DataMapper.Repository
             }
         }
 
+        /// <inheritdoc/>
         public virtual T GetByID(object id)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))

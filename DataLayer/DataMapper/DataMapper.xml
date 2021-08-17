@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataMapper</name>
+    </assembly>
+    <members>
+        <member name="T:DataMapper.DAO.ApplicationSettingDataService">
+            <summary>
+            Provides data access functionality for <see cref="T:DomainModel.Models.ApplicationSetting"/>.
+            </summary>
+        </member>
+        <member name="M:DataMapper.DAO.ApplicationSettingDataService.GetByName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataMapper.DAO.AuctionDataService">
+            <summary>
+            Provides data access functionality for <see cref="T:DomainModel.Models.Auction"/>.
+            </summary>
+        </member>
+        <member name="M:DataMapper.DAO.AuctionDataService.GetAuctionsByUserId(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataMapper.DAO.BidDataService">
+            <summary>
+            Provides data access functionality for <see cref="T:DomainModel.Models.Category"/>.
+            </summary>
+        </member>
+        <member name="T:DataMapper.DAO.CategoryDataService">
+            <summary>
+            Provides data access functionality for <see cref="T:DomainModel.Models.Category"/>.
+            </summary>
+        </member>
+        <member name="T:DataMapper.DAO.ProductDataService">
+            <summary>
+            Provides data access functionality for <see cref="T:DomainModel.Models.Product"/>.
+            </summary>
+        </member>
+        <member name="T:DataMapper.DAO.UserDataService">
+            <summary>
+            Provides data access functionality for <see cref="T:DomainModel.Models.User"/>.
+            </summary>
+        </member>
+        <member name="T:DataMapper.Interfaces.IApplicationSettingDataService">
+            <summary>
+            Interface for the ApplicationSettingsDataService.
+            </summary>
+        </member>
+        <member name="M:DataMapper.Interfaces.IApplicationSettingDataService.GetByName(System.String)">
+            <summary>
+            Gets an applicationSetting by its name.
+            </summary>
+            <param name="name">The name of the setting.</param>
+            <returns>The corresponding application setting.</returns>
+        </member>
+        <member name="T:DataMapper.Interfaces.IAuctionDataService">
+            <summary>
+            Interface for the AuctionDataService.
+            </summary>
+        </member>
+        <member name="M:DataMapper.Interfaces.IAuctionDataService.GetAuctionsByUserId(System.String)">
+            <summary>
+            Returns a list of auctions that the user has.
+            </summary>
+            <param name="userId">the user.</param>
+            <returns>A list of auctions.</returns>
+        </member>
+        <member name="T:DataMapper.Interfaces.IBidDataService">
+            <summary>
+            Interface for the BidDataService.
+            </summary>
+        </member>
+        <member name="T:DataMapper.Interfaces.ICategoryDataService">
+            <summary>
+            Interface for the CategoryDataService.
+            </summary>
+        </member>
+        <member name="T:DataMapper.Interfaces.IProductDataService">
+            <summary>
+            Interface for the ProductDataService.
+            </summary>
+        </member>
+        <member name="T:DataMapper.Interfaces.IUserDataService">
+            <summary>
+            Interface for the UserDataService.
+            </summary>
+        </member>
+        <member name="T:DataMapper.Repository.BaseRepository`1">
+            <summary>
+            Provides basic data access functionality for entity <see cref="!:T"/>.
+            </summary>
+            <typeparam name="T">The entity it offers data access for.</typeparam>
+        </member>
+        <member name="M:DataMapper.Repository.BaseRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.Repository.BaseRepository`1.Insert(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.Repository.BaseRepository`1.Update(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.Repository.BaseRepository`1.Delete(System.Object)">
+            <summary>
+            Deletes an record from the database based on its id.
+            </summary>
+            <param name="id">The id of teh record.</param>
+        </member>
+        <member name="M:DataMapper.Repository.BaseRepository`1.Delete(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.Repository.BaseRepository`1.GetByID(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataMapper.Repository.IRepository`1">
+            <summary>
+            Interface for a generic repository.
+            </summary>
+            <typeparam name="T">The domain model that the repository corresponds to.</typeparam>
+        </member>
+        <member name="M:DataMapper.Repository.IRepository`1.Insert(`0)">
+            <summary>
+            Inserts the entity into the database.
+            </summary>
+            <param name="entity">The entity to be inserted.</param>
+        </member>
+        <member name="M:DataMapper.Repository.IRepository`1.Update(`0)">
+            <summary>
+            Updates the entity in the database.
+            </summary>
+            <param name="item">The item to be updated.</param>
+        </member>
+        <member name="M:DataMapper.Repository.IRepository`1.Delete(`0)">
+            <summary>
+            Deletes the entity in the database.
+            </summary>
+            <param name="entity">The entity to be deleted.</param>
+        </member>
+        <member name="M:DataMapper.Repository.IRepository`1.GetByID(System.Object)">
+            <summary>
+            Gets an antyty by its Id.
+            </summary>
+            <param name="id">The Id of the entity.</param>
+            <returns>The entity that has a matching ID.</returns>
+        </member>
+        <member name="M:DataMapper.Repository.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.String)">
+            <summary>
+            Gets the list of records from the database that match the criteria.
+            </summary>
+            <param name="filter">Expression to be used to filter the data.</param>
+            <param name="orderBy">The property to order by.</param>
+            <param name="includeProperties">The properties to be included, comma separated.</param>
+            <returns>The list of objects that match the criteria.</returns>
+        </member>
+    </members>
+</doc>

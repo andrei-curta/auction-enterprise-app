@@ -23,10 +23,10 @@ namespace ConsoleApp
             ConfigureServices(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            // Get an instance of the service
+            // Get an instance of the Service
             var myService = serviceProvider.GetService<AuctionService>();
 
-            // Call the service (logs are made here)
+            // Call the Service (logs are made here)
             // myService.List();
 
             // var appServ = serviceProvider.GetService<ApplicationSettingService>();
@@ -74,7 +74,7 @@ namespace ConsoleApp
 
             services.AddLogging(configure => configure.AddSerilog());
 
-            // Register service from the library
+            // Register Service from the library
             services.AddTransient<ApplicationSettingService>();
             services.AddTransient<AuctionService>();
             services.AddTransient<BidService>();

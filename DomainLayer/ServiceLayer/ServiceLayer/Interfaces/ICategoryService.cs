@@ -7,7 +7,7 @@ namespace ServiceLayer.Interfaces
     using DomainModel.Models;
 
     /// <summary>
-    /// Interface for the Category service.
+    /// Interface for the Category Service.
     /// </summary>
     public interface ICategoryService : IService<Category>
     {

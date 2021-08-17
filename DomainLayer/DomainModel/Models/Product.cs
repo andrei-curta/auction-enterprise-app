@@ -2,12 +2,11 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using System.Diagnostics.CodeAnalysis;
-
 namespace DomainModel.Models
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Diagnostics.CodeAnalysis;
     using DomainModel.ValueObjects;
 
     /// <summary>

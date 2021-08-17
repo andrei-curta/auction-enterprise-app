@@ -2,14 +2,13 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using Microsoft.Extensions.Logging;
-
-namespace ServiceLayer.Implemantations
+namespace ServiceLayer.Implementations
 {
     using System.Collections.Generic;
     using System.Linq;
     using DataMapper.Repository;
     using FluentValidation;
+    using Microsoft.Extensions.Logging;
     using ServiceLayer.Interfaces;
 
     /// <summary>
@@ -22,8 +21,19 @@ namespace ServiceLayer.Implemantations
         where TV : AbstractValidator<TE>
         where TS : IRepository<TE>
     {
+        /// <summary>
+        /// The service that corresponds to the entity managed by this service.
+        /// </summary>
         protected readonly TS service;
+
+        /// <summary>
+        /// The validator that corresponds to the entity managed by this service.
+        /// </summary>
         protected readonly TV validator;
+
+        /// <summary>
+        /// The logger.
+        /// </summary>
         protected readonly ILogger logger;
 
         /// <summary>
@@ -31,6 +41,7 @@ namespace ServiceLayer.Implemantations
         /// </summary>
         /// <param name="service">The service that corresponds to the entity managed by this service.</param>
         /// <param name="validator">The validator that corresponds to the entity managed by this service.</param>
+        /// <param name="logger">The logger.</param>
         protected BaseService(TS service, TV validator, ILogger logger = null)
         {
             this.service = service;

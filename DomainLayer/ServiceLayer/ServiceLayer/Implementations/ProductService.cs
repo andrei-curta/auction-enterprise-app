@@ -2,13 +2,12 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
 namespace ServiceLayer.Implementations
 {
     using DataMapper.DAO;
     using DomainModel.Models;
     using DomainModel.Validators;
-    using ServiceLayer.Implemantations;
+    using ServiceLayer.Implementations;
     using ServiceLayer.Interfaces;
 
     /// <summary>

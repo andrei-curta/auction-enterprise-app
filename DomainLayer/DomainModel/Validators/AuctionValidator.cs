@@ -2,7 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
 namespace DomainModel.Validators
 {
     using System.Diagnostics.CodeAnalysis;
@@ -22,9 +21,6 @@ namespace DomainModel.Validators
         {
             this.RuleFor(x => x.StartDate).NotEmpty().LessThan(x => x.EndDate).WithMessage("Start date cannot be after End date");
             this.RuleFor(x => x.EndDate).NotEmpty().WithMessage("End date must be specified.");
-            //TODO: reparat
-            // this.RuleFor(x => x.StartDate).Must((x, startDate) => startDate.AddMonths(7) < x.EndDate).WithMessage("There cannot be more than 7 months between start date and end date");
-
         }
     }
 }

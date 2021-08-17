@@ -8,7 +8,7 @@ namespace ServiceLayer.Interfaces
     using DomainModel.Models;
 
     /// <summary>
-    /// Interface for the auction service.
+    /// Interface for the auction Service.
     /// </summary>
     public interface IAuctionService : IService<Auction>
     {

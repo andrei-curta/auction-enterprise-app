@@ -7,7 +7,7 @@ namespace ServiceLayer.Interfaces
     using DomainModel.Models;
 
     /// <summary>
-    /// Interface for the Product service.
+    /// Interface for the Product Service.
     /// </summary>
     public interface IProductService : IService<Product>
     {

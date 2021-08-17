@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainModel</name>
+    </assembly>
+    <members>
+        <member name="T:DomainModel.Models.ApplicationSetting">
+            <summary>
+            Manages settings used in the application.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.ApplicationSetting.Id">
+            <summary>
+            Gets or sets the primary key.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.ApplicationSetting.Name">
+            <summary>
+            Gets or sets the name of the setting.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.ApplicationSetting.Value">
+            <summary>
+            gets or sets the value of the setting.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Models.Auction">
+            <summary>
+            Class that represents an auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.Id">
+            <summary>
+            Gets or sets the id for this auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.StartDate">
+            <summary>
+            Gets or sets the start date of the auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.EndDate">
+            <summary>
+            Gets or sets the end date of this auction. No more bids can be placed after this date and the auction is finalized.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.DateCreated">
+            <summary>
+            Gets or sets the date when this auction was created.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.Product">
+            <summary>
+            Gets or sets the product that is auctioned in this auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.ProductId">
+            <summary>
+            Gets or sets the id of the product that is auctioned in this auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.ClosedByOwner">
+            <summary>
+            Gets or sets a value indicating whether this auction was closed by the owner.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.UserId">
+            <summary>
+            Gets or sets the Id of the user that started the auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.StartPrice">
+            <summary>
+            Gets or sets the start price of the auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Auction.Closed">
+            <summary>
+            Gets a value indicating whether if the auction is either closed by the owner or the end date is passed.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Models.Bid">
+            <summary>
+            Class that represents a bid an user makes at an auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Bid.Id">
+            <summary>
+            Gets or sets the Id for this Bid.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Bid.UserId">
+            <summary>
+            Gets or sets the Id of the user that placed this bid.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Bid.AuctionId">
+            <summary>
+            Gets or sets the auctionId that the bid was placed in.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Bid.DateAdded">
+            <summary>
+            Gets or sets the date when the bid was added. Default is current datetime.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Bid.BidValue">
+            <summary>
+            Gets or sets the bid value and currency for this bid.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Models.Category">
+            <summary>
+            Product category.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Category.Id">
+            <summary>
+            Gets or sets the Id for this category.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Category.Name">
+            <summary>
+            Gets or sets the Name of this category.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Category.ParentId">
+            <summary>
+            Gets or sets the parent id.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Category.Parent">
+            <summary>
+            Gets or sets the parent.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Category.SubCategories">
+            <summary>
+            Gets or sets the subcategories.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Category.Products">
+            <summary>
+            The list of products in the category.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Models.Product">
+            <summary>
+            A product that is to be sold at aan auction.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Product.Id">
+            <summary>
+            Gets or sets the Id of this product.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Product.Name">
+            <summary>
+            Gets or sets the name of this product.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Product.Description">
+            <summary>
+            Gets or sets the description of this product.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Product.User">
+            <summary>
+            Gets or sets the owner of this product.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Product.UserId">
+            <summary>
+            Gets or sets the ID of the owner of this product.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Product.Categories">
+            <summary>
+            Gets or sets categories that the product is part of.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Models.User">
+            <summary>
+            The application user.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.User.Products">
+            <summary>
+            Gets or sets the products that a user has.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.ApplicationSettingValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.ApplicationSetting"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.ApplicationSettingValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.ApplicationSettingValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.AuctionValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.Auction"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.AuctionValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.AuctionValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.BidValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.Auction"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.BidValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.BidValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.CategoryValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.Auction"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.CategoryValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.CategoryValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.ProductValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.Auction"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.ProductValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.ProductValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.UserValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.Auction"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.UserValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.UserValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.ValueObjects.Money">
+            <summary>
+            Value object to represent money having a value and a currency.
+            </summary>
+        </member>
+        <member name="M:DomainModel.ValueObjects.Money.#ctor(System.Decimal,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.ValueObjects.Money"/> class.
+            </summary>
+            <param name="amount">The amount/value of money in the declared currency.</param>
+            <param name="currency">The currency the monetary value is in.</param>
+        </member>
+        <member name="P:DomainModel.ValueObjects.Money.Amount">
+            <summary>
+            Gets the amount.
+            </summary>
+        </member>
+        <member name="P:DomainModel.ValueObjects.Money.Currency">
+            <summary>
+            Gets the currency.
+            </summary>
+        </member>
+        <member name="T:DomainModel.ValueObjects.ValueObject">
+            <summary>
+            Base class for value objects.
+            </summary>
+        </member>
+    </members>
+</doc>

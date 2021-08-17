@@ -8,7 +8,7 @@ namespace ServiceLayer.Implementations
     using DomainModel.Models;
     using DomainModel.Validators;
     using Microsoft.Extensions.Logging;
-    using ServiceLayer.Implemantations;
+    using ServiceLayer.Implementations;
     using ServiceLayer.Interfaces;
 
     /// <summary>
@@ -23,7 +23,5 @@ namespace ServiceLayer.Implementations
             : base(new BidDataService(), new BidValidator(), logger)
         {
         }
-
-
     }
 }
