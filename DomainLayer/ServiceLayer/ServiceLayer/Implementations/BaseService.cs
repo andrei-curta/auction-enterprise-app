@@ -67,13 +67,13 @@ namespace ServiceLayer.Implemantations
         /// <inheritdoc/>
         public virtual IList<TE> List()
         {
-            return service.Get().ToList();
+            return this.service.Get().ToList();
         }
 
         /// <inheritdoc/>
         public virtual void Update(TE entity)
         {
-            throw new System.NotImplementedException();
+            this.service.Update(entity);
         }
     }
 }

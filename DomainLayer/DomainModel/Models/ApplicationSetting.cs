@@ -1,11 +1,17 @@
-﻿namespace DomainModel.Models
+﻿// <copyright file="ApplicationSetting.cs" company="Transilvania University of Brașov">
+// Copyright (c) Curta Andrei. All rights reserved.
+// </copyright>
+
+namespace DomainModel.Models
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Manages settings used in the application.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ApplicationSetting
     {
         /// <summary>

@@ -2,16 +2,17 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
 namespace DomainModel.Models
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Product category.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Category
     {
         /// <summary>

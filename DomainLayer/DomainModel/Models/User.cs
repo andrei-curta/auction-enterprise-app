@@ -6,11 +6,13 @@
 namespace DomainModel.Models
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using Microsoft.AspNetCore.Identity;
 
     /// <summary>
     /// The application user.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class User : IdentityUser
     {
         /// <summary>

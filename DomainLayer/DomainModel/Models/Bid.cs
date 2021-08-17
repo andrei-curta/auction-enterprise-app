@@ -7,11 +7,13 @@ namespace DomainModel.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.Diagnostics.CodeAnalysis;
     using DomainModel.ValueObjects;
 
     /// <summary>
     /// Class that represents a bid an user makes at an auction.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Bid
     {
         /// <summary>

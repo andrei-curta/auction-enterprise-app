@@ -17,7 +17,7 @@ namespace ServiceLayer.Implementations
     /// <summary>
     /// Provides services regarding the <see cref="Auction"/>.
     /// </summary>
-    public class AuctionService : BaseService<Auction, AuctionDataService, AuctionValidator>
+    public class AuctionService : BaseService<Auction, AuctionDataService, AuctionValidator>, IAuctionService
     {
         private readonly IApplicationSettingService applicationSettingService;
 
@@ -26,11 +26,12 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
-        public AuctionService(AuctionDataService auctionDataService, IProductDataService productDataService, ApplicationSettingDataService applicationSettingDataService)
+        public AuctionService(AuctionDataService auctionDataService, IProductDataService productDataService,
+            ApplicationSettingDataService applicationSettingDataService)
             : base(auctionDataService, new AuctionValidator())
         {
             this.productDataService = productDataService;
-            this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService); 
+            this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService);
         }
 
         /// <inheritdoc/>
@@ -38,16 +39,22 @@ namespace ServiceLayer.Implementations
         {
             this.validator.ValidateAndThrow(entity);
 
+            int maxAuctionDurationMonths = this.applicationSettingService.GetValueAsInt("AuctionMaxDurationMonths");
+            if (entity.StartDate.AddMonths(maxAuctionDurationMonths) > entity.EndDate)
+            {
+                throw new ArgumentException("The max duration of an auction was exceded.");
+            }
+
             if (this.HasReachedMaxNumberOfOpenedAuctions(entity.UserId))
             {
                 throw new Exception("You have reached the max number of open auctions;");
             }
 
-            var auctionedProduct = productDataService.GetByID(entity.ProductId);
-            if (auctionedProduct == null)
-            {
-                throw new NullReferenceException("The Id for the product is invalid");
-            }
+            // var auctionedProduct = productDataService.GetByID(entity.ProductId);
+            // if (auctionedProduct == null)
+            // {
+            //     throw new NullReferenceException("The Id for the product is invalid");
+            // }
 
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
             if (entity.StartPrice.Amount < thresholdValue)
@@ -72,6 +79,26 @@ namespace ServiceLayer.Implementations
             int maxUnfinishedAuctions = this.applicationSettingService.GetValueAsInt("MaxUnfinishedAuctions");
 
             return unfinishedAuctions > maxUnfinishedAuctions;
+        }
+
+        /// <inheritdoc/>
+        public override void Update(Auction entity)
+        {
+            throw new Exception("Cannot directly update an auction.");
+        }
+
+        /// <inheritdoc/>
+        public void CancelAuction(Auction auction)
+        {
+            //todo: verificat daca userul care incearca inchiderea licitatiei este cel care a si deschis-o
+
+            if (auction.Closed)
+            {
+                throw new Exception("The auction is already closed");
+            }
+
+            auction.ClosedByOwner = true;
+            this.service.Update(auction);
         }
     }
 }

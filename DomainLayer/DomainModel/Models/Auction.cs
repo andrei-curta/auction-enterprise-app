@@ -2,18 +2,18 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
-using DomainModel.ValueObjects;
-
 namespace DomainModel.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Diagnostics.CodeAnalysis;
+    using DomainModel.ValueObjects;
 
     /// <summary>
     /// Class that represents an auction.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Auction
     {
         /// <summary>

@@ -2,17 +2,18 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
-using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DomainModel.Models
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using DomainModel.ValueObjects;
 
     /// <summary>
     /// A product that is to be sold at aan auction.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Product
     {
         /// <summary>
