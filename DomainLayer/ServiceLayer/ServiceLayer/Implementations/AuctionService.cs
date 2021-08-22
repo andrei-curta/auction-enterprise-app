@@ -42,7 +42,7 @@ namespace ServiceLayer.Implementations
             this.validator.ValidateAndThrow(entity);
 
             int maxAuctionDurationMonths = this.applicationSettingService.GetValueAsInt("AuctionMaxDurationMonths");
-            if (entity.StartDate.AddMonths(maxAuctionDurationMonths) > entity.EndDate)
+            if (entity.EndDate.Subtract(entity.StartDate).Days / (365.25 / 12) > maxAuctionDurationMonths)
             {
                 throw new ArgumentException("The max duration of an auction was exceded.");
             }

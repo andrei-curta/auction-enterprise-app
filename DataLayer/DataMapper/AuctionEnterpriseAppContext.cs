@@ -40,6 +40,11 @@ namespace DataMapper
                 .HasOne(typeof(User))
                 .WithMany()
                 .HasForeignKey("UserId");
+
+            modelBuilder.Entity<Bid>()
+                .HasOne(typeof(User))
+                .WithMany()
+                .HasForeignKey("UserId");
         }
     }
 }

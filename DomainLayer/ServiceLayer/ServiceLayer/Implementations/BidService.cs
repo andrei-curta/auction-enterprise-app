@@ -35,12 +35,19 @@ namespace ServiceLayer.Implementations
         {
             this.validator.ValidateAndThrow(bid);
 
-            // Pentru o licitatie incheiata nu se mai poate modifica nimic
             var auction = this.auctionDataService.GetByID(bid.AuctionId);
+
+            if (auction.StartDate > DateTime.Now)
+            {
+                throw new Exception("The auction has not started yet!");
+            }
+
+            // Pentru o licitatie incheiata nu se mai poate modifica nimic
             if (auction.Closed)
             {
                 throw new UnauthorizedAccessException("The auction is closed, you cannot add a bid to it");
             }
+
 
             // check if the bid is in the same currency as the auction.
             if (bid.BidValue.Currency != auction.StartPrice.Currency)
@@ -63,7 +70,7 @@ namespace ServiceLayer.Implementations
                 throw new Exception("The amount must be greater than the one of the last bid!");
             }
 
-            if (bid.BidValue.Amount + (0.1M * bid.BidValue.Amount) > latestBidValue.Amount)
+            if (bid.BidValue.Amount > latestBidValue.Amount + (0.1M * latestBidValue.Amount))
             {
                 throw new Exception("You cannot bid with more than 10% more than the last bid!");
             }

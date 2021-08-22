@@ -24,7 +24,7 @@ namespace DomainModel.Models
         /// Gets or sets the Id of the user that placed this bid.
         /// </summary>
         [Required]
-        public long UserId { get; set; }
+        public string UserId { get; set; }
 
         /// <summary>
         /// Gets or sets the auctionId that the bid was placed in.

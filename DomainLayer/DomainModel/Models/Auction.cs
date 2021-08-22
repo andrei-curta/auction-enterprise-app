@@ -72,6 +72,6 @@ namespace DomainModel.Models
         /// Gets a value indicating whether if the auction is either closed by the owner or the end date is passed.
         /// </summary>
         [NotMapped]
-        public bool Closed => this.ClosedByOwner || this.EndDate > DateTime.Now;
+        public bool Closed => this.ClosedByOwner || this.EndDate < DateTime.Now;
     }
 }

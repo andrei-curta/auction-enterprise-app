@@ -31,7 +31,7 @@ namespace DataMapper.DAO
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 return ctx.Bids.Where(bid => bid.AuctionId == auctionId).OrderByDescending(bid => bid.DateAdded)
-                    .First();
+                    .FirstOrDefault();
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using DataMapper.DAO;
 using DomainModel.Models;
 using DomainModel.ValueObjects;
 using Microsoft.Extensions.Configuration;
@@ -24,7 +25,7 @@ namespace ConsoleApp
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
             // Get an instance of the Service
-            var myService = serviceProvider.GetService<AuctionService>();
+            // var myService = serviceProvider.GetService<AuctionService>();
 
             // Call the Service (logs are made here)
             // myService.List();
@@ -39,25 +40,26 @@ namespace ConsoleApp
 
             var prodServ = serviceProvider.GetService<ProductService>();
 
-            var prod = new Product()
-            {
-                Description = "another chair",
-                Name = "chair2",
 
-                UserId = "1",
-                // Value = new Money(10, "RON")
-            };
 
-            prodServ.Add(prod);
-
-            var auctServ = serviceProvider.GetService<AuctionService>();
+            var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(), new ApplicationSettingDataService());
             // auctServ.Add(new Auction()
             // {
             //     UserId = "1",
             //     ProductId = 1,
             //     StartDate = DateTime.Now.AddDays(1),
-            //     EndDate = DateTime.Now.AddDays(20)
+            //     EndDate = DateTime.Now.AddDays(20),
+            //     StartPrice = new Money(10, "RON")
             // });
+
+            var bidServ = new BidService();
+            bidServ.Add(new Bid()
+            {
+                AuctionId = 8,
+                UserId = "1",
+                BidValue = new Money(10.5M, "RON")
+            });
+
 
         }
 
@@ -76,6 +78,7 @@ namespace ConsoleApp
 
             // Register Service from the library
             services.AddTransient<ApplicationSettingService>();
+            services.AddTransient<AuctionDataService>();
             services.AddTransient<AuctionService>();
             services.AddTransient<BidService>();
             services.AddTransient<CategoryService>();
