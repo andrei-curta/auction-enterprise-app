@@ -2,7 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
 namespace ServiceLayer.Interfaces
 {
     using DomainModel.Models;

@@ -1,11 +1,15 @@
-﻿namespace DataMapper
-{
-    using Microsoft.EntityFrameworkCore.Design;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using System.IO;
+﻿// <copyright file="AuctionEnterpriseContextFactory.cs" company="Transilvania University of Brașov">
+// Copyright (c) Curta Andrei. All rights reserved.
+// </copyright>
 
-    class AuctionEnterpriseContextFactory : IDesignTimeDbContextFactory<AuctionEnterpriseAppContext>
+namespace DataMapper
+{
+    using System.IO;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Design;
+    using Microsoft.Extensions.Configuration;
+
+    public class AuctionEnterpriseContextFactory : IDesignTimeDbContextFactory<AuctionEnterpriseAppContext>
     {
         private IConfiguration Configuration => new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json")

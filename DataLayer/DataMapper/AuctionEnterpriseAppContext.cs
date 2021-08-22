@@ -13,25 +13,6 @@ namespace DataMapper
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            // Specifies the monet property is a value type and not an entity, such no other table is created and the properties are defined as columns in the product table.
-            modelBuilder.Entity<Auction>().OwnsOne(x => x.StartPrice);
-            modelBuilder.Entity<Bid>().OwnsOne(x => x.BidValue);
-
-            modelBuilder.Entity<Bid>().Property(b => b.DateAdded).HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<Auction>().Property(b => b.DateCreated).HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<Auction>().Property(b => b.ClosedByOwner).HasDefaultValue(false);
-            modelBuilder.Entity<Auction>().HasOne(c => c.Product).WithMany().OnDelete(DeleteBehavior.ClientNoAction);
-
-
-
-            modelBuilder.Entity<Auction>()
-                .HasOne(typeof(User))
-                .WithMany()
-                .HasForeignKey("UserId");
-        }
-
         public virtual DbSet<ApplicationSetting> ApplicationSettings { get; set; }
 
         public virtual DbSet<Auction> Auctions { get; set; }
@@ -43,5 +24,22 @@ namespace DataMapper
         public virtual DbSet<Product> Products { get; set; }
 
         public virtual DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Specifies the monet property is a value type and not an entity, such no other table is created and the properties are defined as columns in the product table.
+            modelBuilder.Entity<Auction>().OwnsOne(x => x.StartPrice);
+            modelBuilder.Entity<Bid>().OwnsOne(x => x.BidValue);
+
+            modelBuilder.Entity<Bid>().Property(b => b.DateAdded).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Auction>().Property(b => b.DateCreated).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Auction>().Property(b => b.ClosedByOwner).HasDefaultValue(false);
+            modelBuilder.Entity<Auction>().HasOne(c => c.Product).WithMany().OnDelete(DeleteBehavior.ClientNoAction);
+
+            modelBuilder.Entity<Auction>()
+                .HasOne(typeof(User))
+                .WithMany()
+                .HasForeignKey("UserId");
+        }
     }
 }

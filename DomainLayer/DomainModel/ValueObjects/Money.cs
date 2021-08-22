@@ -37,7 +37,6 @@ namespace DomainModel.ValueObjects
         [MaxLength(3)]
         public string Currency { get; private set; }
 
-
         public override string ToString()
         {
             return $"{this.Currency} {this.Amount}";

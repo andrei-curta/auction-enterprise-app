@@ -16,8 +16,15 @@ namespace DataMapper.Interfaces
         /// <summary>
         /// Gets a list of bids that were placed on the auction.
         /// </summary>
-        /// <param name="auction">The auction to search bids for.</param>
+        /// <param name="auctionId">The auction to search bids for.</param>
         /// <returns>The list of corresponding bids.</returns>
-        //public List<Bid> GetBidsByAuction(Auction auction);
+        public List<Bid> GetBidsByAuction(long auctionId);
+
+        /// <summary>
+        /// Gets the latest bid that was placed on the auction.
+        /// </summary>
+        /// <param name="auctionId">The auction to search bids for.</param>
+        /// <returns>The latest bid or null.</returns>
+        public Bid GetLatestBidByAuction(long auctionId);
     }
 }

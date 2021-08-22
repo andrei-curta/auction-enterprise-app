@@ -1,7 +1,6 @@
-﻿// <copyright file="BaseValueObject.cs" company="Transilvania University of Brașov">
+﻿// <copyright file="ValueObject.cs" company="Transilvania University of Brașov">
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
-
 
 namespace DomainModel.ValueObjects
 {
@@ -27,8 +26,6 @@ namespace DomainModel.ValueObjects
         {
             return !(EqualOperator(left, right));
         }
-
-        protected abstract IEnumerable<object> GetAtomicValues();
 
         public override bool Equals(object obj)
         {
@@ -65,5 +62,7 @@ namespace DomainModel.ValueObjects
                 .Select(x => x != null ? x.GetHashCode() : 0)
                 .Aggregate((x, y) => x ^ y);
         }
+
+        protected abstract IEnumerable<object> GetAtomicValues();
     }
 }

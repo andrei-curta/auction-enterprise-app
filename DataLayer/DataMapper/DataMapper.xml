@@ -25,6 +25,12 @@
             Provides data access functionality for <see cref="T:DomainModel.Models.Category"/>.
             </summary>
         </member>
+        <member name="M:DataMapper.DAO.BidDataService.GetBidsByAuction(System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.DAO.BidDataService.GetLatestBidByAuction(System.Int64)">
+            <inheritdoc/>
+        </member>
         <member name="T:DataMapper.DAO.CategoryDataService">
             <summary>
             Provides data access functionality for <see cref="T:DomainModel.Models.Category"/>.
@@ -68,6 +74,20 @@
             <summary>
             Interface for the BidDataService.
             </summary>
+        </member>
+        <member name="M:DataMapper.Interfaces.IBidDataService.GetBidsByAuction(System.Int64)">
+            <summary>
+            Gets a list of bids that were placed on the auction.
+            </summary>
+            <param name="auctionId">The auction to search bids for.</param>
+            <returns>The list of corresponding bids.</returns>
+        </member>
+        <member name="M:DataMapper.Interfaces.IBidDataService.GetLatestBidByAuction(System.Int64)">
+            <summary>
+            Gets the latest bid that was placed on the auction.
+            </summary>
+            <param name="auctionId">The auction to search bids for.</param>
+            <returns>The latest bid or null.</returns>
         </member>
         <member name="T:DataMapper.Interfaces.ICategoryDataService">
             <summary>

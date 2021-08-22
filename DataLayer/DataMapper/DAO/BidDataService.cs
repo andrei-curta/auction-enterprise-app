@@ -4,6 +4,8 @@
 
 namespace DataMapper.DAO
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using DataMapper.Interfaces;
     using DataMapper.Repository;
     using DomainModel.Models;
@@ -13,5 +15,24 @@ namespace DataMapper.DAO
     /// </summary>
     public class BidDataService : BaseRepository<Bid>, IBidDataService
     {
+        /// <inheritdoc/>
+        public List<Bid> GetBidsByAuction(long auctionId)
+        {
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
+            {
+                return ctx.Bids.Where(bid => bid.AuctionId == auctionId).OrderByDescending(bid => bid.DateAdded)
+                    .ToList();
+            }
+        }
+
+        /// <inheritdoc/>
+        public Bid GetLatestBidByAuction(long auctionId)
+        {
+            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
+            {
+                return ctx.Bids.Where(bid => bid.AuctionId == auctionId).OrderByDescending(bid => bid.DateAdded)
+                    .First();
+            }
+        }
     }
 }

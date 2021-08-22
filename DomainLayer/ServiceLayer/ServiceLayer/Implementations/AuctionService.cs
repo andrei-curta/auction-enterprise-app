@@ -83,9 +83,18 @@ namespace ServiceLayer.Implementations
         }
 
         /// <inheritdoc/>
-        public override void Update(Auction entity)
+        public override void Update(Auction auction)
         {
-            throw new Exception("Cannot directly update an auction.");
+            var dbAuction = this.service.GetByID(auction.Id);
+
+            if (dbAuction.Closed)
+            {
+                throw new UnauthorizedAccessException("The auction is closed, you cannot update it!");
+            }
+            else
+            {
+                service.Update(auction);
+            }
         }
 
         /// <inheritdoc/>
