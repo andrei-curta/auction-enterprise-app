@@ -179,6 +179,16 @@
             Gets or sets categories that the product is part of.
             </summary>
         </member>
+        <member name="T:DomainModel.Models.Role">
+            <summary>
+            The roles an user can have.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Role.UsersInRole">
+            <summary>
+            Gets or sets the users in this role.
+            </summary>
+        </member>
         <member name="T:DomainModel.Models.User">
             <summary>
             The application user.
@@ -187,6 +197,11 @@
         <member name="P:DomainModel.Models.User.Products">
             <summary>
             Gets or sets the products that a user has.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.User.Roles">
+            <summary>
+            Gets or sets the roles the user has.
             </summary>
         </member>
         <member name="T:DomainModel.Validators.ApplicationSettingValidator">

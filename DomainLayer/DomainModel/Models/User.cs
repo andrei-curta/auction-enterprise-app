@@ -17,6 +17,11 @@ namespace DomainModel.Models
         /// <summary>
         /// Gets or sets the products that a user has.
         /// </summary>
-        public List<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; }
+
+        /// <summary>
+        /// Gets or sets the roles the user has.
+        /// </summary>
+        public virtual List<Role> Roles { get; set; }
     }
 }

@@ -4,12 +4,12 @@
 Sa se creeze o aplicatie in care se permite licitarea pentru produse vandute de catre utilizatori. Produsele sunt caracterizate prin apartenenta la categorii, acestea putand face parte din alte categorii etc. (ex: electronice <- aparatura foto <- aparat foto concret). Se va modela situatia in care o categorie poate sa aiba mai multi parinti – conditie de luare in considerare a temei.
 ##### Se cere implementare care sa trateze urmatoarele:
 
-- [ ] Pentru un produs se specifica data de incepere si data de finalizare a licitatiei; se va valida ca
-  - [ ]  data inceperii < data finalizarii, dar diferente sa fie de maxim 7 luni de zile, 
-  - [ ]  ca data inceperii nu poate sa fie in trecut (relativ la momentul prezent); impuneti alte validari ale valorilor utilizate.
+- [X] Pentru un produs se specifica data de incepere si data de finalizare a licitatiei; se va valida ca
+  - [X]  data inceperii < data finalizarii, dar diferente sa fie de maxim 7 luni de zile, 
+  - [X]  ca data inceperii nu poate sa fie in trecut (relativ la momentul prezent); impuneti alte validari ale valorilor utilizate.
    
 - [ ] Pentru fiecare produs pentru care se incepe licitatia se specifica un pret de pornire; 
-  - [ ] se vor rejecta preturi de pornire mai mici decat un prag, predefinit ca o constanta a aplicatiei;
+  - [X] se vor rejecta preturi de pornire mai mici decat un prag, predefinit ca o constanta a aplicatiei;
   - [ ] la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda (validati sau modelati corespunzator). 
   - [ ] Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n. Impuneti alte validari asupra datelor, demonstrati prin testare automata implementarea.
 - [ ] Finalizarea unui proces de licitatie se face
@@ -32,7 +32,7 @@ Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
 - [X] Baza de date relationala.
 - [ ] Domain Layer implementat prin Domain Model; Data Layer implementat prin Data Mapper (conditiile de la acest punct sunt obligatorii).
 - [ ] Code coverage de minim 90% pentru codul de Domain Model si minim 90% pentru Service Layer (conditie de luare in considerare a temei).
-- [ ] Mocking (conditie de luare in considerare a temei).
+- [X] Mocking (conditie de luare in considerare a temei).
 - [ ]  Comentarii, minim pentru metode, constructori, proprietati, indexatori, destructori, tipuri imbricate. Puteti folosi GhostDoc.
 - [ ]  Se va face analiza codului sursa folosind StyleCop (plugin de Visual Studio; versiune recomandata 4.7.x). Toate regulile (tab-ul Rules) trebuie bifate; in tab-ul Company Information la sectiunea „Company Name” sa figureze „Transilvania University of Brasov”, iar la Copyright numele studentului. Maxim 30 de avertismente sunt permise (conditiile de la acest punct sunt obligatorii).
 Puteti folosi pluginuri auxiliare de forma CodeItRight.

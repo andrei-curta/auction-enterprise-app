@@ -23,5 +23,14 @@ namespace ServiceLayer.Implementations
             : base(new BidDataService(), new BidValidator(), logger)
         {
         }
+
+        public override void Add(Bid entity)
+        {
+            //Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n
+
+            //Pentru o licitatie incheiata nu se mai poate modifica nimic
+
+            //la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda
+        }
     }
 }
