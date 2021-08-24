@@ -1,13 +1,22 @@
-﻿using Xunit;
+﻿using DomainModel.Models;
+using FluentValidation.TestHelper;
+using Xunit;
 
 namespace DomainModel.Validators.Tests
 {
     public class UserValidatorTests
     {
         [Fact()]
-        public void UserValidatorTest()
+        public void TestEmptyUsername()
         {
-            Assert.True(false, "This test needs an implementation");
+            var user = new User()
+            {
+                UserName = null
+            };
+
+            var validationResult = new UserValidator().TestValidate(user);
+
+            validationResult.ShouldHaveValidationErrorFor(a => a.UserName);
         }
     }
 }
