@@ -37,11 +37,13 @@ namespace DomainModel.ValueObjects
         [MaxLength(3)]
         public string Currency { get; private set; }
 
+        /// <inheritdoc/>
         public override string ToString()
         {
             return $"{this.Currency} {this.Amount}";
         }
 
+        /// <inheritdoc/>
         protected override IEnumerable<object> GetAtomicValues()
         {
             // Using a yield return statement to return each element one at a time

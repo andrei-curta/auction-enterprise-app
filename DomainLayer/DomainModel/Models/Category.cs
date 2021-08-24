@@ -45,7 +45,7 @@ namespace DomainModel.Models
         public ICollection<Category> SubCategories { get; set; }
 
         /// <summary>
-        /// The list of products in the category.
+        /// Gets or sets the list of products in the category.
         /// </summary>
         public virtual List<Product> Products { get; set; }
     }

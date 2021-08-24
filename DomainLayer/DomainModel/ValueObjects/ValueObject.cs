@@ -12,24 +12,10 @@ namespace DomainModel.ValueObjects
     /// </summary>
     public abstract class ValueObject
     {
-        protected static bool EqualOperator(ValueObject left, ValueObject right)
-        {
-            if (ReferenceEquals(left, null) ^ ReferenceEquals(right, null))
-            {
-                return false;
-            }
-
-            return ReferenceEquals(left, null) || left.Equals(right);
-        }
-
-        protected static bool NotEqualOperator(ValueObject left, ValueObject right)
-        {
-            return !(EqualOperator(left, right));
-        }
-
+        /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj == null || obj.GetType() != GetType())
+            if (obj == null || obj.GetType() != this.GetType())
             {
                 return false;
             }
@@ -56,6 +42,7 @@ namespace DomainModel.ValueObjects
             return !thisValues.MoveNext() && !otherValues.MoveNext();
         }
 
+        /// <inheritdoc/>
         public override int GetHashCode()
         {
             return this.GetAtomicValues()
@@ -63,6 +50,37 @@ namespace DomainModel.ValueObjects
                 .Aggregate((x, y) => x ^ y);
         }
 
+        /// <summary>
+        /// Determines if the values are equal.
+        /// </summary>
+        /// <param name="left">Left side of the equality comparison.</param>
+        /// <param name="right">Right side of the equality comparison.</param>
+        /// <returns>True if the elements are equal, false otherwise.</returns>
+        protected static bool EqualOperator(ValueObject left, ValueObject right)
+        {
+            if (ReferenceEquals(left, null) ^ ReferenceEquals(right, null))
+            {
+                return false;
+            }
+
+            return ReferenceEquals(left, null) || left.Equals(right);
+        }
+
+        /// <summary>
+        /// The reverse of <see cref="EqualOperator"/>.
+        /// </summary>
+        /// <param name="left">Left side of the equality comparison.</param>
+        /// <param name="right">Right side of the equality comparison.</param>
+        /// <returns>True if the elements are not equal, false otherwise.</returns>
+        protected static bool NotEqualOperator(ValueObject left, ValueObject right)
+        {
+            return !EqualOperator(left, right);
+        }
+
+        /// <summary>
+        /// Gets the atomic values.
+        /// </summary>
+        /// <returns>The atomic values.</returns>
         protected abstract IEnumerable<object> GetAtomicValues();
     }
 }
