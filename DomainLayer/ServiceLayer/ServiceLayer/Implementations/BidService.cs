@@ -2,17 +2,16 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using DomainModel.ValueObjects;
-using FluentValidation;
-
 namespace ServiceLayer.Implementations
 {
     using System;
+    using System.Collections.Generic;
     using DataMapper.DAO;
+    using DataMapper.Interfaces;
     using DomainModel.Models;
     using DomainModel.Validators;
+    using FluentValidation;
     using Microsoft.Extensions.Logging;
-    using ServiceLayer.Implementations;
     using ServiceLayer.Interfaces;
 
     /// <summary>
@@ -20,22 +19,31 @@ namespace ServiceLayer.Implementations
     /// </summary>
     public class BidService : BaseService<Bid, BidDataService, BidValidator>, IBidService
     {
-        private readonly AuctionDataService auctionDataService = new AuctionDataService();
+        private readonly IAuctionDataService auctionDataService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BidService"/> class.
         /// </summary>
-        public BidService(ILogger<BidService> logger = null)
+        /// <param name="logger">The optional Logger.</param>
+        public BidService(AuctionDataService auctionDataService, ILogger<BidService> logger = null)
             : base(new BidDataService(), new BidValidator(), logger)
         {
+            this.auctionDataService = auctionDataService;
         }
 
         /// <inheritdoc/>
         public override void Add(Bid bid)
         {
+            var exceptions = new List<Exception>();
+
             this.validator.ValidateAndThrow(bid);
 
             var auction = this.auctionDataService.GetByID(bid.AuctionId);
+
+            if (auction == null)
+            {
+                throw new ArgumentException("The auction was not found!");
+            }
 
             if (auction.StartDate > DateTime.Now)
             {
@@ -47,7 +55,6 @@ namespace ServiceLayer.Implementations
             {
                 throw new UnauthorizedAccessException("The auction is closed, you cannot add a bid to it");
             }
-
 
             // check if the bid is in the same currency as the auction.
             if (bid.BidValue.Currency != auction.StartPrice.Currency)
@@ -78,6 +85,7 @@ namespace ServiceLayer.Implementations
             this.service.Insert(bid);
         }
 
+        /// <inheritdoc/>
         public override void Update(Bid entity)
         {
             throw new Exception("A bid once placed cannot be altered!");

@@ -52,7 +52,7 @@ namespace ConsoleApp
             //     StartPrice = new Money(10, "RON")
             // });
 
-            var bidServ = new BidService();
+            var bidServ = new BidService(new AuctionDataService());
             bidServ.Add(new Bid()
             {
                 AuctionId = 8,
