@@ -11,7 +11,6 @@ namespace DomainModel.Validators
     /// <summary>
     /// Validator for <see cref="Auction"/>.
     /// </summary>
-    [ExcludeFromCodeCoverage]
     public class ProductValidator : AbstractValidator<Product>
     {
         /// <summary>
@@ -19,6 +18,8 @@ namespace DomainModel.Validators
         /// </summary>
         public ProductValidator()
         {
+            this.RuleFor(x => x.Name).NotEmpty().MaximumLength(150);
+            this.RuleFor(x => x.Description).NotEmpty().MaximumLength(1000);
         }
     }
 }

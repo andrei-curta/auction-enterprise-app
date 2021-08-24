@@ -65,5 +65,33 @@ namespace DomainModelTests.Validators
 
             validationResult.ShouldNotHaveValidationErrorFor(a => a.StartDate);
         }
+
+        [Theory]
+        [InlineData(0)]
+        public void TestEmptyProductId(long productID)
+        {
+            var auction = new Auction()
+            {
+                ProductId = productID
+            };
+
+            var validationResult = new AuctionValidator().TestValidate(auction);
+
+            validationResult.ShouldHaveValidationErrorFor(a => a.ProductId);
+        }
+
+        [Theory]
+        [InlineData(1)]
+        public void TestNotEmptyProductId(long productID)
+        {
+            var auction = new Auction()
+            {
+                ProductId = productID
+            };
+
+            var validationResult = new AuctionValidator().TestValidate(auction);
+
+            validationResult.ShouldNotHaveValidationErrorFor(a => a.ProductId);
+        }
     }
 }

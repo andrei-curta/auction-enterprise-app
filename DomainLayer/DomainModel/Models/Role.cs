@@ -5,11 +5,13 @@
 namespace DomainModel.Models
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using Microsoft.AspNetCore.Identity;
 
     /// <summary>
     /// The roles an user can have.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Role : IdentityRole
     {
         /// <summary>

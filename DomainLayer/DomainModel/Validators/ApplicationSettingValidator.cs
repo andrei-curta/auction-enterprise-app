@@ -11,7 +11,6 @@ namespace DomainModel.Validators
     /// <summary>
     /// Validator for <see cref="ApplicationSetting"/>.
     /// </summary>
-    [ExcludeFromCodeCoverage]
     public class ApplicationSettingValidator : AbstractValidator<ApplicationSetting>
     {
         /// <summary>

@@ -10,9 +10,9 @@ Sa se creeze o aplicatie in care se permite licitarea pentru produse vandute de 
    
 - [ ] Pentru fiecare produs pentru care se incepe licitatia se specifica un pret de pornire; 
   - [X] se vor rejecta preturi de pornire mai mici decat un prag, predefinit ca o constanta a aplicatiei;
-  - [ ] la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda (validati sau modelati corespunzator). 
+  - [X] la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda (validati sau modelati corespunzator). 
   - [ ] Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n. Impuneti alte validari asupra datelor, demonstrati prin testare automata implementarea.
-- [ ] Finalizarea unui proces de licitatie se face
+- [X] Finalizarea unui proces de licitatie se face
   - fie prin atingerea datei declarate pentru finalizare
   - fie prin incheierea la dorinta de catre cel care a depus obiectul la licitare (o persoana nu poate sa incheie o licitatie pe care nu a demarat-o);
 Pentru o licitatie incheiata nu se mai poate modifica nimic. Impuneti validari asupra fluxului de operatii si acoperiti cu teste.
@@ -26,7 +26,8 @@ Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
    2. licitant
    
 ## Cerinte:
-- [ ] Unit testing folosind NUnit, xUnit sau Visual Studio 2019+; minim 210 de metode de testare (conditie de luare in considerare a temei); se vor testa daca valorile proprietatilor au valori adecvate, restrictiile de mai sus si altele de validare a corectitudinii rezultatelor sia fluxului de lucru.
+- [ ] Unit testing folosind NUnit, xUnit sau Visual Studio 2019+;
+  - [ ]  minim 210 de metode de testare (conditie de luare in considerare a temei); se vor testa daca valorile proprietatilor au valori adecvate, restrictiile de mai sus si altele de validare a corectitudinii rezultatelor sia fluxului de lucru.
 - [ ] Folosire de blocuri din suita Microsoft Enterprise Library sau echivalente: logging (se poate folosi alternativ log4net), validation application block (sau se poate scrie cod de validare manual, sau se poate folosi o biblioteca de tipul https://github.com/JeremySkinner/FluentValidation), optional: exception handling application block, optional: security application block. Nu se face logging in unit testing (se permite in straturile aplicatiei, insa). Validarea starii obiectelor prin teste este conditie obligatorie pentru luarea in considere a temei. Logging-ul este obligatoriu pentru luarea in considerare a temei.
 - [ ] Dezvoltare pe straturi (layers): Domain layer si Data Layer (conditie de luare in considerare a temei); nu se ia in considerare/nu se cere user interface. Se pot folosi alte pattern-uri de design, daca se considera necesar (DTO, remote facade etc.).
 - [X] Baza de date relationala.

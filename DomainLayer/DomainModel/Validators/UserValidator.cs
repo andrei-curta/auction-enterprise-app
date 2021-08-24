@@ -11,7 +11,6 @@ namespace DomainModel.Validators
     /// <summary>
     /// Validator for <see cref="Auction"/>.
     /// </summary>
-    [ExcludeFromCodeCoverage]
     public class UserValidator : AbstractValidator<User>
     {
         /// <summary>
@@ -19,6 +18,7 @@ namespace DomainModel.Validators
         /// </summary>
         public UserValidator()
         {
+            this.RuleFor(x => x.UserName).NotEmpty();
         }
     }
 }

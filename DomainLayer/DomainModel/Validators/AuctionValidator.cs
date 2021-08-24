@@ -11,7 +11,6 @@ namespace DomainModel.Validators
     /// <summary>
     /// Validator for <see cref="Auction"/>.
     /// </summary>
-    [ExcludeFromCodeCoverage]
     public class AuctionValidator : AbstractValidator<Auction>
     {
         /// <summary>
@@ -21,6 +20,8 @@ namespace DomainModel.Validators
         {
             this.RuleFor(x => x.StartDate).NotEmpty().LessThan(x => x.EndDate).WithMessage("Start date cannot be after End date");
             this.RuleFor(x => x.EndDate).NotEmpty().WithMessage("End date must be specified.");
+
+            this.RuleFor(x => x.ProductId).NotEmpty();
         }
     }
 }
