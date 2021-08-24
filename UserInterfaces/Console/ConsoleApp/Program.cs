@@ -41,8 +41,8 @@ namespace ConsoleApp
             var prodServ = serviceProvider.GetService<ProductService>();
 
 
-
-            var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(), new ApplicationSettingDataService());
+            var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(),
+                new ApplicationSettingDataService());
             // auctServ.Add(new Auction()
             // {
             //     UserId = "1",
@@ -52,15 +52,13 @@ namespace ConsoleApp
             //     StartPrice = new Money(10, "RON")
             // });
 
-            var bidServ = new BidService(new AuctionDataService());
+            var bidServ = new BidService(new BidDataService(), new AuctionDataService());
             bidServ.Add(new Bid()
             {
                 AuctionId = 8,
                 UserId = "1",
                 BidValue = new Money(10.5M, "RON")
             });
-
-
         }
 
         private static void ConfigureServices(ServiceCollection services)

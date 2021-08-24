@@ -16,7 +16,7 @@ namespace DataMapper.DAO
     public class BidDataService : BaseRepository<Bid>, IBidDataService
     {
         /// <inheritdoc/>
-        public List<Bid> GetBidsByAuction(long auctionId)
+        public virtual List<Bid> GetBidsByAuction(long auctionId)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
@@ -26,7 +26,7 @@ namespace DataMapper.DAO
         }
 
         /// <inheritdoc/>
-        public Bid GetLatestBidByAuction(long auctionId)
+        public virtual Bid GetLatestBidByAuction(long auctionId)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
