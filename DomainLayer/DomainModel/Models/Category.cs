@@ -29,20 +29,14 @@ namespace DomainModel.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the parent id.
+        /// Gets or sets the parent categories.
         /// </summary>
-        public int? ParentId { get; set; }
+        public HashSet<Category> ParentCategories { get; set; }
 
-        /// <summary>
-        /// Gets or sets the parent.
-        /// </summary>
-#nullable enable
-        public Category? Parent { get; set; }
-#nullable disable
         /// <summary>
         /// Gets or sets the subcategories.
         /// </summary>
-        public ICollection<Category> SubCategories { get; set; }
+        public virtual HashSet<Category> SubCategories { get; set; }
 
         /// <summary>
         /// Gets or sets the list of products in the category.

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using DataMapper.DAO;
 using DomainModel.Models;
@@ -35,10 +36,23 @@ namespace ConsoleApp
             // var x = appServ.GetByName("test1");
             // Console.WriteLine(x.Value);
 
-            var catServ = serviceProvider.GetService<CategoryService>();
-            // catServ.Add(new Category(){Name = "Furniture"});
+            var catServ = new CategoryService(new CategoryDataService());
+            // catServ.Update(new Category()
+            // {
+            //     Id = 2,
+            //     Name = "Chairs",
+            //     SubCategories = new HashSet<Category>()
+            //     {
+            //         new Category()
+            //         {
+            //             Id = 1
+            //         }
+            //     }
+            // });
 
-            var prodServ = serviceProvider.GetService<ProductService>();
+           var a = catServ.List();
+
+            // var prodServ = serviceProvider.GetService<ProductService>();
 
 
             var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(),
@@ -53,12 +67,12 @@ namespace ConsoleApp
             // });
 
             var bidServ = new BidService(new BidDataService(), new AuctionDataService());
-            bidServ.Add(new Bid()
-            {
-                AuctionId = 8,
-                UserId = "1",
-                BidValue = new Money(10.5M, "RON")
-            });
+            // bidServ.Add(new Bid()
+            // {
+            //     AuctionId = 8,
+            //     UserId = "1",
+            //     BidValue = new Money(10.5M, "RON")
+            // });
         }
 
         private static void ConfigureServices(ServiceCollection services)

@@ -26,6 +26,9 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
+        /// <param name="auctionDataService">The auction data service.</param>
+        /// <param name="productDataService">The product data service.</param>
+        /// <param name="applicationSettingDataService">The app settings data service.</param>
         public AuctionService(
             AuctionDataService auctionDataService,
             IProductDataService productDataService,
@@ -93,7 +96,7 @@ namespace ServiceLayer.Implementations
             }
             else
             {
-                service.Update(auction);
+                this.service.Update(auction);
             }
         }
 

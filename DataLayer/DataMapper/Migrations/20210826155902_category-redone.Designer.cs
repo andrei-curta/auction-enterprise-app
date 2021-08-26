@@ -4,35 +4,22 @@ using DataMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
-    partial class AuctionEnterpriseAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210826155902_category-redone")]
+    partial class categoryredone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("CategoryCategory", b =>
-                {
-                    b.Property<long>("ParentCategoriesId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("SubCategoriesId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("ParentCategoriesId", "SubCategoriesId");
-
-                    b.HasIndex("SubCategoriesId");
-
-                    b.ToTable("CategoryCategory");
-                });
 
             modelBuilder.Entity("CategoryProduct", b =>
                 {
@@ -148,7 +135,12 @@ namespace DataMapper.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<long?>("ParentId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
 
                     b.ToTable("Categories");
                 });
@@ -267,21 +259,6 @@ namespace DataMapper.Migrations
                     b.ToTable("RoleUser");
                 });
 
-            modelBuilder.Entity("CategoryCategory", b =>
-                {
-                    b.HasOne("DomainModel.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("ParentCategoriesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DomainModel.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("SubCategoriesId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("CategoryProduct", b =>
                 {
                     b.HasOne("DomainModel.Models.Category", null)
@@ -374,6 +351,15 @@ namespace DataMapper.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("DomainModel.Models.Category", b =>
+                {
+                    b.HasOne("DomainModel.Models.Category", "Parent")
+                        .WithMany("SubCategories")
+                        .HasForeignKey("ParentId");
+
+                    b.Navigation("Parent");
+                });
+
             modelBuilder.Entity("DomainModel.Models.Product", b =>
                 {
                     b.HasOne("DomainModel.Models.User", "User")
@@ -398,6 +384,11 @@ namespace DataMapper.Migrations
                         .HasForeignKey("UsersInRoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DomainModel.Models.Category", b =>
+                {
+                    b.Navigation("SubCategories");
                 });
 
             modelBuilder.Entity("DomainModel.Models.User", b =>

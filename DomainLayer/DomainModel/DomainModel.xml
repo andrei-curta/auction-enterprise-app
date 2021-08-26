@@ -124,14 +124,9 @@
             Gets or sets the Name of this category.
             </summary>
         </member>
-        <member name="P:DomainModel.Models.Category.ParentId">
+        <member name="P:DomainModel.Models.Category.ParentCategories">
             <summary>
-            Gets or sets the parent id.
-            </summary>
-        </member>
-        <member name="P:DomainModel.Models.Category.Parent">
-            <summary>
-            Gets or sets the parent.
+            Gets or sets the parent categories.
             </summary>
         </member>
         <member name="P:DomainModel.Models.Category.SubCategories">

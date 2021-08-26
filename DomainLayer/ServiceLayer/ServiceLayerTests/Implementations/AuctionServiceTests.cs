@@ -43,8 +43,7 @@ namespace ServiceLayer.Implementations.Tests
 
             Assert.False(result);
         }
-
-
+        
         [Fact()]
         public void AddTestExcededMaxDuration()
         {
