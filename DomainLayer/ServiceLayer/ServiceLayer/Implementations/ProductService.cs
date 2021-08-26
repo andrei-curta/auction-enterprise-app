@@ -18,8 +18,9 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductService"/> class.
         /// </summary>
-        public ProductService()
-            : base(new ProductDataService(), new ProductValidator())
+        /// <param name="productDataService">The data service.</param>
+        public ProductService(ProductDataService productDataService)
+            : base(productDataService, new ProductValidator())
         {
         }
     }

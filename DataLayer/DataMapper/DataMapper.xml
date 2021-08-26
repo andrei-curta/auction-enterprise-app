@@ -4,6 +4,18 @@
         <name>DataMapper</name>
     </assembly>
     <members>
+        <member name="T:DataMapper.AuctionEnterpriseContextFactory">
+            <summary>
+            Factory class that creates EF contexts.
+            </summary>
+        </member>
+        <member name="M:DataMapper.AuctionEnterpriseContextFactory.CreateDbContext(System.String[])">
+            <summary>
+            Creates a db context based on the arguments.
+            </summary>
+            <param name="args">Aditional arguments used for creating the context.</param>
+            <returns>An EF context.</returns>
+        </member>
         <member name="T:DataMapper.DAO.ApplicationSettingDataService">
             <summary>
             Provides data access functionality for <see cref="T:DomainModel.Models.ApplicationSetting"/>.

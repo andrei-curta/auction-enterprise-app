@@ -1,12 +1,9 @@
-﻿using Xunit;
-using ServiceLayer.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using DataMapper.DAO;
+﻿using DataMapper.DAO;
 using DomainModel.Models;
 using DomainModel.ValueObjects;
 using Moq;
+using System;
+using Xunit;
 
 namespace ServiceLayer.Implementations.Tests
 {
@@ -20,7 +17,12 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
 
-            var bid = new Bid() {AuctionId = -1};
+            var bid = new Bid()
+            {
+                UserId = "a",
+                AuctionId = -1
+            };
+
             Auction auction = null;
             auctionDataServiceMock.Setup(x => x.GetByID(-1)).Returns(auction);
 
@@ -36,7 +38,12 @@ namespace ServiceLayer.Implementations.Tests
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
 
             long auctionId = 1;
-            var bid = new Bid() {AuctionId = auctionId};
+            var bid = new Bid()
+            {
+                UserId = "a",
+                AuctionId = auctionId
+            };
+
             Auction auction = new Auction()
                 {Id = auctionId, StartDate = DateTime.Now.AddDays(1), EndDate = DateTime.Now.AddDays(5)};
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
@@ -55,7 +62,12 @@ namespace ServiceLayer.Implementations.Tests
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
 
             long auctionId = 1;
-            var bid = new Bid() {AuctionId = auctionId};
+            var bid = new Bid()
+            {
+                UserId = "a",
+                AuctionId = auctionId
+            };
+
             Auction auction = new Auction()
             {
                 Id = auctionId,
@@ -81,6 +93,7 @@ namespace ServiceLayer.Implementations.Tests
             long auctionId = 1;
             var bid = new Bid()
             {
+                UserId = "a",
                 AuctionId = auctionId,
                 BidValue = new Money(10, "EUR")
             };
@@ -111,6 +124,7 @@ namespace ServiceLayer.Implementations.Tests
             long auctionId = 1;
             var bid = new Bid()
             {
+                UserId = "a",
                 AuctionId = auctionId,
                 BidValue = new Money(9, "RON")
             };
@@ -144,8 +158,9 @@ namespace ServiceLayer.Implementations.Tests
             long auctionId = 1;
             var bid = new Bid()
             {
+                UserId = "a",
                 AuctionId = auctionId,
-                BidValue = new Money(10.5M, "RON")
+                BidValue = new Money(10.01M, "RON")
             };
 
             Auction auction = new Auction()
@@ -158,6 +173,7 @@ namespace ServiceLayer.Implementations.Tests
 
             Bid previousBid = new Bid()
             {
+                UserId = "a",
                 AuctionId = auctionId,
                 BidValue = new Money(10.1M, "RON")
             };
@@ -181,6 +197,7 @@ namespace ServiceLayer.Implementations.Tests
             long auctionId = 1;
             var bid = new Bid()
             {
+                UserId = "a",
                 AuctionId = auctionId,
                 BidValue = new Money(12M, "RON")
             };
@@ -208,7 +225,8 @@ namespace ServiceLayer.Implementations.Tests
         [Theory]
         [InlineData(10, 10.5, 12)]
         [InlineData(10.1, 10.5, 12)]
-        public void AddTestBidAmountTooHighWithPreviousBid(decimal auctionStartPrice, decimal latestBidValue, decimal newBidValue)
+        public void AddTestBidAmountTooHighWithPreviousBid(decimal auctionStartPrice, decimal latestBidValue,
+            decimal newBidValue)
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
@@ -231,6 +249,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var bid = new Bid()
             {
+                UserId = "a",
                 AuctionId = auctionId,
                 BidValue = new Money(newBidValue, "RON")
             };

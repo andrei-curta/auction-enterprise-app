@@ -286,6 +286,12 @@
             Gets the currency.
             </summary>
         </member>
+        <member name="M:DomainModel.ValueObjects.Money.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:DomainModel.ValueObjects.Money.GetAtomicValues">
+            <inheritdoc/>
+        </member>
         <member name="T:DomainModel.ValueObjects.ValueObject">
             <summary>
             Base class for value objects.

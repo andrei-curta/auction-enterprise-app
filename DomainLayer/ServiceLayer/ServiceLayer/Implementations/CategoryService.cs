@@ -15,11 +15,13 @@ namespace ServiceLayer.Implementations
     /// </summary>
     public class CategoryService : BaseService<Category, CategoryDataService, CategoryValidator>, ICategoryService
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CategoryService"/> class.
         /// </summary>
-        public CategoryService()
-            : base(new CategoryDataService(), new CategoryValidator())
+        /// <param name="categoryDataService">The data service.</param>
+        public CategoryService(CategoryDataService categoryDataService)
+            : base(categoryDataService, new CategoryValidator())
         {
         }
     }
