@@ -53,6 +53,9 @@
             Provides data access functionality for <see cref="T:DomainModel.Models.Product"/>.
             </summary>
         </member>
+        <member name="M:DataMapper.DAO.ProductDataService.GetByID(System.Object)">
+            <inheritdoc/>
+        </member>
         <member name="T:DataMapper.DAO.UserDataService">
             <summary>
             Provides data access functionality for <see cref="T:DomainModel.Models.User"/>.

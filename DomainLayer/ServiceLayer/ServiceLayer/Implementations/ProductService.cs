@@ -7,6 +7,7 @@ namespace ServiceLayer.Implementations
     using DataMapper.DAO;
     using DomainModel.Models;
     using DomainModel.Validators;
+    using FluentValidation;
     using ServiceLayer.Implementations;
     using ServiceLayer.Interfaces;
 
@@ -22,6 +23,11 @@ namespace ServiceLayer.Implementations
         public ProductService(ProductDataService productDataService)
             : base(productDataService, new ProductValidator())
         {
+        }
+
+        public override void Add(Product entity)
+        {
+            this.validator.ValidateAndThrow(entity);
         }
     }
 }

@@ -50,6 +50,8 @@ namespace ConsoleApp
             //     }
             // });
 
+           
+
            var a = catServ.List();
 
             // var prodServ = serviceProvider.GetService<ProductService>();

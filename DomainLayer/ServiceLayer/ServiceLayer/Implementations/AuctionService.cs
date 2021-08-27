@@ -55,11 +55,14 @@ namespace ServiceLayer.Implementations
                 throw new Exception("You have reached the max number of open auctions;");
             }
 
-            // var auctionedProduct = productDataService.GetByID(entity.ProductId);
-            // if (auctionedProduct == null)
-            // {
-            //     throw new NullReferenceException("The Id for the product is invalid");
-            // }
+            var auctionedProduct = this.productDataService.GetByID(entity.ProductId);
+            if (auctionedProduct == null)
+            {
+                throw new NullReferenceException("The Id for the product is invalid");
+            }
+
+            // if() 
+
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
             if (entity.StartPrice.Amount < thresholdValue)
             {

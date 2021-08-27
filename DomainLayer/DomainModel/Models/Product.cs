@@ -7,7 +7,6 @@ namespace DomainModel.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Diagnostics.CodeAnalysis;
-    using DomainModel.ValueObjects;
 
     /// <summary>
     /// A product that is to be sold at aan auction.
@@ -49,6 +48,6 @@ namespace DomainModel.Models
         /// <summary>
         /// Gets or sets categories that the product is part of.
         /// </summary>
-        public virtual List<Category> Categories { get; set; }
+        public virtual HashSet<Category> Categories { get; set; }
     }
 }

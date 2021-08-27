@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using Microsoft.Data.SqlClient;
+
 namespace DataMapper.DAO
 {
     using System;
@@ -18,6 +20,7 @@ namespace DataMapper.DAO
     /// </summary>
     public class CategoryDataService : BaseRepository<Category>, ICategoryDataService
     {
+        /// <inheritdoc/>
         public override Category GetByID(object id)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
@@ -29,12 +32,14 @@ namespace DataMapper.DAO
             }
         }
 
+        /// <inheritdoc/>
         public override IEnumerable<Category> Get(Expression<Func<Category, bool>> filter = null,
-            Func<IQueryable<Category>, IOrderedQueryable<Category>> orderBy = null, string includeProperties = "")
+            Func<IQueryable<Category>, IOrderedQueryable<Category>> orderBy = null, 
+            string includeProperties = "")
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
-                var dbSet = ctx.Set<Category>().Include(x=> x.ParentCategories).Include(x=> x.SubCategories);
+                var dbSet = ctx.Set<Category>().Include(x => x.ParentCategories).Include(x => x.SubCategories);
 
                 IQueryable<Category> query = dbSet;
 
@@ -59,6 +64,28 @@ namespace DataMapper.DAO
                     return query.ToList();
                 }
             }
+        }
+
+        /// <inheritdoc/>
+        public Dictionary<string, int> GetNumberOfOpenedAuctionsByCategory(string userId)
+        {
+            throw new NotImplementedException();
+
+            // using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
+            // {
+            //
+            //     // select Categories.Id, count(1) as NumberPerCat  from Categories inner join CategoryProduct on Categories.Id = CategoryProduct.CategoriesId inner    join Auctions on Auctions.ProductId = CategoryProduct.ProductsId   where Auctions.ClosedByOwner = 0 and Auctions.EndDate < GETDATE() group by Categories.Id 
+            //     // var result = from auction in ctx.Auctions
+            //     //     join product in ctx.Products on auction.ProductId equals product.Id
+            //     //     select auction
+            //     //     grou
+            //     //     ;
+            //
+            //     // var studentName = ctx.Categories.FromSqlRaw("select Categories.Id, count(1) as NumberPerCat  from Categories inner join CategoryProduct on Categories.Id = CategoryProduct.CategoriesId inner    join Auctions on Auctions.ProductId = CategoryProduct.ProductsId   where Auctions.ClosedByOwner = 0 and Auctions.EndDate < GETDATE() and Auctions.UserId = @UserId group by Categories.Id ", userId)
+            //     //         .ToList();
+            //
+            //     var x = ctx.Categories.w
+            // }
         }
     }
 }
