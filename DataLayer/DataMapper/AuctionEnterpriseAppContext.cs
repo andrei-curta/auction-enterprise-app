@@ -26,6 +26,7 @@ namespace DataMapper
         public virtual DbSet<User> Users { get; set; }
 
         public virtual DbSet<Score> Scores { get; set; }
+        public virtual DbSet<AuctionPlacingRestriction> AuctionPlacingRestrictions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

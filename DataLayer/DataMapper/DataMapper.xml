@@ -68,6 +68,17 @@
         <member name="M:DataMapper.DAO.ProductDataService.Get(System.Linq.Expressions.Expression{System.Func{DomainModel.Models.Product,System.Boolean}},System.Func{System.Linq.IQueryable{DomainModel.Models.Product},System.Linq.IOrderedQueryable{DomainModel.Models.Product}},System.String)">
             <inheritdoc/>
         </member>
+        <member name="T:DataMapper.DAO.ScoreDataService">
+            <summary>
+            Implementation of the score data service.
+            </summary>
+        </member>
+        <member name="M:DataMapper.DAO.ScoreDataService.CalculateUserScore(System.String,System.Double,System.Nullable{System.UInt32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.DAO.ScoreDataService.GetScoresAssignedToUser(System.String,System.Nullable{System.UInt32})">
+            <inheritdoc/>
+        </member>
         <member name="T:DataMapper.DAO.UserDataService">
             <summary>
             Provides data access functionality for <see cref="T:DomainModel.Models.User"/>.
@@ -131,6 +142,28 @@
             <summary>
             Interface for the ProductDataService.
             </summary>
+        </member>
+        <member name="T:DataMapper.Interfaces.IScoreDataService">
+            <summary>
+            Interface for the scoreDataService.
+            </summary>
+        </member>
+        <member name="M:DataMapper.Interfaces.IScoreDataService.GetScoresAssignedToUser(System.String,System.Nullable{System.UInt32})">
+            <summary>
+            Calculates the score of the user or returns the default value.
+            </summary>
+            <param name="userId">The Id uf the user to get the score of.</param>
+            <param name="limit">The max number to return or all if null.</param>
+            <returns>The score of the user in descending order by date added.</returns>
+        </member>
+        <member name="M:DataMapper.Interfaces.IScoreDataService.CalculateUserScore(System.String,System.Double,System.Nullable{System.UInt32})">
+            <summary>
+            Calculates the score a user has.
+            </summary>
+            <param name="userId">The Id uf the user to get the score of.</param>
+            <param name="defaultScore">If the user has not been assigned any score, this value will be returned.</param>
+            <param name="limit">The max number to return or all if null.</param>
+            <returns>The value uf the score</returns>
         </member>
         <member name="T:DataMapper.Interfaces.IUserDataService">
             <summary>
