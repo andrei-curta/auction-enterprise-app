@@ -17,6 +17,6 @@ namespace DataMapper.Interfaces
         /// Gets the Number Of Opened Auctions By Category.
         /// </summary>
         /// <returns>A dictionary with key being the category and the value being the number of opened auctions.</returns>
-        public Dictionary<string, int> GetNumberOfOpenedAuctionsByCategory();
+        public Dictionary<string, int> GetNumberOfOpenedAuctionsByCategory(string userId);
     }
 }
