@@ -184,6 +184,36 @@
             Gets or sets the users in this role.
             </summary>
         </member>
+        <member name="T:DomainModel.Models.Score">
+            <summary>
+            Represents the trustworthy score an user assigns to another user.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Score.Id">
+            <summary>
+            Gets or sets the Id of the Score.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Score.AssignedToUser">
+            <summary>
+            Gets or sets the user that the score is assigned to.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Score.AssignedByUser">
+            <summary>
+            Gets or sets the user that assigned the score.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Score.ScoreValue">
+            <summary>
+            Gets or sets the actual score value.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.Score.DateAdded">
+            <summary>
+            Gets or sets the date at which the score was added.
+            </summary>
+        </member>
         <member name="T:DomainModel.Models.User">
             <summary>
             The application user.

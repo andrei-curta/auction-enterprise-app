@@ -48,12 +48,24 @@
             Provides data access functionality for <see cref="T:DomainModel.Models.Category"/>.
             </summary>
         </member>
+        <member name="M:DataMapper.DAO.CategoryDataService.GetByID(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.DAO.CategoryDataService.Get(System.Linq.Expressions.Expression{System.Func{DomainModel.Models.Category,System.Boolean}},System.Func{System.Linq.IQueryable{DomainModel.Models.Category},System.Linq.IOrderedQueryable{DomainModel.Models.Category}},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.DAO.CategoryDataService.GetNumberOfOpenedAuctionsByCategory(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:DataMapper.DAO.ProductDataService">
             <summary>
             Provides data access functionality for <see cref="T:DomainModel.Models.Product"/>.
             </summary>
         </member>
         <member name="M:DataMapper.DAO.ProductDataService.GetByID(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.DAO.ProductDataService.Get(System.Linq.Expressions.Expression{System.Func{DomainModel.Models.Product,System.Boolean}},System.Func{System.Linq.IQueryable{DomainModel.Models.Product},System.Linq.IOrderedQueryable{DomainModel.Models.Product}},System.String)">
             <inheritdoc/>
         </member>
         <member name="T:DataMapper.DAO.UserDataService">
@@ -108,6 +120,12 @@
             <summary>
             Interface for the CategoryDataService.
             </summary>
+        </member>
+        <member name="M:DataMapper.Interfaces.ICategoryDataService.GetNumberOfOpenedAuctionsByCategory(System.String)">
+            <summary>
+            Gets the Number Of Opened Auctions By Category.
+            </summary>
+            <returns>A dictionary with key being the category and the value being the number of opened auctions.</returns>
         </member>
         <member name="T:DataMapper.Interfaces.IProductDataService">
             <summary>

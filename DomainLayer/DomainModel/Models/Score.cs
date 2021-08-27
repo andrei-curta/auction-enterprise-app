@@ -4,6 +4,7 @@
 
 namespace DomainModel.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.Diagnostics.CodeAnalysis;
 
@@ -36,5 +37,10 @@ namespace DomainModel.Models
         [Required]
         [Range(1, 5)]
         public ushort ScoreValue { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date at which the score was added.
+        /// </summary>
+        public DateTime DateAdded { get; set; }
     }
 }
