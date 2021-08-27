@@ -35,11 +35,10 @@ namespace DomainModel.Models
         /// Gets or sets the actual score value.
         /// </summary>
         [Required]
-        [Range(1, 5)]
         public ushort ScoreValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the date at which the score was added.
+        /// Gets or sets the date added.
         /// </summary>
         public DateTime DateAdded { get; set; }
     }

@@ -23,6 +23,8 @@ namespace ServiceLayer.Implementations
 
         private readonly IProductDataService productDataService;
 
+        private readonly IAuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
@@ -32,11 +34,13 @@ namespace ServiceLayer.Implementations
         public AuctionService(
             AuctionDataService auctionDataService,
             IProductDataService productDataService,
-            ApplicationSettingDataService applicationSettingDataService)
+            ApplicationSettingDataService applicationSettingDataService,
+            AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService)
             : base(auctionDataService, new AuctionValidator())
         {
             this.productDataService = productDataService;
             this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService);
+            this.auctionPlacingRestrictionsDataService = auctionPlacingRestrictionsDataService;
         }
 
         /// <inheritdoc/>
@@ -61,12 +65,20 @@ namespace ServiceLayer.Implementations
                 throw new NullReferenceException("The Id for the product is invalid");
             }
 
-            // if() 
+            // Todo: verificare nr de licitatii pe categorie.
 
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
             if (entity.StartPrice.Amount < thresholdValue)
             {
                 throw new Exception($"The price set is below the threshold of {thresholdValue}");
+            }
+
+            bool hasAuctionPlacingRestrictions =
+                this.auctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions(entity.UserId);
+
+            if (hasAuctionPlacingRestrictions)
+            {
+                throw new Exception("You have an active auction placing restriction. Try later.");
             }
 
             // todo: verificat daca produsul apartine userului curent

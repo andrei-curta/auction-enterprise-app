@@ -1,4 +1,4 @@
-﻿// <copyright file="AuctionPlacingRestrictions.cs" company="Transilvania University of Brașov">
+﻿// <copyright file="AuctionPlacingRestriction.cs" company="Transilvania University of Brașov">
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
@@ -11,6 +11,11 @@ namespace DomainModel.Models
     /// </summary>
     public class AuctionPlacingRestriction
     {
+        /// <summary>
+        /// Gets or sets the id.
+        /// </summary>
+        public long Id { get; set; }
+
         /// <summary>
         /// Gets or sets the user that is sanctioned.
         /// </summary>

@@ -19,6 +19,9 @@ namespace ServiceLayer.Implementations.Tests
             Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
                 new Mock<ApplicationSettingDataService>();
 
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
             string name = "MaxUnfinishedAuctions";
             string userId = "1";
             var appSettingData = new ApplicationSetting()
@@ -38,7 +41,7 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataService.Object,
-                applicationSettingDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object);
             var result = service.HasReachedMaxNumberOfOpenedAuctions(userId);
 
             Assert.False(result);
@@ -53,6 +56,10 @@ namespace ServiceLayer.Implementations.Tests
 
             Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
                 new Mock<ApplicationSettingDataService>();
+
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
 
             string userId = "1";
             string name = "AuctionMaxDurationMonths";
@@ -91,7 +98,7 @@ namespace ServiceLayer.Implementations.Tests
             applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataService.Object,
-                applicationSettingDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object);
             service.Add(auction);
 
             var exception = Record.Exception(() => service.Add(auction));

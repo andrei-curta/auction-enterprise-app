@@ -79,6 +79,31 @@
             Gets a value indicating whether if the auction is either closed by the owner or the end date is passed.
             </summary>
         </member>
+        <member name="T:DomainModel.Models.AuctionPlacingRestriction">
+            <summary>
+            Once an user's score drops below a value, it cannot place an auction for a certain amount of time.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.AuctionPlacingRestriction.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.AuctionPlacingRestriction.User">
+            <summary>
+            Gets or sets the user that is sanctioned.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.AuctionPlacingRestriction.StartDate">
+            <summary>
+            Gets or sets the date and time the restrictions start.
+            </summary>
+        </member>
+        <member name="P:DomainModel.Models.AuctionPlacingRestriction.EndDate">
+            <summary>
+            Gets or sets the date and time the restrictions end.
+            </summary>
+        </member>
         <member name="T:DomainModel.Models.Bid">
             <summary>
             Class that represents a bid an user makes at an auction.
@@ -211,7 +236,7 @@
         </member>
         <member name="P:DomainModel.Models.Score.DateAdded">
             <summary>
-            Gets or sets the date at which the score was added.
+            Gets or sets the date added.
             </summary>
         </member>
         <member name="T:DomainModel.Models.User">
@@ -277,6 +302,16 @@
         <member name="M:DomainModel.Validators.ProductValidator.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:DomainModel.Validators.ProductValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:DomainModel.Validators.ScoreValidator">
+            <summary>
+            Validator for <see cref="T:DomainModel.Models.Score"/>.
+            </summary>
+        </member>
+        <member name="M:DomainModel.Validators.ScoreValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.ScoreValidator"/> class.
             </summary>
         </member>
         <member name="T:DomainModel.Validators.UserValidator">

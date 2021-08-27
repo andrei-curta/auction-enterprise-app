@@ -32,6 +32,14 @@
         <member name="M:DataMapper.DAO.AuctionDataService.GetAuctionsByUserId(System.String)">
             <inheritdoc/>
         </member>
+        <member name="T:DataMapper.DAO.AuctionPlacingRestrictionsDataService">
+            <summary>
+            Implementation of the auction placing data service.
+            </summary>
+        </member>
+        <member name="M:DataMapper.DAO.AuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:DataMapper.DAO.BidDataService">
             <summary>
             Provides data access functionality for <see cref="T:DomainModel.Models.Category"/>.
@@ -107,6 +115,18 @@
             </summary>
             <param name="userId">the user.</param>
             <returns>A list of auctions.</returns>
+        </member>
+        <member name="T:DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService">
+            <summary>
+            Interface for the auctionPlacingRestrictionsDataService.
+            </summary>
+        </member>
+        <member name="M:DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions(System.String)">
+            <summary>
+            Check if the user can start auctions or not.
+            </summary>
+            <param name="userId">The Id of the user to find out if it is unser restrictions.</param>
+            <returns>A boolean representing if the user is under restrictions.</returns>
         </member>
         <member name="T:DataMapper.Interfaces.IBidDataService">
             <summary>

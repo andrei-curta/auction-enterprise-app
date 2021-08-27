@@ -6,6 +6,9 @@ namespace ServiceLayer.Interfaces
 {
     using DomainModel.Models;
 
+    /// <summary>
+    /// Interface for the Application settings service.
+    /// </summary>
     public interface IApplicationSettingService : IService<ApplicationSetting>
     {
         public ApplicationSetting GetByName(string name);

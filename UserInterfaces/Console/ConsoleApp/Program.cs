@@ -57,8 +57,8 @@ namespace ConsoleApp
             // var prodServ = serviceProvider.GetService<ProductService>();
 
 
-            var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(),
-                new ApplicationSettingDataService());
+            // var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(),
+            //     new ApplicationSettingDataService());
             // auctServ.Add(new Auction()
             // {
             //     UserId = "1",

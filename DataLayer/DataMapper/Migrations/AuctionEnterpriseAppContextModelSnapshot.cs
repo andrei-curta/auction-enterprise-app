@@ -109,6 +109,29 @@ namespace DataMapper.Migrations
                     b.ToTable("Auctions");
                 });
 
+            modelBuilder.Entity("DomainModel.Models.AuctionPlacingRestriction", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AuctionPlacingRestrictions");
+                });
+
             modelBuilder.Entity("DomainModel.Models.Bid", b =>
                 {
                     b.Property<long>("Id")
@@ -367,6 +390,15 @@ namespace DataMapper.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("StartPrice");
+                });
+
+            modelBuilder.Entity("DomainModel.Models.AuctionPlacingRestriction", b =>
+                {
+                    b.HasOne("DomainModel.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DomainModel.Models.Bid", b =>
