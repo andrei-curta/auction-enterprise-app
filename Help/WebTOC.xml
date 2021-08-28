@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="89e59b63-7259-4093-af57-6fd5b7d9d493" Title="DataMapper Namespace" Url="html/N-DataMapper.htm">
+    <HelpTOCNode Id="3d64dec6-2fcf-4583-b81f-8840a3605d92" Title="AuctionEnterpriseAppContext Class" Url="html/T-DataMapper.AuctionEnterpriseAppContext.htm">
+      <HelpTOCNode Title="AuctionEnterpriseAppContext Members" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+      <HelpTOCNode Title="AuctionEnterpriseAppContext Constructor " Url="html/M-DataMapper.AuctionEnterpriseAppContext.-ctor.htm" />
+      <HelpTOCNode Title="AuctionEnterpriseAppContext Methods" Url="html/Methods.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+      <HelpTOCNode Id="46fe053f-33de-4409-926f-a28ffa9702d8" Title="AuctionEnterpriseAppContext Properties" Url="html/Properties.T-DataMapper.AuctionEnterpriseAppContext.htm">
+        <HelpTOCNode Title="ApplicationSettings Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.ApplicationSettings.htm" />
+        <HelpTOCNode Title="AuctionPlacingRestrictions Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.AuctionPlacingRestrictions.htm" />
+        <HelpTOCNode Title="Auctions Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.Auctions.htm" />
+        <HelpTOCNode Title="Bids Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.Bids.htm" />
+        <HelpTOCNode Title="Categories Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.Categories.htm" />
+        <HelpTOCNode Title="Products Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.Products.htm" />
+        <HelpTOCNode Title="Scores Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.Scores.htm" />
+        <HelpTOCNode Title="Users Property " Url="html/P-DataMapper.AuctionEnterpriseAppContext.Users.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="accc720d-1068-4fda-bb3a-b0c99d7bcdb3" Title="AuctionEnterpriseContextFactory Class" Url="html/T-DataMapper.AuctionEnterpriseContextFactory.htm">
+      <HelpTOCNode Title="AuctionEnterpriseContextFactory Members" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+      <HelpTOCNode Id="a83cb322-356e-4e18-8b91-ab9a0f79d06a" Title="AuctionEnterpriseContextFactory Methods" Url="html/Methods.T-DataMapper.AuctionEnterpriseContextFactory.htm">
+        <HelpTOCNode Title="CreateDbContext Method " Url="html/M-DataMapper.AuctionEnterpriseContextFactory.CreateDbContext.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="94f26591-6050-4799-b4d9-5da553b8db6d" Title="DataMapper.DAO Namespace" Url="html/N-DataMapper.DAO.htm">
+    <HelpTOCNode Id="6fb23e73-9651-4483-ab8b-c7054ecbb4fb" Title="ApplicationSettingDataService Class" Url="html/T-DataMapper.DAO.ApplicationSettingDataService.htm">
+      <HelpTOCNode Title="ApplicationSettingDataService Members" Url="html/AllMembers.T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+      <HelpTOCNode Id="f4070df9-59f3-45ab-a2cc-b17575258ff6" Title="ApplicationSettingDataService Methods" Url="html/Methods.T-DataMapper.DAO.ApplicationSettingDataService.htm">
+        <HelpTOCNode Title="GetByName Method " Url="html/M-DataMapper.DAO.ApplicationSettingDataService.GetByName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="406bba51-87e3-4b28-8225-fdaca2989d20" Title="AuctionDataService Class" Url="html/T-DataMapper.DAO.AuctionDataService.htm">
+      <HelpTOCNode Title="AuctionDataService Members" Url="html/AllMembers.T-DataMapper.DAO.AuctionDataService.htm" />
+      <HelpTOCNode Id="f7ed64eb-a0ee-4aba-ad69-24a7b2d345b8" Title="AuctionDataService Methods" Url="html/Methods.T-DataMapper.DAO.AuctionDataService.htm">
+        <HelpTOCNode Title="GetAuctionsByUserId Method " Url="html/M-DataMapper.DAO.AuctionDataService.GetAuctionsByUserId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5fe8b668-e623-42ff-a69b-19da95edb770" Title="AuctionPlacingRestrictionsDataService Class" Url="html/T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm">
+      <HelpTOCNode Title="AuctionPlacingRestrictionsDataService Members" Url="html/AllMembers.T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+      <HelpTOCNode Id="27577398-7e40-4eee-9163-257af6c7bec1" Title="AuctionPlacingRestrictionsDataService Methods" Url="html/Methods.T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm">
+        <HelpTOCNode Title="HasActiveAuctionPlacingRestrictions Method " Url="html/M-DataMapper.DAO.AuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="20c2ddfc-526e-47c7-92c3-14c260eb715f" Title="BidDataService Class" Url="html/T-DataMapper.DAO.BidDataService.htm">
+      <HelpTOCNode Title="BidDataService Members" Url="html/AllMembers.T-DataMapper.DAO.BidDataService.htm" />
+      <HelpTOCNode Id="11ec1a50-b913-43da-a701-9f9e86f4c8c5" Title="BidDataService Methods" Url="html/Methods.T-DataMapper.DAO.BidDataService.htm">
+        <HelpTOCNode Title="GetBidsByAuction Method " Url="html/M-DataMapper.DAO.BidDataService.GetBidsByAuction.htm" />
+        <HelpTOCNode Title="GetLatestBidByAuction Method " Url="html/M-DataMapper.DAO.BidDataService.GetLatestBidByAuction.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="378b990f-8a7a-45fa-aad1-57a26ca52d6d" Title="CategoryDataService Class" Url="html/T-DataMapper.DAO.CategoryDataService.htm">
+      <HelpTOCNode Title="CategoryDataService Members" Url="html/AllMembers.T-DataMapper.DAO.CategoryDataService.htm" />
+      <HelpTOCNode Id="03434a0a-a800-4417-a708-1144d576c6be" Title="CategoryDataService Methods" Url="html/Methods.T-DataMapper.DAO.CategoryDataService.htm">
+        <HelpTOCNode Id="35c319fe-cefd-43f7-b3e3-5892e3167ac2" Title="Get Method " Url="html/Overload-DataMapper.DAO.CategoryDataService.Get.htm">
+          <HelpTOCNode Title="Get Method " Url="html/M-DataMapper.DAO.CategoryDataService.Get.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetByID Method " Url="html/M-DataMapper.DAO.CategoryDataService.GetByID.htm" />
+        <HelpTOCNode Title="GetNumberOfOpenedAuctionsByCategory Method " Url="html/M-DataMapper.DAO.CategoryDataService.GetNumberOfOpenedAuctionsByCategory.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="39300e6d-7278-4ac9-bcda-066a462fc9a9" Title="ProductDataService Class" Url="html/T-DataMapper.DAO.ProductDataService.htm">
+      <HelpTOCNode Title="ProductDataService Members" Url="html/AllMembers.T-DataMapper.DAO.ProductDataService.htm" />
+      <HelpTOCNode Id="51aa60a5-50ed-4dd3-9689-1ba2543f52bb" Title="ProductDataService Methods" Url="html/Methods.T-DataMapper.DAO.ProductDataService.htm">
+        <HelpTOCNode Id="137d7fbf-a630-4c00-83d9-644fedae6c10" Title="Get Method " Url="html/Overload-DataMapper.DAO.ProductDataService.Get.htm">
+          <HelpTOCNode Title="Get Method " Url="html/M-DataMapper.DAO.ProductDataService.Get.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetByID Method " Url="html/M-DataMapper.DAO.ProductDataService.GetByID.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="78a8bb23-00fb-4c26-a717-75d7064c7105" Title="ScoreDataService Class" Url="html/T-DataMapper.DAO.ScoreDataService.htm">
+      <HelpTOCNode Title="ScoreDataService Members" Url="html/AllMembers.T-DataMapper.DAO.ScoreDataService.htm" />
+      <HelpTOCNode Id="7e95e690-33a0-40f5-86fd-1d7c40ba0385" Title="ScoreDataService Methods" Url="html/Methods.T-DataMapper.DAO.ScoreDataService.htm">
+        <HelpTOCNode Title="CalculateUserScore Method " Url="html/M-DataMapper.DAO.ScoreDataService.CalculateUserScore.htm" />
+        <HelpTOCNode Title="GetScoresAssignedToUser Method " Url="html/M-DataMapper.DAO.ScoreDataService.GetScoresAssignedToUser.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0dff8d54-c956-4fd1-b884-e79cb4efab67" Title="UserDataService Class" Url="html/T-DataMapper.DAO.UserDataService.htm">
+      <HelpTOCNode Title="UserDataService Methods" Url="html/Methods.T-DataMapper.DAO.UserDataService.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="1dd26278-9aa6-41c5-96e1-ec79cb61502e" Title="DataMapper.Interfaces Namespace" Url="html/N-DataMapper.Interfaces.htm">
+    <HelpTOCNode Id="509089d3-e6a5-4d92-981e-7ad78963f262" Title="IApplicationSettingDataService Interface" Url="html/T-DataMapper.Interfaces.IApplicationSettingDataService.htm">
+      <HelpTOCNode Title="IApplicationSettingDataService Members" Url="html/AllMembers.T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+      <HelpTOCNode Id="c20797aa-c5c7-428e-aeba-6206e5ab601e" Title="IApplicationSettingDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IApplicationSettingDataService.htm">
+        <HelpTOCNode Title="GetByName Method " Url="html/M-DataMapper.Interfaces.IApplicationSettingDataService.GetByName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a827c6c3-8e48-4407-8837-46d96a54dba1" Title="IAuctionDataService Interface" Url="html/T-DataMapper.Interfaces.IAuctionDataService.htm">
+      <HelpTOCNode Title="IAuctionDataService Members" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionDataService.htm" />
+      <HelpTOCNode Id="def9c0ef-ed5b-4e14-b8f2-414110e54c47" Title="IAuctionDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IAuctionDataService.htm">
+        <HelpTOCNode Title="GetAuctionsByUserId Method " Url="html/M-DataMapper.Interfaces.IAuctionDataService.GetAuctionsByUserId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9f3c7e36-b218-46be-97de-9c145b4ad12d" Title="IAuctionPlacingRestrictionsDataService Interface" Url="html/T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm">
+      <HelpTOCNode Title="IAuctionPlacingRestrictionsDataService Members" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+      <HelpTOCNode Id="19875ca5-09d5-4476-a62d-29cdc4ef2190" Title="IAuctionPlacingRestrictionsDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm">
+        <HelpTOCNode Title="HasActiveAuctionPlacingRestrictions Method " Url="html/M-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e55d108e-5865-4755-997e-a4be12bf91cb" Title="IBidDataService Interface" Url="html/T-DataMapper.Interfaces.IBidDataService.htm">
+      <HelpTOCNode Title="IBidDataService Members" Url="html/AllMembers.T-DataMapper.Interfaces.IBidDataService.htm" />
+      <HelpTOCNode Id="77fcbf72-49e7-4ba7-9a40-0c72848ef247" Title="IBidDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IBidDataService.htm">
+        <HelpTOCNode Title="GetBidsByAuction Method " Url="html/M-DataMapper.Interfaces.IBidDataService.GetBidsByAuction.htm" />
+        <HelpTOCNode Title="GetLatestBidByAuction Method " Url="html/M-DataMapper.Interfaces.IBidDataService.GetLatestBidByAuction.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f25ccd1d-27ee-4a63-b793-e413f3a0e2c7" Title="ICategoryDataService Interface" Url="html/T-DataMapper.Interfaces.ICategoryDataService.htm">
+      <HelpTOCNode Title="ICategoryDataService Members" Url="html/AllMembers.T-DataMapper.Interfaces.ICategoryDataService.htm" />
+      <HelpTOCNode Id="dc9f36bf-f702-4826-86dd-3ae84b47fb1f" Title="ICategoryDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.ICategoryDataService.htm">
+        <HelpTOCNode Title="GetNumberOfOpenedAuctionsByCategory Method " Url="html/M-DataMapper.Interfaces.ICategoryDataService.GetNumberOfOpenedAuctionsByCategory.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ed471d87-aeae-4d4f-9fbd-b5002681ed61" Title="IProductDataService Interface" Url="html/T-DataMapper.Interfaces.IProductDataService.htm">
+      <HelpTOCNode Title="IProductDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IProductDataService.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="cac26a75-0f07-420d-8ad3-7f43ba0102b6" Title="IScoreDataService Interface" Url="html/T-DataMapper.Interfaces.IScoreDataService.htm">
+      <HelpTOCNode Title="IScoreDataService Members" Url="html/AllMembers.T-DataMapper.Interfaces.IScoreDataService.htm" />
+      <HelpTOCNode Id="111573b9-68ed-4970-9537-fda0b31fdfb7" Title="IScoreDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IScoreDataService.htm">
+        <HelpTOCNode Title="CalculateUserScore Method " Url="html/M-DataMapper.Interfaces.IScoreDataService.CalculateUserScore.htm" />
+        <HelpTOCNode Title="GetScoresAssignedToUser Method " Url="html/M-DataMapper.Interfaces.IScoreDataService.GetScoresAssignedToUser.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="221be8a6-84e2-47dd-81b4-41f061949481" Title="IUserDataService Interface" Url="html/T-DataMapper.Interfaces.IUserDataService.htm">
+      <HelpTOCNode Title="IUserDataService Methods" Url="html/Methods.T-DataMapper.Interfaces.IUserDataService.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a880c10a-71c5-4c48-abd1-6e00347cf345" Title="DataMapper.Migrations Namespace" Url="html/N-DataMapper.Migrations.htm">
+    <HelpTOCNode Id="a52cf4bd-1150-417c-a015-b980e7f0c6c0" Title="addProductCategories Class" Url="html/T-DataMapper.Migrations.addProductCategories.htm">
+      <HelpTOCNode Title="addProductCategories Members" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories.htm" />
+      <HelpTOCNode Title="addProductCategories Methods" Url="html/Methods.T-DataMapper.Migrations.addProductCategories.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="00f9a04e-a33a-4283-8b21-908d06d81303" Title="addProductCategories2 Class" Url="html/T-DataMapper.Migrations.addProductCategories2.htm">
+      <HelpTOCNode Title="addProductCategories2 Members" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories2.htm" />
+      <HelpTOCNode Title="addProductCategories2 Methods" Url="html/Methods.T-DataMapper.Migrations.addProductCategories2.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="bc6f10fe-234c-458a-940f-630f58fbea2a" Title="AuctionDefaultDate Class" Url="html/T-DataMapper.Migrations.AuctionDefaultDate.htm">
+      <HelpTOCNode Title="AuctionDefaultDate Members" Url="html/AllMembers.T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+      <HelpTOCNode Title="AuctionDefaultDate Methods" Url="html/Methods.T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c23c2e50-ae93-4a67-b416-778952a12c5f" Title="AuctionPlacingRestriction Class" Url="html/T-DataMapper.Migrations.AuctionPlacingRestriction.htm">
+      <HelpTOCNode Title="AuctionPlacingRestriction Members" Url="html/AllMembers.T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+      <HelpTOCNode Title="AuctionPlacingRestriction Methods" Url="html/Methods.T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="55a46d1f-ddef-4c5d-b5b7-8759360ed4b7" Title="AuctionStartPrice Class" Url="html/T-DataMapper.Migrations.AuctionStartPrice.htm">
+      <HelpTOCNode Title="AuctionStartPrice Members" Url="html/AllMembers.T-DataMapper.Migrations.AuctionStartPrice.htm" />
+      <HelpTOCNode Title="AuctionStartPrice Methods" Url="html/Methods.T-DataMapper.Migrations.AuctionStartPrice.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="e1a6104c-3baa-40f8-bf84-75f609ce69b7" Title="BidDefaultDate Class" Url="html/T-DataMapper.Migrations.BidDefaultDate.htm">
+      <HelpTOCNode Title="BidDefaultDate Members" Url="html/AllMembers.T-DataMapper.Migrations.BidDefaultDate.htm" />
+      <HelpTOCNode Title="BidDefaultDate Methods" Url="html/Methods.T-DataMapper.Migrations.BidDefaultDate.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="a6e29d5b-c797-4a72-a62d-e8f67700d6fe" Title="bidUser Class" Url="html/T-DataMapper.Migrations.bidUser.htm">
+      <HelpTOCNode Title="bidUser Members" Url="html/AllMembers.T-DataMapper.Migrations.bidUser.htm" />
+      <HelpTOCNode Title="bidUser Methods" Url="html/Methods.T-DataMapper.Migrations.bidUser.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="8b5b5534-29fd-4596-bddf-39cbdaf9e64f" Title="categorydisable Class" Url="html/T-DataMapper.Migrations.categorydisable.htm">
+      <HelpTOCNode Title="categorydisable Members" Url="html/AllMembers.T-DataMapper.Migrations.categorydisable.htm" />
+      <HelpTOCNode Title="categorydisable Methods" Url="html/Methods.T-DataMapper.Migrations.categorydisable.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="8e898d02-7e47-481a-9f17-aadcadaf32d3" Title="categoryredone Class" Url="html/T-DataMapper.Migrations.categoryredone.htm">
+      <HelpTOCNode Title="categoryredone Members" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone.htm" />
+      <HelpTOCNode Title="categoryredone Methods" Url="html/Methods.T-DataMapper.Migrations.categoryredone.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="301d961f-e066-4fb0-8764-7552ef1bb675" Title="categoryredone2 Class" Url="html/T-DataMapper.Migrations.categoryredone2.htm">
+      <HelpTOCNode Title="categoryredone2 Members" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone2.htm" />
+      <HelpTOCNode Title="categoryredone2 Methods" Url="html/Methods.T-DataMapper.Migrations.categoryredone2.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="112bda8b-3779-4b92-b4d0-de97044230ee" Title="ConnectAuctionWithUser Class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser.htm">
+      <HelpTOCNode Title="ConnectAuctionWithUser Members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+      <HelpTOCNode Title="ConnectAuctionWithUser Methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="0ce103f0-b490-4fc7-b3db-e79e6319fbdb" Title="ConnectAuctionWithUser2 Class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser2.htm">
+      <HelpTOCNode Title="ConnectAuctionWithUser2 Members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+      <HelpTOCNode Title="ConnectAuctionWithUser2 Methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f8d3f689-c4de-4e8b-9d9e-0463da0ca30f" Title="ConnectAuctionWithUser3 Class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser3.htm">
+      <HelpTOCNode Title="ConnectAuctionWithUser3 Members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+      <HelpTOCNode Title="ConnectAuctionWithUser3 Methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="39bbf3ef-4eec-47b4-aafd-b8d9f91d7405" Title="ConnectAuctionWithUser4 Class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser4.htm">
+      <HelpTOCNode Title="ConnectAuctionWithUser4 Members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+      <HelpTOCNode Title="ConnectAuctionWithUser4 Methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="cb7df6ea-9f87-43a4-bc6b-65b8431b2fdd" Title="DomainModel Class" Url="html/T-DataMapper.Migrations.DomainModel.htm">
+      <HelpTOCNode Title="DomainModel Members" Url="html/AllMembers.T-DataMapper.Migrations.DomainModel.htm" />
+      <HelpTOCNode Title="DomainModel Methods" Url="html/Methods.T-DataMapper.Migrations.DomainModel.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c2eb3eb8-ea3a-4030-96f3-34b4ff6c6c51" Title="InitialMigration Class" Url="html/T-DataMapper.Migrations.InitialMigration.htm">
+      <HelpTOCNode Title="InitialMigration Members" Url="html/AllMembers.T-DataMapper.Migrations.InitialMigration.htm" />
+      <HelpTOCNode Title="InitialMigration Methods" Url="html/Methods.T-DataMapper.Migrations.InitialMigration.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="608d2c4a-7c54-4b74-8928-9a562a358dfe" Title="MoneyType Class" Url="html/T-DataMapper.Migrations.MoneyType.htm">
+      <HelpTOCNode Title="MoneyType Members" Url="html/AllMembers.T-DataMapper.Migrations.MoneyType.htm" />
+      <HelpTOCNode Title="MoneyType Methods" Url="html/Methods.T-DataMapper.Migrations.MoneyType.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="6a29c2dd-1a22-4399-996f-0f8ac8d8d07f" Title="MoneyTypeBid Class" Url="html/T-DataMapper.Migrations.MoneyTypeBid.htm">
+      <HelpTOCNode Title="MoneyTypeBid Members" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeBid.htm" />
+      <HelpTOCNode Title="MoneyTypeBid Methods" Url="html/Methods.T-DataMapper.Migrations.MoneyTypeBid.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="9e2eaa4a-25cb-450a-8ee1-910f0b4b2a24" Title="MoneyTypeConstraints Class" Url="html/T-DataMapper.Migrations.MoneyTypeConstraints.htm">
+      <HelpTOCNode Title="MoneyTypeConstraints Members" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+      <HelpTOCNode Title="MoneyTypeConstraints Methods" Url="html/Methods.T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="65fd347f-8db5-4ae0-a271-ef62881b5784" Title="score Class" Url="html/T-DataMapper.Migrations.score.htm">
+      <HelpTOCNode Title="score Members" Url="html/AllMembers.T-DataMapper.Migrations.score.htm" />
+      <HelpTOCNode Title="score Methods" Url="html/Methods.T-DataMapper.Migrations.score.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c7779cc7-8ee1-48c3-a6ed-fc557b90d353" Title="UpdatedCategoryHierarchy Class" Url="html/T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm">
+      <HelpTOCNode Title="UpdatedCategoryHierarchy Members" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+      <HelpTOCNode Title="UpdatedCategoryHierarchy Methods" Url="html/Methods.T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="2f82e2c6-06da-4a12-a9a4-e2c15d3d3adc" Title="UpdatedRelations Class" Url="html/T-DataMapper.Migrations.UpdatedRelations.htm">
+      <HelpTOCNode Title="UpdatedRelations Members" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedRelations.htm" />
+      <HelpTOCNode Title="UpdatedRelations Methods" Url="html/Methods.T-DataMapper.Migrations.UpdatedRelations.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ad7832f7-6d77-4b35-9dec-fa18f94cf3ac" Title="UpdateProduct Class" Url="html/T-DataMapper.Migrations.UpdateProduct.htm">
+      <HelpTOCNode Title="UpdateProduct Members" Url="html/AllMembers.T-DataMapper.Migrations.UpdateProduct.htm" />
+      <HelpTOCNode Title="UpdateProduct Methods" Url="html/Methods.T-DataMapper.Migrations.UpdateProduct.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="39aeaa21-2650-46f7-be8b-50722ef3e238" Title="userRoles Class" Url="html/T-DataMapper.Migrations.userRoles.htm">
+      <HelpTOCNode Title="userRoles Members" Url="html/AllMembers.T-DataMapper.Migrations.userRoles.htm" />
+      <HelpTOCNode Title="userRoles Methods" Url="html/Methods.T-DataMapper.Migrations.userRoles.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f8915a7e-64f1-4c34-8a39-8743700a3717" Title="DataMapper.Repository Namespace" Url="html/N-DataMapper.Repository.htm">
+    <HelpTOCNode Id="b830fff7-6e88-411e-a66c-d3905f254dd9" Title="BaseRepository(T) Class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm">
+      <HelpTOCNode Title="BaseRepository(T) Members" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+      <HelpTOCNode Id="ac88d549-e1ad-4b81-83bb-fb5db55416e7" Title="BaseRepository(T) Methods" Url="html/Methods.T-DataMapper.Repository.BaseRepository-1.htm">
+        <HelpTOCNode Id="56a98e57-e5a1-4cf4-a45d-e64954e048c4" Title="Delete Method " Url="html/Overload-DataMapper.Repository.BaseRepository-1.Delete.htm">
+          <HelpTOCNode Title="Delete Method (Object)" Url="html/M-DataMapper.Repository.BaseRepository-1.Delete.htm" />
+          <HelpTOCNode Title="Delete Method (T)" Url="html/M-DataMapper.Repository.BaseRepository-1.Delete_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Get Method " Url="html/M-DataMapper.Repository.BaseRepository-1.Get.htm" />
+        <HelpTOCNode Title="GetByID Method " Url="html/M-DataMapper.Repository.BaseRepository-1.GetByID.htm" />
+        <HelpTOCNode Title="Insert Method " Url="html/M-DataMapper.Repository.BaseRepository-1.Insert.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-DataMapper.Repository.BaseRepository-1.Update.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="37ba1b18-e59c-4b08-b9cd-1b776042deca" Title="IRepository(T) Interface" Url="html/T-DataMapper.Repository.IRepository-1.htm">
+      <HelpTOCNode Title="IRepository Members" Url="html/AllMembers.T-DataMapper.Repository.IRepository-1.htm" />
+      <HelpTOCNode Id="920e086a-3929-4ac7-9d05-00b46aa88027" Title="IRepository Methods" Url="html/Methods.T-DataMapper.Repository.IRepository-1.htm">
+        <HelpTOCNode Title="Delete Method " Url="html/M-DataMapper.Repository.IRepository-1.Delete.htm" />
+        <HelpTOCNode Title="Get Method " Url="html/M-DataMapper.Repository.IRepository-1.Get.htm" />
+        <HelpTOCNode Title="GetByID Method " Url="html/M-DataMapper.Repository.IRepository-1.GetByID.htm" />
+        <HelpTOCNode Title="Insert Method " Url="html/M-DataMapper.Repository.IRepository-1.Insert.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-DataMapper.Repository.IRepository-1.Update.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="05e7103d-99cd-4018-898a-cd3a9d685ee6" Title="DomainModel.Models Namespace" Url="html/N-DomainModel.Models.htm">
+    <HelpTOCNode Id="071887b3-cbd2-4a95-90d3-2776cf514762" Title="ApplicationSetting Class" Url="html/T-DomainModel.Models.ApplicationSetting.htm">
+      <HelpTOCNode Title="ApplicationSetting Members" Url="html/AllMembers.T-DomainModel.Models.ApplicationSetting.htm" />
+      <HelpTOCNode Title="ApplicationSetting Methods" Url="html/Methods.T-DomainModel.Models.ApplicationSetting.htm" />
+      <HelpTOCNode Id="59a94bbd-2989-4c51-9ed4-45a2f4e916f1" Title="ApplicationSetting Properties" Url="html/Properties.T-DomainModel.Models.ApplicationSetting.htm">
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.ApplicationSetting.Id.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P-DomainModel.Models.ApplicationSetting.Name.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P-DomainModel.Models.ApplicationSetting.Value.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ab05e011-f66a-4eda-ab1f-b97ac80d7e46" Title="Auction Class" Url="html/T-DomainModel.Models.Auction.htm">
+      <HelpTOCNode Title="Auction Members" Url="html/AllMembers.T-DomainModel.Models.Auction.htm" />
+      <HelpTOCNode Title="Auction Methods" Url="html/Methods.T-DomainModel.Models.Auction.htm" />
+      <HelpTOCNode Id="7007f854-3b95-41b7-a95e-9a5bd4bbda28" Title="Auction Properties" Url="html/Properties.T-DomainModel.Models.Auction.htm">
+        <HelpTOCNode Title="Closed Property " Url="html/P-DomainModel.Models.Auction.Closed.htm" />
+        <HelpTOCNode Title="ClosedByOwner Property " Url="html/P-DomainModel.Models.Auction.ClosedByOwner.htm" />
+        <HelpTOCNode Title="DateCreated Property " Url="html/P-DomainModel.Models.Auction.DateCreated.htm" />
+        <HelpTOCNode Title="EndDate Property " Url="html/P-DomainModel.Models.Auction.EndDate.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.Auction.Id.htm" />
+        <HelpTOCNode Title="Product Property " Url="html/P-DomainModel.Models.Auction.Product.htm" />
+        <HelpTOCNode Title="ProductId Property " Url="html/P-DomainModel.Models.Auction.ProductId.htm" />
+        <HelpTOCNode Title="StartDate Property " Url="html/P-DomainModel.Models.Auction.StartDate.htm" />
+        <HelpTOCNode Title="StartPrice Property " Url="html/P-DomainModel.Models.Auction.StartPrice.htm" />
+        <HelpTOCNode Title="UserId Property " Url="html/P-DomainModel.Models.Auction.UserId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="26a47451-f81d-4b0b-970c-dbba4110dc36" Title="AuctionPlacingRestriction Class" Url="html/T-DomainModel.Models.AuctionPlacingRestriction.htm">
+      <HelpTOCNode Title="AuctionPlacingRestriction Members" Url="html/AllMembers.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+      <HelpTOCNode Title="AuctionPlacingRestriction Methods" Url="html/Methods.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+      <HelpTOCNode Id="630cddef-0a74-40bd-96c1-91e61cfd425d" Title="AuctionPlacingRestriction Properties" Url="html/Properties.T-DomainModel.Models.AuctionPlacingRestriction.htm">
+        <HelpTOCNode Title="EndDate Property " Url="html/P-DomainModel.Models.AuctionPlacingRestriction.EndDate.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.AuctionPlacingRestriction.Id.htm" />
+        <HelpTOCNode Title="StartDate Property " Url="html/P-DomainModel.Models.AuctionPlacingRestriction.StartDate.htm" />
+        <HelpTOCNode Title="User Property " Url="html/P-DomainModel.Models.AuctionPlacingRestriction.User.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c0ddb363-5115-44de-8a1e-e705450f0378" Title="Bid Class" Url="html/T-DomainModel.Models.Bid.htm">
+      <HelpTOCNode Title="Bid Members" Url="html/AllMembers.T-DomainModel.Models.Bid.htm" />
+      <HelpTOCNode Title="Bid Methods" Url="html/Methods.T-DomainModel.Models.Bid.htm" />
+      <HelpTOCNode Id="7be85e9d-ac1d-4ce5-9fe2-2d45f91a04b8" Title="Bid Properties" Url="html/Properties.T-DomainModel.Models.Bid.htm">
+        <HelpTOCNode Title="AuctionId Property " Url="html/P-DomainModel.Models.Bid.AuctionId.htm" />
+        <HelpTOCNode Title="BidValue Property " Url="html/P-DomainModel.Models.Bid.BidValue.htm" />
+        <HelpTOCNode Title="DateAdded Property " Url="html/P-DomainModel.Models.Bid.DateAdded.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.Bid.Id.htm" />
+        <HelpTOCNode Title="UserId Property " Url="html/P-DomainModel.Models.Bid.UserId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f5f94598-a776-4722-afc2-ec888c14f692" Title="Category Class" Url="html/T-DomainModel.Models.Category.htm">
+      <HelpTOCNode Title="Category Members" Url="html/AllMembers.T-DomainModel.Models.Category.htm" />
+      <HelpTOCNode Title="Category Methods" Url="html/Methods.T-DomainModel.Models.Category.htm" />
+      <HelpTOCNode Id="d959c865-78b3-4c58-84fb-ba15c875606b" Title="Category Properties" Url="html/Properties.T-DomainModel.Models.Category.htm">
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.Category.Id.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P-DomainModel.Models.Category.Name.htm" />
+        <HelpTOCNode Title="ParentCategories Property " Url="html/P-DomainModel.Models.Category.ParentCategories.htm" />
+        <HelpTOCNode Title="Products Property " Url="html/P-DomainModel.Models.Category.Products.htm" />
+        <HelpTOCNode Title="SubCategories Property " Url="html/P-DomainModel.Models.Category.SubCategories.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c2b72ab6-6cc9-440d-b44c-df604c7c7b9c" Title="Product Class" Url="html/T-DomainModel.Models.Product.htm">
+      <HelpTOCNode Title="Product Members" Url="html/AllMembers.T-DomainModel.Models.Product.htm" />
+      <HelpTOCNode Title="Product Methods" Url="html/Methods.T-DomainModel.Models.Product.htm" />
+      <HelpTOCNode Id="93bf1b7c-1659-41b2-9c45-89af0e7b8684" Title="Product Properties" Url="html/Properties.T-DomainModel.Models.Product.htm">
+        <HelpTOCNode Title="Categories Property " Url="html/P-DomainModel.Models.Product.Categories.htm" />
+        <HelpTOCNode Title="Description Property " Url="html/P-DomainModel.Models.Product.Description.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.Product.Id.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P-DomainModel.Models.Product.Name.htm" />
+        <HelpTOCNode Title="User Property " Url="html/P-DomainModel.Models.Product.User.htm" />
+        <HelpTOCNode Title="UserId Property " Url="html/P-DomainModel.Models.Product.UserId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="607ac725-56e7-49b2-9b4f-3c9d9261fd67" Title="Role Class" Url="html/T-DomainModel.Models.Role.htm">
+      <HelpTOCNode Title="Role Members" Url="html/AllMembers.T-DomainModel.Models.Role.htm" />
+      <HelpTOCNode Title="Role Methods" Url="html/Methods.T-DomainModel.Models.Role.htm" />
+      <HelpTOCNode Id="f0cff96a-69ab-4266-ac9c-6d61120e9750" Title="Role Properties" Url="html/Properties.T-DomainModel.Models.Role.htm">
+        <HelpTOCNode Title="UsersInRole Property " Url="html/P-DomainModel.Models.Role.UsersInRole.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f82929cf-55b9-46f7-ab4b-095ba8634c7a" Title="Score Class" Url="html/T-DomainModel.Models.Score.htm">
+      <HelpTOCNode Title="Score Members" Url="html/AllMembers.T-DomainModel.Models.Score.htm" />
+      <HelpTOCNode Title="Score Methods" Url="html/Methods.T-DomainModel.Models.Score.htm" />
+      <HelpTOCNode Id="ea3b61fb-3aee-4f85-9f24-8e9976055b89" Title="Score Properties" Url="html/Properties.T-DomainModel.Models.Score.htm">
+        <HelpTOCNode Title="AssignedByUser Property " Url="html/P-DomainModel.Models.Score.AssignedByUser.htm" />
+        <HelpTOCNode Title="AssignedToUser Property " Url="html/P-DomainModel.Models.Score.AssignedToUser.htm" />
+        <HelpTOCNode Title="DateAdded Property " Url="html/P-DomainModel.Models.Score.DateAdded.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-DomainModel.Models.Score.Id.htm" />
+        <HelpTOCNode Title="ScoreValue Property " Url="html/P-DomainModel.Models.Score.ScoreValue.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="481098c6-12ca-4487-8185-7e77bddcbb66" Title="User Class" Url="html/T-DomainModel.Models.User.htm">
+      <HelpTOCNode Title="User Members" Url="html/AllMembers.T-DomainModel.Models.User.htm" />
+      <HelpTOCNode Title="User Methods" Url="html/Methods.T-DomainModel.Models.User.htm" />
+      <HelpTOCNode Id="402f8c5e-f29b-4497-aa44-5273aae622da" Title="User Properties" Url="html/Properties.T-DomainModel.Models.User.htm">
+        <HelpTOCNode Title="Products Property " Url="html/P-DomainModel.Models.User.Products.htm" />
+        <HelpTOCNode Title="Roles Property " Url="html/P-DomainModel.Models.User.Roles.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="bb470009-8cca-40a7-b272-04e7875387a3" Title="DomainModel.Validators Namespace" Url="html/N-DomainModel.Validators.htm">
+    <HelpTOCNode Id="434529dd-d2a4-406b-bca5-b826bddbe652" Title="ApplicationSettingValidator Class" Url="html/T-DomainModel.Validators.ApplicationSettingValidator.htm">
+      <HelpTOCNode Title="ApplicationSettingValidator Members" Url="html/AllMembers.T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+      <HelpTOCNode Title="ApplicationSettingValidator Constructor " Url="html/M-DomainModel.Validators.ApplicationSettingValidator.-ctor.htm" />
+      <HelpTOCNode Title="ApplicationSettingValidator Methods" Url="html/Methods.T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c43f0f74-6e41-4a3a-a6e9-eb55eef74d01" Title="AuctionValidator Class" Url="html/T-DomainModel.Validators.AuctionValidator.htm">
+      <HelpTOCNode Title="AuctionValidator Members" Url="html/AllMembers.T-DomainModel.Validators.AuctionValidator.htm" />
+      <HelpTOCNode Title="AuctionValidator Constructor " Url="html/M-DomainModel.Validators.AuctionValidator.-ctor.htm" />
+      <HelpTOCNode Title="AuctionValidator Methods" Url="html/Methods.T-DomainModel.Validators.AuctionValidator.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="decd1296-85d1-4a75-92c6-512b2fe3aa3b" Title="BidValidator Class" Url="html/T-DomainModel.Validators.BidValidator.htm">
+      <HelpTOCNode Title="BidValidator Members" Url="html/AllMembers.T-DomainModel.Validators.BidValidator.htm" />
+      <HelpTOCNode Title="BidValidator Constructor " Url="html/M-DomainModel.Validators.BidValidator.-ctor.htm" />
+      <HelpTOCNode Title="BidValidator Methods" Url="html/Methods.T-DomainModel.Validators.BidValidator.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="47644fbb-1cc4-4523-a8ab-2fb42cd877a9" Title="CategoryValidator Class" Url="html/T-DomainModel.Validators.CategoryValidator.htm">
+      <HelpTOCNode Title="CategoryValidator Members" Url="html/AllMembers.T-DomainModel.Validators.CategoryValidator.htm" />
+      <HelpTOCNode Title="CategoryValidator Constructor " Url="html/M-DomainModel.Validators.CategoryValidator.-ctor.htm" />
+      <HelpTOCNode Title="CategoryValidator Methods" Url="html/Methods.T-DomainModel.Validators.CategoryValidator.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="6ee4e915-5aaf-42f4-91bd-a5aef8bc2ef7" Title="ProductValidator Class" Url="html/T-DomainModel.Validators.ProductValidator.htm">
+      <HelpTOCNode Title="ProductValidator Members" Url="html/AllMembers.T-DomainModel.Validators.ProductValidator.htm" />
+      <HelpTOCNode Title="ProductValidator Constructor " Url="html/M-DomainModel.Validators.ProductValidator.-ctor.htm" />
+      <HelpTOCNode Title="ProductValidator Methods" Url="html/Methods.T-DomainModel.Validators.ProductValidator.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="fd2b73b7-eeaa-4b3c-a6ae-f0800bc94eed" Title="ScoreValidator Class" Url="html/T-DomainModel.Validators.ScoreValidator.htm">
+      <HelpTOCNode Title="ScoreValidator Members" Url="html/AllMembers.T-DomainModel.Validators.ScoreValidator.htm" />
+      <HelpTOCNode Title="ScoreValidator Constructor " Url="html/M-DomainModel.Validators.ScoreValidator.-ctor.htm" />
+      <HelpTOCNode Title="ScoreValidator Methods" Url="html/Methods.T-DomainModel.Validators.ScoreValidator.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="7c1ad01e-3c95-4085-913b-780861faa648" Title="UserValidator Class" Url="html/T-DomainModel.Validators.UserValidator.htm">
+      <HelpTOCNode Title="UserValidator Members" Url="html/AllMembers.T-DomainModel.Validators.UserValidator.htm" />
+      <HelpTOCNode Title="UserValidator Constructor " Url="html/M-DomainModel.Validators.UserValidator.-ctor.htm" />
+      <HelpTOCNode Title="UserValidator Methods" Url="html/Methods.T-DomainModel.Validators.UserValidator.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="b40420d7-395a-4ef2-88a0-6c0aa25044a8" Title="DomainModel.Validators.Tests Namespace" Url="html/N-DomainModel.Validators.Tests.htm">
+    <HelpTOCNode Id="762fb771-d4c0-4675-b362-1582f51bf111" Title="BidValidatorTests Class" Url="html/T-DomainModel.Validators.Tests.BidValidatorTests.htm">
+      <HelpTOCNode Title="BidValidatorTests Members" Url="html/AllMembers.T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+      <HelpTOCNode Id="34edd55c-2bc8-4b04-ae70-a86a8699f5ae" Title="BidValidatorTests Methods" Url="html/Methods.T-DomainModel.Validators.Tests.BidValidatorTests.htm">
+        <HelpTOCNode Title="TestEmptyUserId Method " Url="html/M-DomainModel.Validators.Tests.BidValidatorTests.TestEmptyUserId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6f64d1c3-aa0e-4911-b8c2-06b24112ad47" Title="CategoryValidatorTests Class" Url="html/T-DomainModel.Validators.Tests.CategoryValidatorTests.htm">
+      <HelpTOCNode Title="CategoryValidatorTests Members" Url="html/AllMembers.T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+      <HelpTOCNode Id="989d7851-8469-4c5e-8d64-8cfb4b368aae" Title="CategoryValidatorTests Methods" Url="html/Methods.T-DomainModel.Validators.Tests.CategoryValidatorTests.htm">
+        <HelpTOCNode Title="TestAboveMaxLenghtName Method " Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestAboveMaxLenghtName.htm" />
+        <HelpTOCNode Title="TestEmptyName Method " Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestEmptyName.htm" />
+        <HelpTOCNode Title="TestMaxLenghtName Method " Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestMaxLenghtName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2ea29db4-0be6-4425-831e-bdbeb011ffef" Title="ProductValidatorTests Class" Url="html/T-DomainModel.Validators.Tests.ProductValidatorTests.htm">
+      <HelpTOCNode Title="ProductValidatorTests Members" Url="html/AllMembers.T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+      <HelpTOCNode Id="ed9af9ab-ca83-4901-ac0f-3ec0abb0b1f5" Title="ProductValidatorTests Methods" Url="html/Methods.T-DomainModel.Validators.Tests.ProductValidatorTests.htm">
+        <HelpTOCNode Title="TestEmptyDescription Method " Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestEmptyDescription.htm" />
+        <HelpTOCNode Title="TestEmptyName Method " Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestEmptyName.htm" />
+        <HelpTOCNode Title="TestExcedingMaxLengthDescription Method " Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestExcedingMaxLengthDescription.htm" />
+        <HelpTOCNode Title="TestExcedingMaxLengthName Method " Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestExcedingMaxLengthName.htm" />
+        <HelpTOCNode Title="TestMaxLengthDescription Method " Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestMaxLengthDescription.htm" />
+        <HelpTOCNode Title="TestMaxLengthName Method " Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestMaxLengthName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="467e7c29-a1da-44b9-aa0c-de83d7d4dce0" Title="ScoreValidatorTests Class" Url="html/T-DomainModel.Validators.Tests.ScoreValidatorTests.htm">
+      <HelpTOCNode Title="ScoreValidatorTests Members" Url="html/AllMembers.T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+      <HelpTOCNode Id="10cb90d9-b231-4313-9cac-8df3e9a35203" Title="ScoreValidatorTests Methods" Url="html/Methods.T-DomainModel.Validators.Tests.ScoreValidatorTests.htm">
+        <HelpTOCNode Title="TestEmptyAssignedByUser Method " Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestEmptyAssignedByUser.htm" />
+        <HelpTOCNode Title="TestEmptyAssignedToUser Method " Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestEmptyAssignedToUser.htm" />
+        <HelpTOCNode Title="TestInvalidScoreValue Method " Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestInvalidScoreValue.htm" />
+        <HelpTOCNode Title="TestNotEmptyAssignedByUser Method " Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestNotEmptyAssignedByUser.htm" />
+        <HelpTOCNode Title="TestNotEmptyAssignedToUser Method " Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestNotEmptyAssignedToUser.htm" />
+        <HelpTOCNode Title="TestValidScoreValue Method " Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestValidScoreValue.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6af01b3b-7908-41d5-9353-1d228a7d5294" Title="UserValidatorTests Class" Url="html/T-DomainModel.Validators.Tests.UserValidatorTests.htm">
+      <HelpTOCNode Title="UserValidatorTests Members" Url="html/AllMembers.T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+      <HelpTOCNode Id="bf695abd-2fe9-4a4d-a6db-130362600a15" Title="UserValidatorTests Methods" Url="html/Methods.T-DomainModel.Validators.Tests.UserValidatorTests.htm">
+        <HelpTOCNode Title="TestEmptyUsername Method " Url="html/M-DomainModel.Validators.Tests.UserValidatorTests.TestEmptyUsername.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ee6460e0-a033-4011-a662-54cf3503ea91" Title="DomainModel.ValueObjects Namespace" Url="html/N-DomainModel.ValueObjects.htm">
+    <HelpTOCNode Id="8c25258a-ecb6-4f5f-a53c-2a79bdb2fc9b" Title="Money Class" Url="html/T-DomainModel.ValueObjects.Money.htm">
+      <HelpTOCNode Title="Money Members" Url="html/AllMembers.T-DomainModel.ValueObjects.Money.htm" />
+      <HelpTOCNode Title="Money Constructor " Url="html/M-DomainModel.ValueObjects.Money.-ctor.htm" />
+      <HelpTOCNode Id="a0883b7c-19a6-4128-9178-7e78fff8bf5d" Title="Money Methods" Url="html/Methods.T-DomainModel.ValueObjects.Money.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M-DomainModel.ValueObjects.Money.ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a91f4507-513a-4ca6-aa2d-418eb15b599b" Title="Money Properties" Url="html/Properties.T-DomainModel.ValueObjects.Money.htm">
+        <HelpTOCNode Title="Amount Property " Url="html/P-DomainModel.ValueObjects.Money.Amount.htm" />
+        <HelpTOCNode Title="Currency Property " Url="html/P-DomainModel.ValueObjects.Money.Currency.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7b3156a1-1c22-471a-a560-a00f1ee4d3ed" Title="ValueObject Class" Url="html/T-DomainModel.ValueObjects.ValueObject.htm">
+      <HelpTOCNode Title="ValueObject Members" Url="html/AllMembers.T-DomainModel.ValueObjects.ValueObject.htm" />
+      <HelpTOCNode Id="8de75192-0970-480b-9593-b272d7a79e55" Title="ValueObject Methods" Url="html/Methods.T-DomainModel.ValueObjects.ValueObject.htm">
+        <HelpTOCNode Title="Equals Method " Url="html/M-DomainModel.ValueObjects.ValueObject.Equals.htm" />
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M-DomainModel.ValueObjects.ValueObject.GetHashCode.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="91c929f6-4d21-4225-87ed-54fe5d38fb61" Title="DomainModelTests.Validators Namespace" Url="html/N-DomainModelTests.Validators.htm">
+    <HelpTOCNode Id="1e8e7d45-271e-4e7f-b59d-272a93456303" Title="ApplicationSettingValidatorTests Class" Url="html/T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm">
+      <HelpTOCNode Title="ApplicationSettingValidatorTests Members" Url="html/AllMembers.T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+      <HelpTOCNode Id="cfb05009-7ba1-464f-8fc4-d3eafb4d02ba" Title="ApplicationSettingValidatorTests Methods" Url="html/Methods.T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm">
+        <HelpTOCNode Title="TestIncorrectName Method " Url="html/M-DomainModelTests.Validators.ApplicationSettingValidatorTests.TestIncorrectName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8adacc45-9a20-4148-8e14-58cf771c45a1" Title="AuctionValidatorTests Class" Url="html/T-DomainModelTests.Validators.AuctionValidatorTests.htm">
+      <HelpTOCNode Title="AuctionValidatorTests Members" Url="html/AllMembers.T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+      <HelpTOCNode Id="0d0a31bd-80b9-41eb-9163-253220455569" Title="AuctionValidatorTests Methods" Url="html/Methods.T-DomainModelTests.Validators.AuctionValidatorTests.htm">
+        <HelpTOCNode Title="TestCorrectStartDate Method " Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestCorrectStartDate.htm" />
+        <HelpTOCNode Title="TestEmptyProductId Method " Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestEmptyProductId.htm" />
+        <HelpTOCNode Title="TestIncorrectStartDate Method " Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestIncorrectStartDate.htm" />
+        <HelpTOCNode Title="TestNotEmptyProductId Method " Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestNotEmptyProductId.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5d7676da-9204-433d-9697-05c7df8f3bb7" Title="AuctionValidatorTests Properties" Url="html/Properties.T-DomainModelTests.Validators.AuctionValidatorTests.htm">
+        <HelpTOCNode Title="TestCorrectStartDateData Property " Url="html/P-DomainModelTests.Validators.AuctionValidatorTests.TestCorrectStartDateData.htm" />
+        <HelpTOCNode Title="TestIncorrectStartDateData Property " Url="html/P-DomainModelTests.Validators.AuctionValidatorTests.TestIncorrectStartDateData.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="5bb60bff-c412-4320-be58-80a8941f4def" Title="ServiceLayer.Implementations Namespace" Url="html/N-ServiceLayer.Implementations.htm">
+    <HelpTOCNode Id="f3bac2a1-7af3-456a-904a-489cf731fb60" Title="ApplicationSettingService Class" Url="html/T-ServiceLayer.Implementations.ApplicationSettingService.htm">
+      <HelpTOCNode Title="ApplicationSettingService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+      <HelpTOCNode Title="ApplicationSettingService Constructor " Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.-ctor.htm" />
+      <HelpTOCNode Id="a9058589-3a89-4fd9-b3a0-7a15375cb002" Title="ApplicationSettingService Methods" Url="html/Methods.T-ServiceLayer.Implementations.ApplicationSettingService.htm">
+        <HelpTOCNode Title="GetByName Method " Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetByName.htm" />
+        <HelpTOCNode Title="GetValueAsBool Method " Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsBool.htm" />
+        <HelpTOCNode Title="GetValueAsDecimal Method " Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsDecimal.htm" />
+        <HelpTOCNode Title="GetValueAsInt Method " Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsInt.htm" />
+        <HelpTOCNode Title="GetValueAsString Method " Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="caacaacf-213e-4c24-aa8a-a0d19bcc27a3" Title="AuctionService Class" Url="html/T-ServiceLayer.Implementations.AuctionService.htm">
+      <HelpTOCNode Title="AuctionService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.AuctionService.htm" />
+      <HelpTOCNode Title="AuctionService Constructor " Url="html/M-ServiceLayer.Implementations.AuctionService.-ctor.htm" />
+      <HelpTOCNode Id="ff88911b-25d9-4446-8b63-2cbfe7ec8382" Title="AuctionService Methods" Url="html/Methods.T-ServiceLayer.Implementations.AuctionService.htm">
+        <HelpTOCNode Id="1e92a2ef-8270-440d-831c-579f226aa8b5" Title="Add Method " Url="html/Overload-ServiceLayer.Implementations.AuctionService.Add.htm">
+          <HelpTOCNode Title="Add Method " Url="html/M-ServiceLayer.Implementations.AuctionService.Add.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="CancelAuction Method " Url="html/M-ServiceLayer.Implementations.AuctionService.CancelAuction.htm" />
+        <HelpTOCNode Title="HasReachedMaxNumberOfOpenedAuctions Method " Url="html/M-ServiceLayer.Implementations.AuctionService.HasReachedMaxNumberOfOpenedAuctions.htm" />
+        <HelpTOCNode Id="56aae2a8-7eaa-4296-8c50-ce94c34f67ff" Title="Update Method " Url="html/Overload-ServiceLayer.Implementations.AuctionService.Update.htm">
+          <HelpTOCNode Title="Update Method " Url="html/M-ServiceLayer.Implementations.AuctionService.Update.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="56306b30-f7d0-48cd-8b99-6565105be470" Title="BaseService(TE, TS, TV) Class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm">
+      <HelpTOCNode Title="BaseService(TE, TS, TV) Members" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+      <HelpTOCNode Id="c0d59cbe-b7fb-4e77-8560-7e3894162691" Title="BaseService(TE, TS, TV) Methods" Url="html/Methods.T-ServiceLayer.Implementations.BaseService-3.htm">
+        <HelpTOCNode Title="Add Method " Url="html/M-ServiceLayer.Implementations.BaseService-3.Add.htm" />
+        <HelpTOCNode Title="Delete Method " Url="html/M-ServiceLayer.Implementations.BaseService-3.Delete.htm" />
+        <HelpTOCNode Title="GetById Method " Url="html/M-ServiceLayer.Implementations.BaseService-3.GetById.htm" />
+        <HelpTOCNode Title="List Method " Url="html/M-ServiceLayer.Implementations.BaseService-3.List.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-ServiceLayer.Implementations.BaseService-3.Update.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f69be80a-1cfe-405c-8512-1b419b45d17a" Title="BidService Class" Url="html/T-ServiceLayer.Implementations.BidService.htm">
+      <HelpTOCNode Title="BidService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.BidService.htm" />
+      <HelpTOCNode Title="BidService Constructor " Url="html/M-ServiceLayer.Implementations.BidService.-ctor.htm" />
+      <HelpTOCNode Id="0b40d805-7118-47f6-9e39-5cf0a57a33bd" Title="BidService Methods" Url="html/Methods.T-ServiceLayer.Implementations.BidService.htm">
+        <HelpTOCNode Id="ce5e4760-ee05-4097-8dc7-8278826a1392" Title="Add Method " Url="html/Overload-ServiceLayer.Implementations.BidService.Add.htm">
+          <HelpTOCNode Title="Add Method " Url="html/M-ServiceLayer.Implementations.BidService.Add.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7d654266-dab3-4802-b0e3-2a352fe95a61" Title="Update Method " Url="html/Overload-ServiceLayer.Implementations.BidService.Update.htm">
+          <HelpTOCNode Title="Update Method " Url="html/M-ServiceLayer.Implementations.BidService.Update.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bdfc6a46-f552-4130-b403-29a382b4f5e8" Title="CategoryService Class" Url="html/T-ServiceLayer.Implementations.CategoryService.htm">
+      <HelpTOCNode Title="CategoryService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.CategoryService.htm" />
+      <HelpTOCNode Title="CategoryService Constructor " Url="html/M-ServiceLayer.Implementations.CategoryService.-ctor.htm" />
+      <HelpTOCNode Title="CategoryService Methods" Url="html/Methods.T-ServiceLayer.Implementations.CategoryService.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="4af70a20-0618-48b9-add8-58a03f17c01c" Title="ProductService Class" Url="html/T-ServiceLayer.Implementations.ProductService.htm">
+      <HelpTOCNode Title="ProductService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.ProductService.htm" />
+      <HelpTOCNode Title="ProductService Constructor " Url="html/M-ServiceLayer.Implementations.ProductService.-ctor.htm" />
+      <HelpTOCNode Id="03064012-d1a4-4a33-8b8c-179679912b49" Title="ProductService Methods" Url="html/Methods.T-ServiceLayer.Implementations.ProductService.htm">
+        <HelpTOCNode Id="1121d9ca-05d7-42f4-ac82-06b179c52d7f" Title="Add Method " Url="html/Overload-ServiceLayer.Implementations.ProductService.Add.htm">
+          <HelpTOCNode Title="Add Method " Url="html/M-ServiceLayer.Implementations.ProductService.Add.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="78521b14-05b4-4e4b-b677-fd37e8493d1c" Title="ScoreService Class" Url="html/T-ServiceLayer.Implementations.ScoreService.htm">
+      <HelpTOCNode Title="ScoreService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.ScoreService.htm" />
+      <HelpTOCNode Title="ScoreService Constructor " Url="html/M-ServiceLayer.Implementations.ScoreService.-ctor.htm" />
+      <HelpTOCNode Id="539f3f0b-2aba-4cdf-a76b-735e46bc1161" Title="ScoreService Methods" Url="html/Methods.T-ServiceLayer.Implementations.ScoreService.htm">
+        <HelpTOCNode Id="bb732127-7de4-4cf2-952e-8915db60e922" Title="Add Method " Url="html/Overload-ServiceLayer.Implementations.ScoreService.Add.htm">
+          <HelpTOCNode Title="Add Method " Url="html/M-ServiceLayer.Implementations.ScoreService.Add.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1d13345e-6a01-4388-9a68-440964f89956" Title="UserService Class" Url="html/T-ServiceLayer.Implementations.UserService.htm">
+      <HelpTOCNode Title="UserService Members" Url="html/AllMembers.T-ServiceLayer.Implementations.UserService.htm" />
+      <HelpTOCNode Title="UserService Constructor " Url="html/M-ServiceLayer.Implementations.UserService.-ctor.htm" />
+      <HelpTOCNode Title="UserService Methods" Url="html/Methods.T-ServiceLayer.Implementations.UserService.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f5fdd105-bea8-484f-9926-0e69974378c8" Title="ServiceLayer.Implementations.Tests Namespace" Url="html/N-ServiceLayer.Implementations.Tests.htm">
+    <HelpTOCNode Id="f8e46c2d-20cb-4c60-8de0-de280b84e256" Title="ApplicationSettingServiceTests Class" Url="html/T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm">
+      <HelpTOCNode Title="ApplicationSettingServiceTests Members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+      <HelpTOCNode Id="4d08ebdd-f42a-4f34-8c30-5145d9345ba2" Title="ApplicationSettingServiceTests Methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm">
+        <HelpTOCNode Title="GetByNameTest Method " Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetByNameTest.htm" />
+        <HelpTOCNode Title="GetValueAsBoolTest Method " Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsBoolTest.htm" />
+        <HelpTOCNode Title="GetValueAsDecimalTest Method " Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsDecimalTest.htm" />
+        <HelpTOCNode Title="GetValueAsIntTest Method " Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsIntTest.htm" />
+        <HelpTOCNode Title="GetValueAsStringTest Method " Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsStringTest.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="935c7e7c-b49a-4ea6-b5df-fe6848cfcac4" Title="AuctionServiceTests Class" Url="html/T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm">
+      <HelpTOCNode Title="AuctionServiceTests Members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+      <HelpTOCNode Id="da4f3507-6eaf-4f8c-a57d-5190b53b245c" Title="AuctionServiceTests Methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm">
+        <HelpTOCNode Title="AddTestExcededMaxDuration Method " Url="html/M-ServiceLayer.Implementations.Tests.AuctionServiceTests.AddTestExcededMaxDuration.htm" />
+        <HelpTOCNode Title="HasReachedMaxNumberOfOpenedAuctionsTest Method " Url="html/M-ServiceLayer.Implementations.Tests.AuctionServiceTests.HasReachedMaxNumberOfOpenedAuctionsTest.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bb9fe880-2017-4eb4-8f7e-3038532f7010" Title="BidServiceTests Class" Url="html/T-ServiceLayer.Implementations.Tests.BidServiceTests.htm">
+      <HelpTOCNode Title="BidServiceTests Members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+      <HelpTOCNode Id="860c8a12-a8d4-4995-a583-4324b7b8674b" Title="BidServiceTests Methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.BidServiceTests.htm">
+        <HelpTOCNode Title="AddTestAuctionEnded Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionEnded.htm" />
+        <HelpTOCNode Title="AddTestAuctionNotFound Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionNotFound.htm" />
+        <HelpTOCNode Title="AddTestAuctionNotStarted Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionNotStarted.htm" />
+        <HelpTOCNode Title="AddTestBidAmountTooHighNoPreviousBid Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooHighNoPreviousBid.htm" />
+        <HelpTOCNode Title="AddTestBidAmountTooHighWithPreviousBid Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooHighWithPreviousBid.htm" />
+        <HelpTOCNode Title="AddTestBidAmountTooLowNoPreviousBid Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooLowNoPreviousBid.htm" />
+        <HelpTOCNode Title="AddTestBidAmountTooLowWithPreviousBid Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooLowWithPreviousBid.htm" />
+        <HelpTOCNode Title="AddTestInvalidCurrency Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestInvalidCurrency.htm" />
+        <HelpTOCNode Title="UpdateTest Method " Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.UpdateTest.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="47cae84d-9580-4210-a9b6-f0033a96659c" Title="CategoryServiceTests Class" Url="html/T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm">
+      <HelpTOCNode Title="CategoryServiceTests Members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+      <HelpTOCNode Id="bcd20f94-599d-4ebb-bad6-68fa2df6d261" Title="CategoryServiceTests Methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm">
+        <HelpTOCNode Title="TestAddShouldThrowValidationError Method " Url="html/M-ServiceLayer.Implementations.Tests.CategoryServiceTests.TestAddShouldThrowValidationError.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="16787b88-3275-454e-9985-2e147ebd47e9" Title="ProductServiceTests Class" Url="html/T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm">
+      <HelpTOCNode Title="ProductServiceTests Members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+      <HelpTOCNode Id="2d134e05-6046-4a9c-9e34-96cc896ae0a0" Title="ProductServiceTests Methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm">
+        <HelpTOCNode Title="TestAddShouldThrowValidationException Method " Url="html/M-ServiceLayer.Implementations.Tests.ProductServiceTests.TestAddShouldThrowValidationException.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ecef118a-f1d2-4f7e-b7dc-f0f6dfc249c9" Title="UserServiceTests Class" Url="html/T-ServiceLayer.Implementations.Tests.UserServiceTests.htm">
+      <HelpTOCNode Title="UserServiceTests Members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+      <HelpTOCNode Id="1333df07-07bf-4462-8109-3661c978006e" Title="UserServiceTests Methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.UserServiceTests.htm">
+        <HelpTOCNode Title="TestAddShouldThrowValidationException Method " Url="html/M-ServiceLayer.Implementations.Tests.UserServiceTests.TestAddShouldThrowValidationException.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="9e8896b1-337c-493d-87f1-c6992e841351" Title="ServiceLayer.Interfaces Namespace" Url="html/N-ServiceLayer.Interfaces.htm">
+    <HelpTOCNode Id="c546cf32-951a-4269-a496-91da18f44909" Title="IApplicationSettingService Interface" Url="html/T-ServiceLayer.Interfaces.IApplicationSettingService.htm">
+      <HelpTOCNode Title="IApplicationSettingService Members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+      <HelpTOCNode Id="52e1933d-0685-449b-be68-ddeaafa4fb15" Title="IApplicationSettingService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IApplicationSettingService.htm">
+        <HelpTOCNode Title="GetByName Method " Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetByName.htm" />
+        <HelpTOCNode Title="GetValueAsBool Method " Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsBool.htm" />
+        <HelpTOCNode Title="GetValueAsDecimal Method " Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsDecimal.htm" />
+        <HelpTOCNode Title="GetValueAsInt Method " Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsInt.htm" />
+        <HelpTOCNode Title="GetValueAsString Method " Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="009434e2-79d4-48c9-85d7-263a735aa0db" Title="IAuctionService Interface" Url="html/T-ServiceLayer.Interfaces.IAuctionService.htm">
+      <HelpTOCNode Title="IAuctionService Members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IAuctionService.htm" />
+      <HelpTOCNode Id="8bda87d9-ab06-4ea2-8b2d-855ea751829e" Title="IAuctionService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IAuctionService.htm">
+        <HelpTOCNode Title="CancelAuction Method " Url="html/M-ServiceLayer.Interfaces.IAuctionService.CancelAuction.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c2a0749e-3fba-40f2-9ea1-003ff9510caf" Title="IBidService Interface" Url="html/T-ServiceLayer.Interfaces.IBidService.htm">
+      <HelpTOCNode Title="IBidService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IBidService.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f4429026-8dc8-4b84-a150-9f91839716ff" Title="ICategoryService Interface" Url="html/T-ServiceLayer.Interfaces.ICategoryService.htm">
+      <HelpTOCNode Title="ICategoryService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.ICategoryService.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="e47b4c8e-0ca4-47a7-9c38-82cda2e599f9" Title="IProductService Interface" Url="html/T-ServiceLayer.Interfaces.IProductService.htm">
+      <HelpTOCNode Title="IProductService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IProductService.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="4dd17aa4-1c96-4515-ad04-803765482427" Title="IScoreService Interface" Url="html/T-ServiceLayer.Interfaces.IScoreService.htm">
+      <HelpTOCNode Title="IScoreService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IScoreService.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="96c1d366-41f0-4173-afc0-b9a0fd569f6c" Title="IService(T) Interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm">
+      <HelpTOCNode Title="IService Members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IService-1.htm" />
+      <HelpTOCNode Id="621a7712-90de-4ce9-b7af-e858f41cfdeb" Title="IService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IService-1.htm">
+        <HelpTOCNode Title="Add Method " Url="html/M-ServiceLayer.Interfaces.IService-1.Add.htm" />
+        <HelpTOCNode Title="Delete Method " Url="html/M-ServiceLayer.Interfaces.IService-1.Delete.htm" />
+        <HelpTOCNode Title="GetById Method " Url="html/M-ServiceLayer.Interfaces.IService-1.GetById.htm" />
+        <HelpTOCNode Title="List Method " Url="html/M-ServiceLayer.Interfaces.IService-1.List.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-ServiceLayer.Interfaces.IService-1.Update.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="868aa188-e9d6-465f-b430-768e8aa3b5e3" Title="IUserService Interface" Url="html/T-ServiceLayer.Interfaces.IUserService.htm">
+      <HelpTOCNode Title="IUserService Methods" Url="html/Methods.T-ServiceLayer.Interfaces.IUserService.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

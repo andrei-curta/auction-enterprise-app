@@ -1,0 +1,1262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title="Add method" Url="html/M-ServiceLayer.Implementations.AuctionService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/M-ServiceLayer.Implementations.BidService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/M-ServiceLayer.Implementations.ProductService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/M-ServiceLayer.Implementations.ScoreService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/M-ServiceLayer.Interfaces.IService-1.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/Overload-ServiceLayer.Implementations.AuctionService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/Overload-ServiceLayer.Implementations.BidService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/Overload-ServiceLayer.Implementations.ProductService.Add.htm" />
+  <HelpKINode Title="Add method" Url="html/Overload-ServiceLayer.Implementations.ScoreService.Add.htm" />
+  <HelpKINode Title="addProductCategories class" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories.htm" />
+  <HelpKINode Title="addProductCategories class" Url="html/T-DataMapper.Migrations.addProductCategories.htm" />
+  <HelpKINode Title="addProductCategories class">
+    <HelpKINode Title="about addProductCategories class" Url="html/T-DataMapper.Migrations.addProductCategories.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.addProductCategories.htm" />
+  </HelpKINode>
+  <HelpKINode Title="addProductCategories2 class" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories2.htm" />
+  <HelpKINode Title="addProductCategories2 class" Url="html/T-DataMapper.Migrations.addProductCategories2.htm" />
+  <HelpKINode Title="addProductCategories2 class">
+    <HelpKINode Title="about addProductCategories2 class" Url="html/T-DataMapper.Migrations.addProductCategories2.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.addProductCategories2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddTestAuctionEnded method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionEnded.htm" />
+  <HelpKINode Title="AddTestAuctionNotFound method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionNotFound.htm" />
+  <HelpKINode Title="AddTestAuctionNotStarted method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionNotStarted.htm" />
+  <HelpKINode Title="AddTestBidAmountTooHighNoPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooHighNoPreviousBid.htm" />
+  <HelpKINode Title="AddTestBidAmountTooHighWithPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooHighWithPreviousBid.htm" />
+  <HelpKINode Title="AddTestBidAmountTooLowNoPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooLowNoPreviousBid.htm" />
+  <HelpKINode Title="AddTestBidAmountTooLowWithPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooLowWithPreviousBid.htm" />
+  <HelpKINode Title="AddTestExcededMaxDuration method" Url="html/M-ServiceLayer.Implementations.Tests.AuctionServiceTests.AddTestExcededMaxDuration.htm" />
+  <HelpKINode Title="AddTestInvalidCurrency method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestInvalidCurrency.htm" />
+  <HelpKINode Title="Amount property" Url="html/P-DomainModel.ValueObjects.Money.Amount.htm" />
+  <HelpKINode Title="ApplicationSetting class" Url="html/AllMembers.T-DomainModel.Models.ApplicationSetting.htm" />
+  <HelpKINode Title="ApplicationSetting class" Url="html/T-DomainModel.Models.ApplicationSetting.htm" />
+  <HelpKINode Title="ApplicationSetting class">
+    <HelpKINode Title="about ApplicationSetting class" Url="html/T-DomainModel.Models.ApplicationSetting.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.ApplicationSetting.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.ApplicationSetting.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.ApplicationSetting.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSetting.Id property" Url="html/P-DomainModel.Models.ApplicationSetting.Id.htm" />
+  <HelpKINode Title="ApplicationSetting.Name property" Url="html/P-DomainModel.Models.ApplicationSetting.Name.htm" />
+  <HelpKINode Title="ApplicationSetting.Value property" Url="html/P-DomainModel.Models.ApplicationSetting.Value.htm" />
+  <HelpKINode Title="ApplicationSettingDataService class" Url="html/AllMembers.T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+  <HelpKINode Title="ApplicationSettingDataService class" Url="html/T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+  <HelpKINode Title="ApplicationSettingDataService class">
+    <HelpKINode Title="about ApplicationSettingDataService class" Url="html/T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSettingDataService.GetByName method" Url="html/M-DataMapper.DAO.ApplicationSettingDataService.GetByName.htm" />
+  <HelpKINode Title="ApplicationSettings property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.ApplicationSettings.htm" />
+  <HelpKINode Title="ApplicationSettingService class" Url="html/AllMembers.T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+  <HelpKINode Title="ApplicationSettingService class" Url="html/T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+  <HelpKINode Title="ApplicationSettingService class">
+    <HelpKINode Title="about ApplicationSettingService class" Url="html/T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSettingService.ApplicationSettingService constructor" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.-ctor.htm" />
+  <HelpKINode Title="ApplicationSettingService.GetByName method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetByName.htm" />
+  <HelpKINode Title="ApplicationSettingService.GetValueAsBool method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsBool.htm" />
+  <HelpKINode Title="ApplicationSettingService.GetValueAsDecimal method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsDecimal.htm" />
+  <HelpKINode Title="ApplicationSettingService.GetValueAsInt method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsInt.htm" />
+  <HelpKINode Title="ApplicationSettingService.GetValueAsString method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsString.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests class">
+    <HelpKINode Title="about ApplicationSettingServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSettingServiceTests.GetByNameTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetByNameTest.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests.GetValueAsBoolTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsBoolTest.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests.GetValueAsDecimalTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsDecimalTest.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests.GetValueAsIntTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsIntTest.htm" />
+  <HelpKINode Title="ApplicationSettingServiceTests.GetValueAsStringTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsStringTest.htm" />
+  <HelpKINode Title="ApplicationSettingValidator class" Url="html/AllMembers.T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+  <HelpKINode Title="ApplicationSettingValidator class" Url="html/T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+  <HelpKINode Title="ApplicationSettingValidator class">
+    <HelpKINode Title="about ApplicationSettingValidator class" Url="html/T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.ApplicationSettingValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSettingValidator.ApplicationSettingValidator constructor" Url="html/M-DomainModel.Validators.ApplicationSettingValidator.-ctor.htm" />
+  <HelpKINode Title="ApplicationSettingValidatorTests class" Url="html/AllMembers.T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+  <HelpKINode Title="ApplicationSettingValidatorTests class" Url="html/T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+  <HelpKINode Title="ApplicationSettingValidatorTests class">
+    <HelpKINode Title="about ApplicationSettingValidatorTests class" Url="html/T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSettingValidatorTests.TestIncorrectName method" Url="html/M-DomainModelTests.Validators.ApplicationSettingValidatorTests.TestIncorrectName.htm" />
+  <HelpKINode Title="AssignedByUser property" Url="html/P-DomainModel.Models.Score.AssignedByUser.htm" />
+  <HelpKINode Title="AssignedToUser property" Url="html/P-DomainModel.Models.Score.AssignedToUser.htm" />
+  <HelpKINode Title="Auction class" Url="html/AllMembers.T-DomainModel.Models.Auction.htm" />
+  <HelpKINode Title="Auction class" Url="html/T-DomainModel.Models.Auction.htm" />
+  <HelpKINode Title="Auction class">
+    <HelpKINode Title="about Auction class" Url="html/T-DomainModel.Models.Auction.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.Auction.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.Auction.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.Auction.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Auction.Closed property" Url="html/P-DomainModel.Models.Auction.Closed.htm" />
+  <HelpKINode Title="Auction.ClosedByOwner property" Url="html/P-DomainModel.Models.Auction.ClosedByOwner.htm" />
+  <HelpKINode Title="Auction.DateCreated property" Url="html/P-DomainModel.Models.Auction.DateCreated.htm" />
+  <HelpKINode Title="Auction.EndDate property" Url="html/P-DomainModel.Models.Auction.EndDate.htm" />
+  <HelpKINode Title="Auction.Id property" Url="html/P-DomainModel.Models.Auction.Id.htm" />
+  <HelpKINode Title="Auction.Product property" Url="html/P-DomainModel.Models.Auction.Product.htm" />
+  <HelpKINode Title="Auction.ProductId property" Url="html/P-DomainModel.Models.Auction.ProductId.htm" />
+  <HelpKINode Title="Auction.StartDate property" Url="html/P-DomainModel.Models.Auction.StartDate.htm" />
+  <HelpKINode Title="Auction.StartPrice property" Url="html/P-DomainModel.Models.Auction.StartPrice.htm" />
+  <HelpKINode Title="Auction.UserId property" Url="html/P-DomainModel.Models.Auction.UserId.htm" />
+  <HelpKINode Title="AuctionDataService class" Url="html/AllMembers.T-DataMapper.DAO.AuctionDataService.htm" />
+  <HelpKINode Title="AuctionDataService class" Url="html/T-DataMapper.DAO.AuctionDataService.htm" />
+  <HelpKINode Title="AuctionDataService class">
+    <HelpKINode Title="about AuctionDataService class" Url="html/T-DataMapper.DAO.AuctionDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.AuctionDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.AuctionDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionDataService.GetAuctionsByUserId method" Url="html/M-DataMapper.DAO.AuctionDataService.GetAuctionsByUserId.htm" />
+  <HelpKINode Title="AuctionDefaultDate class" Url="html/AllMembers.T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+  <HelpKINode Title="AuctionDefaultDate class" Url="html/T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+  <HelpKINode Title="AuctionDefaultDate class">
+    <HelpKINode Title="about AuctionDefaultDate class" Url="html/T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionEnterpriseAppContext class" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext class" Url="html/T-DataMapper.AuctionEnterpriseAppContext.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext class">
+    <HelpKINode Title="about AuctionEnterpriseAppContext class" Url="html/T-DataMapper.AuctionEnterpriseAppContext.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DataMapper.AuctionEnterpriseAppContext.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionEnterpriseAppContext.ApplicationSettings property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.ApplicationSettings.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.AuctionEnterpriseAppContext constructor" Url="html/M-DataMapper.AuctionEnterpriseAppContext.-ctor.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.AuctionPlacingRestrictions property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.AuctionPlacingRestrictions.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.Auctions property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Auctions.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.Bids property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Bids.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.Categories property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Categories.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.Products property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Products.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.Scores property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Scores.htm" />
+  <HelpKINode Title="AuctionEnterpriseAppContext.Users property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Users.htm" />
+  <HelpKINode Title="AuctionEnterpriseContextFactory class" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+  <HelpKINode Title="AuctionEnterpriseContextFactory class" Url="html/T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+  <HelpKINode Title="AuctionEnterpriseContextFactory class">
+    <HelpKINode Title="about AuctionEnterpriseContextFactory class" Url="html/T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionEnterpriseContextFactory.CreateDbContext method" Url="html/M-DataMapper.AuctionEnterpriseContextFactory.CreateDbContext.htm" />
+  <HelpKINode Title="AuctionId property" Url="html/P-DomainModel.Models.Bid.AuctionId.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction class" Url="html/AllMembers.T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction class" Url="html/AllMembers.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction class" Url="html/T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction class" Url="html/T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction class">
+    <HelpKINode Title="about AuctionPlacingRestriction class" Url="html/T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+    <HelpKINode Title="about AuctionPlacingRestriction class" Url="html/T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionPlacingRestriction.EndDate property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.EndDate.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction.Id property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.Id.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction.StartDate property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.StartDate.htm" />
+  <HelpKINode Title="AuctionPlacingRestriction.User property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.User.htm" />
+  <HelpKINode Title="AuctionPlacingRestrictions property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.AuctionPlacingRestrictions.htm" />
+  <HelpKINode Title="AuctionPlacingRestrictionsDataService class" Url="html/AllMembers.T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="AuctionPlacingRestrictionsDataService class" Url="html/T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="AuctionPlacingRestrictionsDataService class">
+    <HelpKINode Title="about AuctionPlacingRestrictionsDataService class" Url="html/T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions method" Url="html/M-DataMapper.DAO.AuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions.htm" />
+  <HelpKINode Title="Auctions property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Auctions.htm" />
+  <HelpKINode Title="AuctionService class" Url="html/AllMembers.T-ServiceLayer.Implementations.AuctionService.htm" />
+  <HelpKINode Title="AuctionService class" Url="html/T-ServiceLayer.Implementations.AuctionService.htm" />
+  <HelpKINode Title="AuctionService class">
+    <HelpKINode Title="about AuctionService class" Url="html/T-ServiceLayer.Implementations.AuctionService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.AuctionService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.AuctionService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.AuctionService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionService.Add method" Url="html/M-ServiceLayer.Implementations.AuctionService.Add.htm" />
+  <HelpKINode Title="AuctionService.Add method" Url="html/Overload-ServiceLayer.Implementations.AuctionService.Add.htm" />
+  <HelpKINode Title="AuctionService.AuctionService constructor" Url="html/M-ServiceLayer.Implementations.AuctionService.-ctor.htm" />
+  <HelpKINode Title="AuctionService.CancelAuction method" Url="html/M-ServiceLayer.Implementations.AuctionService.CancelAuction.htm" />
+  <HelpKINode Title="AuctionService.HasReachedMaxNumberOfOpenedAuctions method" Url="html/M-ServiceLayer.Implementations.AuctionService.HasReachedMaxNumberOfOpenedAuctions.htm" />
+  <HelpKINode Title="AuctionService.Update method" Url="html/M-ServiceLayer.Implementations.AuctionService.Update.htm" />
+  <HelpKINode Title="AuctionService.Update method" Url="html/Overload-ServiceLayer.Implementations.AuctionService.Update.htm" />
+  <HelpKINode Title="AuctionServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+  <HelpKINode Title="AuctionServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+  <HelpKINode Title="AuctionServiceTests class">
+    <HelpKINode Title="about AuctionServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionServiceTests.AddTestExcededMaxDuration method" Url="html/M-ServiceLayer.Implementations.Tests.AuctionServiceTests.AddTestExcededMaxDuration.htm" />
+  <HelpKINode Title="AuctionServiceTests.HasReachedMaxNumberOfOpenedAuctionsTest method" Url="html/M-ServiceLayer.Implementations.Tests.AuctionServiceTests.HasReachedMaxNumberOfOpenedAuctionsTest.htm" />
+  <HelpKINode Title="AuctionStartPrice class" Url="html/AllMembers.T-DataMapper.Migrations.AuctionStartPrice.htm" />
+  <HelpKINode Title="AuctionStartPrice class" Url="html/T-DataMapper.Migrations.AuctionStartPrice.htm" />
+  <HelpKINode Title="AuctionStartPrice class">
+    <HelpKINode Title="about AuctionStartPrice class" Url="html/T-DataMapper.Migrations.AuctionStartPrice.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.AuctionStartPrice.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.AuctionStartPrice.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionValidator class" Url="html/AllMembers.T-DomainModel.Validators.AuctionValidator.htm" />
+  <HelpKINode Title="AuctionValidator class" Url="html/T-DomainModel.Validators.AuctionValidator.htm" />
+  <HelpKINode Title="AuctionValidator class">
+    <HelpKINode Title="about AuctionValidator class" Url="html/T-DomainModel.Validators.AuctionValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.AuctionValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.AuctionValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.AuctionValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionValidator.AuctionValidator constructor" Url="html/M-DomainModel.Validators.AuctionValidator.-ctor.htm" />
+  <HelpKINode Title="AuctionValidatorTests class" Url="html/AllMembers.T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+  <HelpKINode Title="AuctionValidatorTests class" Url="html/T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+  <HelpKINode Title="AuctionValidatorTests class">
+    <HelpKINode Title="about AuctionValidatorTests class" Url="html/T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuctionValidatorTests.TestCorrectStartDate method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestCorrectStartDate.htm" />
+  <HelpKINode Title="AuctionValidatorTests.TestCorrectStartDateData property" Url="html/P-DomainModelTests.Validators.AuctionValidatorTests.TestCorrectStartDateData.htm" />
+  <HelpKINode Title="AuctionValidatorTests.TestEmptyProductId method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestEmptyProductId.htm" />
+  <HelpKINode Title="AuctionValidatorTests.TestIncorrectStartDate method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestIncorrectStartDate.htm" />
+  <HelpKINode Title="AuctionValidatorTests.TestIncorrectStartDateData property" Url="html/P-DomainModelTests.Validators.AuctionValidatorTests.TestIncorrectStartDateData.htm" />
+  <HelpKINode Title="AuctionValidatorTests.TestNotEmptyProductId method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestNotEmptyProductId.htm" />
+  <HelpKINode Title="BaseRepository(Of T) class" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="BaseRepository(Of T) class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="BaseRepository(Of T) class">
+    <HelpKINode Title="about BaseRepository(Of T) class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Repository.BaseRepository-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseRepository(Of T).Delete method" Url="html/Overload-DataMapper.Repository.BaseRepository-1.Delete.htm" />
+  <HelpKINode Title="BaseRepository(Of T).Get method" Url="html/M-DataMapper.Repository.BaseRepository-1.Get.htm" />
+  <HelpKINode Title="BaseRepository(Of T).GetByID method" Url="html/M-DataMapper.Repository.BaseRepository-1.GetByID.htm" />
+  <HelpKINode Title="BaseRepository(Of T).Insert method" Url="html/M-DataMapper.Repository.BaseRepository-1.Insert.htm" />
+  <HelpKINode Title="BaseRepository(Of T).Update method" Url="html/M-DataMapper.Repository.BaseRepository-1.Update.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt; class" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt; class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt; class">
+    <HelpKINode Title="about BaseRepository&lt;T&gt; class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Repository.BaseRepository-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseRepository&lt;T&gt;.Delete method" Url="html/Overload-DataMapper.Repository.BaseRepository-1.Delete.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt;.Get method" Url="html/M-DataMapper.Repository.BaseRepository-1.Get.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt;.GetByID method" Url="html/M-DataMapper.Repository.BaseRepository-1.GetByID.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt;.Insert method" Url="html/M-DataMapper.Repository.BaseRepository-1.Insert.htm" />
+  <HelpKINode Title="BaseRepository&lt;T&gt;.Update method" Url="html/M-DataMapper.Repository.BaseRepository-1.Update.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV) class" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV) class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV) class">
+    <HelpKINode Title="about BaseService(Of TE, TS, TV) class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.BaseService-3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseService(Of TE, TS, TV).Add method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Add.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV).Delete method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Delete.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV).GetById method" Url="html/M-ServiceLayer.Implementations.BaseService-3.GetById.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV).List method" Url="html/M-ServiceLayer.Implementations.BaseService-3.List.htm" />
+  <HelpKINode Title="BaseService(Of TE, TS, TV).Update method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Update.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt; class" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt; class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt; class">
+    <HelpKINode Title="about BaseService&lt;TE, TS, TV&gt; class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.BaseService-3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt;.Add method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Add.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt;.Delete method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Delete.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt;.GetById method" Url="html/M-ServiceLayer.Implementations.BaseService-3.GetById.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt;.List method" Url="html/M-ServiceLayer.Implementations.BaseService-3.List.htm" />
+  <HelpKINode Title="BaseService&lt;TE, TS, TV&gt;.Update method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Update.htm" />
+  <HelpKINode Title="Bid class" Url="html/AllMembers.T-DomainModel.Models.Bid.htm" />
+  <HelpKINode Title="Bid class" Url="html/T-DomainModel.Models.Bid.htm" />
+  <HelpKINode Title="Bid class">
+    <HelpKINode Title="about Bid class" Url="html/T-DomainModel.Models.Bid.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.Bid.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.Bid.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.Bid.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bid.AuctionId property" Url="html/P-DomainModel.Models.Bid.AuctionId.htm" />
+  <HelpKINode Title="Bid.BidValue property" Url="html/P-DomainModel.Models.Bid.BidValue.htm" />
+  <HelpKINode Title="Bid.DateAdded property" Url="html/P-DomainModel.Models.Bid.DateAdded.htm" />
+  <HelpKINode Title="Bid.Id property" Url="html/P-DomainModel.Models.Bid.Id.htm" />
+  <HelpKINode Title="Bid.UserId property" Url="html/P-DomainModel.Models.Bid.UserId.htm" />
+  <HelpKINode Title="BidDataService class" Url="html/AllMembers.T-DataMapper.DAO.BidDataService.htm" />
+  <HelpKINode Title="BidDataService class" Url="html/T-DataMapper.DAO.BidDataService.htm" />
+  <HelpKINode Title="BidDataService class">
+    <HelpKINode Title="about BidDataService class" Url="html/T-DataMapper.DAO.BidDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.BidDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.BidDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BidDataService.GetBidsByAuction method" Url="html/M-DataMapper.DAO.BidDataService.GetBidsByAuction.htm" />
+  <HelpKINode Title="BidDataService.GetLatestBidByAuction method" Url="html/M-DataMapper.DAO.BidDataService.GetLatestBidByAuction.htm" />
+  <HelpKINode Title="BidDefaultDate class" Url="html/AllMembers.T-DataMapper.Migrations.BidDefaultDate.htm" />
+  <HelpKINode Title="BidDefaultDate class" Url="html/T-DataMapper.Migrations.BidDefaultDate.htm" />
+  <HelpKINode Title="BidDefaultDate class">
+    <HelpKINode Title="about BidDefaultDate class" Url="html/T-DataMapper.Migrations.BidDefaultDate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.BidDefaultDate.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.BidDefaultDate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bids property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Bids.htm" />
+  <HelpKINode Title="BidService class" Url="html/AllMembers.T-ServiceLayer.Implementations.BidService.htm" />
+  <HelpKINode Title="BidService class" Url="html/T-ServiceLayer.Implementations.BidService.htm" />
+  <HelpKINode Title="BidService class">
+    <HelpKINode Title="about BidService class" Url="html/T-ServiceLayer.Implementations.BidService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.BidService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.BidService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.BidService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BidService.Add method" Url="html/M-ServiceLayer.Implementations.BidService.Add.htm" />
+  <HelpKINode Title="BidService.Add method" Url="html/Overload-ServiceLayer.Implementations.BidService.Add.htm" />
+  <HelpKINode Title="BidService.BidService constructor" Url="html/M-ServiceLayer.Implementations.BidService.-ctor.htm" />
+  <HelpKINode Title="BidService.Update method" Url="html/M-ServiceLayer.Implementations.BidService.Update.htm" />
+  <HelpKINode Title="BidService.Update method" Url="html/Overload-ServiceLayer.Implementations.BidService.Update.htm" />
+  <HelpKINode Title="BidServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+  <HelpKINode Title="BidServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+  <HelpKINode Title="BidServiceTests class">
+    <HelpKINode Title="about BidServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BidServiceTests.AddTestAuctionEnded method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionEnded.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestAuctionNotFound method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionNotFound.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestAuctionNotStarted method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestAuctionNotStarted.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestBidAmountTooHighNoPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooHighNoPreviousBid.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestBidAmountTooHighWithPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooHighWithPreviousBid.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestBidAmountTooLowNoPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooLowNoPreviousBid.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestBidAmountTooLowWithPreviousBid method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestBidAmountTooLowWithPreviousBid.htm" />
+  <HelpKINode Title="BidServiceTests.AddTestInvalidCurrency method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.AddTestInvalidCurrency.htm" />
+  <HelpKINode Title="BidServiceTests.UpdateTest method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.UpdateTest.htm" />
+  <HelpKINode Title="bidUser class" Url="html/AllMembers.T-DataMapper.Migrations.bidUser.htm" />
+  <HelpKINode Title="bidUser class" Url="html/T-DataMapper.Migrations.bidUser.htm" />
+  <HelpKINode Title="bidUser class">
+    <HelpKINode Title="about bidUser class" Url="html/T-DataMapper.Migrations.bidUser.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.bidUser.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.bidUser.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BidValidator class" Url="html/AllMembers.T-DomainModel.Validators.BidValidator.htm" />
+  <HelpKINode Title="BidValidator class" Url="html/T-DomainModel.Validators.BidValidator.htm" />
+  <HelpKINode Title="BidValidator class">
+    <HelpKINode Title="about BidValidator class" Url="html/T-DomainModel.Validators.BidValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.BidValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.BidValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.BidValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BidValidator.BidValidator constructor" Url="html/M-DomainModel.Validators.BidValidator.-ctor.htm" />
+  <HelpKINode Title="BidValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+  <HelpKINode Title="BidValidatorTests class" Url="html/T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+  <HelpKINode Title="BidValidatorTests class">
+    <HelpKINode Title="about BidValidatorTests class" Url="html/T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BidValidatorTests.TestEmptyUserId method" Url="html/M-DomainModel.Validators.Tests.BidValidatorTests.TestEmptyUserId.htm" />
+  <HelpKINode Title="BidValue property" Url="html/P-DomainModel.Models.Bid.BidValue.htm" />
+  <HelpKINode Title="CalculateUserScore method" Url="html/M-DataMapper.DAO.ScoreDataService.CalculateUserScore.htm" />
+  <HelpKINode Title="CalculateUserScore method" Url="html/M-DataMapper.Interfaces.IScoreDataService.CalculateUserScore.htm" />
+  <HelpKINode Title="CancelAuction method" Url="html/M-ServiceLayer.Implementations.AuctionService.CancelAuction.htm" />
+  <HelpKINode Title="CancelAuction method" Url="html/M-ServiceLayer.Interfaces.IAuctionService.CancelAuction.htm" />
+  <HelpKINode Title="Categories property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Categories.htm" />
+  <HelpKINode Title="Categories property" Url="html/P-DomainModel.Models.Product.Categories.htm" />
+  <HelpKINode Title="Category class" Url="html/AllMembers.T-DomainModel.Models.Category.htm" />
+  <HelpKINode Title="Category class" Url="html/T-DomainModel.Models.Category.htm" />
+  <HelpKINode Title="Category class">
+    <HelpKINode Title="about Category class" Url="html/T-DomainModel.Models.Category.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.Category.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.Category.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.Category.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Category.Id property" Url="html/P-DomainModel.Models.Category.Id.htm" />
+  <HelpKINode Title="Category.Name property" Url="html/P-DomainModel.Models.Category.Name.htm" />
+  <HelpKINode Title="Category.ParentCategories property" Url="html/P-DomainModel.Models.Category.ParentCategories.htm" />
+  <HelpKINode Title="Category.Products property" Url="html/P-DomainModel.Models.Category.Products.htm" />
+  <HelpKINode Title="Category.SubCategories property" Url="html/P-DomainModel.Models.Category.SubCategories.htm" />
+  <HelpKINode Title="CategoryDataService class" Url="html/AllMembers.T-DataMapper.DAO.CategoryDataService.htm" />
+  <HelpKINode Title="CategoryDataService class" Url="html/T-DataMapper.DAO.CategoryDataService.htm" />
+  <HelpKINode Title="CategoryDataService class">
+    <HelpKINode Title="about CategoryDataService class" Url="html/T-DataMapper.DAO.CategoryDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.CategoryDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.CategoryDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CategoryDataService.Get method" Url="html/M-DataMapper.DAO.CategoryDataService.Get.htm" />
+  <HelpKINode Title="CategoryDataService.Get method" Url="html/Overload-DataMapper.DAO.CategoryDataService.Get.htm" />
+  <HelpKINode Title="CategoryDataService.GetByID method" Url="html/M-DataMapper.DAO.CategoryDataService.GetByID.htm" />
+  <HelpKINode Title="CategoryDataService.GetNumberOfOpenedAuctionsByCategory method" Url="html/M-DataMapper.DAO.CategoryDataService.GetNumberOfOpenedAuctionsByCategory.htm" />
+  <HelpKINode Title="categorydisable class" Url="html/AllMembers.T-DataMapper.Migrations.categorydisable.htm" />
+  <HelpKINode Title="categorydisable class" Url="html/T-DataMapper.Migrations.categorydisable.htm" />
+  <HelpKINode Title="categorydisable class">
+    <HelpKINode Title="about categorydisable class" Url="html/T-DataMapper.Migrations.categorydisable.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.categorydisable.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.categorydisable.htm" />
+  </HelpKINode>
+  <HelpKINode Title="categoryredone class" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone.htm" />
+  <HelpKINode Title="categoryredone class" Url="html/T-DataMapper.Migrations.categoryredone.htm" />
+  <HelpKINode Title="categoryredone class">
+    <HelpKINode Title="about categoryredone class" Url="html/T-DataMapper.Migrations.categoryredone.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.categoryredone.htm" />
+  </HelpKINode>
+  <HelpKINode Title="categoryredone2 class" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone2.htm" />
+  <HelpKINode Title="categoryredone2 class" Url="html/T-DataMapper.Migrations.categoryredone2.htm" />
+  <HelpKINode Title="categoryredone2 class">
+    <HelpKINode Title="about categoryredone2 class" Url="html/T-DataMapper.Migrations.categoryredone2.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.categoryredone2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CategoryService class" Url="html/AllMembers.T-ServiceLayer.Implementations.CategoryService.htm" />
+  <HelpKINode Title="CategoryService class" Url="html/T-ServiceLayer.Implementations.CategoryService.htm" />
+  <HelpKINode Title="CategoryService class">
+    <HelpKINode Title="about CategoryService class" Url="html/T-ServiceLayer.Implementations.CategoryService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.CategoryService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.CategoryService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.CategoryService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CategoryService.CategoryService constructor" Url="html/M-ServiceLayer.Implementations.CategoryService.-ctor.htm" />
+  <HelpKINode Title="CategoryServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+  <HelpKINode Title="CategoryServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+  <HelpKINode Title="CategoryServiceTests class">
+    <HelpKINode Title="about CategoryServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CategoryServiceTests.TestAddShouldThrowValidationError method" Url="html/M-ServiceLayer.Implementations.Tests.CategoryServiceTests.TestAddShouldThrowValidationError.htm" />
+  <HelpKINode Title="CategoryValidator class" Url="html/AllMembers.T-DomainModel.Validators.CategoryValidator.htm" />
+  <HelpKINode Title="CategoryValidator class" Url="html/T-DomainModel.Validators.CategoryValidator.htm" />
+  <HelpKINode Title="CategoryValidator class">
+    <HelpKINode Title="about CategoryValidator class" Url="html/T-DomainModel.Validators.CategoryValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.CategoryValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.CategoryValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.CategoryValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CategoryValidator.CategoryValidator constructor" Url="html/M-DomainModel.Validators.CategoryValidator.-ctor.htm" />
+  <HelpKINode Title="CategoryValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+  <HelpKINode Title="CategoryValidatorTests class" Url="html/T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+  <HelpKINode Title="CategoryValidatorTests class">
+    <HelpKINode Title="about CategoryValidatorTests class" Url="html/T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CategoryValidatorTests.TestAboveMaxLenghtName method" Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestAboveMaxLenghtName.htm" />
+  <HelpKINode Title="CategoryValidatorTests.TestEmptyName method" Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestEmptyName.htm" />
+  <HelpKINode Title="CategoryValidatorTests.TestMaxLenghtName method" Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestMaxLenghtName.htm" />
+  <HelpKINode Title="Closed property" Url="html/P-DomainModel.Models.Auction.Closed.htm" />
+  <HelpKINode Title="ClosedByOwner property" Url="html/P-DomainModel.Models.Auction.ClosedByOwner.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser class">
+    <HelpKINode Title="about ConnectAuctionWithUser class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectAuctionWithUser2 class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser2 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser2 class">
+    <HelpKINode Title="about ConnectAuctionWithUser2 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectAuctionWithUser3 class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser3 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser3 class">
+    <HelpKINode Title="about ConnectAuctionWithUser3 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectAuctionWithUser4 class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser4 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+  <HelpKINode Title="ConnectAuctionWithUser4 class">
+    <HelpKINode Title="about ConnectAuctionWithUser4 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreateDbContext method" Url="html/M-DataMapper.AuctionEnterpriseContextFactory.CreateDbContext.htm" />
+  <HelpKINode Title="Currency property" Url="html/P-DomainModel.ValueObjects.Money.Currency.htm" />
+  <HelpKINode Title="DataMapper namespace" Url="html/N-DataMapper.htm" />
+  <HelpKINode Title="DataMapper.AuctionEnterpriseAppContext class" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseAppContext.htm" />
+  <HelpKINode Title="DataMapper.AuctionEnterpriseAppContext class" Url="html/T-DataMapper.AuctionEnterpriseAppContext.htm" />
+  <HelpKINode Title="DataMapper.AuctionEnterpriseContextFactory class" Url="html/AllMembers.T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+  <HelpKINode Title="DataMapper.AuctionEnterpriseContextFactory class" Url="html/T-DataMapper.AuctionEnterpriseContextFactory.htm" />
+  <HelpKINode Title="DataMapper.DAO namespace" Url="html/N-DataMapper.DAO.htm" />
+  <HelpKINode Title="DataMapper.DAO.ApplicationSettingDataService class" Url="html/AllMembers.T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.ApplicationSettingDataService class" Url="html/T-DataMapper.DAO.ApplicationSettingDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.AuctionDataService class" Url="html/AllMembers.T-DataMapper.DAO.AuctionDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.AuctionDataService class" Url="html/T-DataMapper.DAO.AuctionDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.AuctionPlacingRestrictionsDataService class" Url="html/AllMembers.T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.AuctionPlacingRestrictionsDataService class" Url="html/T-DataMapper.DAO.AuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.BidDataService class" Url="html/AllMembers.T-DataMapper.DAO.BidDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.BidDataService class" Url="html/T-DataMapper.DAO.BidDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.CategoryDataService class" Url="html/AllMembers.T-DataMapper.DAO.CategoryDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.CategoryDataService class" Url="html/T-DataMapper.DAO.CategoryDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.ProductDataService class" Url="html/AllMembers.T-DataMapper.DAO.ProductDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.ProductDataService class" Url="html/T-DataMapper.DAO.ProductDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.ScoreDataService class" Url="html/AllMembers.T-DataMapper.DAO.ScoreDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.ScoreDataService class" Url="html/T-DataMapper.DAO.ScoreDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.UserDataService class" Url="html/AllMembers.T-DataMapper.DAO.UserDataService.htm" />
+  <HelpKINode Title="DataMapper.DAO.UserDataService class" Url="html/T-DataMapper.DAO.UserDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces namespace" Url="html/N-DataMapper.Interfaces.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IApplicationSettingDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IApplicationSettingDataService interface" Url="html/T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IAuctionDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IAuctionDataService interface" Url="html/T-DataMapper.Interfaces.IAuctionDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService interface" Url="html/T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IBidDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IBidDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IBidDataService interface" Url="html/T-DataMapper.Interfaces.IBidDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.ICategoryDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.ICategoryDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.ICategoryDataService interface" Url="html/T-DataMapper.Interfaces.ICategoryDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IProductDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IProductDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IProductDataService interface" Url="html/T-DataMapper.Interfaces.IProductDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IScoreDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IScoreDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IScoreDataService interface" Url="html/T-DataMapper.Interfaces.IScoreDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IUserDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IUserDataService.htm" />
+  <HelpKINode Title="DataMapper.Interfaces.IUserDataService interface" Url="html/T-DataMapper.Interfaces.IUserDataService.htm" />
+  <HelpKINode Title="DataMapper.Migrations namespace" Url="html/N-DataMapper.Migrations.htm" />
+  <HelpKINode Title="DataMapper.Migrations.addProductCategories class" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories.htm" />
+  <HelpKINode Title="DataMapper.Migrations.addProductCategories class" Url="html/T-DataMapper.Migrations.addProductCategories.htm" />
+  <HelpKINode Title="DataMapper.Migrations.addProductCategories2 class" Url="html/AllMembers.T-DataMapper.Migrations.addProductCategories2.htm" />
+  <HelpKINode Title="DataMapper.Migrations.addProductCategories2 class" Url="html/T-DataMapper.Migrations.addProductCategories2.htm" />
+  <HelpKINode Title="DataMapper.Migrations.AuctionDefaultDate class" Url="html/AllMembers.T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+  <HelpKINode Title="DataMapper.Migrations.AuctionDefaultDate class" Url="html/T-DataMapper.Migrations.AuctionDefaultDate.htm" />
+  <HelpKINode Title="DataMapper.Migrations.AuctionPlacingRestriction class" Url="html/AllMembers.T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="DataMapper.Migrations.AuctionPlacingRestriction class" Url="html/T-DataMapper.Migrations.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="DataMapper.Migrations.AuctionStartPrice class" Url="html/AllMembers.T-DataMapper.Migrations.AuctionStartPrice.htm" />
+  <HelpKINode Title="DataMapper.Migrations.AuctionStartPrice class" Url="html/T-DataMapper.Migrations.AuctionStartPrice.htm" />
+  <HelpKINode Title="DataMapper.Migrations.BidDefaultDate class" Url="html/AllMembers.T-DataMapper.Migrations.BidDefaultDate.htm" />
+  <HelpKINode Title="DataMapper.Migrations.BidDefaultDate class" Url="html/T-DataMapper.Migrations.BidDefaultDate.htm" />
+  <HelpKINode Title="DataMapper.Migrations.bidUser class" Url="html/AllMembers.T-DataMapper.Migrations.bidUser.htm" />
+  <HelpKINode Title="DataMapper.Migrations.bidUser class" Url="html/T-DataMapper.Migrations.bidUser.htm" />
+  <HelpKINode Title="DataMapper.Migrations.categorydisable class" Url="html/AllMembers.T-DataMapper.Migrations.categorydisable.htm" />
+  <HelpKINode Title="DataMapper.Migrations.categorydisable class" Url="html/T-DataMapper.Migrations.categorydisable.htm" />
+  <HelpKINode Title="DataMapper.Migrations.categoryredone class" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone.htm" />
+  <HelpKINode Title="DataMapper.Migrations.categoryredone class" Url="html/T-DataMapper.Migrations.categoryredone.htm" />
+  <HelpKINode Title="DataMapper.Migrations.categoryredone2 class" Url="html/AllMembers.T-DataMapper.Migrations.categoryredone2.htm" />
+  <HelpKINode Title="DataMapper.Migrations.categoryredone2 class" Url="html/T-DataMapper.Migrations.categoryredone2.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser2 class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser2 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser2.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser3 class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser3 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser3.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser4 class" Url="html/AllMembers.T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+  <HelpKINode Title="DataMapper.Migrations.ConnectAuctionWithUser4 class" Url="html/T-DataMapper.Migrations.ConnectAuctionWithUser4.htm" />
+  <HelpKINode Title="DataMapper.Migrations.DomainModel class" Url="html/AllMembers.T-DataMapper.Migrations.DomainModel.htm" />
+  <HelpKINode Title="DataMapper.Migrations.DomainModel class" Url="html/T-DataMapper.Migrations.DomainModel.htm" />
+  <HelpKINode Title="DataMapper.Migrations.InitialMigration class" Url="html/AllMembers.T-DataMapper.Migrations.InitialMigration.htm" />
+  <HelpKINode Title="DataMapper.Migrations.InitialMigration class" Url="html/T-DataMapper.Migrations.InitialMigration.htm" />
+  <HelpKINode Title="DataMapper.Migrations.MoneyType class" Url="html/AllMembers.T-DataMapper.Migrations.MoneyType.htm" />
+  <HelpKINode Title="DataMapper.Migrations.MoneyType class" Url="html/T-DataMapper.Migrations.MoneyType.htm" />
+  <HelpKINode Title="DataMapper.Migrations.MoneyTypeBid class" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeBid.htm" />
+  <HelpKINode Title="DataMapper.Migrations.MoneyTypeBid class" Url="html/T-DataMapper.Migrations.MoneyTypeBid.htm" />
+  <HelpKINode Title="DataMapper.Migrations.MoneyTypeConstraints class" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+  <HelpKINode Title="DataMapper.Migrations.MoneyTypeConstraints class" Url="html/T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+  <HelpKINode Title="DataMapper.Migrations.score class" Url="html/AllMembers.T-DataMapper.Migrations.score.htm" />
+  <HelpKINode Title="DataMapper.Migrations.score class" Url="html/T-DataMapper.Migrations.score.htm" />
+  <HelpKINode Title="DataMapper.Migrations.UpdatedCategoryHierarchy class" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+  <HelpKINode Title="DataMapper.Migrations.UpdatedCategoryHierarchy class" Url="html/T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+  <HelpKINode Title="DataMapper.Migrations.UpdatedRelations class" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedRelations.htm" />
+  <HelpKINode Title="DataMapper.Migrations.UpdatedRelations class" Url="html/T-DataMapper.Migrations.UpdatedRelations.htm" />
+  <HelpKINode Title="DataMapper.Migrations.UpdateProduct class" Url="html/AllMembers.T-DataMapper.Migrations.UpdateProduct.htm" />
+  <HelpKINode Title="DataMapper.Migrations.UpdateProduct class" Url="html/T-DataMapper.Migrations.UpdateProduct.htm" />
+  <HelpKINode Title="DataMapper.Migrations.userRoles class" Url="html/AllMembers.T-DataMapper.Migrations.userRoles.htm" />
+  <HelpKINode Title="DataMapper.Migrations.userRoles class" Url="html/T-DataMapper.Migrations.userRoles.htm" />
+  <HelpKINode Title="DataMapper.Repository namespace" Url="html/N-DataMapper.Repository.htm" />
+  <HelpKINode Title="DataMapper.Repository.BaseRepository(Of T) class" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="DataMapper.Repository.BaseRepository(Of T) class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="DataMapper.Repository.BaseRepository&lt;T&gt; class" Url="html/AllMembers.T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="DataMapper.Repository.BaseRepository&lt;T&gt; class" Url="html/T-DataMapper.Repository.BaseRepository-1.htm" />
+  <HelpKINode Title="DataMapper.Repository.IRepository interface" Url="html/AllMembers.T-DataMapper.Repository.IRepository-1.htm" />
+  <HelpKINode Title="DataMapper.Repository.IRepository(Of T) interface" Url="html/T-DataMapper.Repository.IRepository-1.htm" />
+  <HelpKINode Title="DataMapper.Repository.IRepository&lt;T&gt; interface" Url="html/T-DataMapper.Repository.IRepository-1.htm" />
+  <HelpKINode Title="DateAdded property" Url="html/P-DomainModel.Models.Bid.DateAdded.htm" />
+  <HelpKINode Title="DateAdded property" Url="html/P-DomainModel.Models.Score.DateAdded.htm" />
+  <HelpKINode Title="DateCreated property" Url="html/P-DomainModel.Models.Auction.DateCreated.htm" />
+  <HelpKINode Title="Delete method" Url="html/M-DataMapper.Repository.IRepository-1.Delete.htm" />
+  <HelpKINode Title="Delete method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Delete.htm" />
+  <HelpKINode Title="Delete method" Url="html/M-ServiceLayer.Interfaces.IService-1.Delete.htm" />
+  <HelpKINode Title="Delete method" Url="html/Overload-DataMapper.Repository.BaseRepository-1.Delete.htm" />
+  <HelpKINode Title="Description property" Url="html/P-DomainModel.Models.Product.Description.htm" />
+  <HelpKINode Title="DomainModel class" Url="html/AllMembers.T-DataMapper.Migrations.DomainModel.htm" />
+  <HelpKINode Title="DomainModel class" Url="html/T-DataMapper.Migrations.DomainModel.htm" />
+  <HelpKINode Title="DomainModel class">
+    <HelpKINode Title="about DomainModel class" Url="html/T-DataMapper.Migrations.DomainModel.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.DomainModel.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.DomainModel.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DomainModel.Models namespace" Url="html/N-DomainModel.Models.htm" />
+  <HelpKINode Title="DomainModel.Models.ApplicationSetting class" Url="html/AllMembers.T-DomainModel.Models.ApplicationSetting.htm" />
+  <HelpKINode Title="DomainModel.Models.ApplicationSetting class" Url="html/T-DomainModel.Models.ApplicationSetting.htm" />
+  <HelpKINode Title="DomainModel.Models.Auction class" Url="html/AllMembers.T-DomainModel.Models.Auction.htm" />
+  <HelpKINode Title="DomainModel.Models.Auction class" Url="html/T-DomainModel.Models.Auction.htm" />
+  <HelpKINode Title="DomainModel.Models.AuctionPlacingRestriction class" Url="html/AllMembers.T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="DomainModel.Models.AuctionPlacingRestriction class" Url="html/T-DomainModel.Models.AuctionPlacingRestriction.htm" />
+  <HelpKINode Title="DomainModel.Models.Bid class" Url="html/AllMembers.T-DomainModel.Models.Bid.htm" />
+  <HelpKINode Title="DomainModel.Models.Bid class" Url="html/T-DomainModel.Models.Bid.htm" />
+  <HelpKINode Title="DomainModel.Models.Category class" Url="html/AllMembers.T-DomainModel.Models.Category.htm" />
+  <HelpKINode Title="DomainModel.Models.Category class" Url="html/T-DomainModel.Models.Category.htm" />
+  <HelpKINode Title="DomainModel.Models.Product class" Url="html/AllMembers.T-DomainModel.Models.Product.htm" />
+  <HelpKINode Title="DomainModel.Models.Product class" Url="html/T-DomainModel.Models.Product.htm" />
+  <HelpKINode Title="DomainModel.Models.Role class" Url="html/AllMembers.T-DomainModel.Models.Role.htm" />
+  <HelpKINode Title="DomainModel.Models.Role class" Url="html/T-DomainModel.Models.Role.htm" />
+  <HelpKINode Title="DomainModel.Models.Score class" Url="html/AllMembers.T-DomainModel.Models.Score.htm" />
+  <HelpKINode Title="DomainModel.Models.Score class" Url="html/T-DomainModel.Models.Score.htm" />
+  <HelpKINode Title="DomainModel.Models.User class" Url="html/AllMembers.T-DomainModel.Models.User.htm" />
+  <HelpKINode Title="DomainModel.Models.User class" Url="html/T-DomainModel.Models.User.htm" />
+  <HelpKINode Title="DomainModel.Validators namespace" Url="html/N-DomainModel.Validators.htm" />
+  <HelpKINode Title="DomainModel.Validators.ApplicationSettingValidator class" Url="html/AllMembers.T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.ApplicationSettingValidator class" Url="html/T-DomainModel.Validators.ApplicationSettingValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.AuctionValidator class" Url="html/AllMembers.T-DomainModel.Validators.AuctionValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.AuctionValidator class" Url="html/T-DomainModel.Validators.AuctionValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.BidValidator class" Url="html/AllMembers.T-DomainModel.Validators.BidValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.BidValidator class" Url="html/T-DomainModel.Validators.BidValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.CategoryValidator class" Url="html/AllMembers.T-DomainModel.Validators.CategoryValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.CategoryValidator class" Url="html/T-DomainModel.Validators.CategoryValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.ProductValidator class" Url="html/AllMembers.T-DomainModel.Validators.ProductValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.ProductValidator class" Url="html/T-DomainModel.Validators.ProductValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.ScoreValidator class" Url="html/AllMembers.T-DomainModel.Validators.ScoreValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.ScoreValidator class" Url="html/T-DomainModel.Validators.ScoreValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests namespace" Url="html/N-DomainModel.Validators.Tests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.BidValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.BidValidatorTests class" Url="html/T-DomainModel.Validators.Tests.BidValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.CategoryValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.CategoryValidatorTests class" Url="html/T-DomainModel.Validators.Tests.CategoryValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.ProductValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.ProductValidatorTests class" Url="html/T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.ScoreValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.ScoreValidatorTests class" Url="html/T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.UserValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.Tests.UserValidatorTests class" Url="html/T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+  <HelpKINode Title="DomainModel.Validators.UserValidator class" Url="html/AllMembers.T-DomainModel.Validators.UserValidator.htm" />
+  <HelpKINode Title="DomainModel.Validators.UserValidator class" Url="html/T-DomainModel.Validators.UserValidator.htm" />
+  <HelpKINode Title="DomainModel.ValueObjects namespace" Url="html/N-DomainModel.ValueObjects.htm" />
+  <HelpKINode Title="DomainModel.ValueObjects.Money class" Url="html/AllMembers.T-DomainModel.ValueObjects.Money.htm" />
+  <HelpKINode Title="DomainModel.ValueObjects.Money class" Url="html/T-DomainModel.ValueObjects.Money.htm" />
+  <HelpKINode Title="DomainModel.ValueObjects.ValueObject class" Url="html/AllMembers.T-DomainModel.ValueObjects.ValueObject.htm" />
+  <HelpKINode Title="DomainModel.ValueObjects.ValueObject class" Url="html/T-DomainModel.ValueObjects.ValueObject.htm" />
+  <HelpKINode Title="DomainModelTests.Validators namespace" Url="html/N-DomainModelTests.Validators.htm" />
+  <HelpKINode Title="DomainModelTests.Validators.ApplicationSettingValidatorTests class" Url="html/AllMembers.T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+  <HelpKINode Title="DomainModelTests.Validators.ApplicationSettingValidatorTests class" Url="html/T-DomainModelTests.Validators.ApplicationSettingValidatorTests.htm" />
+  <HelpKINode Title="DomainModelTests.Validators.AuctionValidatorTests class" Url="html/AllMembers.T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+  <HelpKINode Title="DomainModelTests.Validators.AuctionValidatorTests class" Url="html/T-DomainModelTests.Validators.AuctionValidatorTests.htm" />
+  <HelpKINode Title="EndDate property" Url="html/P-DomainModel.Models.Auction.EndDate.htm" />
+  <HelpKINode Title="EndDate property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.EndDate.htm" />
+  <HelpKINode Title="Equals method" Url="html/M-DomainModel.ValueObjects.ValueObject.Equals.htm" />
+  <HelpKINode Title="Get method" Url="html/M-DataMapper.DAO.CategoryDataService.Get.htm" />
+  <HelpKINode Title="Get method" Url="html/M-DataMapper.DAO.ProductDataService.Get.htm" />
+  <HelpKINode Title="Get method" Url="html/M-DataMapper.Repository.BaseRepository-1.Get.htm" />
+  <HelpKINode Title="Get method" Url="html/M-DataMapper.Repository.IRepository-1.Get.htm" />
+  <HelpKINode Title="Get method" Url="html/Overload-DataMapper.DAO.CategoryDataService.Get.htm" />
+  <HelpKINode Title="Get method" Url="html/Overload-DataMapper.DAO.ProductDataService.Get.htm" />
+  <HelpKINode Title="GetAuctionsByUserId method" Url="html/M-DataMapper.DAO.AuctionDataService.GetAuctionsByUserId.htm" />
+  <HelpKINode Title="GetAuctionsByUserId method" Url="html/M-DataMapper.Interfaces.IAuctionDataService.GetAuctionsByUserId.htm" />
+  <HelpKINode Title="GetBidsByAuction method" Url="html/M-DataMapper.DAO.BidDataService.GetBidsByAuction.htm" />
+  <HelpKINode Title="GetBidsByAuction method" Url="html/M-DataMapper.Interfaces.IBidDataService.GetBidsByAuction.htm" />
+  <HelpKINode Title="GetByID method" Url="html/M-DataMapper.DAO.CategoryDataService.GetByID.htm" />
+  <HelpKINode Title="GetByID method" Url="html/M-DataMapper.Repository.BaseRepository-1.GetByID.htm" />
+  <HelpKINode Title="GetById method" Url="html/M-ServiceLayer.Implementations.BaseService-3.GetById.htm" />
+  <HelpKINode Title="GetById method" Url="html/M-ServiceLayer.Interfaces.IService-1.GetById.htm" />
+  <HelpKINode Title="GetByID method" Url="html/M-DataMapper.DAO.ProductDataService.GetByID.htm" />
+  <HelpKINode Title="GetByID method" Url="html/M-DataMapper.Repository.IRepository-1.GetByID.htm" />
+  <HelpKINode Title="GetByName method" Url="html/M-DataMapper.DAO.ApplicationSettingDataService.GetByName.htm" />
+  <HelpKINode Title="GetByName method" Url="html/M-DataMapper.Interfaces.IApplicationSettingDataService.GetByName.htm" />
+  <HelpKINode Title="GetByName method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetByName.htm" />
+  <HelpKINode Title="GetByName method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetByName.htm" />
+  <HelpKINode Title="GetByNameTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetByNameTest.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/M-DomainModel.ValueObjects.ValueObject.GetHashCode.htm" />
+  <HelpKINode Title="GetLatestBidByAuction method" Url="html/M-DataMapper.DAO.BidDataService.GetLatestBidByAuction.htm" />
+  <HelpKINode Title="GetLatestBidByAuction method" Url="html/M-DataMapper.Interfaces.IBidDataService.GetLatestBidByAuction.htm" />
+  <HelpKINode Title="GetNumberOfOpenedAuctionsByCategory method" Url="html/M-DataMapper.DAO.CategoryDataService.GetNumberOfOpenedAuctionsByCategory.htm" />
+  <HelpKINode Title="GetNumberOfOpenedAuctionsByCategory method" Url="html/M-DataMapper.Interfaces.ICategoryDataService.GetNumberOfOpenedAuctionsByCategory.htm" />
+  <HelpKINode Title="GetScoresAssignedToUser method" Url="html/M-DataMapper.DAO.ScoreDataService.GetScoresAssignedToUser.htm" />
+  <HelpKINode Title="GetScoresAssignedToUser method" Url="html/M-DataMapper.Interfaces.IScoreDataService.GetScoresAssignedToUser.htm" />
+  <HelpKINode Title="GetValueAsBool method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsBool.htm" />
+  <HelpKINode Title="GetValueAsBool method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsBool.htm" />
+  <HelpKINode Title="GetValueAsBoolTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsBoolTest.htm" />
+  <HelpKINode Title="GetValueAsDecimal method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsDecimal.htm" />
+  <HelpKINode Title="GetValueAsDecimal method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsDecimal.htm" />
+  <HelpKINode Title="GetValueAsDecimalTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsDecimalTest.htm" />
+  <HelpKINode Title="GetValueAsInt method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsInt.htm" />
+  <HelpKINode Title="GetValueAsInt method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsInt.htm" />
+  <HelpKINode Title="GetValueAsIntTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsIntTest.htm" />
+  <HelpKINode Title="GetValueAsString method" Url="html/M-ServiceLayer.Implementations.ApplicationSettingService.GetValueAsString.htm" />
+  <HelpKINode Title="GetValueAsString method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsString.htm" />
+  <HelpKINode Title="GetValueAsStringTest method" Url="html/M-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.GetValueAsStringTest.htm" />
+  <HelpKINode Title="HasActiveAuctionPlacingRestrictions method" Url="html/M-DataMapper.DAO.AuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions.htm" />
+  <HelpKINode Title="HasActiveAuctionPlacingRestrictions method" Url="html/M-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions.htm" />
+  <HelpKINode Title="HasReachedMaxNumberOfOpenedAuctions method" Url="html/M-ServiceLayer.Implementations.AuctionService.HasReachedMaxNumberOfOpenedAuctions.htm" />
+  <HelpKINode Title="HasReachedMaxNumberOfOpenedAuctionsTest method" Url="html/M-ServiceLayer.Implementations.Tests.AuctionServiceTests.HasReachedMaxNumberOfOpenedAuctionsTest.htm" />
+  <HelpKINode Title="IApplicationSettingDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+  <HelpKINode Title="IApplicationSettingDataService interface" Url="html/T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+  <HelpKINode Title="IApplicationSettingDataService interface">
+    <HelpKINode Title="about IApplicationSettingDataService interface" Url="html/T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IApplicationSettingDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IApplicationSettingDataService.GetByName method" Url="html/M-DataMapper.Interfaces.IApplicationSettingDataService.GetByName.htm" />
+  <HelpKINode Title="IApplicationSettingService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+  <HelpKINode Title="IApplicationSettingService interface" Url="html/T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+  <HelpKINode Title="IApplicationSettingService interface">
+    <HelpKINode Title="about IApplicationSettingService interface" Url="html/T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IApplicationSettingService.GetByName method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetByName.htm" />
+  <HelpKINode Title="IApplicationSettingService.GetValueAsBool method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsBool.htm" />
+  <HelpKINode Title="IApplicationSettingService.GetValueAsDecimal method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsDecimal.htm" />
+  <HelpKINode Title="IApplicationSettingService.GetValueAsInt method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsInt.htm" />
+  <HelpKINode Title="IApplicationSettingService.GetValueAsString method" Url="html/M-ServiceLayer.Interfaces.IApplicationSettingService.GetValueAsString.htm" />
+  <HelpKINode Title="IAuctionDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionDataService.htm" />
+  <HelpKINode Title="IAuctionDataService interface" Url="html/T-DataMapper.Interfaces.IAuctionDataService.htm" />
+  <HelpKINode Title="IAuctionDataService interface">
+    <HelpKINode Title="about IAuctionDataService interface" Url="html/T-DataMapper.Interfaces.IAuctionDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IAuctionDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuctionDataService.GetAuctionsByUserId method" Url="html/M-DataMapper.Interfaces.IAuctionDataService.GetAuctionsByUserId.htm" />
+  <HelpKINode Title="IAuctionPlacingRestrictionsDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="IAuctionPlacingRestrictionsDataService interface" Url="html/T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+  <HelpKINode Title="IAuctionPlacingRestrictionsDataService interface">
+    <HelpKINode Title="about IAuctionPlacingRestrictionsDataService interface" Url="html/T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions method" Url="html/M-DataMapper.Interfaces.IAuctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions.htm" />
+  <HelpKINode Title="IAuctionService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IAuctionService.htm" />
+  <HelpKINode Title="IAuctionService interface" Url="html/T-ServiceLayer.Interfaces.IAuctionService.htm" />
+  <HelpKINode Title="IAuctionService interface">
+    <HelpKINode Title="about IAuctionService interface" Url="html/T-ServiceLayer.Interfaces.IAuctionService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IAuctionService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IAuctionService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuctionService.CancelAuction method" Url="html/M-ServiceLayer.Interfaces.IAuctionService.CancelAuction.htm" />
+  <HelpKINode Title="IBidDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IBidDataService.htm" />
+  <HelpKINode Title="IBidDataService interface" Url="html/T-DataMapper.Interfaces.IBidDataService.htm" />
+  <HelpKINode Title="IBidDataService interface">
+    <HelpKINode Title="about IBidDataService interface" Url="html/T-DataMapper.Interfaces.IBidDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IBidDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IBidDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IBidDataService.GetBidsByAuction method" Url="html/M-DataMapper.Interfaces.IBidDataService.GetBidsByAuction.htm" />
+  <HelpKINode Title="IBidDataService.GetLatestBidByAuction method" Url="html/M-DataMapper.Interfaces.IBidDataService.GetLatestBidByAuction.htm" />
+  <HelpKINode Title="IBidService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IBidService.htm" />
+  <HelpKINode Title="IBidService interface" Url="html/T-ServiceLayer.Interfaces.IBidService.htm" />
+  <HelpKINode Title="IBidService interface">
+    <HelpKINode Title="about IBidService interface" Url="html/T-ServiceLayer.Interfaces.IBidService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IBidService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IBidService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICategoryDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.ICategoryDataService.htm" />
+  <HelpKINode Title="ICategoryDataService interface" Url="html/T-DataMapper.Interfaces.ICategoryDataService.htm" />
+  <HelpKINode Title="ICategoryDataService interface">
+    <HelpKINode Title="about ICategoryDataService interface" Url="html/T-DataMapper.Interfaces.ICategoryDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.ICategoryDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.ICategoryDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICategoryDataService.GetNumberOfOpenedAuctionsByCategory method" Url="html/M-DataMapper.Interfaces.ICategoryDataService.GetNumberOfOpenedAuctionsByCategory.htm" />
+  <HelpKINode Title="ICategoryService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.ICategoryService.htm" />
+  <HelpKINode Title="ICategoryService interface" Url="html/T-ServiceLayer.Interfaces.ICategoryService.htm" />
+  <HelpKINode Title="ICategoryService interface">
+    <HelpKINode Title="about ICategoryService interface" Url="html/T-ServiceLayer.Interfaces.ICategoryService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.ICategoryService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.ICategoryService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.ApplicationSetting.Id.htm" />
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.Auction.Id.htm" />
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.Id.htm" />
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.Bid.Id.htm" />
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.Category.Id.htm" />
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.Product.Id.htm" />
+  <HelpKINode Title="Id property" Url="html/P-DomainModel.Models.Score.Id.htm" />
+  <HelpKINode Title="InitialMigration class" Url="html/AllMembers.T-DataMapper.Migrations.InitialMigration.htm" />
+  <HelpKINode Title="InitialMigration class" Url="html/T-DataMapper.Migrations.InitialMigration.htm" />
+  <HelpKINode Title="InitialMigration class">
+    <HelpKINode Title="about InitialMigration class" Url="html/T-DataMapper.Migrations.InitialMigration.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.InitialMigration.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.InitialMigration.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Insert method" Url="html/M-DataMapper.Repository.BaseRepository-1.Insert.htm" />
+  <HelpKINode Title="Insert method" Url="html/M-DataMapper.Repository.IRepository-1.Insert.htm" />
+  <HelpKINode Title="IProductDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IProductDataService.htm" />
+  <HelpKINode Title="IProductDataService interface" Url="html/T-DataMapper.Interfaces.IProductDataService.htm" />
+  <HelpKINode Title="IProductDataService interface">
+    <HelpKINode Title="about IProductDataService interface" Url="html/T-DataMapper.Interfaces.IProductDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IProductDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IProductDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IProductService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IProductService.htm" />
+  <HelpKINode Title="IProductService interface" Url="html/T-ServiceLayer.Interfaces.IProductService.htm" />
+  <HelpKINode Title="IProductService interface">
+    <HelpKINode Title="about IProductService interface" Url="html/T-ServiceLayer.Interfaces.IProductService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IProductService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IProductService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRepository interface" Url="html/AllMembers.T-DataMapper.Repository.IRepository-1.htm" />
+  <HelpKINode Title="IRepository interface">
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Repository.IRepository-1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Repository.IRepository-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRepository(Of T) interface" Url="html/T-DataMapper.Repository.IRepository-1.htm" />
+  <HelpKINode Title="IRepository(Of T) interface">
+    <HelpKINode Title="about IRepository(Of T) interface" Url="html/T-DataMapper.Repository.IRepository-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRepository(Of T).Delete method" Url="html/M-DataMapper.Repository.IRepository-1.Delete.htm" />
+  <HelpKINode Title="IRepository(Of T).Get method" Url="html/M-DataMapper.Repository.IRepository-1.Get.htm" />
+  <HelpKINode Title="IRepository(Of T).GetByID method" Url="html/M-DataMapper.Repository.IRepository-1.GetByID.htm" />
+  <HelpKINode Title="IRepository(Of T).Insert method" Url="html/M-DataMapper.Repository.IRepository-1.Insert.htm" />
+  <HelpKINode Title="IRepository(Of T).Update method" Url="html/M-DataMapper.Repository.IRepository-1.Update.htm" />
+  <HelpKINode Title="IRepository&lt;T&gt; interface" Url="html/T-DataMapper.Repository.IRepository-1.htm" />
+  <HelpKINode Title="IRepository&lt;T&gt; interface">
+    <HelpKINode Title="about IRepository&lt;T&gt; interface" Url="html/T-DataMapper.Repository.IRepository-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRepository&lt;T&gt;.Delete method" Url="html/M-DataMapper.Repository.IRepository-1.Delete.htm" />
+  <HelpKINode Title="IRepository&lt;T&gt;.Get method" Url="html/M-DataMapper.Repository.IRepository-1.Get.htm" />
+  <HelpKINode Title="IRepository&lt;T&gt;.GetByID method" Url="html/M-DataMapper.Repository.IRepository-1.GetByID.htm" />
+  <HelpKINode Title="IRepository&lt;T&gt;.Insert method" Url="html/M-DataMapper.Repository.IRepository-1.Insert.htm" />
+  <HelpKINode Title="IRepository&lt;T&gt;.Update method" Url="html/M-DataMapper.Repository.IRepository-1.Update.htm" />
+  <HelpKINode Title="IScoreDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IScoreDataService.htm" />
+  <HelpKINode Title="IScoreDataService interface" Url="html/T-DataMapper.Interfaces.IScoreDataService.htm" />
+  <HelpKINode Title="IScoreDataService interface">
+    <HelpKINode Title="about IScoreDataService interface" Url="html/T-DataMapper.Interfaces.IScoreDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IScoreDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IScoreDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IScoreDataService.CalculateUserScore method" Url="html/M-DataMapper.Interfaces.IScoreDataService.CalculateUserScore.htm" />
+  <HelpKINode Title="IScoreDataService.GetScoresAssignedToUser method" Url="html/M-DataMapper.Interfaces.IScoreDataService.GetScoresAssignedToUser.htm" />
+  <HelpKINode Title="IScoreService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IScoreService.htm" />
+  <HelpKINode Title="IScoreService interface" Url="html/T-ServiceLayer.Interfaces.IScoreService.htm" />
+  <HelpKINode Title="IScoreService interface">
+    <HelpKINode Title="about IScoreService interface" Url="html/T-ServiceLayer.Interfaces.IScoreService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IScoreService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IScoreService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IService-1.htm" />
+  <HelpKINode Title="IService interface">
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IService-1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IService-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IService(Of T) interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm" />
+  <HelpKINode Title="IService(Of T) interface">
+    <HelpKINode Title="about IService(Of T) interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IService(Of T).Add method" Url="html/M-ServiceLayer.Interfaces.IService-1.Add.htm" />
+  <HelpKINode Title="IService(Of T).Delete method" Url="html/M-ServiceLayer.Interfaces.IService-1.Delete.htm" />
+  <HelpKINode Title="IService(Of T).GetById method" Url="html/M-ServiceLayer.Interfaces.IService-1.GetById.htm" />
+  <HelpKINode Title="IService(Of T).List method" Url="html/M-ServiceLayer.Interfaces.IService-1.List.htm" />
+  <HelpKINode Title="IService(Of T).Update method" Url="html/M-ServiceLayer.Interfaces.IService-1.Update.htm" />
+  <HelpKINode Title="IService&lt;T&gt; interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm" />
+  <HelpKINode Title="IService&lt;T&gt; interface">
+    <HelpKINode Title="about IService&lt;T&gt; interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IService&lt;T&gt;.Add method" Url="html/M-ServiceLayer.Interfaces.IService-1.Add.htm" />
+  <HelpKINode Title="IService&lt;T&gt;.Delete method" Url="html/M-ServiceLayer.Interfaces.IService-1.Delete.htm" />
+  <HelpKINode Title="IService&lt;T&gt;.GetById method" Url="html/M-ServiceLayer.Interfaces.IService-1.GetById.htm" />
+  <HelpKINode Title="IService&lt;T&gt;.List method" Url="html/M-ServiceLayer.Interfaces.IService-1.List.htm" />
+  <HelpKINode Title="IService&lt;T&gt;.Update method" Url="html/M-ServiceLayer.Interfaces.IService-1.Update.htm" />
+  <HelpKINode Title="IUserDataService interface" Url="html/AllMembers.T-DataMapper.Interfaces.IUserDataService.htm" />
+  <HelpKINode Title="IUserDataService interface" Url="html/T-DataMapper.Interfaces.IUserDataService.htm" />
+  <HelpKINode Title="IUserDataService interface">
+    <HelpKINode Title="about IUserDataService interface" Url="html/T-DataMapper.Interfaces.IUserDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Interfaces.IUserDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Interfaces.IUserDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IUserService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IUserService.htm" />
+  <HelpKINode Title="IUserService interface" Url="html/T-ServiceLayer.Interfaces.IUserService.htm" />
+  <HelpKINode Title="IUserService interface">
+    <HelpKINode Title="about IUserService interface" Url="html/T-ServiceLayer.Interfaces.IUserService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Interfaces.IUserService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Interfaces.IUserService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="List method" Url="html/M-ServiceLayer.Implementations.BaseService-3.List.htm" />
+  <HelpKINode Title="List method" Url="html/M-ServiceLayer.Interfaces.IService-1.List.htm" />
+  <HelpKINode Title="Money class" Url="html/AllMembers.T-DomainModel.ValueObjects.Money.htm" />
+  <HelpKINode Title="Money class" Url="html/T-DomainModel.ValueObjects.Money.htm" />
+  <HelpKINode Title="Money class">
+    <HelpKINode Title="about Money class" Url="html/T-DomainModel.ValueObjects.Money.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.ValueObjects.Money.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.ValueObjects.Money.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.ValueObjects.Money.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.ValueObjects.Money.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Money.Amount property" Url="html/P-DomainModel.ValueObjects.Money.Amount.htm" />
+  <HelpKINode Title="Money.Currency property" Url="html/P-DomainModel.ValueObjects.Money.Currency.htm" />
+  <HelpKINode Title="Money.Money constructor" Url="html/M-DomainModel.ValueObjects.Money.-ctor.htm" />
+  <HelpKINode Title="Money.ToString method" Url="html/M-DomainModel.ValueObjects.Money.ToString.htm" />
+  <HelpKINode Title="MoneyType class" Url="html/AllMembers.T-DataMapper.Migrations.MoneyType.htm" />
+  <HelpKINode Title="MoneyType class" Url="html/T-DataMapper.Migrations.MoneyType.htm" />
+  <HelpKINode Title="MoneyType class">
+    <HelpKINode Title="about MoneyType class" Url="html/T-DataMapper.Migrations.MoneyType.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.MoneyType.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.MoneyType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoneyTypeBid class" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeBid.htm" />
+  <HelpKINode Title="MoneyTypeBid class" Url="html/T-DataMapper.Migrations.MoneyTypeBid.htm" />
+  <HelpKINode Title="MoneyTypeBid class">
+    <HelpKINode Title="about MoneyTypeBid class" Url="html/T-DataMapper.Migrations.MoneyTypeBid.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeBid.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.MoneyTypeBid.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoneyTypeConstraints class" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+  <HelpKINode Title="MoneyTypeConstraints class" Url="html/T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+  <HelpKINode Title="MoneyTypeConstraints class">
+    <HelpKINode Title="about MoneyTypeConstraints class" Url="html/T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.MoneyTypeConstraints.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Name property" Url="html/P-DomainModel.Models.ApplicationSetting.Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P-DomainModel.Models.Category.Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P-DomainModel.Models.Product.Name.htm" />
+  <HelpKINode Title="ParentCategories property" Url="html/P-DomainModel.Models.Category.ParentCategories.htm" />
+  <HelpKINode Title="Product class" Url="html/AllMembers.T-DomainModel.Models.Product.htm" />
+  <HelpKINode Title="Product class" Url="html/T-DomainModel.Models.Product.htm" />
+  <HelpKINode Title="Product class">
+    <HelpKINode Title="about Product class" Url="html/T-DomainModel.Models.Product.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.Product.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.Product.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.Product.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Product property" Url="html/P-DomainModel.Models.Auction.Product.htm" />
+  <HelpKINode Title="Product.Categories property" Url="html/P-DomainModel.Models.Product.Categories.htm" />
+  <HelpKINode Title="Product.Description property" Url="html/P-DomainModel.Models.Product.Description.htm" />
+  <HelpKINode Title="Product.Id property" Url="html/P-DomainModel.Models.Product.Id.htm" />
+  <HelpKINode Title="Product.Name property" Url="html/P-DomainModel.Models.Product.Name.htm" />
+  <HelpKINode Title="Product.User property" Url="html/P-DomainModel.Models.Product.User.htm" />
+  <HelpKINode Title="Product.UserId property" Url="html/P-DomainModel.Models.Product.UserId.htm" />
+  <HelpKINode Title="ProductDataService class" Url="html/AllMembers.T-DataMapper.DAO.ProductDataService.htm" />
+  <HelpKINode Title="ProductDataService class" Url="html/T-DataMapper.DAO.ProductDataService.htm" />
+  <HelpKINode Title="ProductDataService class">
+    <HelpKINode Title="about ProductDataService class" Url="html/T-DataMapper.DAO.ProductDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.ProductDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.ProductDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProductDataService.Get method" Url="html/M-DataMapper.DAO.ProductDataService.Get.htm" />
+  <HelpKINode Title="ProductDataService.Get method" Url="html/Overload-DataMapper.DAO.ProductDataService.Get.htm" />
+  <HelpKINode Title="ProductDataService.GetByID method" Url="html/M-DataMapper.DAO.ProductDataService.GetByID.htm" />
+  <HelpKINode Title="ProductId property" Url="html/P-DomainModel.Models.Auction.ProductId.htm" />
+  <HelpKINode Title="Products property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Products.htm" />
+  <HelpKINode Title="Products property" Url="html/P-DomainModel.Models.Category.Products.htm" />
+  <HelpKINode Title="Products property" Url="html/P-DomainModel.Models.User.Products.htm" />
+  <HelpKINode Title="ProductService class" Url="html/AllMembers.T-ServiceLayer.Implementations.ProductService.htm" />
+  <HelpKINode Title="ProductService class" Url="html/T-ServiceLayer.Implementations.ProductService.htm" />
+  <HelpKINode Title="ProductService class">
+    <HelpKINode Title="about ProductService class" Url="html/T-ServiceLayer.Implementations.ProductService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.ProductService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.ProductService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.ProductService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProductService.Add method" Url="html/M-ServiceLayer.Implementations.ProductService.Add.htm" />
+  <HelpKINode Title="ProductService.Add method" Url="html/Overload-ServiceLayer.Implementations.ProductService.Add.htm" />
+  <HelpKINode Title="ProductService.ProductService constructor" Url="html/M-ServiceLayer.Implementations.ProductService.-ctor.htm" />
+  <HelpKINode Title="ProductServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+  <HelpKINode Title="ProductServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+  <HelpKINode Title="ProductServiceTests class">
+    <HelpKINode Title="about ProductServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProductServiceTests.TestAddShouldThrowValidationException method" Url="html/M-ServiceLayer.Implementations.Tests.ProductServiceTests.TestAddShouldThrowValidationException.htm" />
+  <HelpKINode Title="ProductValidator class" Url="html/AllMembers.T-DomainModel.Validators.ProductValidator.htm" />
+  <HelpKINode Title="ProductValidator class" Url="html/T-DomainModel.Validators.ProductValidator.htm" />
+  <HelpKINode Title="ProductValidator class">
+    <HelpKINode Title="about ProductValidator class" Url="html/T-DomainModel.Validators.ProductValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.ProductValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.ProductValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.ProductValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProductValidator.ProductValidator constructor" Url="html/M-DomainModel.Validators.ProductValidator.-ctor.htm" />
+  <HelpKINode Title="ProductValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+  <HelpKINode Title="ProductValidatorTests class" Url="html/T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+  <HelpKINode Title="ProductValidatorTests class">
+    <HelpKINode Title="about ProductValidatorTests class" Url="html/T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.Tests.ProductValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProductValidatorTests.TestEmptyDescription method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestEmptyDescription.htm" />
+  <HelpKINode Title="ProductValidatorTests.TestEmptyName method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestEmptyName.htm" />
+  <HelpKINode Title="ProductValidatorTests.TestExcedingMaxLengthDescription method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestExcedingMaxLengthDescription.htm" />
+  <HelpKINode Title="ProductValidatorTests.TestExcedingMaxLengthName method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestExcedingMaxLengthName.htm" />
+  <HelpKINode Title="ProductValidatorTests.TestMaxLengthDescription method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestMaxLengthDescription.htm" />
+  <HelpKINode Title="ProductValidatorTests.TestMaxLengthName method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestMaxLengthName.htm" />
+  <HelpKINode Title="Role class" Url="html/AllMembers.T-DomainModel.Models.Role.htm" />
+  <HelpKINode Title="Role class" Url="html/T-DomainModel.Models.Role.htm" />
+  <HelpKINode Title="Role class">
+    <HelpKINode Title="about Role class" Url="html/T-DomainModel.Models.Role.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.Role.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.Role.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.Role.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Role.UsersInRole property" Url="html/P-DomainModel.Models.Role.UsersInRole.htm" />
+  <HelpKINode Title="Roles property" Url="html/P-DomainModel.Models.User.Roles.htm" />
+  <HelpKINode Title="score class" Url="html/AllMembers.T-DataMapper.Migrations.score.htm" />
+  <HelpKINode Title="score class" Url="html/T-DataMapper.Migrations.score.htm" />
+  <HelpKINode Title="Score class" Url="html/AllMembers.T-DomainModel.Models.Score.htm" />
+  <HelpKINode Title="Score class">
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.Score.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.Score.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.Score.htm" />
+  </HelpKINode>
+  <HelpKINode Title="score class">
+    <HelpKINode Title="about score class" Url="html/T-DataMapper.Migrations.score.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.score.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.score.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Score class" Url="html/T-DomainModel.Models.Score.htm" />
+  <HelpKINode Title="Score class">
+    <HelpKINode Title="about Score class" Url="html/T-DomainModel.Models.Score.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Score.AssignedByUser property" Url="html/P-DomainModel.Models.Score.AssignedByUser.htm" />
+  <HelpKINode Title="Score.AssignedToUser property" Url="html/P-DomainModel.Models.Score.AssignedToUser.htm" />
+  <HelpKINode Title="Score.DateAdded property" Url="html/P-DomainModel.Models.Score.DateAdded.htm" />
+  <HelpKINode Title="Score.Id property" Url="html/P-DomainModel.Models.Score.Id.htm" />
+  <HelpKINode Title="Score.ScoreValue property" Url="html/P-DomainModel.Models.Score.ScoreValue.htm" />
+  <HelpKINode Title="ScoreDataService class" Url="html/AllMembers.T-DataMapper.DAO.ScoreDataService.htm" />
+  <HelpKINode Title="ScoreDataService class" Url="html/T-DataMapper.DAO.ScoreDataService.htm" />
+  <HelpKINode Title="ScoreDataService class">
+    <HelpKINode Title="about ScoreDataService class" Url="html/T-DataMapper.DAO.ScoreDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.ScoreDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.ScoreDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScoreDataService.CalculateUserScore method" Url="html/M-DataMapper.DAO.ScoreDataService.CalculateUserScore.htm" />
+  <HelpKINode Title="ScoreDataService.GetScoresAssignedToUser method" Url="html/M-DataMapper.DAO.ScoreDataService.GetScoresAssignedToUser.htm" />
+  <HelpKINode Title="Scores property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Scores.htm" />
+  <HelpKINode Title="ScoreService class" Url="html/AllMembers.T-ServiceLayer.Implementations.ScoreService.htm" />
+  <HelpKINode Title="ScoreService class" Url="html/T-ServiceLayer.Implementations.ScoreService.htm" />
+  <HelpKINode Title="ScoreService class">
+    <HelpKINode Title="about ScoreService class" Url="html/T-ServiceLayer.Implementations.ScoreService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.ScoreService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.ScoreService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.ScoreService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScoreService.Add method" Url="html/M-ServiceLayer.Implementations.ScoreService.Add.htm" />
+  <HelpKINode Title="ScoreService.Add method" Url="html/Overload-ServiceLayer.Implementations.ScoreService.Add.htm" />
+  <HelpKINode Title="ScoreService.ScoreService constructor" Url="html/M-ServiceLayer.Implementations.ScoreService.-ctor.htm" />
+  <HelpKINode Title="ScoreValidator class" Url="html/AllMembers.T-DomainModel.Validators.ScoreValidator.htm" />
+  <HelpKINode Title="ScoreValidator class" Url="html/T-DomainModel.Validators.ScoreValidator.htm" />
+  <HelpKINode Title="ScoreValidator class">
+    <HelpKINode Title="about ScoreValidator class" Url="html/T-DomainModel.Validators.ScoreValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.ScoreValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.ScoreValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.ScoreValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScoreValidator.ScoreValidator constructor" Url="html/M-DomainModel.Validators.ScoreValidator.-ctor.htm" />
+  <HelpKINode Title="ScoreValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+  <HelpKINode Title="ScoreValidatorTests class" Url="html/T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+  <HelpKINode Title="ScoreValidatorTests class">
+    <HelpKINode Title="about ScoreValidatorTests class" Url="html/T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.Tests.ScoreValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScoreValidatorTests.TestEmptyAssignedByUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestEmptyAssignedByUser.htm" />
+  <HelpKINode Title="ScoreValidatorTests.TestEmptyAssignedToUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestEmptyAssignedToUser.htm" />
+  <HelpKINode Title="ScoreValidatorTests.TestInvalidScoreValue method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestInvalidScoreValue.htm" />
+  <HelpKINode Title="ScoreValidatorTests.TestNotEmptyAssignedByUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestNotEmptyAssignedByUser.htm" />
+  <HelpKINode Title="ScoreValidatorTests.TestNotEmptyAssignedToUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestNotEmptyAssignedToUser.htm" />
+  <HelpKINode Title="ScoreValidatorTests.TestValidScoreValue method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestValidScoreValue.htm" />
+  <HelpKINode Title="ScoreValue property" Url="html/P-DomainModel.Models.Score.ScoreValue.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations namespace" Url="html/N-ServiceLayer.Implementations.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.ApplicationSettingService class" Url="html/AllMembers.T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.ApplicationSettingService class" Url="html/T-ServiceLayer.Implementations.ApplicationSettingService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.AuctionService class" Url="html/AllMembers.T-ServiceLayer.Implementations.AuctionService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.AuctionService class" Url="html/T-ServiceLayer.Implementations.AuctionService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.BaseService(Of TE, TS, TV) class" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.BaseService(Of TE, TS, TV) class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.BaseService&lt;TE, TS, TV&gt; class" Url="html/AllMembers.T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.BaseService&lt;TE, TS, TV&gt; class" Url="html/T-ServiceLayer.Implementations.BaseService-3.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.BidService class" Url="html/AllMembers.T-ServiceLayer.Implementations.BidService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.BidService class" Url="html/T-ServiceLayer.Implementations.BidService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.CategoryService class" Url="html/AllMembers.T-ServiceLayer.Implementations.CategoryService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.CategoryService class" Url="html/T-ServiceLayer.Implementations.CategoryService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.ProductService class" Url="html/AllMembers.T-ServiceLayer.Implementations.ProductService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.ProductService class" Url="html/T-ServiceLayer.Implementations.ProductService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.ScoreService class" Url="html/AllMembers.T-ServiceLayer.Implementations.ScoreService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.ScoreService class" Url="html/T-ServiceLayer.Implementations.ScoreService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests namespace" Url="html/N-ServiceLayer.Implementations.Tests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.ApplicationSettingServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.AuctionServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.AuctionServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.AuctionServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.BidServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.BidServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.BidServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.CategoryServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.CategoryServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.CategoryServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.ProductServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.ProductServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.ProductServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.UserServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.Tests.UserServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.UserService class" Url="html/AllMembers.T-ServiceLayer.Implementations.UserService.htm" />
+  <HelpKINode Title="ServiceLayer.Implementations.UserService class" Url="html/T-ServiceLayer.Implementations.UserService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces namespace" Url="html/N-ServiceLayer.Interfaces.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IApplicationSettingService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IApplicationSettingService interface" Url="html/T-ServiceLayer.Interfaces.IApplicationSettingService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IAuctionService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IAuctionService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IAuctionService interface" Url="html/T-ServiceLayer.Interfaces.IAuctionService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IBidService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IBidService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IBidService interface" Url="html/T-ServiceLayer.Interfaces.IBidService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.ICategoryService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.ICategoryService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.ICategoryService interface" Url="html/T-ServiceLayer.Interfaces.ICategoryService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IProductService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IProductService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IProductService interface" Url="html/T-ServiceLayer.Interfaces.IProductService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IScoreService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IScoreService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IScoreService interface" Url="html/T-ServiceLayer.Interfaces.IScoreService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IService-1.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IService(Of T) interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IService&lt;T&gt; interface" Url="html/T-ServiceLayer.Interfaces.IService-1.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IUserService interface" Url="html/AllMembers.T-ServiceLayer.Interfaces.IUserService.htm" />
+  <HelpKINode Title="ServiceLayer.Interfaces.IUserService interface" Url="html/T-ServiceLayer.Interfaces.IUserService.htm" />
+  <HelpKINode Title="StartDate property" Url="html/P-DomainModel.Models.Auction.StartDate.htm" />
+  <HelpKINode Title="StartDate property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.StartDate.htm" />
+  <HelpKINode Title="StartPrice property" Url="html/P-DomainModel.Models.Auction.StartPrice.htm" />
+  <HelpKINode Title="SubCategories property" Url="html/P-DomainModel.Models.Category.SubCategories.htm" />
+  <HelpKINode Title="TestAboveMaxLenghtName method" Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestAboveMaxLenghtName.htm" />
+  <HelpKINode Title="TestAddShouldThrowValidationError method" Url="html/M-ServiceLayer.Implementations.Tests.CategoryServiceTests.TestAddShouldThrowValidationError.htm" />
+  <HelpKINode Title="TestAddShouldThrowValidationException method" Url="html/M-ServiceLayer.Implementations.Tests.ProductServiceTests.TestAddShouldThrowValidationException.htm" />
+  <HelpKINode Title="TestAddShouldThrowValidationException method" Url="html/M-ServiceLayer.Implementations.Tests.UserServiceTests.TestAddShouldThrowValidationException.htm" />
+  <HelpKINode Title="TestCorrectStartDate method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestCorrectStartDate.htm" />
+  <HelpKINode Title="TestCorrectStartDateData property" Url="html/P-DomainModelTests.Validators.AuctionValidatorTests.TestCorrectStartDateData.htm" />
+  <HelpKINode Title="TestEmptyAssignedByUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestEmptyAssignedByUser.htm" />
+  <HelpKINode Title="TestEmptyAssignedToUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestEmptyAssignedToUser.htm" />
+  <HelpKINode Title="TestEmptyDescription method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestEmptyDescription.htm" />
+  <HelpKINode Title="TestEmptyName method" Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestEmptyName.htm" />
+  <HelpKINode Title="TestEmptyName method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestEmptyName.htm" />
+  <HelpKINode Title="TestEmptyProductId method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestEmptyProductId.htm" />
+  <HelpKINode Title="TestEmptyUserId method" Url="html/M-DomainModel.Validators.Tests.BidValidatorTests.TestEmptyUserId.htm" />
+  <HelpKINode Title="TestEmptyUsername method" Url="html/M-DomainModel.Validators.Tests.UserValidatorTests.TestEmptyUsername.htm" />
+  <HelpKINode Title="TestExcedingMaxLengthDescription method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestExcedingMaxLengthDescription.htm" />
+  <HelpKINode Title="TestExcedingMaxLengthName method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestExcedingMaxLengthName.htm" />
+  <HelpKINode Title="TestIncorrectName method" Url="html/M-DomainModelTests.Validators.ApplicationSettingValidatorTests.TestIncorrectName.htm" />
+  <HelpKINode Title="TestIncorrectStartDate method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestIncorrectStartDate.htm" />
+  <HelpKINode Title="TestIncorrectStartDateData property" Url="html/P-DomainModelTests.Validators.AuctionValidatorTests.TestIncorrectStartDateData.htm" />
+  <HelpKINode Title="TestInvalidScoreValue method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestInvalidScoreValue.htm" />
+  <HelpKINode Title="TestMaxLenghtName method" Url="html/M-DomainModel.Validators.Tests.CategoryValidatorTests.TestMaxLenghtName.htm" />
+  <HelpKINode Title="TestMaxLengthDescription method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestMaxLengthDescription.htm" />
+  <HelpKINode Title="TestMaxLengthName method" Url="html/M-DomainModel.Validators.Tests.ProductValidatorTests.TestMaxLengthName.htm" />
+  <HelpKINode Title="TestNotEmptyAssignedByUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestNotEmptyAssignedByUser.htm" />
+  <HelpKINode Title="TestNotEmptyAssignedToUser method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestNotEmptyAssignedToUser.htm" />
+  <HelpKINode Title="TestNotEmptyProductId method" Url="html/M-DomainModelTests.Validators.AuctionValidatorTests.TestNotEmptyProductId.htm" />
+  <HelpKINode Title="TestValidScoreValue method" Url="html/M-DomainModel.Validators.Tests.ScoreValidatorTests.TestValidScoreValue.htm" />
+  <HelpKINode Title="ToString method" Url="html/M-DomainModel.ValueObjects.Money.ToString.htm" />
+  <HelpKINode Title="Update method" Url="html/M-DataMapper.Repository.BaseRepository-1.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/M-DataMapper.Repository.IRepository-1.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/M-ServiceLayer.Implementations.AuctionService.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/M-ServiceLayer.Implementations.BaseService-3.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/M-ServiceLayer.Implementations.BidService.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/M-ServiceLayer.Interfaces.IService-1.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/Overload-ServiceLayer.Implementations.AuctionService.Update.htm" />
+  <HelpKINode Title="Update method" Url="html/Overload-ServiceLayer.Implementations.BidService.Update.htm" />
+  <HelpKINode Title="UpdatedCategoryHierarchy class" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+  <HelpKINode Title="UpdatedCategoryHierarchy class" Url="html/T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+  <HelpKINode Title="UpdatedCategoryHierarchy class">
+    <HelpKINode Title="about UpdatedCategoryHierarchy class" Url="html/T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.UpdatedCategoryHierarchy.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdatedRelations class" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedRelations.htm" />
+  <HelpKINode Title="UpdatedRelations class" Url="html/T-DataMapper.Migrations.UpdatedRelations.htm" />
+  <HelpKINode Title="UpdatedRelations class">
+    <HelpKINode Title="about UpdatedRelations class" Url="html/T-DataMapper.Migrations.UpdatedRelations.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.UpdatedRelations.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.UpdatedRelations.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateProduct class" Url="html/AllMembers.T-DataMapper.Migrations.UpdateProduct.htm" />
+  <HelpKINode Title="UpdateProduct class" Url="html/T-DataMapper.Migrations.UpdateProduct.htm" />
+  <HelpKINode Title="UpdateProduct class">
+    <HelpKINode Title="about UpdateProduct class" Url="html/T-DataMapper.Migrations.UpdateProduct.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.UpdateProduct.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.UpdateProduct.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateTest method" Url="html/M-ServiceLayer.Implementations.Tests.BidServiceTests.UpdateTest.htm" />
+  <HelpKINode Title="User class" Url="html/AllMembers.T-DomainModel.Models.User.htm" />
+  <HelpKINode Title="User class" Url="html/T-DomainModel.Models.User.htm" />
+  <HelpKINode Title="User class">
+    <HelpKINode Title="about User class" Url="html/T-DomainModel.Models.User.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Models.User.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Models.User.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-DomainModel.Models.User.htm" />
+  </HelpKINode>
+  <HelpKINode Title="User property" Url="html/P-DomainModel.Models.AuctionPlacingRestriction.User.htm" />
+  <HelpKINode Title="User property" Url="html/P-DomainModel.Models.Product.User.htm" />
+  <HelpKINode Title="User.Products property" Url="html/P-DomainModel.Models.User.Products.htm" />
+  <HelpKINode Title="User.Roles property" Url="html/P-DomainModel.Models.User.Roles.htm" />
+  <HelpKINode Title="UserDataService class" Url="html/AllMembers.T-DataMapper.DAO.UserDataService.htm" />
+  <HelpKINode Title="UserDataService class" Url="html/T-DataMapper.DAO.UserDataService.htm" />
+  <HelpKINode Title="UserDataService class">
+    <HelpKINode Title="about UserDataService class" Url="html/T-DataMapper.DAO.UserDataService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.DAO.UserDataService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.DAO.UserDataService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserId property" Url="html/P-DomainModel.Models.Auction.UserId.htm" />
+  <HelpKINode Title="UserId property" Url="html/P-DomainModel.Models.Bid.UserId.htm" />
+  <HelpKINode Title="UserId property" Url="html/P-DomainModel.Models.Product.UserId.htm" />
+  <HelpKINode Title="userRoles class" Url="html/AllMembers.T-DataMapper.Migrations.userRoles.htm" />
+  <HelpKINode Title="userRoles class" Url="html/T-DataMapper.Migrations.userRoles.htm" />
+  <HelpKINode Title="userRoles class">
+    <HelpKINode Title="about userRoles class" Url="html/T-DataMapper.Migrations.userRoles.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DataMapper.Migrations.userRoles.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DataMapper.Migrations.userRoles.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Users property" Url="html/P-DataMapper.AuctionEnterpriseAppContext.Users.htm" />
+  <HelpKINode Title="UserService class" Url="html/AllMembers.T-ServiceLayer.Implementations.UserService.htm" />
+  <HelpKINode Title="UserService class" Url="html/T-ServiceLayer.Implementations.UserService.htm" />
+  <HelpKINode Title="UserService class">
+    <HelpKINode Title="about UserService class" Url="html/T-ServiceLayer.Implementations.UserService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.UserService.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ServiceLayer.Implementations.UserService.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.UserService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserService.UserService constructor" Url="html/M-ServiceLayer.Implementations.UserService.-ctor.htm" />
+  <HelpKINode Title="UserServiceTests class" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+  <HelpKINode Title="UserServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+  <HelpKINode Title="UserServiceTests class">
+    <HelpKINode Title="about UserServiceTests class" Url="html/T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ServiceLayer.Implementations.Tests.UserServiceTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserServiceTests.TestAddShouldThrowValidationException method" Url="html/M-ServiceLayer.Implementations.Tests.UserServiceTests.TestAddShouldThrowValidationException.htm" />
+  <HelpKINode Title="UsersInRole property" Url="html/P-DomainModel.Models.Role.UsersInRole.htm" />
+  <HelpKINode Title="UserValidator class" Url="html/AllMembers.T-DomainModel.Validators.UserValidator.htm" />
+  <HelpKINode Title="UserValidator class" Url="html/T-DomainModel.Validators.UserValidator.htm" />
+  <HelpKINode Title="UserValidator class">
+    <HelpKINode Title="about UserValidator class" Url="html/T-DomainModel.Validators.UserValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.UserValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-DomainModel.Validators.UserValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.UserValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserValidator.UserValidator constructor" Url="html/M-DomainModel.Validators.UserValidator.-ctor.htm" />
+  <HelpKINode Title="UserValidatorTests class" Url="html/AllMembers.T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+  <HelpKINode Title="UserValidatorTests class" Url="html/T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+  <HelpKINode Title="UserValidatorTests class">
+    <HelpKINode Title="about UserValidatorTests class" Url="html/T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.Validators.Tests.UserValidatorTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserValidatorTests.TestEmptyUsername method" Url="html/M-DomainModel.Validators.Tests.UserValidatorTests.TestEmptyUsername.htm" />
+  <HelpKINode Title="Value property" Url="html/P-DomainModel.Models.ApplicationSetting.Value.htm" />
+  <HelpKINode Title="ValueObject class" Url="html/AllMembers.T-DomainModel.ValueObjects.ValueObject.htm" />
+  <HelpKINode Title="ValueObject class" Url="html/T-DomainModel.ValueObjects.ValueObject.htm" />
+  <HelpKINode Title="ValueObject class">
+    <HelpKINode Title="about ValueObject class" Url="html/T-DomainModel.ValueObjects.ValueObject.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-DomainModel.ValueObjects.ValueObject.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-DomainModel.ValueObjects.ValueObject.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueObject.Equals method" Url="html/M-DomainModel.ValueObjects.ValueObject.Equals.htm" />
+  <HelpKINode Title="ValueObject.GetHashCode method" Url="html/M-DomainModel.ValueObjects.ValueObject.GetHashCode.htm" />
+</HelpKI>

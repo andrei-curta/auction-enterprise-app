@@ -8,20 +8,20 @@ Sa se creeze o aplicatie in care se permite licitarea pentru produse vandute de 
   - [X]  data inceperii < data finalizarii, dar diferente sa fie de maxim 7 luni de zile, 
   - [X]  ca data inceperii nu poate sa fie in trecut (relativ la momentul prezent); impuneti alte validari ale valorilor utilizate.
    
-- [ ] Pentru fiecare produs pentru care se incepe licitatia se specifica un pret de pornire; 
+- [X] Pentru fiecare produs pentru care se incepe licitatia se specifica un pret de pornire; 
   - [X] se vor rejecta preturi de pornire mai mici decat un prag, predefinit ca o constanta a aplicatiei;
   - [X] la inceputul licitatiei se va specifica o moneda de tranzactie si toate celelalte licitari pentru obiectul curent trebuie sa se faca in aceasta moneda (validati sau modelati corespunzator). 
-  - [ ] Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n. Impuneti alte validari asupra datelor, demonstrati prin testare automata implementarea.
+  - [X] Pentru o licitare, pretul oferit la momentul n+1 trebuie sa fie strict mai mare decat pretul de la momentul n, dar cel mult cu 10% mai mult fata de pretul de la momentul n. Impuneti alte validari asupra datelor, demonstrati prin testare automata implementarea.
 - [X] Finalizarea unui proces de licitatie se face
   - fie prin atingerea datei declarate pentru finalizare
   - fie prin incheierea la dorinta de catre cel care a depus obiectul la licitare (o persoana nu poate sa incheie o licitatie pe care nu a demarat-o);
 Pentru o licitatie incheiata nu se mai poate modifica nimic. Impuneti validari asupra fluxului de operatii si acoperiti cu teste.
 - [X] O persoana care depune obiecte spre a fi licitate nu poate sa aiba la un moment dat mai mult de k licitatii incepute si nefinalizate (finalizare = incheierea perioadei de finalizare sau terminarea explicita de catre ofertantul obiectului). Valoarea k este constanta a aplicatiei ce se va citi din baza de date sau din fisier de configurare. Modificarea ei nu trebuie sa duca la recompilarea si re-deploy de aplicatie.
 - [ ] Nu se permite ca o persoana sa aiba la un moment dat mai mult de m licitatii demarate si nefinalizate in cadrul unei categorii. Se permite deschiderea unei alte licitatii in acea categorie doar momentul in care numarul celor active (deschise de utilizator) este sub pragul m.
-- [ ] Pentru fiecare persoana care foloseste platforma se asigneaza un scor, reprezentand seriozitatea; scorul este cu o valoare initiala S, pana la prima asignare de scor facuta de alt utilizator, moment dupa care se folosesc doar scorurile date de utilizatori; pentru cel putin un scor asociat unui utilizator, scorul total este media ultimelor cel mult n scoruri (n citit din fisier de configurare sau baza de
+- [X] Pentru fiecare persoana care foloseste platforma se asigneaza un scor, reprezentand seriozitatea; scorul este cu o valoare initiala S, pana la prima asignare de scor facuta de alt utilizator, moment dupa care se folosesc doar scorurile date de utilizatori; pentru cel putin un scor asociat unui utilizator, scorul total este media ultimelor cel mult n scoruri (n citit din fisier de configurare sau baza de
 2
 date, n >= 1). Daca scorul unei persoane scade sub un prag prestabilit p, atunci persoana va fi impiedicata sa deschida noi licitatii timp de z zile (p si z preluate din fisier de configurare sau baza de date).
-Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
+ - [ ]  Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
    1. ofertant de obiect
    2. licitant
    
