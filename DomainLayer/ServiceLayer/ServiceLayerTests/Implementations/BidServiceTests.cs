@@ -225,6 +225,9 @@ namespace ServiceLayer.Implementations.Tests
         [Theory]
         [InlineData(10, 10.5, 12)]
         [InlineData(10.1, 10.5, 12)]
+        [InlineData(0.000001, 10.5, 12)]
+        [InlineData(0.000001, 0.000001, 12)]
+        [InlineData(0.000001, 0.000001, 0.00001)]
         public void AddTestBidAmountTooHighWithPreviousBid(decimal auctionStartPrice, decimal latestBidValue,
             decimal newBidValue)
         {

@@ -1,4 +1,6 @@
-﻿using DataMapper.DAO;
+﻿using System;
+using System.Collections.Generic;
+using DataMapper.DAO;
 using DomainModel.Models;
 using Moq;
 using Xunit;
@@ -30,7 +32,7 @@ namespace ServiceLayer.Implementations.Tests
 
             Assert.Equal(data, result);
         }
-        
+
 
         [Theory]
         [InlineData("1", "1")]
@@ -57,11 +59,33 @@ namespace ServiceLayer.Implementations.Tests
             Assert.Equal(expectedValue, result);
         }
 
+        public static IEnumerable<object[]> GetValueAsIntTestData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    "1", 1
+                },
+                new object[]
+                {
+                    "0", 0
+                },
+                new object[]
+                {
+                    "-1", -1
+                },
+                new object[]
+                {
+                    int.MaxValue.ToString(), int.MaxValue
+                },
+                new object[]
+                {
+                    int.MinValue.ToString(), int.MinValue
+                },
+            };
+
         [Theory]
-        [InlineData("1", 1)]
-        [InlineData("0", 0)]
-        [InlineData("-1", -1)]
-        [InlineData(" -1", -1)]
+        [MemberData(nameof(GetValueAsIntTestData))]
         public void GetValueAsIntTest(string appSettingValue, int expectedValue)
         {
             Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
@@ -82,7 +106,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var result = service.GetValueAsInt(name);
 
-            Assert.Equal( expectedValue, result);
+            Assert.Equal(expectedValue, result);
         }
 
         [Theory]
@@ -114,8 +138,37 @@ namespace ServiceLayer.Implementations.Tests
             Assert.Equal(expectedValue, result);
         }
 
+        public static IEnumerable<object[]> GetValueAsDecimalTestData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    "1", 1
+                },
+                new object[]
+                {
+                    "0", 0
+                },
+                new object[]
+                {
+                    "-1", -1
+                },
+                new object[]
+                {
+                    decimal.MaxValue.ToString(), decimal.MaxValue
+                },
+                new object[]
+                {
+                    decimal.MinValue.ToString(), decimal.MinValue
+                },
+                new object[]
+                {
+                    "    2,00", 2
+                },
+            };
+
         [Theory]
-        [InlineData("2,14", 2.14)]
+        [MemberData(nameof(GetValueAsDecimalTestData))]
         public void GetValueAsDecimalTest(string appSettingValue, decimal expectedValue)
         {
             Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
@@ -136,7 +189,61 @@ namespace ServiceLayer.Implementations.Tests
 
             var result = service.GetValueAsDecimal(name);
 
-            Assert.Equal(expectedValue,result);
+            Assert.Equal(expectedValue, result);
+        }
+
+        public static IEnumerable<object[]> GetValueAsDoubleTestData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    "1", 1
+                },
+                new object[]
+                {
+                    "0", 0
+                },
+                new object[]
+                {
+                    "-1", -1
+                },
+                new object[]
+                {
+                    double.MaxValue.ToString(), double.MaxValue
+                },
+                new object[]
+                {
+                    double.MinValue.ToString(), double.MinValue
+                },
+                new object[]
+                {
+                    "    2,00", 2
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(GetValueAsDoubleTestData))]
+        public void GetValueAsDoubleTest(string appSettingValue, double expectedValue)
+        {
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            string name = "aasda";
+
+            var data = new ApplicationSetting()
+            {
+                Name = name,
+                Value = appSettingValue,
+                Id = 1
+            };
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(data);
+
+            var service = new ApplicationSettingService(applicationSettingDataServiceMock.Object);
+
+            var result = service.GetValueAsDouble(name);
+
+            Assert.Equal(expectedValue, result);
         }
     }
 }

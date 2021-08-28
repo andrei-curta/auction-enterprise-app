@@ -19,6 +19,10 @@ namespace ServiceLayer.Implementations.Tests
                 },
                 new object[]
                 {
+                    "2,5", "3", "3", 3.00013211, false, Times.Never()
+                },
+                new object[]
+                {
                     "2,5", "3", "3", 3.1, true, Times.Never()
                 },
                 new object[]

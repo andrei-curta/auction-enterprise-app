@@ -1,12 +1,8 @@
-﻿using Xunit;
-using ServiceLayer.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using DataMapper.DAO;
+﻿using DataMapper.DAO;
 using DomainModel.Models;
 using FluentValidation;
 using Moq;
+using Xunit;
 
 namespace ServiceLayer.Implementations.Tests
 {
