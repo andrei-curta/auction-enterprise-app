@@ -36,9 +36,12 @@ namespace DataMapper.Repository
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
-                var dbSet = ctx.Set<T>();
+                var dbSet = ctx.Set<T>().AsQueryable();
 
                 IQueryable<T> query = dbSet;
+
+                // remove empty spaces that can cause errors
+                includeProperties = includeProperties.Replace(" ", string.Empty);
 
                 foreach (var includeProperty in includeProperties.Split(
                     new char[] { ',' },

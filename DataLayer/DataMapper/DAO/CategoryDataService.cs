@@ -36,33 +36,9 @@ namespace DataMapper.DAO
             Func<IQueryable<Category>, IOrderedQueryable<Category>> orderBy = null,
             string includeProperties = "")
         {
-            using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
-            {
-                var dbSet = ctx.Set<Category>().Include(x => x.ParentCategories).Include(x => x.SubCategories);
+            includeProperties += ",SubCategories,ParentCategories";
 
-                IQueryable<Category> query = dbSet;
-
-                foreach (var includeProperty in includeProperties.Split(
-                    new char[] { ',' },
-                    StringSplitOptions.RemoveEmptyEntries))
-                {
-                    query = query.Include(includeProperty);
-                }
-
-                if (filter != null)
-                {
-                    query = query.Where(filter);
-                }
-
-                if (orderBy != null)
-                {
-                    return orderBy(query).ToList();
-                }
-                else
-                {
-                    return query.ToList();
-                }
-            }
+            return base.Get(filter, orderBy, includeProperties);
         }
 
         /// <inheritdoc/>

@@ -165,6 +165,12 @@
             Provides data access functionality for <see cref="T:DomainModel.Models.User"/>.
             </summary>
         </member>
+        <member name="M:DataMapper.DAO.UserDataService.Get(System.Linq.Expressions.Expression{System.Func{DomainModel.Models.User,System.Boolean}},System.Func{System.Linq.IQueryable{DomainModel.Models.User},System.Linq.IOrderedQueryable{DomainModel.Models.User}},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataMapper.DAO.UserDataService.GetByID(System.Object)">
+            <inheritdoc />
+        </member>
         <member name="T:DataMapper.Interfaces.IApplicationSettingDataService">
             <summary>
             Interface for the ApplicationSettingsDataService.

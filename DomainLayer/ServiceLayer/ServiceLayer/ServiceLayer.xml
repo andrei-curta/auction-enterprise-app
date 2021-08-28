@@ -38,7 +38,7 @@
             Provides services regarding the <see cref="T:DomainModel.Models.Auction"/>.
             </summary>
         </member>
-        <member name="M:ServiceLayer.Implementations.AuctionService.#ctor(DataMapper.DAO.AuctionDataService,DataMapper.Interfaces.IProductDataService,DataMapper.DAO.ApplicationSettingDataService,DataMapper.DAO.AuctionPlacingRestrictionsDataService)">
+        <member name="M:ServiceLayer.Implementations.AuctionService.#ctor(DataMapper.DAO.AuctionDataService,DataMapper.Interfaces.IProductDataService,DataMapper.DAO.ApplicationSettingDataService,DataMapper.DAO.AuctionPlacingRestrictionsDataService,DataMapper.DAO.UserDataService)">
             <summary>
             Initializes a new instance of the <see cref="T:ServiceLayer.Implementations.AuctionService"/> class.
             </summary>
@@ -46,6 +46,7 @@
             <param name="productDataService">The product data service.</param>
             <param name="applicationSettingDataService">The application setting data service.</param>
             <param name="auctionPlacingRestrictionsDataService">The auction placing restrictions data service.</param>
+            <param name="userDataService">The user data service.</param>
         </member>
         <member name="M:ServiceLayer.Implementations.AuctionService.Add(DomainModel.Models.Auction)">
             <inheritdoc/>

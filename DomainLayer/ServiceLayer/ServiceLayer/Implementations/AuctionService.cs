@@ -25,6 +25,8 @@ namespace ServiceLayer.Implementations
 
         private readonly IAuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService;
 
+        private readonly IUserDataService userDataService;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
@@ -32,16 +34,19 @@ namespace ServiceLayer.Implementations
         /// <param name="productDataService">The product data service.</param>
         /// <param name="applicationSettingDataService">The application setting data service.</param>
         /// <param name="auctionPlacingRestrictionsDataService">The auction placing restrictions data service.</param>
+        /// <param name="userDataService">The user data service.</param>
         public AuctionService(
             AuctionDataService auctionDataService,
             IProductDataService productDataService,
             ApplicationSettingDataService applicationSettingDataService,
-            AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService)
+            AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService,
+            UserDataService userDataService)
             : base(auctionDataService, new AuctionValidator())
         {
             this.productDataService = productDataService;
             this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService);
             this.auctionPlacingRestrictionsDataService = auctionPlacingRestrictionsDataService;
+            this.userDataService = userDataService;
         }
 
         /// <inheritdoc/>

@@ -5,6 +5,7 @@
 namespace DomainModel.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Diagnostics.CodeAnalysis;
     using Microsoft.AspNetCore.Identity;
 
@@ -23,5 +24,10 @@ namespace DomainModel.Models
         /// Gets or sets the roles the user has.
         /// </summary>
         public virtual List<Role> Roles { get; set; }
+
+        // public bool IsInRole()
+        // {
+        //
+        // }
     }
 }
