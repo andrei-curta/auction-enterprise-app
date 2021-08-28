@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace ServiceLayer.Implementations
 {
     using System.Collections.Generic;
@@ -17,6 +19,7 @@ namespace ServiceLayer.Implementations
     /// <typeparam name="TE">The Entity.</typeparam>
     /// <typeparam name="TS">The Service that corresponds to the Entity.</typeparam>
     /// <typeparam name="TV">The Validator that coresponds to the Entity.</typeparam>
+    [ExcludeFromCodeCoverage]
     public abstract class BaseService<TE, TS, TV> : IService<TE>
         where TV : AbstractValidator<TE>
         where TS : IRepository<TE>

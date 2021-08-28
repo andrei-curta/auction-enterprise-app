@@ -24,10 +24,5 @@ namespace ServiceLayer.Implementations
             : base(productDataService, new ProductValidator())
         {
         }
-
-        public override void Add(Product entity)
-        {
-            this.validator.ValidateAndThrow(entity);
-        }
     }
 }

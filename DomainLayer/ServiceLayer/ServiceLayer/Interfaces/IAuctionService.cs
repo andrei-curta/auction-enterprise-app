@@ -11,10 +11,5 @@ namespace ServiceLayer.Interfaces
     /// </summary>
     public interface IAuctionService : IService<Auction>
     {
-        /// <summary>
-        /// Allows the user that started the auction to close it before the expiration date.
-        /// </summary>
-        /// <param name="auction">The auction to be closed.</param>
-        public void CancelAuction(Auction auction);
     }
 }

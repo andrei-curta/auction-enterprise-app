@@ -3,6 +3,7 @@ using DomainModel.Models;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DomainModel.ValueObjects;
 using Xunit;
 
@@ -61,7 +62,7 @@ namespace ServiceLayer.Implementations.Tests
                 },
                 new object[]
                 {
-                    new DateTime(2020, 01, 01), new DateTime(2020, 07, 30), "7", false
+                    new DateTime(2020, 01, 01), new DateTime(2020, 08, 30), "7", false
                 },
             };
 
@@ -250,6 +251,116 @@ namespace ServiceLayer.Implementations.Tests
             }
         }
 
+        public static IEnumerable<object[]> AddTestOpenedAuctionsData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    9, "10", true
+                },
+                new object[]
+                {
+                    9999, "10000", true
+                },
+                new object[]
+                {
+                    1, "2", true
+                },
+                new object[]
+                {
+                    0, "1", true
+                },
+                new object[]
+                {
+                    1, "1", true
+                },
+                new object[]
+                {
+                    2, "1", false
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(AddTestOpenedAuctionsData))]
+        public void AddTestOpenedAuctions(int numberOfUserAuctions, string maxNumberOfUserAuctions, bool valid)
+        {
+            Mock<AuctionDataService> auctionDataServiceMock =
+                new Mock<AuctionDataService>();
+            Mock<ProductDataService> productDataServiceMock = new Mock<ProductDataService>();
+
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
+
+            string userId = "1";
+            string name = "AuctionMaxDurationMonths";
+            long productId = 1;
+
+
+            var appSettingData = new ApplicationSetting()
+            {
+                Name = name,
+                Value = "7",
+                Id = 1
+            };
+
+            var auction = new Auction()
+            {
+                UserId = userId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddMonths(4),
+                ClosedByOwner = false,
+                ProductId = productId,
+                StartPrice = new Money(10, "RON")
+            };
+
+            string name2 = "MaxUnfinishedAuctions";
+            var appSettingMaxUnfinishedAuctions = new ApplicationSetting()
+            {
+                Name = name2,
+                Value = maxNumberOfUserAuctions,
+                Id = 1,
+            };
+
+            string auctionMinStartPrice = "AuctionMinStartPrice";
+            var appSettingAuctionMinStartPrice = new ApplicationSetting()
+            {
+                Name = auctionMinStartPrice,
+                Value = "9",
+                Id = 3,
+            };
+
+            var userAuctionsData = Enumerable.Repeat(new Auction(){ClosedByOwner = false, EndDate = DateTime.Now.AddDays(1)}, numberOfUserAuctions).ToList();
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
+            auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
+                .Returns(appSettingAuctionMinStartPrice);
+
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+
+            var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object);
+
+            var exception = Record.Exception(() => service.Add(auction));
+
+            string exceptionMessage = $"You have reached the max number of open auctions;";
+
+            if (valid)
+            {
+                Assert.Null(exception);
+            }
+            else
+            {
+                Assert.Equal(exceptionMessage, exception.Message);
+            }
+        }
+
         public static IEnumerable<object[]> UpdateTestClosedAuctionData =>
             new List<object[]>
             {
@@ -360,5 +471,82 @@ namespace ServiceLayer.Implementations.Tests
 
             auctionDataServiceMock.Verify(mock => mock.Update(It.IsAny<Auction>()), Times.Once);
         }
+
+        [Fact]
+        public void AddTestHasAuctionPlacingRestrictions()
+        {
+            Mock<AuctionDataService> auctionDataServiceMock =
+                new Mock<AuctionDataService>();
+            Mock<ProductDataService> productDataServiceMock = new Mock<ProductDataService>();
+
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
+
+            string userId = "1";
+            string name = "AuctionMaxDurationMonths";
+            long productId = 1;
+
+
+            var appSettingData = new ApplicationSetting()
+            {
+                Name = name,
+                Value = "7",
+                Id = 1
+            };
+
+            var auction = new Auction()
+            {
+                UserId = userId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddMonths(4),
+                ClosedByOwner = false,
+                ProductId = productId,
+                StartPrice = new Money(12, "RON")
+            };
+
+            string name2 = "MaxUnfinishedAuctions";
+            var appSettingMaxUnfinishedAuctions = new ApplicationSetting()
+            {
+                Name = name2,
+                Value = "123",
+                Id = 1,
+            };
+
+            string auctionMinStartPrice = "AuctionMinStartPrice";
+            var appSettingAuctionMinStartPrice = new ApplicationSetting()
+            {
+                Name = auctionMinStartPrice,
+                Value = "11",
+                Id = 3,
+            };
+
+            var userAuctionsData = new List<Auction>()
+            {
+                new Auction() { ClosedByOwner = true, EndDate = DateTime.Now.AddDays(1), StartDate = DateTime.Now },
+            };
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
+            auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
+                .Returns(appSettingAuctionMinStartPrice);
+
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+            auctionPlacingDataServiceMock.Setup(x => x.HasActiveAuctionPlacingRestrictions(userId)).Returns(true);
+
+            var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object);
+
+            var exception = Record.Exception(() => service.Add(auction));
+
+            Assert.IsType<Exception>(exception);
+            Assert.Equal("You have an active auction placing restriction. Try later.", exception.Message);
+        }
+
     }
 }

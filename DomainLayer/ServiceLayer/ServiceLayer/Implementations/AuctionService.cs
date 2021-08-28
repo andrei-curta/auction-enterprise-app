@@ -115,17 +115,5 @@ namespace ServiceLayer.Implementations
             }
         }
 
-        /// <inheritdoc/>
-        public void CancelAuction(Auction auction)
-        {
-            // todo: verificat daca userul care incearca inchiderea licitatiei este cel care a si deschis-o
-            if (auction.Closed)
-            {
-                throw new Exception("The auction is already closed");
-            }
-
-            auction.ClosedByOwner = true;
-            this.service.Update(auction);
-        }
     }
 }
