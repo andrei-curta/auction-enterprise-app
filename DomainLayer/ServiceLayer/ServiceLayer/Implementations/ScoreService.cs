@@ -21,11 +21,11 @@ namespace ServiceLayer.Implementations
 
         public ScoreService(ScoreDataService scoreDataService,
             AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService,
-            ApplicationSettingService applicationSettingService)
+            ApplicationSettingDataService applicationSettingDataService)
             : base(scoreDataService, new ScoreValidator())
         {
             this.auctionPlacingRestrictionsDataService = auctionPlacingRestrictionsDataService;
-            this.applicationSettingService = applicationSettingService;
+            this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService);
         }
 
         /// <inheritdoc/>
@@ -34,8 +34,8 @@ namespace ServiceLayer.Implementations
             base.Add(score);
 
             // get the app settings
-            var auctionPlacingRestrictionsScore =
-                this.applicationSettingService.GetValueAsDecimal("AuctionPlacingRestrictionsScore");
+            var auctionPlacingRestrictionsScore = 
+                this.applicationSettingService.GetValueAsDouble("AuctionPlacingRestrictionsScore");
             var defaultScore = this.applicationSettingService.GetValueAsDecimal("DefaultScore");
             var topNScores = this.applicationSettingService.GetValueAsInt("TopNScoresToConsider");
             var numberOfRestrictionDays = this.applicationSettingService.GetValueAsInt("NumberOfRestrictionDays");
@@ -47,7 +47,7 @@ namespace ServiceLayer.Implementations
             bool hasRestrictions =
                 this.auctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions(score.AssignedToUser.Id);
 
-            if (!hasRestrictions)
+            if (!hasRestrictions && newScore < auctionPlacingRestrictionsScore)
             {
                 var restriction = new AuctionPlacingRestriction()
                 {

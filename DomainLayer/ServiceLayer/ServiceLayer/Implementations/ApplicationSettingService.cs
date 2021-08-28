@@ -53,5 +53,11 @@ namespace ServiceLayer.Implementations
         {
             return decimal.Parse(this.service.GetByName(name).Value);
         }
+
+        /// <inheritdoc/>
+        public double GetValueAsDouble(string name)
+        {
+            return double.Parse(this.service.GetByName(name).Value);
+        }
     }
 }

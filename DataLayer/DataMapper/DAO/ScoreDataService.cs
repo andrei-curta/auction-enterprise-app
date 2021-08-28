@@ -16,7 +16,7 @@ namespace DataMapper.DAO
     public class ScoreDataService : BaseRepository<Score>, IScoreDataService
     {
         /// <inheritdoc/>
-        public double CalculateUserScore(string userId, double defaultScore, uint? limit)
+        public virtual double CalculateUserScore(string userId, double defaultScore, uint? limit)
         {
             var scores = this.GetScoresAssignedToUser(userId, limit);
 
@@ -32,7 +32,7 @@ namespace DataMapper.DAO
         }
 
         /// <inheritdoc/>
-        public List<Score> GetScoresAssignedToUser(string userId, uint? limit)
+        public virtual List<Score> GetScoresAssignedToUser(string userId, uint? limit)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {

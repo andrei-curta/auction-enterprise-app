@@ -40,5 +40,12 @@ namespace ServiceLayer.Interfaces
         /// <param name="name">The name of the setting.</param>
         /// <returns>The value of the setting as decimal.</returns>
         public decimal GetValueAsDecimal(string name);
+
+        /// <summary>
+        /// Gets the value as double.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns>System.Double.</returns>
+        public double GetValueAsDouble(string name);
     }
 }

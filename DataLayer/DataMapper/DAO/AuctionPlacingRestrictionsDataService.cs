@@ -17,7 +17,7 @@ namespace DataMapper.DAO
         IAuctionPlacingRestrictionsDataService
     {
         /// <inheritdoc/>
-        public bool HasActiveAuctionPlacingRestrictions(string userId)
+        public virtual bool HasActiveAuctionPlacingRestrictions(string userId)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
