@@ -1,4 +1,4 @@
-﻿// <copyright file="Bid.cs" company="Transilvania University of Brașov">
+﻿// <copyright file="IBidService.cs" company="Transilvania University of Brașov">
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 

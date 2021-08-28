@@ -11,9 +11,13 @@ namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
     [Migration("20210804210740_ConnectAuctionWithUser")]
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     partial class ConnectAuctionWithUser
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
 #pragma warning disable 612, 618
             modelBuilder

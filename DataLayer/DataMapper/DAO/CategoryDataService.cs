@@ -2,8 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using Microsoft.Data.SqlClient;
-
 namespace DataMapper.DAO
 {
     using System;
@@ -26,15 +24,16 @@ namespace DataMapper.DAO
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
                 var category = ctx.Categories.Include(x => x.SubCategories).Include(x => x.ParentCategories)
-                    .FirstOrDefault(x => x.Id == (long) id);
+                    .FirstOrDefault(x => x.Id == (long)id);
 
                 return category;
             }
         }
 
         /// <inheritdoc/>
-        public override IEnumerable<Category> Get(Expression<Func<Category, bool>> filter = null,
-            Func<IQueryable<Category>, IOrderedQueryable<Category>> orderBy = null, 
+        public override IEnumerable<Category> Get(
+            Expression<Func<Category, bool>> filter = null,
+            Func<IQueryable<Category>, IOrderedQueryable<Category>> orderBy = null,
             string includeProperties = "")
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
@@ -44,7 +43,7 @@ namespace DataMapper.DAO
                 IQueryable<Category> query = dbSet;
 
                 foreach (var includeProperty in includeProperties.Split(
-                    new char[] {','},
+                    new char[] { ',' },
                     StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);
@@ -74,7 +73,7 @@ namespace DataMapper.DAO
             // using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             // {
             //
-            //     // select Categories.Id, count(1) as NumberPerCat  from Categories inner join CategoryProduct on Categories.Id = CategoryProduct.CategoriesId inner    join Auctions on Auctions.ProductId = CategoryProduct.ProductsId   where Auctions.ClosedByOwner = 0 and Auctions.EndDate < GETDATE() group by Categories.Id 
+            //     // select Categories.Id, count(1) as NumberPerCat  from Categories inner join CategoryProduct on Categories.Id = CategoryProduct.CategoriesId inner    join Auctions on Auctions.ProductId = CategoryProduct.ProductsId   where Auctions.ClosedByOwner = 0 and Auctions.EndDate < GETDATE() group by Categories.Id
             //     // var result = from auction in ctx.Auctions
             //     //     join product in ctx.Products on auction.ProductId equals product.Id
             //     //     select auction

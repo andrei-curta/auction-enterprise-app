@@ -27,7 +27,7 @@ namespace DataMapper.Interfaces
         /// <param name="userId">The Id uf the user to get the score of.</param>
         /// <param name="defaultScore">If the user has not been assigned any score, this value will be returned.</param>
         /// <param name="limit">The max number to return or all if null.</param>
-        /// <returns>The value uf the score</returns>
+        /// <returns>The value of the score.</returns>
         public double CalculateUserScore(string userId, double defaultScore, uint? limit);
     }
 }

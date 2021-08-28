@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 namespace DataMapper.Migrations
 {
     [DbContext(typeof(AuctionEnterpriseAppContext))]
@@ -312,3 +313,4 @@ namespace DataMapper.Migrations
         }
     }
 }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member

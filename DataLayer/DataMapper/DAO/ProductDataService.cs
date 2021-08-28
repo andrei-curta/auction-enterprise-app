@@ -2,17 +2,16 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
-
 namespace DataMapper.DAO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
     using DataMapper.Interfaces;
     using DataMapper.Repository;
     using DomainModel.Models;
+    using Microsoft.EntityFrameworkCore;
 
     /// <summary>
     /// Provides data access functionality for <see cref="Product"/>.
@@ -24,7 +23,7 @@ namespace DataMapper.DAO
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
-                return ctx.Products.Include(x => x.Categories).FirstOrDefault(x => x.Id == (long) id);
+                return ctx.Products.Include(x => x.Categories).FirstOrDefault(x => x.Id == (long)id);
             }
         }
 
@@ -41,7 +40,7 @@ namespace DataMapper.DAO
                 IQueryable<Product> query = dbSet;
 
                 foreach (var includeProperty in includeProperties.Split(
-                    new char[] {','},
+                    new char[] { ',' },
                     StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);

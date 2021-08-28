@@ -9,7 +9,7 @@ namespace DataMapper
 
     /// <summary>
     /// Class AuctionEnterpriseAppContext.
-    /// Implements the <see cref="Microsoft.EntityFrameworkCore.DbContext" />
+    /// Implements the <see cref="Microsoft.EntityFrameworkCore.DbContext" />.
     /// </summary>
     /// <seealso cref="Microsoft.EntityFrameworkCore.DbContext" />
     public class AuctionEnterpriseAppContext : DbContext
@@ -18,7 +18,8 @@ namespace DataMapper
         /// Initializes a new instance of the <see cref="AuctionEnterpriseAppContext"/> class.
         /// </summary>
         /// <param name="options">The options for this context.</param>
-        public AuctionEnterpriseAppContext(DbContextOptions options) : base(options)
+        public AuctionEnterpriseAppContext(DbContextOptions options)
+            : base(options)
         {
         }
 

@@ -14,8 +14,9 @@ namespace DataMapper.Interfaces
     public interface ICategoryDataService : IRepository<Category>
     {
         /// <summary>
-        /// Gets the Number Of Opened Auctions By Category.
+        /// Gets the number of opened auctions by category.
         /// </summary>
+        /// <param name="userId">The user identifier.</param>
         /// <returns>A dictionary with key being the category and the value being the number of opened auctions.</returns>
         public Dictionary<string, int> GetNumberOfOpenedAuctionsByCategory(string userId);
     }

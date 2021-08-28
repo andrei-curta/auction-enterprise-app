@@ -7,7 +7,7 @@
         <member name="T:DataMapper.AuctionEnterpriseAppContext">
             <summary>
             Class AuctionEnterpriseAppContext.
-            Implements the <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+            Implements the <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />.
             </summary>
             <seealso cref="T:Microsoft.EntityFrameworkCore.DbContext" />
         </member>
@@ -227,8 +227,9 @@
         </member>
         <member name="M:DataMapper.Interfaces.ICategoryDataService.GetNumberOfOpenedAuctionsByCategory(System.String)">
             <summary>
-            Gets the Number Of Opened Auctions By Category.
+            Gets the number of opened auctions by category.
             </summary>
+            <param name="userId">The user identifier.</param>
             <returns>A dictionary with key being the category and the value being the number of opened auctions.</returns>
         </member>
         <member name="T:DataMapper.Interfaces.IProductDataService">
@@ -256,7 +257,7 @@
             <param name="userId">The Id uf the user to get the score of.</param>
             <param name="defaultScore">If the user has not been assigned any score, this value will be returned.</param>
             <param name="limit">The max number to return or all if null.</param>
-            <returns>The value uf the score</returns>
+            <returns>The value of the score.</returns>
         </member>
         <member name="T:DataMapper.Interfaces.IUserDataService">
             <summary>

@@ -15,11 +15,10 @@ namespace ServiceLayer.Implementations
     /// </summary>
     public class UserService : BaseService<User, UserDataService, UserValidator>, IUserService
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="UserService"/> class.
         /// </summary>
-        /// <param name="userDataService"></param>
+        /// <param name="userDataService">The user data service.</param>
         public UserService(UserDataService userDataService)
             : base(userDataService, new UserValidator())
         {

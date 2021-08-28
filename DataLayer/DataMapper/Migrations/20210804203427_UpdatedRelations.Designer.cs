@@ -13,7 +13,9 @@ namespace DataMapper.Migrations
     [Migration("20210804203427_UpdatedRelations")]
     partial class UpdatedRelations
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
 #pragma warning disable 612, 618
             modelBuilder
