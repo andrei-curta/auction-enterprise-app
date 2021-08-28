@@ -24,7 +24,9 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="BidService"/> class.
         /// </summary>
-        /// <param name="logger">The optional Logger.</param>
+        /// <param name="bidDataService">The bid data service.</param>
+        /// <param name="auctionDataService">The auction data service.</param>
+        /// <param name="logger">The logger.</param>
         public BidService(BidDataService bidDataService, AuctionDataService auctionDataService, ILogger<BidService> logger = null)
             : base(bidDataService, new BidValidator(), logger)
         {

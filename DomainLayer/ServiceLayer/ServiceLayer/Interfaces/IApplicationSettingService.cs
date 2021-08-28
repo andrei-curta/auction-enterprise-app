@@ -11,6 +11,11 @@ namespace ServiceLayer.Interfaces
     /// </summary>
     public interface IApplicationSettingService : IService<ApplicationSetting>
     {
+        /// <summary>
+        /// Gets an application setting by its name..
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns>ApplicationSetting.</returns>
         public ApplicationSetting GetByName(string name);
 
         /// <summary>

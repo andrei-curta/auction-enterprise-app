@@ -19,6 +19,7 @@ namespace ServiceLayer.Implementations
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationSettingService"/> class.
         /// </summary>
+        /// <param name="applicationSettingDataService">The application setting data service.</param>
         public ApplicationSettingService(ApplicationSettingDataService applicationSettingDataService)
             : base(applicationSettingDataService, new ApplicationSettingValidator())
         {

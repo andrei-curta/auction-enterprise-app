@@ -19,7 +19,14 @@ namespace ServiceLayer.Implementations
         private readonly IAuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService;
         private readonly IApplicationSettingService applicationSettingService;
 
-        public ScoreService(ScoreDataService scoreDataService,
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScoreService"/> class.
+        /// </summary>
+        /// <param name="scoreDataService">The score data service.</param>
+        /// <param name="auctionPlacingRestrictionsDataService">The auction placing restrictions data service.</param>
+        /// <param name="applicationSettingDataService">The application setting data service.</param>
+        public ScoreService(
+            ScoreDataService scoreDataService,
             AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService,
             ApplicationSettingDataService applicationSettingDataService)
             : base(scoreDataService, new ScoreValidator())
@@ -34,7 +41,7 @@ namespace ServiceLayer.Implementations
             base.Add(score);
 
             // get the app settings
-            var auctionPlacingRestrictionsScore = 
+            var auctionPlacingRestrictionsScore =
                 this.applicationSettingService.GetValueAsDouble("AuctionPlacingRestrictionsScore");
             var defaultScore = this.applicationSettingService.GetValueAsDecimal("DefaultScore");
             var topNScores = this.applicationSettingService.GetValueAsInt("TopNScoresToConsider");

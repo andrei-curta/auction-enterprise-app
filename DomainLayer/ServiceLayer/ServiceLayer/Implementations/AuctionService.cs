@@ -30,7 +30,8 @@ namespace ServiceLayer.Implementations
         /// </summary>
         /// <param name="auctionDataService">The auction data service.</param>
         /// <param name="productDataService">The product data service.</param>
-        /// <param name="applicationSettingDataService">The app settings data service.</param>
+        /// <param name="applicationSettingDataService">The application setting data service.</param>
+        /// <param name="auctionPlacingRestrictionsDataService">The auction placing restrictions data service.</param>
         public AuctionService(
             AuctionDataService auctionDataService,
             IProductDataService productDataService,
@@ -66,7 +67,6 @@ namespace ServiceLayer.Implementations
             // }
 
             // Todo: verificare nr de licitatii pe categorie.
-
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
             if (entity.StartPrice.Amount < thresholdValue)
             {
@@ -114,6 +114,5 @@ namespace ServiceLayer.Implementations
                 this.service.Update(auction);
             }
         }
-
     }
 }

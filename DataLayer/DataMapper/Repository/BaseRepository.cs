@@ -11,7 +11,7 @@ namespace DataMapper.Repository
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>
-    /// Provides basic data access functionality for entity <see cref="T"/>.
+    /// Provides basic data access functionality for entity.
     /// </summary>
     /// <typeparam name="T">The entity it offers data access for.</typeparam>
     public abstract class BaseRepository<T> : IRepository<T>

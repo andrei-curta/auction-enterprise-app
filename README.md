@@ -34,7 +34,7 @@ date, n >= 1). Daca scorul unei persoane scade sub un prag prestabilit p, atunci
 - [ ] Domain Layer implementat prin Domain Model; Data Layer implementat prin Data Mapper (conditiile de la acest punct sunt obligatorii).
 - [ ] Code coverage de minim 90% pentru codul de Domain Model si minim 90% pentru Service Layer (conditie de luare in considerare a temei).
 - [X] Mocking (conditie de luare in considerare a temei).
-- [ ]  Comentarii, minim pentru metode, constructori, proprietati, indexatori, destructori, tipuri imbricate. Puteti folosi GhostDoc.
+- [X]  Comentarii, minim pentru metode, constructori, proprietati, indexatori, destructori, tipuri imbricate. Puteti folosi GhostDoc.
 - [ ]  Se va face analiza codului sursa folosind StyleCop (plugin de Visual Studio; versiune recomandata 4.7.x). Toate regulile (tab-ul Rules) trebuie bifate; in tab-ul Company Information la sectiunea „Company Name” sa figureze „Transilvania University of Brasov”, iar la Copyright numele studentului. Maxim 30 de avertismente sunt permise (conditiile de la acest punct sunt obligatorii).
 Puteti folosi pluginuri auxiliare de forma CodeItRight.
 Notarea aplicatiei se va face prin rularea unitatilor de test scrise. Unitatile de test vor include validarea starii obiectelor (poate aparea validare selectiva, in anumite contexte doar anumite proprietati trebuie sa fie satisfacute) si verificarea coerentei la nivel de service layer (daca parametrii trimisi unor metode

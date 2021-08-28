@@ -2,11 +2,10 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-using System.Diagnostics.CodeAnalysis;
-
 namespace ServiceLayer.Implementations
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using DataMapper.Repository;
     using FluentValidation;
