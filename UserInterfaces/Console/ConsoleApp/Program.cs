@@ -57,16 +57,16 @@ namespace ConsoleApp
             // var prodServ = serviceProvider.GetService<ProductService>();
 
 
-            // var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(),
-            //     new ApplicationSettingDataService());
-            // auctServ.Add(new Auction()
-            // {
-            //     UserId = "1",
-            //     ProductId = 1,
-            //     StartDate = DateTime.Now.AddDays(1),
-            //     EndDate = DateTime.Now.AddDays(20),
-            //     StartPrice = new Money(10, "RON")
-            // });
+            var auctServ = new AuctionService(new AuctionDataService(), new ProductDataService(),
+                new ApplicationSettingDataService(), new AuctionPlacingRestrictionsDataService());
+            auctServ.Add(new Auction()
+            {
+                UserId = "1",
+                ProductId = 1,
+                StartDate = DateTime.Now.AddDays(1),
+                EndDate = DateTime.Now.AddDays(20),
+                StartPrice = new Money(10, "RON")
+            });
 
             var bidServ = new BidService(new BidDataService(), new AuctionDataService());
             // bidServ.Add(new Bid()

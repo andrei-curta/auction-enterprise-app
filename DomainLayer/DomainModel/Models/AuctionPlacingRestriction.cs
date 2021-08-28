@@ -5,10 +5,12 @@
 namespace DomainModel.Models
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Once an user's score drops below a value, it cannot place an auction for a certain amount of time.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class AuctionPlacingRestriction
     {
         /// <summary>
