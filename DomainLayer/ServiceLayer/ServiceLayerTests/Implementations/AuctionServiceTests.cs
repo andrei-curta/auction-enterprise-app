@@ -126,6 +126,9 @@ namespace ServiceLayer.Implementations.Tests
 
             productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
 
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User()
+                { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
+
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
 
@@ -238,6 +241,9 @@ namespace ServiceLayer.Implementations.Tests
 
             productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
 
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User()
+                { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
+
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
 
@@ -348,6 +354,9 @@ namespace ServiceLayer.Implementations.Tests
                 .Returns(appSettingAuctionMinStartPrice);
 
             productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User()
+                { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);

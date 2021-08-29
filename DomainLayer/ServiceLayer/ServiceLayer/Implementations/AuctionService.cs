@@ -86,6 +86,12 @@ namespace ServiceLayer.Implementations
                 throw new Exception("You have an active auction placing restriction. Try later.");
             }
 
+            var user = this.userDataService.GetByID(entity.UserId);
+            if (!user.IsInRole("AUCTIONER"))
+            {
+                throw new UnauthorizedAccessException("You do not have the necessary role to add an auction!");
+            }
+
             // todo: verificat daca produsul apartine userului curent
             this.service.Insert(entity);
         }
