@@ -5,11 +5,13 @@
 namespace DomainModel.ValueObjects
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
     /// <summary>
     /// Base class for value objects.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public abstract class ValueObject
     {
         /// <inheritdoc/>

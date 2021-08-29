@@ -21,21 +21,21 @@ Pentru o licitatie incheiata nu se mai poate modifica nimic. Impuneti validari a
 - [X] Pentru fiecare persoana care foloseste platforma se asigneaza un scor, reprezentand seriozitatea; scorul este cu o valoare initiala S, pana la prima asignare de scor facuta de alt utilizator, moment dupa care se folosesc doar scorurile date de utilizatori; pentru cel putin un scor asociat unui utilizator, scorul total este media ultimelor cel mult n scoruri (n citit din fisier de configurare sau baza de
 2
 date, n >= 1). Daca scorul unei persoane scade sub un prag prestabilit p, atunci persoana va fi impiedicata sa deschida noi licitatii timp de z zile (p si z preluate din fisier de configurare sau baza de date).
- - [ ]  Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
+ - [X]  Roluri (neexcluzive mutual, se preiau la crearea contului sau ulterior):
    1. ofertant de obiect
    2. licitant
    
 ## Cerinte:
-- [ ] Unit testing folosind NUnit, xUnit sau Visual Studio 2019+;
+- [X] Unit testing folosind NUnit, xUnit sau Visual Studio 2019+;
   - [ ]  minim 210 de metode de testare (conditie de luare in considerare a temei); se vor testa daca valorile proprietatilor au valori adecvate, restrictiile de mai sus si altele de validare a corectitudinii rezultatelor sia fluxului de lucru.
 - [ ] Folosire de blocuri din suita Microsoft Enterprise Library sau echivalente: logging (se poate folosi alternativ log4net), validation application block (sau se poate scrie cod de validare manual, sau se poate folosi o biblioteca de tipul https://github.com/JeremySkinner/FluentValidation), optional: exception handling application block, optional: security application block. Nu se face logging in unit testing (se permite in straturile aplicatiei, insa). Validarea starii obiectelor prin teste este conditie obligatorie pentru luarea in considere a temei. Logging-ul este obligatoriu pentru luarea in considerare a temei.
-- [ ] Dezvoltare pe straturi (layers): Domain layer si Data Layer (conditie de luare in considerare a temei); nu se ia in considerare/nu se cere user interface. Se pot folosi alte pattern-uri de design, daca se considera necesar (DTO, remote facade etc.).
+- [X] Dezvoltare pe straturi (layers): Domain layer si Data Layer (conditie de luare in considerare a temei); nu se ia in considerare/nu se cere user interface. Se pot folosi alte pattern-uri de design, daca se considera necesar (DTO, remote facade etc.).
 - [X] Baza de date relationala.
-- [ ] Domain Layer implementat prin Domain Model; Data Layer implementat prin Data Mapper (conditiile de la acest punct sunt obligatorii).
-- [ ] Code coverage de minim 90% pentru codul de Domain Model si minim 90% pentru Service Layer (conditie de luare in considerare a temei).
+- [X] Domain Layer implementat prin Domain Model; Data Layer implementat prin Data Mapper (conditiile de la acest punct sunt obligatorii).
+- [X] Code coverage de minim 90% pentru codul de Domain Model si minim 90% pentru Service Layer (conditie de luare in considerare a temei).
 - [X] Mocking (conditie de luare in considerare a temei).
 - [X]  Comentarii, minim pentru metode, constructori, proprietati, indexatori, destructori, tipuri imbricate. Puteti folosi GhostDoc.
-- [ ]  Se va face analiza codului sursa folosind StyleCop (plugin de Visual Studio; versiune recomandata 4.7.x). Toate regulile (tab-ul Rules) trebuie bifate; in tab-ul Company Information la sectiunea „Company Name” sa figureze „Transilvania University of Brasov”, iar la Copyright numele studentului. Maxim 30 de avertismente sunt permise (conditiile de la acest punct sunt obligatorii).
+- [X]  Se va face analiza codului sursa folosind StyleCop (plugin de Visual Studio; versiune recomandata 4.7.x). Toate regulile (tab-ul Rules) trebuie bifate; in tab-ul Company Information la sectiunea „Company Name” sa figureze „Transilvania University of Brasov”, iar la Copyright numele studentului. Maxim 30 de avertismente sunt permise (conditiile de la acest punct sunt obligatorii).
 Puteti folosi pluginuri auxiliare de forma CodeItRight.
 Notarea aplicatiei se va face prin rularea unitatilor de test scrise. Unitatile de test vor include validarea starii obiectelor (poate aparea validare selectiva, in anumite contexte doar anumite proprietati trebuie sa fie satisfacute) si verificarea coerentei la nivel de service layer (daca parametrii trimisi unor metode
 3

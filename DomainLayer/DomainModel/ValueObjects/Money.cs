@@ -2,7 +2,6 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
-
 namespace DomainModel.ValueObjects
 {
     using System.Collections.Generic;

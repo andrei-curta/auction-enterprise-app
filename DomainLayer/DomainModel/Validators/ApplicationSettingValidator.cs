@@ -18,8 +18,12 @@ namespace DomainModel.Validators
         /// </summary>
         public ApplicationSettingValidator()
         {
+            this.RuleFor(x => x.Name).MinimumLength(3);
+
             this.RuleFor(x => x.Name).NotEmpty().Matches("^[a-zA-Z0-9_.-]*$")
                 .WithMessage("Only letters, numbers and - _ are allowed");
+
+            this.RuleFor(x => x.Value).NotEmpty();
         }
     }
 }
