@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
 using DataMapper.DAO;
 using DomainModel.Models;
 using DomainModel.ValueObjects;
@@ -36,7 +37,7 @@ namespace ConsoleApp
             // var x = appServ.GetByName("test1");
             // Console.WriteLine(x.Value);
 
-            var catServ = new CategoryService(new CategoryDataService());
+            var catServ = new CategoryDataService();
             // catServ.Update(new Category()
             // {
             //     Id = 2,
@@ -52,7 +53,7 @@ namespace ConsoleApp
 
            
 
-           var a = catServ.List();
+           var a = catServ.GetNumberOfOpenedAuctionsByCategory("1");
 
             // var prodServ = serviceProvider.GetService<ProductService>();
 
