@@ -1,4 +1,6 @@
-﻿using DomainModel.Models;
+﻿using System;
+using System.Collections.Generic;
+using DomainModel.Models;
 using FluentValidation.TestHelper;
 using Xunit;
 
@@ -71,6 +73,58 @@ namespace DomainModel.Validators.Tests
             var validationResult = new UserValidator().TestValidate(user);
 
             validationResult.ShouldNotHaveValidationErrorFor(a => a.Email);
+        }
+
+        public static IEnumerable<object[]> TestIsInRoleData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    "a", new List<Role>() { new Role() { NormalizedName = "A" } }, true
+                },
+                new object[]
+                {
+                    "A", new List<Role>() { new Role() { NormalizedName = "A" } }, true
+                },
+                new object[]
+                {
+                    "A ", new List<Role>() { new Role() { NormalizedName = "A" } }, true
+                },
+                new object[]
+                {
+                    "   A ", new List<Role>() { new Role() { NormalizedName = "A" } }, true
+                },
+                new object[]
+                {
+                    "A", new List<Role>() { }, false
+                },
+                new object[]
+                {
+                    "  a ",
+                    new List<Role>() { new Role() { NormalizedName = "A" }, new Role() { NormalizedName = "B" } }, true
+                },
+                new object[]
+                {
+                    "   a ",
+                    new List<Role>() { new Role() { NormalizedName = "B" } }, false
+                },
+                new object[]
+                {
+                    "A",
+                    new List<Role>() { new Role() { NormalizedName = "B" } }, false
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(TestIsInRoleData))]
+        public void TestIsInRole(string role, List<Role> roles, bool expected)
+        {
+            var user = new User()
+            {
+                Roles = roles
+            };
+
+            Assert.Equal(expected, user.IsInRole(role));
         }
     }
 }

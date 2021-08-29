@@ -34,7 +34,7 @@ namespace DomainModel.Models
         /// <returns><c>true</c> if [is in role] [the specified role name]; otherwise, <c>false</c>.</returns>
         public bool IsInRole(string roleName)
         {
-            return this.Roles.Any(x => x.NormalizedName == roleName.ToUpper().Trim());
+            return this.Roles.Any(x => x.NormalizedName == roleName.Trim().ToUpper());
         }
     }
 }
