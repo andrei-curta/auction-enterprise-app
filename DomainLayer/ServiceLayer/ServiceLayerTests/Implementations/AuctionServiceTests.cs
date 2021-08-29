@@ -45,7 +45,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataService.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
             var result = service.HasReachedMaxNumberOfOpenedAuctions(userId);
 
             Assert.False(result);
@@ -130,7 +131,8 @@ namespace ServiceLayer.Implementations.Tests
                 { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -245,7 +247,8 @@ namespace ServiceLayer.Implementations.Tests
                 { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -344,7 +347,9 @@ namespace ServiceLayer.Implementations.Tests
                 Id = 3,
             };
 
-            var userAuctionsData = Enumerable.Repeat(new Auction(){ClosedByOwner = false, EndDate = DateTime.Now.AddDays(1)}, numberOfUserAuctions).ToList();
+            var userAuctionsData = Enumerable
+                .Repeat(new Auction() { ClosedByOwner = false, EndDate = DateTime.Now.AddDays(1) },
+                    numberOfUserAuctions).ToList();
 
             applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
             auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
@@ -359,7 +364,8 @@ namespace ServiceLayer.Implementations.Tests
                 { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -437,7 +443,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetByID(auction.Id)).Returns(dbAuction);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Update(auction));
 
@@ -483,7 +490,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetByID(auction.Id)).Returns(dbAuction);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             service.Update(auction);
 
@@ -559,7 +567,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionPlacingDataServiceMock.Setup(x => x.HasActiveAuctionPlacingRestrictions(userId)).Returns(true);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
-                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object, userDataServiceMock.Object);
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -567,5 +576,117 @@ namespace ServiceLayer.Implementations.Tests
             Assert.Equal("You have an active auction placing restriction. Try later.", exception.Message);
         }
 
+        public static IEnumerable<object[]> AddTestRolesData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    new List<Role>(),
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } },
+                    true
+                },
+                new object[]
+                {
+                    new List<Role>() { new Role() { NormalizedName = "BIDDER" } },
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>() { new Role() { NormalizedName = "AUCTIONER" }, new Role() { NormalizedName = "BIDDER" } },
+                    true
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(AddTestRolesData))]
+        public void AddTestRoles(List<Role> roles, bool valid)
+        {
+            Mock<AuctionDataService> auctionDataServiceMock =
+                new Mock<AuctionDataService>();
+            Mock<ProductDataService> productDataServiceMock = new Mock<ProductDataService>();
+
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            string userId = "1";
+            string name = "AuctionMaxDurationMonths";
+            long productId = 1;
+
+
+            var appSettingData = new ApplicationSetting()
+            {
+                Name = name,
+                Value = "7",
+                Id = 1
+            };
+
+            var auction = new Auction()
+            {
+                UserId = userId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddMonths(4),
+                ClosedByOwner = false,
+                ProductId = productId,
+                StartPrice = new Money(12, "RON")
+            };
+
+            string name2 = "MaxUnfinishedAuctions";
+            var appSettingMaxUnfinishedAuctions = new ApplicationSetting()
+            {
+                Name = name2,
+                Value = "123",
+                Id = 1,
+            };
+
+            string auctionMinStartPrice = "AuctionMinStartPrice";
+            var appSettingAuctionMinStartPrice = new ApplicationSetting()
+            {
+                Name = auctionMinStartPrice,
+                Value = "11",
+                Id = 3,
+            };
+
+            var userAuctionsData = new List<Auction>()
+            {
+                new Auction() { ClosedByOwner = true, EndDate = DateTime.Now.AddDays(1), StartDate = DateTime.Now },
+            };
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
+            auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
+                .Returns(appSettingAuctionMinStartPrice);
+
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+            auctionPlacingDataServiceMock.Setup(x => x.HasActiveAuctionPlacingRestrictions(userId)).Returns(false);
+
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User() { Roles = roles });
+
+            var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object);
+
+            var exception = Record.Exception(() => service.Add(auction));
+
+            if (valid)
+            {
+                Assert.Null(exception);
+            }
+            else
+            {
+                Assert.IsType<UnauthorizedAccessException>(exception);
+                Assert.Equal("You do not have the necessary role to add an auction!", exception.Message);
+            }
+        }
     }
 }
