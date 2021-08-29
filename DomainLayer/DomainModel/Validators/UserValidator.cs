@@ -18,7 +18,9 @@ namespace DomainModel.Validators
         /// </summary>
         public UserValidator()
         {
-            this.RuleFor(x => x.UserName).NotEmpty();
+            this.RuleFor(x => x.UserName).NotEmpty().MinimumLength(5);
+
+            this.RuleFor(x => x.Email).EmailAddress();
         }
     }
 }

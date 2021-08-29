@@ -37,8 +37,8 @@ namespace ServiceLayer.Implementations.Tests
 
             var userAuctionsData = new List<Auction>()
             {
-                new Auction(),
-                new Auction()
+                new Auction() { StartPrice = new Money(1, "RON"), },
+                new Auction() { StartPrice = new Money(1, "RON"), }
             };
 
             applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
@@ -100,6 +100,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var auction = new Auction()
             {
+                StartPrice = new Money(1, "RON"),
                 UserId = userId,
                 StartDate = auctionStartDate,
                 EndDate = auctionEndDate,
@@ -596,7 +597,8 @@ namespace ServiceLayer.Implementations.Tests
                 },
                 new object[]
                 {
-                    new List<Role>() { new Role() { NormalizedName = "AUCTIONER" }, new Role() { NormalizedName = "BIDDER" } },
+                    new List<Role>()
+                        { new Role() { NormalizedName = "AUCTIONER" }, new Role() { NormalizedName = "BIDDER" } },
                     true
                 },
             };

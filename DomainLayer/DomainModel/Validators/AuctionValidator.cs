@@ -22,6 +22,10 @@ namespace DomainModel.Validators
             this.RuleFor(x => x.EndDate).NotEmpty().WithMessage("End date must be specified.");
 
             this.RuleFor(x => x.ProductId).NotEmpty();
+
+            this.RuleFor(x => x.StartPrice).NotNull();
+            this.RuleFor(x => x.StartPrice.Amount).GreaterThan(0).When(x => x.StartPrice != null);
+            this.RuleFor(x => x.StartPrice.Currency).Length(3).Matches("[A-Z]").When(x => x.StartPrice != null);
         }
     }
 }
