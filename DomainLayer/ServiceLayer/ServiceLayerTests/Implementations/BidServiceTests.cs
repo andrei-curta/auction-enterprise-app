@@ -3,6 +3,7 @@ using DomainModel.Models;
 using DomainModel.ValueObjects;
 using Moq;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace ServiceLayer.Implementations.Tests
@@ -14,8 +15,10 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var bid = new Bid()
             {
@@ -36,6 +39,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
             var bid = new Bid()
@@ -45,10 +49,11 @@ namespace ServiceLayer.Implementations.Tests
             };
 
             Auction auction = new Auction()
-                {Id = auctionId, StartDate = DateTime.Now.AddDays(1), EndDate = DateTime.Now.AddDays(5)};
+                { Id = auctionId, StartDate = DateTime.Now.AddDays(1), EndDate = DateTime.Now.AddDays(5) };
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<Exception>(exception);
@@ -60,6 +65,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
             var bid = new Bid()
@@ -77,7 +83,8 @@ namespace ServiceLayer.Implementations.Tests
 
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<UnauthorizedAccessException>(exception);
@@ -89,6 +96,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
             var bid = new Bid()
@@ -108,7 +116,8 @@ namespace ServiceLayer.Implementations.Tests
 
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<Exception>(exception);
@@ -120,6 +129,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
             var bid = new Bid()
@@ -142,7 +152,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
             bidDataServiceMock.Setup(x => x.GetLatestBidByAuction(auctionId)).Returns(previousBid);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<Exception>(exception);
@@ -154,6 +165,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
             var bid = new Bid()
@@ -181,7 +193,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
             bidDataServiceMock.Setup(x => x.GetLatestBidByAuction(auctionId)).Returns(previousBid);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<Exception>(exception);
@@ -193,6 +206,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
             var bid = new Bid()
@@ -215,7 +229,8 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
             bidDataServiceMock.Setup(x => x.GetLatestBidByAuction(auctionId)).Returns(previousBid);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<Exception>(exception);
@@ -233,6 +248,7 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
             long auctionId = 1;
 
@@ -260,11 +276,103 @@ namespace ServiceLayer.Implementations.Tests
             auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
             bidDataServiceMock.Setup(x => x.GetLatestBidByAuction(auctionId)).Returns(previousBid);
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(bid));
             Assert.IsType<Exception>(exception);
             Assert.Equal("You cannot bid with more than 10% more than the last bid!", exception.Message);
+        }
+
+
+        public static IEnumerable<object[]> AddTestBidUserNotInRoleData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { }
+                    },
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { NormalizedName = "AUCTIONER"}
+                    },
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { NormalizedName = "BIDDER"}
+                    },
+                    true
+                },
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { NormalizedName = "BIDDER"},
+                        new Role() { NormalizedName = "AUCTIONER"}
+                    },
+                    true
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(AddTestBidUserNotInRoleData))]
+        public void AddTestBidUserRole(List<Role> roles, bool valid)
+        {
+            Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
+            Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            long auctionId = 1;
+            string userId = "a";
+
+            Auction auction = new Auction()
+            {
+                Id = auctionId,
+                StartDate = DateTime.Now.Subtract(new TimeSpan(1, 1, 1, 1)),
+                EndDate = DateTime.Now.AddDays(1),
+                StartPrice = new Money(10, "RON")
+            };
+
+            Bid previousBid = new Bid()
+            {
+                AuctionId = auctionId,
+                BidValue = new Money(10.5M, "RON"),
+            };
+
+            var bid = new Bid()
+            {
+                UserId = userId,
+                AuctionId = auctionId,
+                BidValue = new Money(11, "RON")
+            };
+
+            auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
+            bidDataServiceMock.Setup(x => x.GetLatestBidByAuction(auctionId)).Returns(previousBid);
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User() { Roles = roles });
+
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
+
+            var exception = Record.Exception(() => service.Add(bid));
+
+            if (valid)
+            {
+                Assert.Null(exception);
+            }
+            else
+            {
+                Assert.IsType<UnauthorizedAccessException>(exception);
+                Assert.Equal("You are not in the role that allows bidding!", exception.Message);
+            }
         }
 
         [Fact()]
@@ -272,8 +380,10 @@ namespace ServiceLayer.Implementations.Tests
         {
             Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
             Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
-            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object);
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object);
 
             var bid = new Bid();
 

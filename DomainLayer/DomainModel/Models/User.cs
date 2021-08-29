@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using System.Linq;
+
 namespace DomainModel.Models
 {
     using System.Collections.Generic;
@@ -25,9 +27,14 @@ namespace DomainModel.Models
         /// </summary>
         public virtual List<Role> Roles { get; set; }
 
-        // public bool IsInRole()
-        // {
-        //
-        // }
+        /// <summary>
+        /// Determines whether the user is in the specified role name.
+        /// </summary>
+        /// <param name="roleName">Name of the role.</param>
+        /// <returns><c>true</c> if [is in role] [the specified role name]; otherwise, <c>false</c>.</returns>
+        public bool IsInRole(string roleName)
+        {
+            return this.Roles.Any(x => x.NormalizedName == roleName.ToUpper().Trim());
+        }
     }
 }

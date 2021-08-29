@@ -20,6 +20,7 @@ namespace ServiceLayer.Implementations
     public class BidService : BaseService<Bid, BidDataService, BidValidator>, IBidService
     {
         private readonly IAuctionDataService auctionDataService;
+        private readonly IUserDataService userDataService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BidService"/> class.
@@ -27,10 +28,11 @@ namespace ServiceLayer.Implementations
         /// <param name="bidDataService">The bid data service.</param>
         /// <param name="auctionDataService">The auction data service.</param>
         /// <param name="logger">The logger.</param>
-        public BidService(BidDataService bidDataService, AuctionDataService auctionDataService, ILogger<BidService> logger = null)
+        public BidService(BidDataService bidDataService, AuctionDataService auctionDataService, UserDataService userDataService, ILogger<BidService> logger = null)
             : base(bidDataService, new BidValidator(), logger)
         {
             this.auctionDataService = auctionDataService;
+            this.userDataService = userDataService;
         }
 
         /// <inheritdoc/>
@@ -82,6 +84,12 @@ namespace ServiceLayer.Implementations
             if (bid.BidValue.Amount > latestBidValue.Amount + (0.1M * latestBidValue.Amount))
             {
                 throw new Exception("You cannot bid with more than 10% more than the last bid!");
+            }
+
+            var biddingUser = this.userDataService.GetByID(bid.UserId);
+            if (!biddingUser.IsInRole("Bidder"))
+            {
+                throw new UnauthorizedAccessException("You are not in the role that allows bidding!");
             }
 
             this.service.Insert(bid);

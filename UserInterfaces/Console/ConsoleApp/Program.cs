@@ -72,7 +72,7 @@ namespace ConsoleApp
 
             var x = userServ.Get();
 
-            var bidServ = new BidService(new BidDataService(), new AuctionDataService());
+            var bidServ = new BidService(new BidDataService(), new AuctionDataService(), new UserDataService());
             // bidServ.Add(new Bid()
             // {
             //     AuctionId = 8,

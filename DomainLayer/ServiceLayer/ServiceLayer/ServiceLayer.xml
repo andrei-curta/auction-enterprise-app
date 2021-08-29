@@ -112,7 +112,7 @@
             Provides services regarding the <see cref="T:DomainModel.Models.Bid"/>.
             </summary>
         </member>
-        <member name="M:ServiceLayer.Implementations.BidService.#ctor(DataMapper.DAO.BidDataService,DataMapper.DAO.AuctionDataService,Microsoft.Extensions.Logging.ILogger{ServiceLayer.Implementations.BidService})">
+        <member name="M:ServiceLayer.Implementations.BidService.#ctor(DataMapper.DAO.BidDataService,DataMapper.DAO.AuctionDataService,DataMapper.DAO.UserDataService,Microsoft.Extensions.Logging.ILogger{ServiceLayer.Implementations.BidService})">
             <summary>
             Initializes a new instance of the <see cref="T:ServiceLayer.Implementations.BidService"/> class.
             </summary>

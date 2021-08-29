@@ -254,6 +254,13 @@
             Gets or sets the roles the user has.
             </summary>
         </member>
+        <member name="M:DomainModel.Models.User.IsInRole(System.String)">
+            <summary>
+            Determines whether the user is in the specified role name.
+            </summary>
+            <param name="roleName">Name of the role.</param>
+            <returns><c>true</c> if [is in role] [the specified role name]; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="T:DomainModel.Validators.ApplicationSettingValidator">
             <summary>
             Validator for <see cref="T:DomainModel.Models.ApplicationSetting"/>.
