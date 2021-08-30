@@ -4,6 +4,7 @@
 
 namespace ServiceLayer.Implementations
 {
+    using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
@@ -54,15 +55,39 @@ namespace ServiceLayer.Implementations
         /// <inheritdoc/>
         public virtual void Add(TE entity)
         {
-            this.validator.ValidateAndThrow(entity);
+            try
+            {
+                this.validator.ValidateAndThrow(entity);
 
-            this.service.Insert(entity);
+                this.service.Insert(entity);
+            }
+            catch (Exception e)
+            {
+                if (this.logger != null)
+                {
+                    this.logger.LogError(e, e.Message);
+                }
+
+                throw;
+            }
         }
 
         /// <inheritdoc/>
         public virtual void Delete(TE entity)
         {
-            this.service.Delete(entity);
+            try
+            {
+                this.service.Delete(entity);
+            }
+            catch (Exception e)
+            {
+                if (this.logger != null)
+                {
+                    this.logger.LogError(e, e.Message);
+                }
+
+                throw;
+            }
         }
 
         // /// <inheritdoc/>
@@ -74,19 +99,55 @@ namespace ServiceLayer.Implementations
         /// <inheritdoc/>
         public virtual TE GetById(long id)
         {
-            return this.service.GetByID(id);
+            try
+            {
+                return this.service.GetByID(id);
+            }
+            catch (Exception e)
+            {
+                if (this.logger != null)
+                {
+                    this.logger.LogError(e, e.Message);
+                }
+
+                throw;
+            }
         }
 
         /// <inheritdoc/>
         public virtual IList<TE> List()
         {
-            return this.service.Get().ToList();
+            try
+            {
+                return this.service.Get().ToList();
+            }
+            catch (Exception e)
+            {
+                if (this.logger != null)
+                {
+                    this.logger.LogError(e, e.Message);
+                }
+
+                throw;
+            }
         }
 
         /// <inheritdoc/>
         public virtual void Update(TE entity)
         {
-            this.service.Update(entity);
+            try
+            {
+                this.service.Update(entity);
+            }
+            catch (Exception e)
+            {
+                if (this.logger != null)
+                {
+                    this.logger.LogError(e, e.Message);
+                }
+
+                throw;
+            }
         }
     }
 }

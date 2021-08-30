@@ -27,6 +27,8 @@ namespace ServiceLayer.Implementations
 
         private readonly IUserDataService userDataService;
 
+        private readonly ICategoryDataService categoryDataService;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuctionService"/> class.
         /// </summary>
@@ -35,18 +37,21 @@ namespace ServiceLayer.Implementations
         /// <param name="applicationSettingDataService">The application setting data service.</param>
         /// <param name="auctionPlacingRestrictionsDataService">The auction placing restrictions data service.</param>
         /// <param name="userDataService">The user data service.</param>
+        /// <param name="categoryDataService">The category data service.</param>
         public AuctionService(
             AuctionDataService auctionDataService,
             IProductDataService productDataService,
             ApplicationSettingDataService applicationSettingDataService,
             AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService,
-            UserDataService userDataService)
+            UserDataService userDataService,
+            CategoryDataService categoryDataService)
             : base(auctionDataService, new AuctionValidator())
         {
             this.productDataService = productDataService;
             this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService);
             this.auctionPlacingRestrictionsDataService = auctionPlacingRestrictionsDataService;
             this.userDataService = userDataService;
+            this.categoryDataService = categoryDataService;
         }
 
         /// <inheritdoc/>
@@ -65,7 +70,6 @@ namespace ServiceLayer.Implementations
                 throw new Exception("You have reached the max number of open auctions;");
             }
 
-            // Todo: verificare nr de licitatii pe categorie.
             decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
             if (entity.StartPrice.Amount < thresholdValue)
             {
@@ -84,6 +88,21 @@ namespace ServiceLayer.Implementations
             if (!user.IsInRole("AUCTIONER"))
             {
                 throw new UnauthorizedAccessException("You do not have the necessary role to add an auction!");
+            }
+
+            var maxOpenedAuctionsPerCategory =
+                this.applicationSettingService.GetValueAsInt("MaxOpenedAuctionsPerCategory");
+
+            var auctionedProduct = this.productDataService.GetByID(entity.ProductId);
+
+            var categoriesWithOpenAuctions = this.categoryDataService.GetNumberOfOpenedAuctionsByCategory(entity.UserId);
+
+            foreach (var category in auctionedProduct.Categories)
+            {
+                if (categoriesWithOpenAuctions.ContainsKey(category) && categoriesWithOpenAuctions[category] > maxOpenedAuctionsPerCategory)
+                {
+                    throw new Exception("Too many opened auctions in category!");
+                }
             }
 
             this.service.Insert(entity);

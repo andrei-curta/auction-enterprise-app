@@ -97,6 +97,7 @@ namespace DomainModelTests.Validators
 
         [Theory]
         [InlineData(-1)]
+        [InlineData(-1.1)]
         [InlineData(0)]
         public void TestInvalidAmount(decimal value)
         {
@@ -148,12 +149,49 @@ namespace DomainModelTests.Validators
         {
             var auction = new Auction()
             {
-
             };
 
             var validationResult = new AuctionValidator().TestValidate(auction);
 
             validationResult.ShouldHaveValidationErrorFor(a => a.StartPrice);
+        }
+
+        public static IEnumerable<object[]> TestClosedData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    new DateTime(2020, 01, 01), true, true
+                },
+                new object[]
+                {
+                    new DateTime(2020, 01, 01), false, true
+                },
+                new object[]
+                {
+                    DateTime.Now.AddDays(1), false, false
+                },
+                new object[]
+                {
+                    DateTime.Now.AddDays(1), true, true
+                },
+                new object[]
+                {
+                    DateTime.Now.AddSeconds(1), true, true
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(TestClosedData))]
+        public void TestClosed(DateTime endDate, bool closedByOwner, bool expected)
+        {
+            var auction = new Auction()
+            {
+                EndDate = endDate,
+                ClosedByOwner = closedByOwner,
+            };
+
+            Assert.Equal(expected, auction.Closed);
         }
     }
 }

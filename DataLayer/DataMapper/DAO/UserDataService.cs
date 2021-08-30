@@ -19,8 +19,10 @@ namespace DataMapper.DAO
     public class UserDataService : BaseRepository<User>, IUserDataService
     {
         /// <inheritdoc/>
-        public override IEnumerable<User> Get(Expression<Func<User, bool>> filter = null,
-            Func<IQueryable<User>, IOrderedQueryable<User>> orderBy = null, string includeProperties = "")
+        public override IEnumerable<User> Get(
+            Expression<Func<User, bool>> filter = null,
+            Func<IQueryable<User>, IOrderedQueryable<User>> orderBy = null,
+            string includeProperties = "")
         {
             includeProperties += ",Roles";
             return base.Get(filter, orderBy, includeProperties);

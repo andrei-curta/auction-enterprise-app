@@ -38,7 +38,7 @@
             Provides services regarding the <see cref="T:DomainModel.Models.Auction"/>.
             </summary>
         </member>
-        <member name="M:ServiceLayer.Implementations.AuctionService.#ctor(DataMapper.DAO.AuctionDataService,DataMapper.Interfaces.IProductDataService,DataMapper.DAO.ApplicationSettingDataService,DataMapper.DAO.AuctionPlacingRestrictionsDataService,DataMapper.DAO.UserDataService)">
+        <member name="M:ServiceLayer.Implementations.AuctionService.#ctor(DataMapper.DAO.AuctionDataService,DataMapper.Interfaces.IProductDataService,DataMapper.DAO.ApplicationSettingDataService,DataMapper.DAO.AuctionPlacingRestrictionsDataService,DataMapper.DAO.UserDataService,DataMapper.DAO.CategoryDataService)">
             <summary>
             Initializes a new instance of the <see cref="T:ServiceLayer.Implementations.AuctionService"/> class.
             </summary>
@@ -47,6 +47,7 @@
             <param name="applicationSettingDataService">The application setting data service.</param>
             <param name="auctionPlacingRestrictionsDataService">The auction placing restrictions data service.</param>
             <param name="userDataService">The user data service.</param>
+            <param name="categoryDataService">The category data service.</param>
         </member>
         <member name="M:ServiceLayer.Implementations.AuctionService.Add(DomainModel.Models.Auction)">
             <inheritdoc/>
@@ -118,6 +119,7 @@
             </summary>
             <param name="bidDataService">The bid data service.</param>
             <param name="auctionDataService">The auction data service.</param>
+            <param name="userDataService">The user data service.</param>
             <param name="logger">The logger.</param>
         </member>
         <member name="M:ServiceLayer.Implementations.BidService.Add(DomainModel.Models.Bid)">

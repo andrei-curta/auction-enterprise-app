@@ -26,6 +26,9 @@ namespace ServiceLayer.Implementations.Tests
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
+
             string name = "MaxUnfinishedAuctions";
             string userId = "1";
             var appSettingData = new ApplicationSetting()
@@ -46,7 +49,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataService.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
             var result = service.HasReachedMaxNumberOfOpenedAuctions(userId);
 
             Assert.False(result);
@@ -85,6 +88,8 @@ namespace ServiceLayer.Implementations.Tests
                 new Mock<AuctionPlacingRestrictionsDataService>();
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
 
             string userId = "1";
             string name = "AuctionMaxDurationMonths";
@@ -133,7 +138,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -192,6 +197,8 @@ namespace ServiceLayer.Implementations.Tests
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
             string userId = "1";
             string name = "AuctionMaxDurationMonths";
             long productId = 1;
@@ -249,7 +256,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -310,6 +317,8 @@ namespace ServiceLayer.Implementations.Tests
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
             string userId = "1";
             string name = "AuctionMaxDurationMonths";
             long productId = 1;
@@ -366,7 +375,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -441,11 +450,13 @@ namespace ServiceLayer.Implementations.Tests
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
             auctionDataServiceMock.Setup(x => x.GetByID(auction.Id)).Returns(dbAuction);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Update(auction));
 
@@ -488,11 +499,13 @@ namespace ServiceLayer.Implementations.Tests
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
 
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
             auctionDataServiceMock.Setup(x => x.GetByID(auction.Id)).Returns(dbAuction);
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             service.Update(auction);
 
@@ -513,6 +526,8 @@ namespace ServiceLayer.Implementations.Tests
                 new Mock<AuctionPlacingRestrictionsDataService>();
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
 
             string userId = "1";
             string name = "AuctionMaxDurationMonths";
@@ -569,7 +584,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 
@@ -618,6 +633,8 @@ namespace ServiceLayer.Implementations.Tests
                 new Mock<AuctionPlacingRestrictionsDataService>();
 
             Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
 
             string userId = "1";
             string name = "AuctionMaxDurationMonths";
@@ -676,7 +693,7 @@ namespace ServiceLayer.Implementations.Tests
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
-                userDataServiceMock.Object);
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
 
             var exception = Record.Exception(() => service.Add(auction));
 

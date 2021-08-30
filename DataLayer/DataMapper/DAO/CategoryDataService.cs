@@ -46,16 +46,6 @@ namespace DataMapper.DAO
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
-                // select Categories.Id, count(1) as NumberPerCat  from Categories inner join CategoryProduct on Categories.Id = CategoryProduct.CategoriesId inner    join Auctions on Auctions.ProductId = CategoryProduct.ProductsId   where Auctions.ClosedByOwner = 0 and Auctions.EndDate < GETDATE() group by Categories.Id
-                // var result = from auction in ctx.Auctions
-                //     join product in ctx.Products on auction.ProductId equals product.Id
-                //     select auction
-                //     grou
-                //     ;
-
-                // var studentName = ctx.Categories.FromSqlRaw("select Categories.Id, count(1) as NumberPerCat  from Categories inner join CategoryProduct on Categories.Id = CategoryProduct.CategoriesId inner    join Auctions on Auctions.ProductId = CategoryProduct.ProductsId   where Auctions.ClosedByOwner = 0 and Auctions.EndDate < GETDATE() and Auctions.UserId = @UserId group by Categories.Id ", userId)
-                //         .ToList();
-
                 var userAuctions = ctx.Auctions.Include(x => x.Product).ThenInclude(x => x.Categories)
                     .Where(x => x.UserId == userId).Where(x => x.ClosedByOwner == false)
                     .Where(x => x.EndDate > DateTime.Now).ToList();

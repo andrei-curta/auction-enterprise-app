@@ -12,6 +12,7 @@ namespace DomainModel.ValueObjects.Tests
         [InlineData(10, "RON", "RON 10")]
         [InlineData(10.5, "RON", "RON 10,5")]
         [InlineData(-10.5, "RON", "RON -10,5")]
+        [InlineData(0, "RON", "RON 0")]
         public void ToStringTest(decimal amount, string currency, string expected)
         {
             Money money = new Money(amount, currency);
