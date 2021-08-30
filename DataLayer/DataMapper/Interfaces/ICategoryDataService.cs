@@ -18,6 +18,6 @@ namespace DataMapper.Interfaces
         /// </summary>
         /// <param name="userId">The user identifier.</param>
         /// <returns>A dictionary with key being the category and the value being the number of opened auctions.</returns>
-        public Dictionary<Category, int> GetNumberOfOpenedAuctionsByCategory(string userId);
+        public Dictionary<long, int> GetNumberOfOpenedAuctionsByCategory(string userId);
     }
 }

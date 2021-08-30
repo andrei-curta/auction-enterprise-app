@@ -38,7 +38,7 @@
             Provides services regarding the <see cref="T:DomainModel.Models.Auction"/>.
             </summary>
         </member>
-        <member name="M:ServiceLayer.Implementations.AuctionService.#ctor(DataMapper.DAO.AuctionDataService,DataMapper.Interfaces.IProductDataService,DataMapper.DAO.ApplicationSettingDataService,DataMapper.DAO.AuctionPlacingRestrictionsDataService,DataMapper.DAO.UserDataService,DataMapper.DAO.CategoryDataService)">
+        <member name="M:ServiceLayer.Implementations.AuctionService.#ctor(DataMapper.DAO.AuctionDataService,DataMapper.Interfaces.IProductDataService,DataMapper.DAO.ApplicationSettingDataService,DataMapper.DAO.AuctionPlacingRestrictionsDataService,DataMapper.DAO.UserDataService,DataMapper.DAO.CategoryDataService,Microsoft.Extensions.Logging.ILogger{ServiceLayer.Implementations.AuctionService})">
             <summary>
             Initializes a new instance of the <see cref="T:ServiceLayer.Implementations.AuctionService"/> class.
             </summary>

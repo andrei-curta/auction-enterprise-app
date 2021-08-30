@@ -42,7 +42,7 @@ namespace DataMapper.DAO
         }
 
         /// <inheritdoc/>
-        public Dictionary<Category, int> GetNumberOfOpenedAuctionsByCategory(string userId)
+        public virtual Dictionary<long, int> GetNumberOfOpenedAuctionsByCategory(string userId)
         {
             using (var ctx = new AuctionEnterpriseContextFactory().CreateDbContext(new string[0]))
             {
@@ -50,19 +50,19 @@ namespace DataMapper.DAO
                     .Where(x => x.UserId == userId).Where(x => x.ClosedByOwner == false)
                     .Where(x => x.EndDate > DateTime.Now).ToList();
 
-                var categories = new Dictionary<Category, int>();
+                var categories = new Dictionary<long, int>();
 
                 foreach (var auction in userAuctions)
                 {
                     foreach (var category in auction.Product.Categories)
                     {
                         int previousValue = 0;
-                        if (categories.ContainsKey(category))
+                        if (categories.ContainsKey(category.Id))
                         {
-                            previousValue = categories[category];
+                            previousValue = categories[category.Id];
                         }
 
-                        categories[category] = previousValue + 1;
+                        categories[category.Id] = previousValue + 1;
                     }
                 }
 

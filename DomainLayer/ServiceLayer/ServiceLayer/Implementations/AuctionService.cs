@@ -2,6 +2,8 @@
 // Copyright (c) Curta Andrei. All rights reserved.
 // </copyright>
 
+using Microsoft.Extensions.Logging;
+
 namespace ServiceLayer.Implementations
 {
     using System;
@@ -44,8 +46,9 @@ namespace ServiceLayer.Implementations
             ApplicationSettingDataService applicationSettingDataService,
             AuctionPlacingRestrictionsDataService auctionPlacingRestrictionsDataService,
             UserDataService userDataService,
-            CategoryDataService categoryDataService)
-            : base(auctionDataService, new AuctionValidator())
+            CategoryDataService categoryDataService,
+            ILogger<AuctionService> logger = null)
+            : base(auctionDataService, new AuctionValidator(), logger)
         {
             this.productDataService = productDataService;
             this.applicationSettingService = new ApplicationSettingService(applicationSettingDataService);
@@ -57,55 +60,66 @@ namespace ServiceLayer.Implementations
         /// <inheritdoc/>
         public override void Add(Auction entity)
         {
-            this.validator.ValidateAndThrow(entity);
-
-            int maxAuctionDurationMonths = this.applicationSettingService.GetValueAsInt("AuctionMaxDurationMonths");
-            if (entity.EndDate.Subtract(entity.StartDate).Days / (365.25 / 12) > maxAuctionDurationMonths)
+            try
             {
-                throw new ArgumentException("The max duration of an auction was exceded.");
-            }
+                this.validator.ValidateAndThrow(entity);
 
-            if (this.HasReachedMaxNumberOfOpenedAuctions(entity.UserId))
-            {
-                throw new Exception("You have reached the max number of open auctions;");
-            }
-
-            decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
-            if (entity.StartPrice.Amount < thresholdValue)
-            {
-                throw new Exception($"The price set is below the threshold of {thresholdValue}");
-            }
-
-            bool hasAuctionPlacingRestrictions =
-                this.auctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions(entity.UserId);
-
-            if (hasAuctionPlacingRestrictions)
-            {
-                throw new Exception("You have an active auction placing restriction. Try later.");
-            }
-
-            var user = this.userDataService.GetByID(entity.UserId);
-            if (!user.IsInRole("AUCTIONER"))
-            {
-                throw new UnauthorizedAccessException("You do not have the necessary role to add an auction!");
-            }
-
-            var maxOpenedAuctionsPerCategory =
-                this.applicationSettingService.GetValueAsInt("MaxOpenedAuctionsPerCategory");
-
-            var auctionedProduct = this.productDataService.GetByID(entity.ProductId);
-
-            var categoriesWithOpenAuctions = this.categoryDataService.GetNumberOfOpenedAuctionsByCategory(entity.UserId);
-
-            foreach (var category in auctionedProduct.Categories)
-            {
-                if (categoriesWithOpenAuctions.ContainsKey(category) && categoriesWithOpenAuctions[category] > maxOpenedAuctionsPerCategory)
+                int maxAuctionDurationMonths = this.applicationSettingService.GetValueAsInt("AuctionMaxDurationMonths");
+                if (entity.EndDate.Subtract(entity.StartDate).Days / (365.25 / 12) > maxAuctionDurationMonths)
                 {
-                    throw new Exception("Too many opened auctions in category!");
+                    throw new ArgumentException("The max duration of an auction was exceded.");
                 }
-            }
 
-            this.service.Insert(entity);
+                if (this.HasReachedMaxNumberOfOpenedAuctions(entity.UserId))
+                {
+                    throw new Exception("You have reached the max number of open auctions;");
+                }
+
+                decimal thresholdValue = this.applicationSettingService.GetValueAsDecimal("AuctionMinStartPrice");
+                if (entity.StartPrice.Amount < thresholdValue)
+                {
+                    throw new Exception($"The price set is below the threshold of {thresholdValue}");
+                }
+
+                bool hasAuctionPlacingRestrictions =
+                    this.auctionPlacingRestrictionsDataService.HasActiveAuctionPlacingRestrictions(entity.UserId);
+
+                if (hasAuctionPlacingRestrictions)
+                {
+                    throw new Exception("You have an active auction placing restriction. Try later.");
+                }
+
+                var user = this.userDataService.GetByID(entity.UserId);
+                if (!user.IsInRole("AUCTIONER"))
+                {
+                    throw new UnauthorizedAccessException("You do not have the necessary role to add an auction!");
+                }
+
+                var maxOpenedAuctionsPerCategory =
+                    this.applicationSettingService.GetValueAsInt("MaxOpenedAuctionsPerCategory");
+
+                var auctionedProduct = this.productDataService.GetByID(entity.ProductId);
+
+                var categoriesWithOpenAuctions =
+                    this.categoryDataService.GetNumberOfOpenedAuctionsByCategory(entity.UserId);
+
+                foreach (var category in auctionedProduct.Categories)
+                {
+                    if (categoriesWithOpenAuctions.ContainsKey(category.Id) &&
+                        categoriesWithOpenAuctions[category.Id] > maxOpenedAuctionsPerCategory)
+                    {
+                        throw new Exception("Too many opened auctions in category!");
+                    }
+                }
+
+                this.service.Insert(entity);
+            }
+            catch (Exception e)
+            {
+                this.logger?.LogError(e, e.Message);
+
+                throw;
+            }
         }
 
         /// <summary>

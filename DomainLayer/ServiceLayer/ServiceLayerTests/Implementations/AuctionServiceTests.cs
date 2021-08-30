@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DomainModel.ValueObjects;
+using Microsoft.Extensions.Logging;
 using Xunit;
 
 namespace ServiceLayer.Implementations.Tests
@@ -237,6 +238,14 @@ namespace ServiceLayer.Implementations.Tests
                 Id = 3,
             };
 
+            string maxOpenedAuctionsPerCategory = "MaxOpenedAuctionsPerCategory";
+            var appSettingMaxOpenedAuctionsPerCategory = new ApplicationSetting()
+            {
+                Name = maxOpenedAuctionsPerCategory,
+                Value = "1",
+                Id = 3,
+            };
+
             var userAuctionsData = new List<Auction>()
             {
                 new Auction() { ClosedByOwner = true, EndDate = DateTime.Now.AddDays(1), StartDate = DateTime.Now },
@@ -248,8 +257,11 @@ namespace ServiceLayer.Implementations.Tests
             applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
             applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
                 .Returns(appSettingAuctionMinStartPrice);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(maxOpenedAuctionsPerCategory))
+                .Returns(appSettingMaxOpenedAuctionsPerCategory);
 
-            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product()
+                { Id = productId, Categories = new HashSet<Category>() });
 
             userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User()
                 { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
@@ -349,6 +361,14 @@ namespace ServiceLayer.Implementations.Tests
                 Id = 1,
             };
 
+            string maxOpenedAuctionsPerCategory = "MaxOpenedAuctionsPerCategory";
+            var appSettingMaxOpenedAuctionsPerCategory = new ApplicationSetting()
+            {
+                Name = maxOpenedAuctionsPerCategory,
+                Value = "1",
+                Id = 3,
+            };
+
             string auctionMinStartPrice = "AuctionMinStartPrice";
             var appSettingAuctionMinStartPrice = new ApplicationSetting()
             {
@@ -367,11 +387,18 @@ namespace ServiceLayer.Implementations.Tests
             applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
             applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
                 .Returns(appSettingAuctionMinStartPrice);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(maxOpenedAuctionsPerCategory))
+                .Returns(appSettingMaxOpenedAuctionsPerCategory);
 
-            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product()
+                { Id = productId, Categories = new HashSet<Category>() });
 
             userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User()
                 { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
+
+            categoryDataServiceMock.Setup(x => x.GetNumberOfOpenedAuctionsByCategory(userId))
+                .Returns(new Dictionary<long, int>());
 
             var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
                 applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
@@ -674,6 +701,14 @@ namespace ServiceLayer.Implementations.Tests
                 Id = 3,
             };
 
+            string maxOpenedAuctionsPerCategory = "MaxOpenedAuctionsPerCategory";
+            var appSettingMaxOpenedAuctionsPerCategory = new ApplicationSetting()
+            {
+                Name = maxOpenedAuctionsPerCategory,
+                Value = "1",
+                Id = 3,
+            };
+
             var userAuctionsData = new List<Auction>()
             {
                 new Auction() { ClosedByOwner = true, EndDate = DateTime.Now.AddDays(1), StartDate = DateTime.Now },
@@ -685,8 +720,11 @@ namespace ServiceLayer.Implementations.Tests
             applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
             applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
                 .Returns(appSettingAuctionMinStartPrice);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(maxOpenedAuctionsPerCategory))
+                .Returns(appSettingMaxOpenedAuctionsPerCategory);
 
-            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product() { Id = productId });
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product()
+                { Id = productId, Categories = new HashSet<Category>() });
             auctionPlacingDataServiceMock.Setup(x => x.HasActiveAuctionPlacingRestrictions(userId)).Returns(false);
 
             userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User() { Roles = roles });
@@ -705,6 +743,307 @@ namespace ServiceLayer.Implementations.Tests
             {
                 Assert.IsType<UnauthorizedAccessException>(exception);
                 Assert.Equal("You do not have the necessary role to add an auction!", exception.Message);
+            }
+        }
+
+
+        public static IEnumerable<object[]> AddTestRolesMaxOpenedAuctionsPerCategoryData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, } },
+                    new Dictionary<long, int>() { { 1, 1 } },
+                    "1",
+                    true
+                },
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, } },
+                    new Dictionary<long, int>() { },
+                    "1",
+                    true
+                },
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, } },
+                    new Dictionary<long, int>() { { 1, 2 } },
+                    "1",
+                    false
+                },
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, }, new Category() { Id = 2, } },
+                    new Dictionary<long, int>() { { 1, 2 } , { 2, 3 }},
+                    "2",
+                    false
+                },
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, }, new Category() { Id = 2, } },
+                    new Dictionary<long, int>() { { 1, 3 } , { 2, 3 }},
+                    "2",
+                    false
+                },
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, }, new Category() { Id = 2, } },
+                    new Dictionary<long, int>() { { 1, 3 } , { 2, 3 }},
+                    "3",
+                    true
+                },
+                new object[]
+                {
+                    new HashSet<Category>() { new Category() { Id = 1, }, new Category() { Id = 2, }, new Category() { Id = 3, }, new Category() { Id = 4, } },
+                    new Dictionary<long, int>() { { 1, 3 } , { 2, 3 }},
+                    "3",
+                    true
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(AddTestRolesMaxOpenedAuctionsPerCategoryData))]
+        public void AddTestRolesMaxOpenedAuctionsPerCategory(HashSet<Category> productCategories,
+            Dictionary<long, int> categoriesWithNumberOfProducts, string maxOpenedAuctionsPerCategoryValue, bool valid)
+        {
+            Mock<AuctionDataService> auctionDataServiceMock =
+                new Mock<AuctionDataService>();
+            Mock<ProductDataService> productDataServiceMock = new Mock<ProductDataService>();
+
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
+            string userId = "1";
+            string name = "AuctionMaxDurationMonths";
+            long productId = 1;
+
+
+            var appSettingData = new ApplicationSetting()
+            {
+                Name = name,
+                Value = "7",
+                Id = 1
+            };
+
+            var auction = new Auction()
+            {
+                UserId = userId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddMonths(4),
+                ClosedByOwner = false,
+                ProductId = productId,
+                StartPrice = new Money(12, "RON")
+            };
+
+            string name2 = "MaxUnfinishedAuctions";
+            var appSettingMaxUnfinishedAuctions = new ApplicationSetting()
+            {
+                Name = name2,
+                Value = "123",
+                Id = 1,
+            };
+
+            string auctionMinStartPrice = "AuctionMinStartPrice";
+            var appSettingAuctionMinStartPrice = new ApplicationSetting()
+            {
+                Name = auctionMinStartPrice,
+                Value = "11",
+                Id = 3,
+            };
+
+            string maxOpenedAuctionsPerCategory = "MaxOpenedAuctionsPerCategory";
+            var appSettingMaxOpenedAuctionsPerCategory = new ApplicationSetting()
+            {
+                Name = maxOpenedAuctionsPerCategory,
+                Value = maxOpenedAuctionsPerCategoryValue,
+                Id = 3,
+            };
+
+            var userAuctionsData = new List<Auction>()
+            {
+                new Auction() { ClosedByOwner = true, EndDate = DateTime.Now.AddDays(1), StartDate = DateTime.Now },
+            };
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
+            auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
+                .Returns(appSettingAuctionMinStartPrice);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(maxOpenedAuctionsPerCategory))
+                .Returns(appSettingMaxOpenedAuctionsPerCategory);
+
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product()
+                { Id = productId, Categories = productCategories });
+            auctionPlacingDataServiceMock.Setup(x => x.HasActiveAuctionPlacingRestrictions(userId)).Returns(false);
+
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User()
+                { Roles = new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } } });
+
+            categoryDataServiceMock.Setup(x => x.GetNumberOfOpenedAuctionsByCategory(userId))
+                .Returns(categoriesWithNumberOfProducts);
+
+            var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object, categoryDataServiceMock.Object);
+
+            var exception = Record.Exception(() => service.Add(auction));
+
+            if (valid)
+            {
+                Assert.Null(exception);
+            }
+            else
+            {
+                Assert.IsType<Exception>(exception);
+                Assert.Equal("Too many opened auctions in category!", exception.Message);
+            }
+        }
+
+        public static IEnumerable<object[]> AddTestLoggingData =>
+            new List<object[]>
+            {
+                new object[]
+                {
+                    new List<Role>(),
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>() { new Role() { NormalizedName = "AUCTIONER" } },
+                    true
+                },
+                new object[]
+                {
+                    new List<Role>() { new Role() { NormalizedName = "BIDDER" } },
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>()
+                        { new Role() { NormalizedName = "AUCTIONER" }, new Role() { NormalizedName = "BIDDER" } },
+                    true
+                },
+            };
+
+        [Theory]
+        [MemberData(nameof(AddTestLoggingData))]
+        public void AddTestLogging(List<Role> roles, bool valid)
+        {
+            Mock<AuctionDataService> auctionDataServiceMock =
+                new Mock<AuctionDataService>();
+            Mock<ProductDataService> productDataServiceMock = new Mock<ProductDataService>();
+
+            Mock<ApplicationSettingDataService> applicationSettingDataServiceMock =
+                new Mock<ApplicationSettingDataService>();
+
+            Mock<AuctionPlacingRestrictionsDataService> auctionPlacingDataServiceMock =
+                new Mock<AuctionPlacingRestrictionsDataService>();
+
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+
+            Mock<CategoryDataService> categoryDataServiceMock = new Mock<CategoryDataService>();
+
+            Mock<ILogger<AuctionService>> loggerMock = new Mock<ILogger<AuctionService>>();
+
+            string userId = "1";
+            string name = "AuctionMaxDurationMonths";
+            long productId = 1;
+
+
+            var appSettingData = new ApplicationSetting()
+            {
+                Name = name,
+                Value = "7",
+                Id = 1
+            };
+
+            var auction = new Auction()
+            {
+                UserId = userId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddMonths(4),
+                ClosedByOwner = false,
+                ProductId = productId,
+                StartPrice = new Money(12, "RON")
+            };
+
+            string name2 = "MaxUnfinishedAuctions";
+            var appSettingMaxUnfinishedAuctions = new ApplicationSetting()
+            {
+                Name = name2,
+                Value = "123",
+                Id = 1,
+            };
+
+            string auctionMinStartPrice = "AuctionMinStartPrice";
+            var appSettingAuctionMinStartPrice = new ApplicationSetting()
+            {
+                Name = auctionMinStartPrice,
+                Value = "11",
+                Id = 3,
+            };
+
+            string maxOpenedAuctionsPerCategory = "MaxOpenedAuctionsPerCategory";
+            var appSettingMaxOpenedAuctionsPerCategory = new ApplicationSetting()
+            {
+                Name = maxOpenedAuctionsPerCategory,
+                Value = "1",
+                Id = 3,
+            };
+
+            var userAuctionsData = new List<Auction>()
+            {
+                new Auction() { ClosedByOwner = true, EndDate = DateTime.Now.AddDays(1), StartDate = DateTime.Now },
+            };
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name)).Returns(appSettingData);
+            auctionDataServiceMock.Setup(x => x.GetAuctionsByUserId(userId)).Returns(userAuctionsData);
+
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(name2)).Returns(appSettingMaxUnfinishedAuctions);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(auctionMinStartPrice))
+                .Returns(appSettingAuctionMinStartPrice);
+            applicationSettingDataServiceMock.Setup(x => x.GetByName(maxOpenedAuctionsPerCategory))
+                .Returns(appSettingMaxOpenedAuctionsPerCategory);
+
+            productDataServiceMock.Setup(x => x.GetByID(productId)).Returns(new Product()
+            { Id = productId, Categories = new HashSet<Category>() });
+            auctionPlacingDataServiceMock.Setup(x => x.HasActiveAuctionPlacingRestrictions(userId)).Returns(false);
+
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User() { Roles = roles });
+
+            var service = new AuctionService(auctionDataServiceMock.Object, productDataServiceMock.Object,
+                applicationSettingDataServiceMock.Object, auctionPlacingDataServiceMock.Object,
+                userDataServiceMock.Object, categoryDataServiceMock.Object, loggerMock.Object);
+
+            var exception = Record.Exception(() => service.Add(auction));
+
+            if (valid)
+            {
+                loggerMock.Verify(
+                    x => x.Log(
+                        It.IsAny<LogLevel>(),
+                        It.IsAny<EventId>(),
+                        It.Is<It.IsAnyType>((v, t) => true),
+                        It.IsAny<Exception>(),
+                        It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Never);
+            }
+            else
+            {
+                loggerMock.Verify(
+                    x => x.Log(
+                        It.IsAny<LogLevel>(),
+                        It.IsAny<EventId>(),
+                        It.Is<It.IsAnyType>((v, t) => true),
+                        It.IsAny<Exception>(),
+                        It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
             }
         }
     }
