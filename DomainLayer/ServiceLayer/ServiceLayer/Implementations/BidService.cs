@@ -116,10 +116,7 @@ namespace ServiceLayer.Implementations
             }
             catch (Exception e)
             {
-                if (this.logger != null)
-                {
-                    this.logger.LogError(e, e.Message);
-                }
+                this.logger?.LogError(e, e.Message);
 
                 throw;
             }

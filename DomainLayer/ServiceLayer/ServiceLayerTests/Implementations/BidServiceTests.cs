@@ -4,6 +4,7 @@ using DomainModel.ValueObjects;
 using Moq;
 using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 using Xunit;
 
 namespace ServiceLayer.Implementations.Tests
@@ -390,6 +391,133 @@ namespace ServiceLayer.Implementations.Tests
             var exception = Record.Exception(() => service.Update(bid));
             Assert.IsType<Exception>(exception);
             Assert.Equal("A bid once placed cannot be altered!", exception.Message);
+        }
+
+        [Fact()]
+        public void UpdateTestLogging()
+        {
+            Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
+            Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+            Mock<ILogger<BidService>> loggerMock = new Mock<ILogger<BidService>>();
+
+
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object, loggerMock.Object);
+
+            var bid = new Bid();
+
+            var exception = Record.Exception(() => service.Update(bid));
+
+            loggerMock.Verify(
+                x => x.Log(
+                    It.IsAny<LogLevel>(),
+                    It.IsAny<EventId>(),
+                    It.Is<It.IsAnyType>((v, t) => true),
+                    It.IsAny<Exception>(),
+                    It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
+        }
+
+        public static IEnumerable<object[]> AddTestLoggingData =>
+           new List<object[]>
+           {
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { }
+                    },
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { NormalizedName = "AUCTIONER"}
+                    },
+                    false
+                },
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { NormalizedName = "BIDDER"}
+                    },
+                    true
+                },
+                new object[]
+                {
+                    new List<Role>()
+                    {
+                        new Role() { NormalizedName = "BIDDER"},
+                        new Role() { NormalizedName = "AUCTIONER"}
+                    },
+                    true
+                },
+           };
+
+        [Theory]
+        [MemberData(nameof(AddTestBidUserNotInRoleData))]
+        public void AddTestLogging(List<Role> roles, bool valid)
+        {
+            Mock<AuctionDataService> auctionDataServiceMock = new Mock<AuctionDataService>();
+            Mock<BidDataService> bidDataServiceMock = new Mock<BidDataService>();
+            Mock<UserDataService> userDataServiceMock = new Mock<UserDataService>();
+            Mock<ILogger<BidService>> loggerMock = new Mock<ILogger<BidService>>();
+
+            long auctionId = 1;
+            string userId = "a";
+
+            Auction auction = new Auction()
+            {
+                Id = auctionId,
+                StartDate = DateTime.Now.Subtract(new TimeSpan(1, 1, 1, 1)),
+                EndDate = DateTime.Now.AddDays(1),
+                StartPrice = new Money(10, "RON")
+            };
+
+            Bid previousBid = new Bid()
+            {
+                AuctionId = auctionId,
+                BidValue = new Money(10.5M, "RON"),
+            };
+
+            var bid = new Bid()
+            {
+                UserId = userId,
+                AuctionId = auctionId,
+                BidValue = new Money(11, "RON")
+            };
+
+            auctionDataServiceMock.Setup(x => x.GetByID(auctionId)).Returns(auction);
+            bidDataServiceMock.Setup(x => x.GetLatestBidByAuction(auctionId)).Returns(previousBid);
+            userDataServiceMock.Setup(x => x.GetByID(userId)).Returns(new User() { Roles = roles });
+
+            var service = new BidService(bidDataServiceMock.Object, auctionDataServiceMock.Object,
+                userDataServiceMock.Object, loggerMock.Object);
+
+            var exception = Record.Exception(() => service.Add(bid));
+
+            if (valid)
+            {
+                loggerMock.Verify(
+                    x => x.Log(
+                        It.IsAny<LogLevel>(),
+                        It.IsAny<EventId>(),
+                        It.Is<It.IsAnyType>((v, t) => true),
+                        It.IsAny<Exception>(),
+                        It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Never);
+            }
+            else
+            {
+                loggerMock.Verify(
+                    x => x.Log(
+                        It.IsAny<LogLevel>(),
+                        It.IsAny<EventId>(),
+                        It.Is<It.IsAnyType>((v, t) => true),
+                        It.IsAny<Exception>(),
+                        It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
+            }
         }
     }
 }
