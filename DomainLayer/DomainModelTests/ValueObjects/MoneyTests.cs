@@ -53,6 +53,12 @@ namespace DomainModel.ValueObjects.Tests
                     new Money(0, "EUR"),
                     false
                 },
+                new object[]
+                {
+                    new Money(0, "RON"),
+                    new Money(0, "ron"),
+                    false
+                },
             };
 
         [Theory]

@@ -21,8 +21,16 @@ namespace DomainModelTests.Validators
                 },
                 new object[]
                 {
+                    DateTime.Now.Subtract(new TimeSpan(0,0,0,1))
+                },
+                new object[]
+                {
+                    DateTime.Now.Subtract(new TimeSpan(1,0,0,1))
+                },
+                new object[]
+                {
                     DateTime.MinValue
-                }
+                },
             };
 
         [Theory]
@@ -40,12 +48,33 @@ namespace DomainModelTests.Validators
             validationResult.ShouldHaveValidationErrorFor(a => a.StartDate);
         }
 
+        
         public static IEnumerable<object[]> TestCorrectStartDateData =>
             new List<object[]>
             {
                 new object[]
                 {
                     DateTime.Now.AddDays(1), DateTime.MaxValue
+                },
+                new object[]
+                {
+                    DateTime.Now, DateTime.MaxValue
+                },
+                new object[]
+                {
+                    DateTime.Now, DateTime.Now.AddDays(1)
+                },
+                new object[]
+                {
+                    DateTime.Now, DateTime.Now.AddSeconds(1)
+                },
+                new object[]
+                {
+                    DateTime.Now, DateTime.Now.AddMonths(1)
+                },
+                new object[]
+                {
+                    DateTime.Now.Subtract(new TimeSpan(0,0,0,1)), DateTime.Now.AddMonths(1)
                 },
             };
 
@@ -64,6 +93,7 @@ namespace DomainModelTests.Validators
 
             validationResult.ShouldNotHaveValidationErrorFor(a => a.StartDate);
         }
+
 
         [Theory]
         [InlineData(0)]

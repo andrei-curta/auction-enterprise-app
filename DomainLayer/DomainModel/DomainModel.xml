@@ -271,6 +271,18 @@
             Initializes a new instance of the <see cref="T:DomainModel.Validators.ApplicationSettingValidator"/> class.
             </summary>
         </member>
+        <member name="T:DomainModel.Validators.AuctionPlacingRestrictionValidator">
+            <summary>
+            Class AuctionPlacingRestrictionValidator.
+            Implements the <see cref="!:FluentValidation.AbstractValidator&lt;DomainModel.Models.AuctionPlacingRestriction&gt;" />
+            </summary>
+            <seealso cref="!:FluentValidation.AbstractValidator&lt;Models.AuctionPlacingRestriction&gt;" />
+        </member>
+        <member name="M:DomainModel.Validators.AuctionPlacingRestrictionValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DomainModel.Validators.AuctionPlacingRestrictionValidator"/> class.
+            </summary>
+        </member>
         <member name="T:DomainModel.Validators.AuctionValidator">
             <summary>
             Validator for <see cref="T:DomainModel.Models.Auction"/>.

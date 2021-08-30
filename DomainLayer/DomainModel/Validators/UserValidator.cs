@@ -21,6 +21,8 @@ namespace DomainModel.Validators
             this.RuleFor(x => x.UserName).NotEmpty().MinimumLength(5);
 
             this.RuleFor(x => x.Email).EmailAddress();
+
+            this.RuleFor(x => x.PhoneNumber).Matches("[0-9]{10}");
         }
     }
 }

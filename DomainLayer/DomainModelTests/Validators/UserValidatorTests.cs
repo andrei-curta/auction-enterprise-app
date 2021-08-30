@@ -75,6 +75,39 @@ namespace DomainModel.Validators.Tests
             validationResult.ShouldNotHaveValidationErrorFor(a => a.Email);
         }
 
+        [Theory]
+        [InlineData("0747584239")]
+        [InlineData(" 0747584239")]
+        public void TestValidPhone(string phoneNumber)
+        {
+            var user = new User()
+            {
+                PhoneNumber = phoneNumber
+            };
+
+            var validationResult = new UserValidator().TestValidate(user);
+
+            validationResult.ShouldNotHaveValidationErrorFor(a => a.PhoneNumber);
+        }
+
+        [Theory]
+        [InlineData("0747 584 239")]
+        [InlineData("0A747584239A")]
+        [InlineData("0747-584-239")]
+        [InlineData("0747.584.239")]
+        [InlineData("🥃")]
+        public void TestInvalidPhone(string phoneNumber)
+        {
+            var user = new User()
+            {
+                PhoneNumber = phoneNumber
+            };
+
+            var validationResult = new UserValidator().TestValidate(user);
+
+            validationResult.ShouldHaveValidationErrorFor(a => a.PhoneNumber);
+        }
+
         public static IEnumerable<object[]> TestIsInRoleData =>
             new List<object[]>
             {
